@@ -1,0 +1,782 @@
+{
+ "version": "0.4",
+ "title": "PWH – Mega Menu / Support",
+ "type": "section",
+ "content": [
+  {
+   "id": "f21e1f7",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "padding": {
+     "unit": "px",
+     "top": "44",
+     "right": "44",
+     "bottom": "44",
+     "left": "44",
+     "isLinked": true
+    },
+    "_title": "Mega Menu / Support",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 48,
+     "column": "48",
+     "row": "48",
+     "isLinked": true
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 32,
+     "column": "32",
+     "row": "32",
+     "isLinked": true
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "24",
+     "right": "24",
+     "bottom": "24",
+     "left": "24",
+     "isLinked": true
+    },
+    "flex_direction_tablet": "row",
+    "flex_direction_mobile": "column",
+    "css_classes": "pwh-mega",
+    "flex_wrap_tablet": "wrap",
+    "flex_align_items": "flex-start"
+   },
+   "elements": [
+    {
+     "id": "8cc0978",
+     "elType": "container",
+     "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Get in touch",
+      "width": {
+       "unit": "%",
+       "size": 25,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 18,
+       "column": "18",
+       "row": "18",
+       "isLinked": true
+      },
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "939374e",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Contact Us",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "7522c5c",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Contact Us",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/contact/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "a3c53a8",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Call, email or chat with our Perth-based team.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "e6ccddd",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Remote Support",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "cf1fe08",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Remote Support",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/support/remote-support/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "562be17",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Click to download remote support for Windows.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "15bb98e",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Mac Remote Support",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "a0832c7",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Mac Remote Support",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/support/mac-remote-support/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "90bdb7c",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Click to download remote support for Mac.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "ec8a5c0",
+     "elType": "container",
+     "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Self help",
+      "width": {
+       "unit": "%",
+       "size": 25,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 18,
+       "column": "18",
+       "row": "18",
+       "isLinked": true
+      },
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "4655dbf",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Knowledge Base",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "79f2cd0",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Knowledge Base",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/knowledge-base/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "c10f494",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Guides and answers to common questions.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "714758c",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Network Status",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "3288bb6",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Network Status",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/network-status/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "9d9ab07",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Live status of our servers and network.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "2cdfa4a",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Hosting Transfer Request",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "66a61c3",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Hosting Transfer Request",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/support/hosting-transfer-request/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "1ddb92e",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Ask us to migrate your site or email across.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "aca4a63",
+     "elType": "container",
+     "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Policies & transfers",
+      "width": {
+       "unit": "%",
+       "size": 25,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 18,
+       "column": "18",
+       "row": "18",
+       "isLinked": true
+      },
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "5df2cbb",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Service Level Agreement",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "3c982a7",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Service Level Agreement",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/service-level-agreement/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "4ee83b3",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Our uptime commitment and support standards.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "5582407",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Microsoft Transfer",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "a5db390",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Microsoft Transfer",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/support/microsoft-transfer-request/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "57adc8b",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Move your Microsoft 365 mailboxes across to us.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "0b2dbf8",
+     "elType": "container",
+     "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Account",
+      "width": {
+       "unit": "%",
+       "size": 25,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 12,
+       "column": "12",
+       "row": "12",
+       "isLinked": true
+      },
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "cea5402",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "14",
+         "right": "14",
+         "bottom": "14",
+         "left": "14",
+         "isLinked": true
+        },
+        "_title": "Item – MyToolbox",
+        "flex_gap": {
+         "unit": "px",
+         "size": 4,
+         "column": "4",
+         "row": "4",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item pwh-mega-box"
+       },
+       "elements": [
+        {
+         "id": "dce6505",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "MyToolbox",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/client-login/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "7b1380e",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Everything for managing your account in one place.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "7c1950d",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "14",
+         "right": "14",
+         "bottom": "14",
+         "left": "14",
+         "isLinked": true
+        },
+        "_title": "Item – Submit a Ticket",
+        "flex_gap": {
+         "unit": "px",
+         "size": 4,
+         "column": "4",
+         "row": "4",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item pwh-mega-box"
+       },
+       "elements": [
+        {
+         "id": "639b541",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Submit a Ticket",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/submit-a-ticket/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "b442459",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Log a support request with our local team.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": []
+}

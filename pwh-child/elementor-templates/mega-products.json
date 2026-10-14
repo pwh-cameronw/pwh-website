@@ -1,0 +1,705 @@
+{
+ "version": "0.4",
+ "title": "PWH – Mega Menu / Products",
+ "type": "section",
+ "content": [
+  {
+   "id": "1383f1c",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "padding": {
+     "unit": "px",
+     "top": "44",
+     "right": "44",
+     "bottom": "44",
+     "left": "44",
+     "isLinked": true
+    },
+    "_title": "Mega Menu / Products",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 48,
+     "column": "48",
+     "row": "48",
+     "isLinked": true
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 32,
+     "column": "32",
+     "row": "32",
+     "isLinked": true
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "24",
+     "right": "24",
+     "bottom": "24",
+     "left": "24",
+     "isLinked": true
+    },
+    "flex_direction_tablet": "row",
+    "flex_direction_mobile": "column",
+    "css_classes": "pwh-mega",
+    "flex_wrap_tablet": "wrap",
+    "flex_align_items": "flex-start"
+   },
+   "elements": [
+    {
+     "id": "e553780",
+     "elType": "container",
+     "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Domains",
+      "width": {
+       "unit": "%",
+       "size": 25,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 18,
+       "column": "18",
+       "row": "18",
+       "isLinked": true
+      },
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "5952b5e",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Domains",
+        "header_size": "p",
+        "_css_classes": "pwh-mega-group"
+       },
+       "elements": []
+      },
+      {
+       "id": "9f2853f",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Search Domains",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "26978b0",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Search Domains",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/domains/search/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "97bac03",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Find and register your business name across every extension.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "102ec1f",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Transfer Domains",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "da2b1c4",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Transfer Domains",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/domains/transfer/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "a5d79e8",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Move an existing domain across with zero downtime.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "f04da15",
+     "elType": "container",
+     "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Hosting",
+      "width": {
+       "unit": "%",
+       "size": 25,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 18,
+       "column": "18",
+       "row": "18",
+       "isLinked": true
+      },
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "93847c2",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Hosting",
+        "header_size": "p",
+        "_css_classes": "pwh-mega-group"
+       },
+       "elements": []
+      },
+      {
+       "id": "fc1ca35",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – cPanel Hosting",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "47d4e31",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "cPanel Hosting",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/web-hosting/cpanel/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "04907d2",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Full control over your site with the industry-standard dashboard.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "f3e0351",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Semi-managed WordPress",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "54a4413",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Semi-managed WordPress",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/web-hosting/wordpress/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "3104eb6",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>We handle updates, backups and troubleshooting for you.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "43df33a",
+     "elType": "container",
+     "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Email",
+      "width": {
+       "unit": "%",
+       "size": 25,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 18,
+       "column": "18",
+       "row": "18",
+       "isLinked": true
+      },
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "c6d0f38",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Email",
+        "header_size": "p",
+        "_css_classes": "pwh-mega-group"
+       },
+       "elements": []
+      },
+      {
+       "id": "a4669ad",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Email",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "8fd568b",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Email",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/email/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "4ad45d8",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Business mailboxes on your own domain, POP3 or IMAP.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "9355ae4",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Microsoft 365",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "cf1b90e",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Microsoft 365",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/email/microsoft-365/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "a9bff73",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Full Exchange mailboxes with Teams and cloud storage.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "c25c768",
+     "elType": "container",
+     "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Business",
+      "width": {
+       "unit": "%",
+       "size": 25,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 50,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 18,
+       "column": "18",
+       "row": "18",
+       "isLinked": true
+      },
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "6582ff6",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – Reseller",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "73b9a0d",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Reseller",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/reseller-hosting/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "6d880f2",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>White-label hosting for agencies and freelancers.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "f25a759",
+       "elType": "container",
+       "settings": {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "Item – VPS",
+        "flex_gap": {
+         "unit": "px",
+         "size": 3,
+         "column": "3",
+         "row": "3",
+         "isLinked": true
+        },
+        "css_classes": "pwh-mega-item"
+       },
+       "elements": [
+        {
+         "id": "57af5ba",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "VPS",
+          "header_size": "p",
+          "link": {
+           "url": "{{PWH_URL:/vps-hosting/}}",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-mega-link"
+         },
+         "elements": []
+        },
+        {
+         "id": "9a44e5e",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Coming soon. Join the waitlist for dedicated resources.</p>",
+          "_css_classes": "pwh-mega-desc"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": []
+}

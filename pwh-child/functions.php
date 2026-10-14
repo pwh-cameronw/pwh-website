@@ -1,0 +1,84 @@
+<?php
+/**
+ * Perth Web Hosting child theme (parent: Hello Elementor).
+ *
+ * @package pwh-child
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+define( 'PWH_CHILD_VERSION', '1.0.0' );
+define( 'PWH_CHILD_DIR', get_stylesheet_directory() );
+define( 'PWH_CHILD_URI', get_stylesheet_directory_uri() );
+
+require_once PWH_CHILD_DIR . '/inc/setup.php';
+
+/**
+ * Theme supports and menu locations.
+ */
+add_action( 'after_setup_theme', function () {
+	load_child_theme_textdomain( 'pwh-child', PWH_CHILD_DIR . '/languages' );
+
+	register_nav_menus(
+		array(
+			'pwh-primary' => __( 'Primary (JetMenu mega menu)', 'pwh-child' ),
+		)
+	);
+} );
+
+/**
+ * Fonts and styles.
+ *
+ * GT Standard (the display face in the design) is a commercial font, so it is
+ * self-hosted from assets/fonts. Archivo Expanded is loaded as the fallback so
+ * headings still look right before the licensed files are added.
+ */
+add_action( 'wp_enqueue_scripts', function () {
+	wp_enqueue_style(
+		'pwh-google-fonts',
+		'https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,900&family=Inter:wght@300;400;700;900&display=swap',
+		array(),
+		null
+	);
+
+	// Hello Elementor enqueues its own reset/theme CSS. Load after it, Elementor and
+	// JetMenu so equal-specificity rules here win.
+	$deps = array( 'pwh-google-fonts' );
+	foreach ( array( 'hello-elementor', 'hello-elementor-theme-style', 'elementor-frontend', 'jet-menu-public-styles' ) as $handle ) {
+		if ( wp_style_is( $handle, 'registered' ) ) {
+			$deps[] = $handle;
+		}
+	}
+
+	wp_enqueue_style(
+		'pwh-child',
+		PWH_CHILD_URI . '/assets/css/pwh.css',
+		$deps,
+		filemtime( PWH_CHILD_DIR . '/assets/css/pwh.css' )
+	);
+}, 20 );
+
+/**
+ * Same styles inside the Elementor editor preview, so templates look right while editing.
+ */
+add_action( 'elementor/preview/enqueue_styles', function () {
+	wp_enqueue_style( 'pwh-child-preview', PWH_CHILD_URI . '/assets/css/pwh.css', array(), filemtime( PWH_CHILD_DIR . '/assets/css/pwh.css' ) );
+} );
+
+/**
+ * Preconnect for Google Fonts.
+ */
+add_filter( 'wp_resource_hints', function ( $urls, $relation ) {
+	if ( 'preconnect' === $relation ) {
+		$urls[] = array( 'href' => 'https://fonts.gstatic.com', 'crossorigin' );
+	}
+	return $urls;
+}, 10, 2 );
+
+/**
+ * Register GT Standard with Elementor's font picker so it can be chosen in the editor.
+ */
+add_filter( 'elementor/fonts/additional_fonts', function ( $fonts ) {
+	$fonts['GT Standard'] = 'system';
+	return $fonts;
+} );

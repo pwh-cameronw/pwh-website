@@ -1,0 +1,854 @@
+/**
+ * Perth Web Hosting – design system + component styles.
+ *
+ * Values come from the "Perth Web Hosting" Figma file (Foundations page,
+ * Page / Home). Elementor templates in /elementor-templates attach these
+ * classes through the "CSS Classes" field (Advanced tab) of each element.
+ *
+ * Breakpoints match Elementor defaults: tablet ≤ 1024px, mobile ≤ 767px.
+ */
+
+/* ---------------------------------------------------------------------------
+ * 1. Fonts
+ * ------------------------------------------------------------------------ */
+
+/* GT Standard is licensed from Grilli Type – drop the woff2 files into
+   assets/fonts (see assets/fonts/README.md). Until then Archivo Expanded,
+   loaded from Google Fonts, is used. */
+@font-face {
+	font-family: "GT Standard";
+	src: url("../fonts/GT-Standard-M-Extended-Black.woff2") format("woff2");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "GT Standard";
+	src: url("../fonts/GT-Standard-M-Extended-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ---------------------------------------------------------------------------
+ * 2. Tokens (Figma variables)
+ * ------------------------------------------------------------------------ */
+
+:root {
+	--pwh-cream: #fffef4;
+	--pwh-navy-ink: #0b1629;
+	--pwh-navy: #1a325b;
+	--pwh-navy-deep: #1a315c;
+	--pwh-navy-soft: #6b91be;
+	--pwh-navy-pale: #c2d3e8;
+	--pwh-navy-mist: #eaf0f8;
+	--pwh-amber: #c89439;
+	--pwh-grey: #828082;
+	--pwh-grey-dark: #575557;
+	--pwh-grey-light: #d4d3d5;
+
+	--pwh-font-display: "GT Standard", "Archivo", "Arial Black", sans-serif;
+	--pwh-font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+	--pwh-radius: 16px;
+	--pwh-radius-sm: 6px;
+	--pwh-shadow-menu: 0 24px 24px rgba(11, 22, 41, 0.28);
+	--pwh-content: 1180px;
+	--pwh-header-h: 84px;
+}
+
+/* ---------------------------------------------------------------------------
+ * 3. Base
+ * ------------------------------------------------------------------------ */
+
+body {
+	background-color: var(--pwh-cream);
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: inherit;
+}
+
+/* ---------------------------------------------------------------------------
+ * 4. Typography helpers (add to Heading / Text Editor widgets)
+ * ------------------------------------------------------------------------ */
+
+.pwh-display .elementor-heading-title,
+.pwh-h1 .elementor-heading-title,
+.pwh-h2 .elementor-heading-title,
+.pwh-h3 .elementor-heading-title,
+.pwh-card-title .elementor-heading-title,
+.pwh-eyebrow .elementor-heading-title {
+	font-family: var(--pwh-font-display);
+	font-stretch: 125%;
+	color: inherit;
+	margin: 0;
+}
+
+/* PWH/H1 */
+.pwh-h1 .elementor-heading-title {
+	font-size: 56px;
+	font-weight: 900;
+	line-height: 62px;
+	letter-spacing: -1.3px;
+}
+
+/* PWH/H2 */
+.pwh-h2 .elementor-heading-title {
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 46px;
+	letter-spacing: -0.9px;
+}
+
+/* PWH/H3 */
+.pwh-h3 .elementor-heading-title {
+	font-size: 28px;
+	font-weight: 900;
+	line-height: 34px;
+}
+
+/* Card Title */
+.pwh-card-title .elementor-heading-title {
+	font-size: 22px;
+	font-weight: 900;
+	line-height: normal;
+}
+
+/* PWH/Eyebrow */
+.pwh-eyebrow .elementor-heading-title {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: 1.8px;
+	text-transform: uppercase;
+}
+
+/* PWH/Body */
+.pwh-body,
+.pwh-lead {
+	font-family: var(--pwh-font-body);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 26px;
+}
+
+.pwh-lead {
+	font-weight: 300;
+	line-height: normal;
+}
+
+.pwh-body p,
+.pwh-lead p {
+	margin: 0;
+}
+
+.pwh-body a {
+	color: inherit;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+/* Colour helpers – applied to the widget wrapper, inherited by the content. */
+.pwh-text-cream,
+.pwh-text-cream .elementor-heading-title {
+	color: var(--pwh-cream);
+}
+
+.pwh-text-ink,
+.pwh-text-ink .elementor-heading-title {
+	color: var(--pwh-navy-ink);
+}
+
+.pwh-text-mist,
+.pwh-text-mist .elementor-heading-title {
+	color: var(--pwh-navy-mist);
+}
+
+/* Dot list (hero proof points). Text Editor widget containing <ul class="pwh-dots">. */
+.pwh-dots {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.pwh-dots li {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	font-family: var(--pwh-font-body);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+.pwh-dots li::before {
+	content: "";
+	flex: 0 0 7px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: var(--pwh-amber);
+}
+
+/* ---------------------------------------------------------------------------
+ * 5. Buttons (Figma component "Button": Amber / Navy / Outline / Outline Pill)
+ *    Add "pwh-btn pwh-btn--<style>" to a Button widget.
+ * ------------------------------------------------------------------------ */
+
+body .pwh-btn .elementor-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px 30px;
+	border: 1.5px solid transparent;
+	border-radius: var(--pwh-radius);
+	background-color: transparent;
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 0;
+	text-transform: none;
+	box-shadow: none;
+	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+body .pwh-btn .elementor-button:hover,
+body .pwh-btn .elementor-button:focus-visible {
+	transform: translateY(-1px);
+}
+
+body .pwh-btn .elementor-button:focus-visible {
+	outline: 2px solid var(--pwh-amber);
+	outline-offset: 3px;
+}
+
+/* Amber */
+body .pwh-btn--amber .elementor-button {
+	background-color: var(--pwh-amber);
+	border-color: var(--pwh-amber);
+	color: var(--pwh-navy-ink);
+}
+
+body .pwh-btn--amber .elementor-button:hover {
+	background-color: #b5832c;
+	border-color: #b5832c;
+	color: var(--pwh-navy-ink);
+}
+
+/* Navy */
+body .pwh-btn--navy .elementor-button {
+	background-color: var(--pwh-navy);
+	border-color: var(--pwh-navy);
+	color: var(--pwh-cream);
+}
+
+body .pwh-btn--navy .elementor-button:hover {
+	background-color: var(--pwh-navy-ink);
+	border-color: var(--pwh-navy-ink);
+	color: var(--pwh-cream);
+}
+
+/* Outline */
+body .pwh-btn--outline .elementor-button {
+	border-color: var(--pwh-navy);
+	color: var(--pwh-navy);
+}
+
+body .pwh-btn--outline .elementor-button:hover {
+	background-color: var(--pwh-navy);
+	color: var(--pwh-cream);
+}
+
+/* Outline on dark backgrounds */
+body .pwh-btn--outline-cream .elementor-button {
+	border-color: var(--pwh-cream);
+	color: var(--pwh-cream);
+}
+
+body .pwh-btn--outline-cream .elementor-button:hover {
+	background-color: var(--pwh-cream);
+	color: var(--pwh-navy-ink);
+}
+
+/* Outline Pill */
+body .pwh-btn--pill .elementor-button {
+	border-color: var(--pwh-navy-ink);
+	border-radius: 999px;
+	color: var(--pwh-navy-ink);
+}
+
+body .pwh-btn--pill .elementor-button:hover {
+	background-color: var(--pwh-navy-ink);
+	color: var(--pwh-cream);
+}
+
+/* Small – nav "Client Login" */
+body .pwh-btn--sm .elementor-button {
+	padding: 11px 22px;
+	font-size: 13px;
+	background-color: var(--pwh-cream);
+}
+
+/* ---------------------------------------------------------------------------
+ * 6. Header + JetMenu mega menu
+ * ------------------------------------------------------------------------ */
+
+.pwh-header {
+	background-color: var(--pwh-cream);
+	min-height: var(--pwh-header-h);
+	z-index: 100;
+	transition: box-shadow 0.2s ease;
+}
+
+/* Elementor Pro adds .elementor-sticky--effects once the sticky header has scrolled. */
+.pwh-header.elementor-sticky--effects {
+	box-shadow: 0 1px 0 var(--pwh-navy-pale);
+}
+
+.pwh-logo img {
+	display: block;
+	width: 200px;
+	max-width: 100%;
+	height: auto;
+}
+
+/* --- JetMenu 2.x widget (.jet-mega-menu) ------------------------------- */
+
+.pwh-mainnav .jet-mega-menu-list {
+	gap: 4px;
+}
+
+.pwh-mainnav .jet-mega-menu-item__inner {
+	padding: 10px 12px;
+	border-radius: var(--pwh-radius-sm);
+	background-color: transparent;
+	transition: background-color 0.2s ease;
+}
+
+.pwh-mainnav .jet-mega-menu-item--hover > .jet-mega-menu-item__inner,
+.pwh-mainnav .jet-mega-menu-item__inner:hover {
+	background-color: var(--pwh-navy-mist);
+}
+
+.pwh-mainnav .jet-mega-menu-item__link,
+.pwh-mainnav .jet-mega-menu-item__title,
+.pwh-mainnav .jet-mega-menu-item__label {
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.pwh-mainnav .jet-mega-menu-item__dropdown {
+	margin-left: 7px;
+	color: var(--pwh-navy-ink);
+	font-size: 11px;
+	line-height: 1;
+}
+
+.pwh-mainnav .jet-mega-menu-item__dropdown svg {
+	width: 11px;
+	height: 11px;
+	fill: currentColor;
+}
+
+/* Mega panel: JetMenu's wrapper is made transparent; the panel look lives on
+   the .pwh-mega container inside the mega content template, so the design
+   survives JetMenu style resets. 14px gap under the bar as in Figma. */
+.pwh-mainnav .jet-mega-menu-mega-container {
+	padding-top: 14px;
+	background: transparent;
+	box-shadow: none;
+	border: 0;
+}
+
+.pwh-mainnav .jet-mega-menu-mega-container__inner {
+	background: transparent;
+	padding: 0;
+}
+
+/* --- JetMenu 1.x (legacy markup: .jet-menu / .jet-sub-mega-menu) ------ */
+
+.pwh-mainnav .jet-menu {
+	gap: 4px;
+	background: transparent;
+}
+
+.pwh-mainnav .jet-menu > .jet-menu-item > .top-level-link {
+	padding: 10px 12px;
+	border-radius: var(--pwh-radius-sm);
+	background: transparent;
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.pwh-mainnav .jet-menu > .jet-menu-item:hover > .top-level-link,
+.pwh-mainnav .jet-menu > .jet-menu-item.jet-menu-hover > .top-level-link {
+	background-color: var(--pwh-navy-mist);
+}
+
+.pwh-mainnav .jet-menu .jet-dropdown-arrow {
+	font-size: 11px;
+	margin-left: 7px;
+	color: var(--pwh-navy-ink);
+}
+
+.pwh-mainnav .jet-sub-mega-menu {
+	padding-top: 14px;
+	background: transparent;
+	box-shadow: none;
+	border: 0;
+}
+
+/* --- Mega content templates (Mega Menu / Products, Support, About) ----- */
+
+.pwh-mega {
+	background-color: var(--pwh-cream);
+	border: 1px solid var(--pwh-navy-pale);
+	border-radius: var(--pwh-radius);
+	box-shadow: var(--pwh-shadow-menu);
+}
+
+/* Column heading: "• Domains" (Inter Black 15, navy dot 7px, gap 8) */
+.pwh-mega-group .elementor-heading-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	font-size: 15px;
+	font-weight: 900;
+	line-height: normal;
+}
+
+.pwh-mega-group .elementor-heading-title::before {
+	content: "";
+	flex: 0 0 7px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: var(--pwh-navy-ink);
+}
+
+/* Link title (Inter Bold 14.5) */
+.pwh-mega-link .elementor-heading-title {
+	margin: 0;
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	font-size: 14.5px;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.pwh-mega-link .elementor-heading-title a {
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.15s ease;
+}
+
+.pwh-mega-link .elementor-heading-title a:hover,
+.pwh-mega-link .elementor-heading-title a:focus-visible {
+	color: var(--pwh-navy-soft);
+}
+
+/* Make the whole item clickable: stretch the title link over its item container. */
+.pwh-mega-item {
+	position: relative;
+}
+
+/* Elementor makes every widget position:relative; release them so the
+   stretched link below covers the whole item, not just the title. */
+.pwh-mega-item > .elementor-widget,
+.pwh-mega-item > .e-con-inner > .elementor-widget,
+.pwh-mega-item .elementor-widget-container {
+	position: static;
+}
+
+.pwh-mega-item .pwh-mega-link .elementor-heading-title a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+
+/* Link description (Inter Regular 12.5, grey-dark) */
+.pwh-mega-desc,
+.pwh-mega-desc p {
+	margin: 0;
+	color: var(--pwh-grey-dark);
+	font-family: var(--pwh-font-body);
+	font-size: 12.5px;
+	font-weight: 400;
+	line-height: normal;
+}
+
+/* Boxed items (Support → MyToolbox / Submit a Ticket) */
+.pwh-mega-box {
+	border: 1.5px solid var(--pwh-navy-ink);
+	border-radius: var(--pwh-radius);
+	transition: background-color 0.15s ease;
+}
+
+.pwh-mega-box:hover {
+	background-color: var(--pwh-navy-mist);
+}
+
+/* ---------------------------------------------------------------------------
+ * 7. Home page sections
+ * ------------------------------------------------------------------------ */
+
+/* Hero: the laptop photo sits on the left of a navy panel. In Figma it is
+   1100 × 825 and starts 155px left of the 1440 frame, i.e. 875px left of
+   centre. With a fixed 1100px width, "50% - 325px" lands it there at any
+   viewport width (50% of (viewport - 1100) - 325 = centre - 875). */
+.pwh-hero {
+	background-color: var(--pwh-navy-ink);
+	background-repeat: no-repeat;
+	background-size: 1100px auto;
+	background-position: calc(50% - 325px) 0;
+}
+
+/* Clients strip – dashed logo slots */
+.pwh-logo-slot {
+	background-color: var(--pwh-navy-mist);
+	border: 1.5px dashed var(--pwh-navy-pale);
+	border-radius: var(--pwh-radius-sm);
+}
+
+.pwh-logo-slot .elementor-heading-title {
+	margin: 0;
+	color: var(--pwh-grey);
+	font-family: var(--pwh-font-body);
+	font-size: 12px;
+	font-weight: 700;
+	line-height: normal;
+	text-align: center;
+}
+
+.pwh-logo-slot img {
+	max-height: 40px;
+	width: auto;
+}
+
+/* Card / Media – product cards */
+.pwh-media-card {
+	border-radius: var(--pwh-radius);
+	overflow: hidden;
+	text-decoration: none;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pwh-media-card:hover,
+.pwh-media-card:focus-visible {
+	transform: translateY(-4px);
+	box-shadow: 0 18px 30px rgba(11, 22, 41, 0.25);
+}
+
+.pwh-media-card:focus-visible {
+	outline: 2px solid var(--pwh-amber);
+	outline-offset: 3px;
+}
+
+.pwh-media-card .pwh-card-arrow img {
+	width: 30px;
+	height: 20px;
+	transition: transform 0.25s ease;
+}
+
+.pwh-media-card:hover .pwh-card-arrow img {
+	transform: translateX(4px);
+}
+
+/* Testimonial Card */
+.pwh-testimonial {
+	background-color: var(--pwh-cream);
+	border: 1px solid var(--pwh-navy-pale);
+	border-radius: var(--pwh-radius);
+}
+
+.pwh-stars img {
+	width: 126px;
+	height: 22px;
+}
+
+.pwh-quote,
+.pwh-quote p {
+	margin: 0;
+	color: var(--pwh-grey-dark);
+	font-family: var(--pwh-font-body);
+	font-size: 16px;
+	font-weight: 300;
+	line-height: normal;
+}
+
+.pwh-who {
+	border-top: 1px solid var(--pwh-navy-pale);
+}
+
+.pwh-avatar img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.pwh-who-name .elementor-heading-title {
+	margin: 0;
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.pwh-who-source,
+.pwh-who-source p {
+	margin: 0;
+	color: var(--pwh-grey);
+	font-family: var(--pwh-font-body);
+	font-size: 13px;
+	line-height: normal;
+}
+
+/* Not sure CTA */
+.pwh-cta {
+	border-top: 1px solid var(--pwh-navy-ink);
+}
+
+.pwh-cta-image img {
+	display: block;
+	width: 100%;
+	height: 348px;
+	object-fit: cover;
+	object-position: 40% 35%;
+	border-radius: var(--pwh-radius);
+}
+
+/* ---------------------------------------------------------------------------
+ * 8. Footer
+ * ------------------------------------------------------------------------ */
+
+.pwh-footer {
+	background-color: var(--pwh-navy-ink);
+	color: var(--pwh-cream);
+}
+
+.pwh-footer-logo img {
+	display: block;
+	width: 201px;
+	height: 41px;
+	object-fit: cover;
+}
+
+.pwh-footer-tagline .elementor-heading-title {
+	margin: 0;
+	color: var(--pwh-cream);
+	font-family: var(--pwh-font-body);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.pwh-footer-blurb,
+.pwh-footer-blurb p {
+	margin: 0;
+	color: var(--pwh-navy-pale);
+	font-family: var(--pwh-font-body);
+	font-size: 14.5px;
+	font-weight: 300;
+	line-height: normal;
+}
+
+/* Contact rows: 24px icon slot, text starts 36px from the left */
+.pwh-contact-row {
+	--pwh-contact-icon: 24px;
+}
+
+.pwh-contact-icon img {
+	display: block;
+	width: var(--pwh-contact-icon);
+	height: var(--pwh-contact-icon);
+	object-fit: contain;
+}
+
+.pwh-contact-text,
+.pwh-contact-text p {
+	margin: 0;
+	color: var(--pwh-cream);
+	font-family: var(--pwh-font-body);
+	font-size: 14px;
+	line-height: normal;
+}
+
+.pwh-contact-text a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.pwh-social img {
+	display: block;
+	width: 34px;
+	height: 34px;
+	transition: opacity 0.15s ease;
+}
+
+.pwh-social a:hover img {
+	opacity: 0.8;
+}
+
+/* Footer columns */
+.pwh-footer-heading .elementor-heading-title {
+	margin: 0;
+	color: var(--pwh-cream);
+	font-family: var(--pwh-font-body);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: normal;
+}
+
+/* Icon List widget used as a plain link list (no icons) */
+.pwh-footer-links .elementor-icon-list-items {
+	display: flex;
+	flex-direction: column;
+	gap: 11px;
+	margin: 0;
+	padding: 0;
+}
+
+.pwh-footer-links .elementor-icon-list-item,
+.pwh-footer-links .elementor-icon-list-item > a {
+	padding: 0;
+	margin: 0;
+}
+
+.pwh-footer-links .elementor-icon-list-item::after {
+	display: none;
+}
+
+.pwh-footer-links .elementor-icon-list-text {
+	padding: 0;
+	color: var(--pwh-navy-mist);
+	font-family: var(--pwh-font-body);
+	font-size: 14.5px;
+	font-weight: 400;
+	line-height: 17px;
+	transition: color 0.15s ease;
+}
+
+.pwh-footer-links a:hover .elementor-icon-list-text,
+.pwh-footer-links a:focus-visible .elementor-icon-list-text {
+	color: var(--pwh-amber);
+}
+
+.pwh-footer-rule {
+	border-top: 1px solid var(--pwh-navy-pale);
+}
+
+.pwh-footer-small,
+.pwh-footer-small p {
+	margin: 0;
+	color: var(--pwh-navy-pale);
+	font-family: var(--pwh-font-body);
+	font-size: 13px;
+	line-height: normal;
+	white-space: pre-wrap;
+}
+
+.pwh-credit img {
+	display: block;
+	width: 84px;
+	height: 32px;
+}
+
+/* ---------------------------------------------------------------------------
+ * 9. Responsive type scale
+ * ------------------------------------------------------------------------ */
+
+@media (max-width: 1024px) {
+	.pwh-h1 .elementor-heading-title {
+		font-size: 44px;
+		line-height: 50px;
+		letter-spacing: -1px;
+	}
+
+	.pwh-h2 .elementor-heading-title {
+		font-size: 34px;
+		line-height: 40px;
+		letter-spacing: -0.7px;
+	}
+
+	/* Stacked: photo on top, copy below (spacer container shrinks to 420px). */
+	.pwh-hero {
+		background-size: auto 480px;
+		background-position: 35% 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.pwh-h1 .elementor-heading-title {
+		font-size: 36px;
+		line-height: 42px;
+		letter-spacing: -0.8px;
+	}
+
+	.pwh-h2 .elementor-heading-title {
+		font-size: 28px;
+		line-height: 34px;
+		letter-spacing: -0.5px;
+	}
+
+	.pwh-h3 .elementor-heading-title {
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	.pwh-body,
+	.pwh-lead {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.pwh-hero {
+		background-size: auto 340px;
+		background-position: 35% 0;
+	}
+
+	.pwh-cta-image img {
+		height: 240px;
+	}
+
+	.pwh-footer-small {
+		white-space: normal;
+	}
+}
+
+/* ---------------------------------------------------------------------------
+ * 10. Reduced motion
+ * ------------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+	.pwh-media-card,
+	.pwh-media-card .pwh-card-arrow img,
+	body .pwh-btn .elementor-button {
+		transition: none;
+	}
+
+	.pwh-media-card:hover,
+	body .pwh-btn .elementor-button:hover {
+		transform: none;
+	}
+}

@@ -1,0 +1,137 @@
+{
+ "version": "0.4",
+ "title": "PWH – Mega Menu / About",
+ "type": "section",
+ "content": [
+  {
+   "id": "0ffac84",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "44",
+     "right": "44",
+     "bottom": "44",
+     "left": "44",
+     "isLinked": true
+    },
+    "_title": "Mega Menu / About",
+    "boxed_width": {
+     "unit": "px",
+     "size": 280,
+     "sizes": []
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "24",
+     "right": "24",
+     "bottom": "24",
+     "left": "24",
+     "isLinked": true
+    },
+    "css_classes": "pwh-mega"
+   },
+   "elements": [
+    {
+     "id": "7ea36f3",
+     "elType": "container",
+     "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Links",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "c093cc8",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "About Us",
+        "header_size": "p",
+        "link": {
+         "url": "{{PWH_URL:/about/}}",
+         "is_external": "",
+         "nofollow": "",
+         "custom_attributes": ""
+        },
+        "_css_classes": "pwh-mega-link"
+       },
+       "elements": []
+      },
+      {
+       "id": "07704c2",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Privacy Policy",
+        "header_size": "p",
+        "link": {
+         "url": "{{PWH_URL:/privacy-policy/}}",
+         "is_external": "",
+         "nofollow": "",
+         "custom_attributes": ""
+        },
+        "_css_classes": "pwh-mega-link"
+       },
+       "elements": []
+      },
+      {
+       "id": "0c595ae",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Terms of Service",
+        "header_size": "p",
+        "link": {
+         "url": "{{PWH_URL:/terms-of-service/}}",
+         "is_external": "",
+         "nofollow": "",
+         "custom_attributes": ""
+        },
+        "_css_classes": "pwh-mega-link"
+       },
+       "elements": []
+      },
+      {
+       "id": "a73b645",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Acceptable Use Policy",
+        "header_size": "p",
+        "link": {
+         "url": "{{PWH_URL:/acceptable-use-policy/}}",
+         "is_external": "",
+         "nofollow": "",
+         "custom_attributes": ""
+        },
+        "_css_classes": "pwh-mega-link"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": []
+}

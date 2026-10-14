@@ -1,0 +1,116 @@
+{
+ "version": "0.4",
+ "title": "PWH – Header",
+ "type": "header",
+ "content": [
+  {
+   "id": "bcbf82f",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "_title": "Header",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "0",
+     "right": "24",
+     "bottom": "0",
+     "left": "24",
+     "isLinked": false
+    },
+    "flex_justify_content": "space-between",
+    "flex_align_items": "center",
+    "min_height": {
+     "unit": "px",
+     "size": 84,
+     "sizes": []
+    },
+    "html_tag": "header",
+    "css_classes": "pwh-header",
+    "background_background": "classic",
+    "background_color": "#FFFEF4",
+    "sticky": "top",
+    "sticky_on": [
+     "desktop",
+     "tablet",
+     "mobile"
+    ],
+    "sticky_effects_offset": 10
+   },
+   "elements": [
+    {
+     "id": "ff5f631",
+     "elType": "widget",
+     "widgetType": "image",
+     "settings": {
+      "image": {
+       "url": "{{PWH_ASSET:images/logo-dark.svg}}",
+       "id": "",
+       "size": "",
+       "alt": "Perth Web Hosting",
+       "source": "library"
+      },
+      "image_size": "full",
+      "align": "left",
+      "link_to": "custom",
+      "link": {
+       "url": "{{PWH_URL:/}}",
+       "is_external": "",
+       "nofollow": "",
+       "custom_attributes": ""
+      },
+      "width": {
+       "unit": "px",
+       "size": 200,
+       "sizes": []
+      },
+      "_css_classes": "pwh-logo"
+     },
+     "elements": []
+    },
+    {
+     "id": "f25fc0b",
+     "elType": "widget",
+     "widgetType": "jet-mega-menu",
+     "settings": {
+      "menu": "{{PWH_MENU:pwh-primary}}",
+      "_css_classes": "pwh-mainnav"
+     },
+     "elements": []
+    },
+    {
+     "id": "f937aad",
+     "elType": "widget",
+     "widgetType": "button",
+     "settings": {
+      "text": "Client Login",
+      "link": {
+       "url": "{{PWH_URL:/client-login/}}",
+       "is_external": "",
+       "nofollow": "",
+       "custom_attributes": ""
+      },
+      "size": "md",
+      "_css_classes": "pwh-btn pwh-btn--pill pwh-btn--sm"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": []
+}
