@@ -47,6 +47,9 @@
 	--pwh-grey: #828082;
 	--pwh-grey-dark: #575557;
 	--pwh-grey-light: #d4d3d5;
+	--pwh-sand: #e8e0c8;
+	--pwh-amber-deep: #9e6e25;
+	--pwh-cream-warm: #f5f1e0;
 
 	--pwh-font-display: "GT Standard", "Archivo", "Arial Black", sans-serif;
 	--pwh-font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -883,6 +886,397 @@ body .pwh-btn--sm .elementor-button {
 	object-fit: cover;
 	object-position: 40% 35%;
 	border-radius: var(--pwh-radius);
+}
+
+/* ---------------------------------------------------------------------------
+ * 7b. Plan pages (cPanel Plans): page hero, billing toggle, pricing cards,
+ *     partner logos, trust strip
+ * ------------------------------------------------------------------------ */
+
+/* Page hero: photo under an 80% navy overlay (set on the container in Elementor). */
+.pwh-page-hero {
+	background-color: var(--pwh-navy-ink);
+}
+
+.pwh-small,
+.pwh-small p {
+	margin: 0;
+	font-family: var(--pwh-font-body);
+	font-size: 14px;
+	line-height: normal;
+}
+
+.pwh-h3-amber .elementor-heading-title {
+	color: var(--pwh-amber-deep);
+}
+
+/* Billing toggle (Toggle / Billing) */
+.pwh-billing {
+	display: inline-flex;
+	align-items: flex-start;
+	gap: 4px;
+	padding: 5px;
+	background: var(--pwh-cream);
+	border: 1px solid var(--pwh-navy-pale);
+	border-radius: 999px;
+}
+
+.pwh-billing__opt {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 10px 22px;
+	border: 0;
+	border-radius: 999px;
+	background: transparent;
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: normal;
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pwh-billing__opt:hover,
+.pwh-billing__opt:focus {
+	background: var(--pwh-navy-mist);
+	color: var(--pwh-navy-ink);
+}
+
+.pwh-billing__opt[aria-checked="true"],
+.pwh-billing__opt[aria-checked="true"]:hover,
+.pwh-billing__opt[aria-checked="true"]:focus {
+	background: var(--pwh-navy-ink);
+	color: var(--pwh-cream);
+}
+
+.pwh-billing__opt:focus-visible {
+	outline: 2px solid var(--pwh-amber);
+	outline-offset: 2px;
+}
+
+.pwh-billing__badge {
+	font-size: 12px;
+	color: var(--pwh-grey-dark);
+}
+
+.pwh-billing__opt[aria-checked="true"] .pwh-billing__badge {
+	color: var(--pwh-cream);
+}
+
+/* Pricing card (Card / Pricing) */
+.pwh-plan {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	padding: 36px;
+	background: var(--pwh-cream);
+	border: 1px solid var(--pwh-navy-pale);
+	border-radius: var(--pwh-radius);
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+}
+
+.pwh-plan--featured {
+	border: 2px solid var(--pwh-navy-ink);
+	box-shadow: 0 20px 20px rgba(11, 22, 41, 0.18);
+}
+
+.pwh-plan [hidden] {
+	display: none !important;
+}
+
+.pwh-plan__tag {
+	padding: 5px 10px;
+	border-radius: 3px;
+	background: var(--pwh-sand);
+	color: var(--pwh-amber-deep);
+	font-size: 11px;
+	font-weight: 700;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.pwh-plan__title {
+	margin: 0;
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-display);
+	font-stretch: 125%;
+	font-size: 22px;
+	font-weight: 900;
+	line-height: normal;
+}
+
+.pwh-plan__desc,
+.pwh-price__note {
+	margin: 0;
+	color: var(--pwh-grey-dark);
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.pwh-price {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.pwh-price__row {
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
+	white-space: nowrap;
+}
+
+.pwh-price__amount {
+	font-family: var(--pwh-font-display);
+	font-stretch: 125%;
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 46px;
+	letter-spacing: -0.9px;
+}
+
+.pwh-price__currency {
+	font-size: 25.8px;
+	vertical-align: top;
+}
+
+.pwh-price__period {
+	color: var(--pwh-grey-dark);
+	font-size: 15px;
+}
+
+.pwh-price__note {
+	line-height: normal;
+}
+
+.pwh-plan__btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 15px 30px;
+	border-radius: var(--pwh-radius);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: normal;
+	text-decoration: none;
+	transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.pwh-plan__btn--navy,
+.pwh-plan__btn--navy:visited {
+	background: var(--pwh-navy);
+	color: var(--pwh-cream);
+}
+
+.pwh-plan__btn--navy:hover,
+.pwh-plan__btn--navy:focus {
+	background: var(--pwh-navy-ink);
+	color: var(--pwh-cream);
+}
+
+.pwh-plan__btn--amber,
+.pwh-plan__btn--amber:visited {
+	background: var(--pwh-amber);
+	color: var(--pwh-navy-ink);
+}
+
+.pwh-plan__btn--amber:hover,
+.pwh-plan__btn--amber:focus {
+	background: #b5832c;
+	color: var(--pwh-navy-ink);
+}
+
+.pwh-plan__btn:focus-visible {
+	outline: 2px solid var(--pwh-amber);
+	outline-offset: 3px;
+}
+
+.pwh-plan__rule {
+	width: 100%;
+	height: 1px;
+	margin: 0;
+	border: 0;
+	background: var(--pwh-navy-pale);
+}
+
+.pwh-plan__features,
+.pwh-plan__details {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.pwh-plan__features li,
+.pwh-plan__details li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 0;
+	font-size: 15px;
+	line-height: normal;
+}
+
+/* 16px tick (Figma check icon, drawn in CSS) */
+.pwh-plan__features li::before {
+	content: "";
+	flex: 0 0 16px;
+	width: 16px;
+	height: 16px;
+	background: no-repeat center / 12px 9px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9'%3E%3Cpath d='M1 4.5 4.3 7.8 11 1' fill='none' stroke='%230b1629' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.pwh-plan__details li {
+	align-items: flex-start;
+	color: var(--pwh-grey-dark);
+	font-size: 13px;
+}
+
+.pwh-plan__details li::before {
+	content: "";
+	flex: 0 0 16px;
+	height: 16px;
+	background: no-repeat center / 5px 5px radial-gradient(circle, var(--pwh-grey-dark) 60%, transparent 62%);
+}
+
+/* "+" divider that opens the technical details; "−" when open */
+.pwh-plan__more {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	height: 14px;
+	margin: -6px 0 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+.pwh-plan__more::before,
+.pwh-plan__more::after {
+	content: "";
+	flex: 1 1 0;
+	height: 1px;
+	background: var(--pwh-navy-pale);
+}
+
+.pwh-plan__more .screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+.pwh-plan__more {
+	--pwh-plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M7 1v12M1 7h12' stroke='%23575557' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E");
+	--pwh-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M1 7h12' stroke='%230b1629' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+	background: no-repeat center / 14px 14px var(--pwh-plus);
+}
+
+.pwh-plan__more::before {
+	margin-right: 12px;
+}
+
+.pwh-plan__more::after {
+	margin-left: 12px;
+}
+
+.pwh-plan__more[aria-expanded="true"] {
+	background-image: var(--pwh-minus);
+}
+
+.pwh-plan__more:focus-visible {
+	outline: 2px solid var(--pwh-amber);
+	outline-offset: 4px;
+}
+
+/* Plan cards row: equal columns, cards keep their own height (Figma: items-start). */
+@media (min-width: 1025px) {
+	.pwh-plans > .e-con,
+	.pwh-plans > .e-con-inner > .e-con,
+	.pwh-plans > .elementor-widget,
+	.pwh-plans > .e-con-inner > .elementor-widget {
+		flex: 1 1 0 !important;
+		min-width: 0;
+	}
+}
+
+@media (max-width: 1024px) {
+	.pwh-plans .elementor-widget-pwh-pricing-card {
+		width: 100%;
+	}
+}
+
+/* Testimonial stars + avatar as built on the live Home page (Rating and Icon
+   widgets). Defaults only; the widgets' own settings take precedence. */
+.pwh-stars {
+	--e-rating-icon-font-size: 20px;
+	--e-rating-gap: 3px;
+	--e-rating-icon-marked-color: var(--pwh-amber);
+}
+
+.pwh-avatar .elementor-icon {
+	font-size: 40px;
+	color: var(--pwh-navy-soft);
+	fill: var(--pwh-navy-soft);
+}
+
+/* Partner logos (cPanel, JetBackup, …) */
+.pwh-partner img {
+	display: block;
+	width: 201px;
+	max-width: 100%;
+	height: 70px;
+	margin: 0 auto;
+	object-fit: contain;
+}
+
+/* Trust strip */
+.pwh-trust {
+	background-color: var(--pwh-cream-warm);
+}
+
+.pwh-trust-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 12px 40px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.pwh-trust-list li {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.pwh-trust-list li::before {
+	content: "";
+	flex: 0 0 6px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--pwh-navy-ink);
 }
 
 /* ---------------------------------------------------------------------------

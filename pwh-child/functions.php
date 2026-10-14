@@ -12,6 +12,7 @@ define( 'PWH_CHILD_DIR', get_stylesheet_directory() );
 define( 'PWH_CHILD_URI', get_stylesheet_directory_uri() );
 
 require_once PWH_CHILD_DIR . '/inc/setup.php';
+require_once PWH_CHILD_DIR . '/inc/elementor-widgets.php';
 
 /**
  * Theme supports and menu locations.

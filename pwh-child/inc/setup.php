@@ -107,7 +107,8 @@ class PWH_Setup {
 					$setup = new self();
 					$setup->run(
 						array(
-							'home' => ! empty( $assoc['home'] ),
+							'home'   => ! empty( $assoc['home'] ),
+							'cpanel' => ! empty( $assoc['cpanel'] ),
 							'kit'  => ! empty( $assoc['kit'] ),
 						)
 					);
@@ -178,6 +179,10 @@ class PWH_Setup {
 					<?php echo $exists['home'] ? '<strong>Re-import the Home page</strong> – overwrites any edits made to it in Elementor' : 'Import the Home page'; ?></label>
 				</p>
 				<p>
+					<label><input type="checkbox" name="pwh_cpanel" value="1" <?php checked( ! $exists['cpanel'] ); ?>>
+					<?php echo $exists['cpanel'] ? '<strong>Re-import the cPanel Plans page</strong> – overwrites any edits made to it in Elementor' : 'Import the cPanel Plans page'; ?></label>
+				</p>
+				<p>
 					<label><input type="checkbox" name="pwh_kit" value="1" <?php checked( empty( $setup->state['kit_done'] ) ); ?>>
 					<?php echo empty( $setup->state['kit_done'] ) ? 'Apply PWH colours &amp; fonts to the Elementor kit' : '<strong>Re-apply PWH colours &amp; fonts</strong> – overwrites changes made in Site Settings'; ?></label>
 				</p>
@@ -201,7 +206,8 @@ class PWH_Setup {
 		$setup = new self();
 		$setup->run(
 			array(
-				'home' => ! empty( $_POST['pwh_home'] ),
+				'home'   => ! empty( $_POST['pwh_home'] ),
+				'cpanel' => ! empty( $_POST['pwh_cpanel'] ),
 				'kit'  => ! empty( $_POST['pwh_kit'] ),
 			)
 		);
@@ -214,7 +220,7 @@ class PWH_Setup {
 	public function __construct() {
 		$this->state = wp_parse_args(
 			(array) get_option( self::OPTION, array() ),
-			array( 'templates' => array(), 'jet' => array(), 'jet_items' => array(), 'home' => 0, 'menu' => 0, 'attachments' => array() )
+			array( 'templates' => array(), 'jet' => array(), 'jet_items' => array(), 'home' => 0, 'pages' => array(), 'menu' => 0, 'attachments' => array() )
 		);
 		$this->attachments = (array) $this->state['attachments'];
 	}
@@ -247,11 +253,12 @@ class PWH_Setup {
 			'footer' => $has_type( 'footer' ),
 			'menu'   => (bool) $menu,
 			'home'   => $this->state['home'] && get_post( $this->state['home'] ),
+			'cpanel' => ! empty( $this->state['pages']['cpanel'] ) && get_post( $this->state['pages']['cpanel'] ),
 		);
 	}
 
 	/**
-	 * @param array $opts { home: bool re-import Home, kit: bool re-apply kit }.
+	 * @param array $opts { home / cpanel: bool (re-)import that page, kit: bool re-apply kit }.
 	 */
 	public function run( array $opts = array() ) {
 		if ( ! did_action( 'elementor/loaded' ) ) {
@@ -312,6 +319,12 @@ class PWH_Setup {
 			$this->setup_home();
 		} else {
 			$this->log[] = 'Home page: kept as is (tick "Re-import the Home page" to overwrite)';
+		}
+
+		if ( ! empty( $opts['cpanel'] ) || ! $exists['cpanel'] ) {
+			$this->setup_cpanel();
+		} else {
+			$this->log[] = 'cPanel Plans page: kept as is (tick "Re-import the cPanel Plans page" to overwrite)';
 		}
 
 		if ( ! $exists['menu'] ) {
@@ -522,6 +535,46 @@ class PWH_Setup {
 
 		$this->state['home'] = $id;
 		$this->log[]         = "Home page (#$id) set as the front page";
+	}
+
+	/**
+	 * cPanel Plans page. Goes at /web-hosting/cpanel/ (the mega menu link) when a
+	 * "web-hosting" page exists, else /cpanel-hosting/. A page someone else made
+	 * at that address is never taken over: ours then gets a "-plans" slug.
+	 */
+	private function setup_cpanel() {
+		$data = $this->load( 'cpanel.json' );
+		if ( ! $data ) {
+			return;
+		}
+
+		$this->state['pages'] = (array) $this->state['pages'];
+		$id                   = isset( $this->state['pages']['cpanel'] ) ? (int) $this->state['pages']['cpanel'] : 0;
+
+		if ( ! $id || ! get_post( $id ) ) {
+			$parent = get_page_by_path( 'web-hosting' );
+			$slug   = $parent ? 'cpanel' : 'cpanel-hosting';
+			$path   = $parent ? 'web-hosting/cpanel' : 'cpanel-hosting';
+			if ( get_page_by_path( $path ) ) {
+				$slug .= '-plans';
+				$this->log[] = "A page already exists at /$path/ – left alone; the cPanel Plans page uses /$slug/ instead";
+			}
+			$id = wp_insert_post(
+				array(
+					'post_type'   => 'page',
+					'post_status' => 'publish',
+					'post_title'  => 'cPanel Hosting',
+					'post_name'   => $slug,
+					'post_parent' => $parent ? $parent->ID : 0,
+				)
+			);
+		}
+
+		update_post_meta( $id, '_wp_page_template', 'elementor_header_footer' );
+		$this->save_elementor_data( $id, $data['content'], 'wp-page', array( 'hide_title' => 'yes' ) );
+
+		$this->state['pages']['cpanel'] = $id;
+		$this->log[]                    = "cPanel Plans page (#$id): " . get_permalink( $id );
 	}
 
 	/* ---------------------------------------------------------------------

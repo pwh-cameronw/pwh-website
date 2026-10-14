@@ -97,3 +97,21 @@ Then re-run **PWH Setup** with *Re-import the Home page* ticked. Header and foot
 ## Not in this build yet
 
 The Figma *Foundations* page also has components for pages that haven't been designed yet: Pricing card (with monthly/yearly toggle and technical details), Managed pricing card, Add-on card and row, FAQ row, Persona card, Feature tile, and the clock, phone and location icons. Only the Home page has a full page design, so those components aren't built yet. Add them to `pwh.css` and the generator when the product pages are designed.
+
+## cPanel Plans page
+
+Built from the Figma *Page / cPanel Plans* frame. Import it from **Appearance → PWH Setup → Import the cPanel Plans page**, or run `wp pwh setup --cpanel`. It's created at `/web-hosting/cpanel/` (the mega menu link) if a *web-hosting* page exists, otherwise at `/cpanel-hosting/`. It never takes over a page someone else made at that address. After the first import it's protected like the Home page, and is only re-imported when you tick it.
+
+**Upload these to the Media Library first** (setup finds them by file name):
+
+| File | Used for |
+| --- | --- |
+| `cpanel-hero.jpg` | Header photo (shown under an 80% navy overlay) |
+| `cpanel.png`, `jetbackups.png`, `cloudlinux.png`, `imunify360.png`, `spamexperts.png`, `softaculous.png` | "What's available on all our cPanel plans" logos |
+
+**Two new Elementor widgets** (panel category *Perth Web Hosting*) that you can reuse on other plan pages:
+
+- **PWH Pricing Card:** set the plan name, tag, description, monthly and yearly price, notes and order links, the features (a repeater) and the technical details (one per line, shown under the **+**). Turn on **Featured** for the navy border and amber button.
+- **PWH Billing Toggle:** the Monthly / Yearly switch. It switches every Pricing Card on the page. A card with no yearly price keeps showing its monthly price.
+
+**To fill in:** the design only gives a yearly price and technical details for **Business**. Starter and Advanced need their yearly price, note and details entered on the card. Every *Order Now* button currently goes to `/client-login/`, so set each card's monthly and yearly order links to your WHMCS cart URLs.

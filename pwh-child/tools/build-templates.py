@@ -545,6 +545,156 @@ def home():
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
 
+# --- cPanel Plans ---------------------------------------------------------
+
+# Media Library files for the plan pages, matched by file name on import.
+# Upload these before running setup (see README).
+CPANEL_HERO = MEDIA + "cpanel-hero.jpg"
+PARTNER_LOGOS = [
+    ("cPanel", "cpanel.png"), ("JetBackup", "jetbackups.png"), ("CloudLinux", "cloudlinux.png"),
+    ("Imunify360", "imunify360.png"), ("SpamExperts", "spamexperts.png"), ("Softaculous", "softaculous.png"),
+]
+
+
+def rating_stars():
+    """Same as the live Home page: Elementor Rating widget, 20px amber stars."""
+    return widget("rating", {
+        "rating_scale": {"unit": "px", "size": 5, "sizes": []},
+        "rating_value": 5,
+        "icon_size": px(20),
+        "icon_gap": px(3),
+        "__globals__": {"icon_marked_color": "globals/colors?id=accent"},
+    }, "pwh-stars")
+
+
+def avatar_dot():
+    """Same as the live Home page: navy-soft circle icon as an avatar placeholder."""
+    return widget("icon", {
+        "selected_icon": {"value": "fas fa-circle", "library": "fa-solid"},
+        "size": px(40),
+        "_element_width": "initial",
+        "__globals__": {"primary_color": "globals/colors?id=pwhnavysoft"},
+    }, "pwh-avatar")
+
+
+def review(quote, name, source):
+    return con(f"Testimonial – {name}", [
+        rating_stars(),
+        text(f"<p>{quote}</p>", "pwh-quote"),
+        con("Who", [
+            avatar_dot(),
+            con("NameCol", [
+                heading(name, "pwh-who-name", tag="p"),
+                text(f"<p>{source}</p>", "pwh-who-source"),
+            ], gap_px=2),
+        ], cls="pwh-who", direction="row", align="center", gap_px=12, pad=box(16, 0, 0, 0)),
+    ], cls="pwh-testimonial", gap_px=16, pad=box(28), width=pct(33.33), width_t=pct(100),
+        extra={"_flex_size": "grow"})
+
+
+def plan(title, desc, monthly, features, featured=False, tag="", yearly="", yearly_note="", details=""):
+    return widget("pwh-pricing-card", {
+        "featured": "yes" if featured else "",
+        "tag": tag,
+        "title": title,
+        "description": desc,
+        "currency": "$",
+        "monthly_price": monthly,
+        "monthly_period": "/ month",
+        "monthly_note": "Billed monthly. Cancel any time.",
+        # Order links aren't in the design; set them per card in Elementor.
+        "monthly_url": url("/client-login/"),
+        "yearly_price": yearly,
+        "yearly_period": "/ year",
+        "yearly_note": yearly_note,
+        "yearly_url": {"url": "", "is_external": "", "nofollow": "", "custom_attributes": ""},
+        "button_text": "Order Now",
+        "features": [{"_id": _id("feat"), "text": f} for f in features],
+        "details": details,
+    })
+
+
+def cpanel():
+    hero = con("Header", [
+        heading("Pick the hosting plan (cPanel) that fits your business.", "pwh-h1 pwh-text-cream", tag="h1", align="center"),
+        text("<p>Every plan runs on Perth servers we monitor ourselves, with free migration and local support. Switch plans any time as you grow.</p>",
+             "pwh-body pwh-text-mist"),
+        text("<p>New to cPanel? It's the dashboard you use to manage your site, email and files. Most hosting runs on it.</p>",
+             "pwh-small pwh-text-mist"),
+    ], cls="pwh-page-hero", boxed=1104, gap_px=12, align="center",
+        pad=box(116, 0, 120, 0), pad_t=box(96, 24, 96, 24), pad_m=box(72, 20, 72, 20), tag="section",
+        extra={
+            "background_background": "classic",
+            "background_color": "#0B1629",
+            "background_image": asset(CPANEL_HERO),
+            "background_position": "center center",
+            "background_size": "cover",
+            "background_repeat": "no-repeat",
+            "background_overlay_background": "classic",
+            "background_overlay_color": "#0B1629",
+            "background_overlay_opacity": {"unit": "px", "size": 0.8, "sizes": []},
+        })
+    # Centre the hero copy (text-editor widgets have no align in our helper).
+    for w in hero["elements"][1:]:
+        w["settings"]["align"] = "center"
+
+    toggle = con("Year Toggle", [
+        widget("pwh-billing-toggle", {"monthly_label": "Monthly", "yearly_label": "Yearly",
+                                      "yearly_badge": "Best value", "default": "monthly"}),
+    ], boxed=1180, align="center", pad=box(56, 0), pad_t=box(48, 24), pad_m=box(40, 20), tag="section")
+
+    common = ["Free SSL certificate", "Free migration from your current host"]
+    cards = con("Cards", [
+        plan("Starter", "For your first website.", "7.95",
+             ["Email support only"] + common + ["5GB high-speed SSD storage", "50GB premium bandwidth",
+                                                "3 add-on domains", "6-hourly, 21-day offsite backups"]),
+        plan("Business", "For growing businesses with more than one site.", "14.95",
+             ["Local phone & email support"] + common + ["10GB high-speed SSD storage", "200GB premium bandwidth",
+                                                         "Unlimited add-on domains", "6-hourly, 21-day offsite backups"],
+             featured=True, tag="Most popular", yearly="149.95",
+             yearly_note="That's $12.50 a month. Save $29.45 a year.",
+             details="SpamExperts filtering, 400% CPU, 12 MB/s I/O, 10GB RAM"),
+        plan("Advanced", "For high-traffic sites and multiple domains.", "27.95",
+             ["Local phone & email support"] + common + ["30GB high-speed SSD storage", "600GB premium bandwidth",
+                                                         "Unlimited add-on domains", "6-hourly, 21-day offsite backups"]),
+    ], cls="pwh-plans", boxed=1180, direction="row", gap_px=28, align="flex-start", dir_t="column",
+        gap_t=24, pad=box(0, 0, 140, 0), pad_t=box(0, 24, 96, 24), pad_m=box(0, 20, 72, 20), tag="section")
+
+    reviews = con("TestimonialStrip", [
+        heading("What customers say", "pwh-h3 pwh-h3-amber", tag="h2", align="center"),
+        con("Cards", [
+            review("I had a nightmare dealing with the larger multinational companies, then I switched to PWH and wow what a difference. Quick and responsive support, extremely helpful.",
+                   "Heath", "Local Guide, Google review"),
+            review("I only have a very small footprint with mainly emails and a little web traffic, but they still valued me as a customer and welcomed me aboard. Pricing is more than reasonable.",
+                   "Mark Vasile", "Local Guide, Google review"),
+            review("Excellent service. Went above and beyond to help transfer multiple websites and email accounts, which was a difficult process.",
+                   "Leon Yeap", "Local Guide, Google review"),
+        ], direction="row", gap_px=24, align="stretch", dir_t="column"),
+    ], boxed=1180, gap_px=24, pad=box(0, 0, 72, 0), pad_t=box(0, 24, 64, 24), pad_m=box(0, 20, 56, 20), tag="section")
+
+    partners = con("Included", [
+        heading("What’s available on all our cPanel plans", "pwh-h3 pwh-text-ink", tag="h2", align="center"),
+        con("Logos", [
+            image(MEDIA + f, "pwh-partner", alt=n, align="center", width=px(201))
+            for n, f in PARTNER_LOGOS
+        ], direction="row", gap_px=24, justify="center", width=px(900), width_t=pct(100),
+            extra={"flex_wrap": "wrap"}),
+    ], boxed=1180, gap_px=24, align="center", pad=box(0, 0, 72, 0), pad_t=box(0, 24, 64, 24), pad_m=box(0, 20, 56, 20), tag="section")
+    # 3 per row: each logo slot is a third of the 900px grid.
+    for w in partners["elements"][1]["elements"]:
+        w["settings"].update({"_element_width": "initial", "_element_custom_width": pct(30),
+                              "_element_custom_width_mobile": pct(45)})
+
+    trust = con("TrustStrip", [
+        text("<ul class=\"pwh-trust-list\"><li>Free migration on every plan</li><li>No lock-in contracts</li>"
+             "<li>Perth-based support, every plan</li><li>30-day money-back guarantee on yearly plans</li></ul>", ""),
+    ], cls="pwh-trust", boxed=1180, pad=box(28, 0), pad_t=box(28, 24), pad_m=box(24, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0"})
+
+    return template("PWH – cPanel Plans", "wp-page", [hero, toggle, cards, reviews, partners, trust],
+                    {"hide_title": "yes", "template": "elementor_header_footer"})
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     files = {
@@ -554,6 +704,7 @@ def main():
         "mega-products.json": mega_products(),
         "mega-support.json": mega_support(),
         "mega-about.json": mega_about(),
+        "cpanel.json": cpanel(),
     }
     for name, data in files.items():
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as fh:
