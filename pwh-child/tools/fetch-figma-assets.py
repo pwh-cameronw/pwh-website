@@ -8,6 +8,9 @@ Downloads every image and icon the theme uses from the Figma file into assets/.
 
 Photos are fetched as the original uploaded image (not a cropped render) so
 they stay sharp; icons and logos are exported as SVG.
+
+The three logos (header, footer, "Website by") come from the Media Library
+instead; see MEDIA in build-templates.py.
 """
 
 import json
@@ -28,12 +31,10 @@ PHOTOS = {
     "images/why-pwh.png": "14:146",                  # WhyPWH section background
     "images/not-sure-cta.png": "231:3435",           # NotSureCTA → 2026_PWH_BRANDSHOOT_NH-1
     "images/avatar-placeholder.png": "6:19",         # Testimonial Card → Ellipse
-    "images/logo-light.png": "55:378",               # Footer → image 1
 }
 
 # Vectors: exported as SVG.
 VECTORS = {
-    "images/logo-dark.svg": "46:121",                # Nav → PWH_HORIZONTAL_DUOTONE_DARK 1
     "icons/arrow-right.svg": "23:141",               # Card / Media → ArrowRow
     "icons/stars.svg": "59:988",                     # Testimonial Card → stars
     "icons/location-pin.svg": "331:1650",            # Footer → address icon
@@ -41,7 +42,6 @@ VECTORS = {
     "icons/clock.svg": "232:3715",                   # Footer → hours icon
     "icons/facebook.svg": "55:610",                  # Footer → FACEBOOK
     "icons/linkedin.svg": "55:586",                  # Footer → LINKEDIN
-    "icons/credit.svg": "55:415",                    # Footer → Layer_1 (Website by)
 }
 
 

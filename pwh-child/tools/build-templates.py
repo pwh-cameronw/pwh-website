@@ -32,7 +32,17 @@ def _id(seed):
 
 
 def asset(path):
-    return {"url": "{{PWH_ASSET:%s}}" % path, "id": "", "size": "", "alt": "", "source": "library"}
+    """Theme file under assets/, or a full URL of an image already in the Media Library."""
+    src = path if path.startswith("http") else "{{PWH_ASSET:%s}}" % path
+    return {"url": src, "id": "", "size": "", "alt": "", "source": "library"}
+
+
+# Logos uploaded to the Media Library. The importer matches them by file name,
+# so they still resolve when the site moves from dev to the live domain.
+MEDIA = "https://dev.perthhosting.net/wp-content/uploads/2026/10/"
+LOGO_HEADER = MEDIA + "pwh-logo-noborder-navy.svg"
+LOGO_FOOTER = MEDIA + "pwh-logo-noborder.svg"
+LOGO_CREDIT = MEDIA + "nhc-credit-1.svg"
 
 
 def url(path, external=False):
@@ -172,8 +182,8 @@ def header():
     }, "pwh-mainnav")
 
     bar = con("Header", [
-        image("images/logo-dark.svg", "pwh-logo", link=url("/"), alt="Perth Web Hosting",
-              width=px(200)),
+        image(LOGO_HEADER, "pwh-logo", link=url("/"), alt="Perth Web Hosting",
+              width=px(142)),
         nav,
         button("Client Login", url("/client-login/"),
                "pwh-btn--pill pwh-btn--sm"),
@@ -301,7 +311,7 @@ def contact_row(icon, html, name):
 
 def footer():
     brand = con("Brand", [
-        image("images/logo-light.png", "pwh-footer-logo", link=url("/"), alt="Perth Web Hosting"),
+        image(LOGO_FOOTER, "pwh-footer-logo", link=url("/"), alt="Perth Web Hosting", width=px(201)),
         heading("Your local hosting partner.", "pwh-footer-tagline", tag="p"),
         text("<p>Website hosting, business email and domains for Western Australian small businesses, set up and supported locally.</p>",
              "pwh-footer-blurb"),
@@ -349,7 +359,7 @@ def footer():
         text("<p>Copyright © 2026 Perth Web Hosting. All Rights Reserved.</p>", "pwh-footer-small"),
         con("Credit", [
             text("<p>ABN: 13 412 527 483   |   Website by</p>", "pwh-footer-small"),
-            image("icons/credit.svg", "pwh-credit", alt="Website credit", width=px(84)),
+            image(LOGO_CREDIT, "pwh-credit", alt="Website by", width=px(84)),
         ], direction="row", gap_px=10, align="center"),
     ], direction="row", justify="space-between", align="center", dir_m="column", gap_px=16,
         extra={"flex_align_items_mobile": "flex-start"})

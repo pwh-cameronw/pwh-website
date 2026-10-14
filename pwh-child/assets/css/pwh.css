@@ -316,9 +316,11 @@ body .pwh-btn--sm .elementor-button {
 	box-shadow: 0 1px 0 var(--pwh-navy-pale);
 }
 
+/* Header logo (pwh-logo-noborder-navy.svg): 142px wide, the visible logo size
+   in Figma's 200 × 86 logo frame. */
 .pwh-logo img {
 	display: block;
-	width: 200px;
+	width: 142px;
 	max-width: 100%;
 	height: auto;
 }
@@ -825,8 +827,8 @@ body .pwh-btn--sm .elementor-button {
 .pwh-footer-logo img {
 	display: block;
 	width: 201px;
-	height: 41px;
-	object-fit: cover;
+	max-width: 100%;
+	height: auto;
 }
 
 .pwh-footer-tagline .elementor-heading-title {
@@ -946,7 +948,7 @@ body .pwh-btn--sm .elementor-button {
 .pwh-credit img {
 	display: block;
 	width: 84px;
-	height: 32px;
+	height: auto;
 }
 
 /* ---------------------------------------------------------------------------

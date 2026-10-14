@@ -254,6 +254,17 @@ class PWH_Setup {
 				}
 				return $node;
 			}
+			// Image controls pointing at a file already in the Media Library (the logos).
+			if ( isset( $node['url'], $node['id'] ) && '' === $node['id'] && is_string( $node['url'] ) && preg_match( '#/wp-content/uploads/#', $node['url'] ) ) {
+				$att = $this->find_media( $node['url'] );
+				if ( $att ) {
+					$node['id']  = $att;
+					$node['url'] = wp_get_attachment_url( $att );
+				} else {
+					$this->log[] = 'Not in the Media Library, using the URL as is: ' . $node['url'];
+				}
+				return $node;
+			}
 			foreach ( $node as $k => $v ) {
 				$node[ $k ] = $this->resolve( $v );
 			}
@@ -284,6 +295,28 @@ class PWH_Setup {
 			);
 		}
 		return $node;
+	}
+
+	/**
+	 * Find an attachment by URL, falling back to its file name so a template
+	 * built against the dev site still resolves on the live domain.
+	 */
+	private function find_media( $url ) {
+		$id = attachment_url_to_postid( $url );
+		if ( $id ) {
+			return $id;
+		}
+
+		global $wpdb;
+		$file = wp_basename( wp_parse_url( $url, PHP_URL_PATH ) );
+		$id   = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			$wpdb->prepare(
+				"SELECT post_id FROM {$wpdb->postmeta} WHERE meta_key = '_wp_attached_file' AND ( meta_value = %s OR meta_value LIKE %s ) ORDER BY post_id DESC LIMIT 1",
+				$file,
+				'%/' . $wpdb->esc_like( $file )
+			)
+		);
+		return (int) $id;
 	}
 
 	/**

@@ -29,6 +29,8 @@ What it gives you:
    FIGMA_TOKEN=figd_your_token python3 tools/fetch-figma-assets.py
    ```
    Create the token under Figma → Settings → Security → Personal access tokens (read-only file content). It writes everything listed in `assets/images/README.md` and `assets/icons/README.md`.
+
+   The three logos are **not** part of this. They come from the Media Library: `pwh-logo-noborder-navy.svg` (header), `pwh-logo-noborder.svg` (footer) and `nhc-credit-1.svg` ("Website by"). The setup finds them by file name, so upload them with those names on any site you install to. To change them, edit `LOGO_*` in `tools/build-templates.py`.
 2. **Fonts (optional):** add the licensed GT Standard files. See `assets/fonts/README.md`. Without them, headings use Archivo Expanded.
 3. Zip the `pwh-child` folder and upload it in **Appearance → Themes → Add New → Upload**, or copy it to `wp-content/themes/`. Activate **Perth Web Hosting**.
 4. Go to **Appearance → PWH Setup** and click **Run setup** (or run `wp pwh setup`). It:

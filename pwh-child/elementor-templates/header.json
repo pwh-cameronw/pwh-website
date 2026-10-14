@@ -57,7 +57,7 @@
      "widgetType": "image",
      "settings": {
       "image": {
-       "url": "{{PWH_ASSET:images/logo-dark.svg}}",
+       "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/pwh-logo-noborder-navy.svg",
        "id": "",
        "size": "",
        "alt": "Perth Web Hosting",
@@ -74,7 +74,7 @@
       },
       "width": {
        "unit": "px",
-       "size": 200,
+       "size": 142,
        "sizes": []
       },
       "_css_classes": "pwh-logo"

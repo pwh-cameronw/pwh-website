@@ -133,7 +133,7 @@
          "widgetType": "image",
          "settings": {
           "image": {
-           "url": "{{PWH_ASSET:images/logo-light.png}}",
+           "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/pwh-logo-noborder.svg",
            "id": "",
            "size": "",
            "alt": "Perth Web Hosting",
@@ -147,6 +147,11 @@
            "is_external": "",
            "nofollow": "",
            "custom_attributes": ""
+          },
+          "width": {
+           "unit": "px",
+           "size": 201,
+           "sizes": []
           },
           "_css_classes": "pwh-footer-logo"
          },
@@ -1095,10 +1100,10 @@
            "widgetType": "image",
            "settings": {
             "image": {
-             "url": "{{PWH_ASSET:icons/credit.svg}}",
+             "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/nhc-credit-1.svg",
              "id": "",
              "size": "",
-             "alt": "Website credit",
+             "alt": "Website by",
              "source": "library"
             },
             "image_size": "full",
