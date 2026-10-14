@@ -1280,6 +1280,318 @@ body .pwh-btn--sm .elementor-button {
 }
 
 /* ---------------------------------------------------------------------------
+ * 7c. Domains page: hero search + phone photo, privacy note, extension
+ *     chips, numbered steps, FAQ, centred help CTA
+ * ------------------------------------------------------------------------ */
+
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+.pwh-domains-hero {
+	overflow: hidden;
+}
+
+/* Copy stays above the oversized phone photo. */
+.pwh-domains-hero > .e-con-inner > .e-con:first-child,
+.pwh-domains-hero > .e-con:first-child {
+	position: relative;
+	z-index: 1;
+}
+
+/* Grey pill search (529 × 40, magnifier at 14px) */
+.pwh-domain-search {
+	position: relative;
+	width: 100%;
+	max-width: 529px;
+	margin: 0;
+}
+
+.pwh-domain-search__input,
+.pwh-domain-search__input[type="search"] {
+	width: 100%;
+	height: 40px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0 20px 0 47px;
+	border: 0;
+	border-radius: 40px;
+	background: #d9d9d9;
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	font-size: 18px;
+	line-height: 26px;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.pwh-domain-search__input::placeholder {
+	color: rgba(11, 22, 41, 0.59);
+	opacity: 1;
+}
+
+.pwh-domain-search__input:focus {
+	outline: 2px solid var(--pwh-amber);
+	outline-offset: 2px;
+	background: #e4e4e4;
+}
+
+.pwh-domain-search__btn {
+	position: absolute;
+	top: 0;
+	left: 8px;
+	width: 34px;
+	height: 40px;
+	padding: 0;
+	border: 0;
+	border-radius: 40px;
+	cursor: pointer;
+	background: transparent no-repeat center / 20px 20px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='7.5' cy='7.5' r='6.5' fill='none' stroke='%230b1629' stroke-width='2'/%3E%3Cpath d='M12.3 12.3 18 18' stroke='%230b1629' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.pwh-domain-search__btn:hover,
+.pwh-domain-search__btn:focus {
+	background-color: transparent;
+}
+
+/* Phone-in-hand photo: overflows its 558 × 380 slot as in Figma, clipped by the hero. */
+@media (min-width: 1025px) {
+	.pwh-domains-visual {
+		position: relative;
+	}
+
+	.pwh-domains-visual > .elementor-widget-image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 1166px;
+		max-width: none;
+		transform: translate(calc(-50% + 61px), -50%);
+		pointer-events: none;
+	}
+
+	.pwh-domains-visual > .elementor-widget-image img {
+		width: 1166px;
+		max-width: none;
+		height: auto;
+	}
+}
+
+@media (max-width: 1024px) {
+	.pwh-domains-visual img {
+		width: 100%;
+		max-width: 560px;
+		height: auto;
+		margin: 0 auto;
+	}
+}
+
+/* Domain privacy note with a switch (on) */
+.pwh-note {
+	background-color: var(--pwh-navy-mist);
+	border: 1px solid var(--pwh-navy-pale);
+	border-radius: 8px;
+}
+
+.pwh-note-switch {
+	flex: 0 0 46px;
+	width: 46px;
+	height: 26px;
+	border-radius: 999px;
+	background: var(--pwh-navy-ink);
+	position: relative;
+}
+
+.pwh-note-switch::after {
+	content: "";
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: var(--pwh-cream);
+}
+
+.pwh-note-title .elementor-heading-title {
+	margin: 0;
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.pwh-note-text,
+.pwh-note-text p {
+	margin: 0;
+	color: var(--pwh-grey-dark);
+	font-family: var(--pwh-font-body);
+	font-size: 13px;
+	line-height: normal;
+}
+
+/* Chips column takes what's left next to the fixed 638px copy column. */
+.e-con:has(> .elementor-widget .pwh-chips),
+.e-con-inner > .e-con:has(> .elementor-widget .pwh-chips) {
+	min-width: 0;
+	flex-basis: 0 !important;
+}
+
+/* Small grey label ("…plus every other extension") */
+.pwh-label .elementor-heading-title {
+	margin: 0;
+	max-width: 200px;
+	color: var(--pwh-grey-dark);
+	font-family: var(--pwh-font-body);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: normal;
+}
+
+/* Extension chips: <ul class="pwh-chips"><li>.com.au</li>… <li class="is-more">+ more</li></ul> */
+.pwh-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.pwh-chips li {
+	margin: 0;
+	padding: 9px 18px;
+	border: 1.5px solid var(--pwh-navy-pale);
+	border-radius: 999px;
+	background: var(--pwh-cream);
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.pwh-chips li.is-more {
+	border-style: dashed;
+	color: var(--pwh-grey-dark);
+	font-weight: 400;
+}
+
+.pwh-chips a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Numbered steps: <ol class="pwh-steps"><li>…</li></ol> → 01, 02 … */
+.pwh-steps {
+	max-width: 640px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	counter-reset: pwh-step;
+}
+
+.pwh-steps li {
+	display: flex;
+	align-items: flex-start;
+	gap: 24px;
+	margin: 0;
+	padding: 16px 0;
+	color: var(--pwh-navy-ink);
+	font-family: var(--pwh-font-body);
+	font-size: 17px;
+	font-weight: 300;
+	line-height: normal;
+	counter-increment: pwh-step;
+}
+
+.pwh-steps li + li {
+	border-top: 1px solid var(--pwh-navy-pale);
+}
+
+.pwh-steps li::before {
+	content: counter(pwh-step, decimal-leading-zero);
+	flex: 0 0 auto;
+	min-width: 20px;
+	padding-top: 2px;
+	color: var(--pwh-amber-deep);
+	font-size: 14px;
+	font-weight: 900;
+}
+
+/* FAQ (Elementor Toggle widget with class pwh-faq; FAQ Row component) */
+.pwh-faq .elementor-toggle-item {
+	margin: 0 !important;
+	border: 0;
+	border-bottom: 1px solid var(--pwh-navy-pale);
+}
+
+.pwh-faq .elementor-tab-title {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 20px 0 !important;
+	border: 0 !important;
+	cursor: pointer;
+}
+
+.pwh-faq .elementor-toggle-title {
+	flex: 1 1 auto;
+	order: 1;
+	color: var(--pwh-navy-ink) !important;
+	font-family: var(--pwh-font-body);
+	font-size: 17px;
+	font-weight: 700;
+	line-height: normal;
+	text-decoration: none;
+}
+
+.pwh-faq .elementor-toggle-icon {
+	order: 2;
+	flex: 0 0 20px;
+	width: 20px !important;
+	margin: 0 !important;
+	color: var(--pwh-navy-ink);
+	fill: var(--pwh-navy-ink);
+	font-size: 14px;
+	text-align: center;
+}
+
+.pwh-faq .elementor-toggle-icon svg {
+	width: 14px;
+	height: 14px;
+	fill: currentColor;
+}
+
+.pwh-faq .elementor-tab-content {
+	padding: 0 40px 20px 0 !important;
+	border: 0 !important;
+	color: var(--pwh-grey-dark);
+	font-family: var(--pwh-font-body);
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.pwh-faq .elementor-tab-content p {
+	margin: 0 0 8px;
+}
+
+.pwh-faq .elementor-tab-content p:last-child {
+	margin-bottom: 0;
+}
+
+.pwh-faq .elementor-tab-title:focus-visible {
+	outline: 2px solid var(--pwh-amber);
+	outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------------------------
  * 8. Footer
  * ------------------------------------------------------------------------ */
 

@@ -86,6 +86,17 @@ class PWH_Setup {
 		),
 	);
 
+	/**
+	 * Inner pages. key => [ template file, title, preferred path, fallback path ].
+	 * Created at the preferred path when its parent page exists (else the
+	 * fallback), never over a page someone else made there, and protected after
+	 * the first import like the Home page.
+	 */
+	const PAGES = array(
+		'cpanel'  => array( 'cpanel.json', 'cPanel Hosting', 'web-hosting/cpanel', 'cpanel-hosting' ),
+		'domains' => array( 'domains.json', 'Domains', 'domains', 'domains' ),
+	);
+
 	/** @var array */
 	public $state;
 
@@ -107,8 +118,8 @@ class PWH_Setup {
 					$setup = new self();
 					$setup->run(
 						array(
-							'home'   => ! empty( $assoc['home'] ),
-							'cpanel' => ! empty( $assoc['cpanel'] ),
+							'home'  => ! empty( $assoc['home'] ),
+							'pages' => array_keys( array_intersect_key( $assoc, self::PAGES ) ),
 							'kit'  => ! empty( $assoc['kit'] ),
 						)
 					);
@@ -178,10 +189,12 @@ class PWH_Setup {
 					<label><input type="checkbox" name="pwh_home" value="1" <?php checked( ! $exists['home'] ); ?>>
 					<?php echo $exists['home'] ? '<strong>Re-import the Home page</strong> – overwrites any edits made to it in Elementor' : 'Import the Home page'; ?></label>
 				</p>
-				<p>
-					<label><input type="checkbox" name="pwh_cpanel" value="1" <?php checked( ! $exists['cpanel'] ); ?>>
-					<?php echo $exists['cpanel'] ? '<strong>Re-import the cPanel Plans page</strong> – overwrites any edits made to it in Elementor' : 'Import the cPanel Plans page'; ?></label>
-				</p>
+				<?php foreach ( self::PAGES as $key => $def ) : ?>
+					<p>
+						<label><input type="checkbox" name="pwh_pages[<?php echo esc_attr( $key ); ?>]" value="1" <?php checked( ! $exists['pages'][ $key ] ); ?>>
+						<?php echo $exists['pages'][ $key ] ? '<strong>Re-import the ' . esc_html( $def[1] ) . ' page</strong> – overwrites any edits made to it in Elementor' : 'Import the ' . esc_html( $def[1] ) . ' page'; ?></label>
+					</p>
+				<?php endforeach; ?>
 				<p>
 					<label><input type="checkbox" name="pwh_kit" value="1" <?php checked( empty( $setup->state['kit_done'] ) ); ?>>
 					<?php echo empty( $setup->state['kit_done'] ) ? 'Apply PWH colours &amp; fonts to the Elementor kit' : '<strong>Re-apply PWH colours &amp; fonts</strong> – overwrites changes made in Site Settings'; ?></label>
@@ -206,8 +219,8 @@ class PWH_Setup {
 		$setup = new self();
 		$setup->run(
 			array(
-				'home'   => ! empty( $_POST['pwh_home'] ),
-				'cpanel' => ! empty( $_POST['pwh_cpanel'] ),
+				'home'  => ! empty( $_POST['pwh_home'] ),
+				'pages' => array_map( 'sanitize_key', array_keys( (array) ( $_POST['pwh_pages'] ?? array() ) ) ),
 				'kit'  => ! empty( $_POST['pwh_kit'] ),
 			)
 		);
@@ -253,12 +266,17 @@ class PWH_Setup {
 			'footer' => $has_type( 'footer' ),
 			'menu'   => (bool) $menu,
 			'home'   => $this->state['home'] && get_post( $this->state['home'] ),
-			'cpanel' => ! empty( $this->state['pages']['cpanel'] ) && get_post( $this->state['pages']['cpanel'] ),
+			'pages'  => array_map(
+				function ( $key ) {
+					return ! empty( $this->state['pages'][ $key ] ) && get_post( $this->state['pages'][ $key ] );
+				},
+				array_combine( array_keys( self::PAGES ), array_keys( self::PAGES ) )
+			),
 		);
 	}
 
 	/**
-	 * @param array $opts { home / cpanel: bool (re-)import that page, kit: bool re-apply kit }.
+	 * @param array $opts { home: bool, pages: string[] PAGES keys to (re-)import, kit: bool }.
 	 */
 	public function run( array $opts = array() ) {
 		if ( ! did_action( 'elementor/loaded' ) ) {
@@ -321,10 +339,13 @@ class PWH_Setup {
 			$this->log[] = 'Home page: kept as is (tick "Re-import the Home page" to overwrite)';
 		}
 
-		if ( ! empty( $opts['cpanel'] ) || ! $exists['cpanel'] ) {
-			$this->setup_cpanel();
-		} else {
-			$this->log[] = 'cPanel Plans page: kept as is (tick "Re-import the cPanel Plans page" to overwrite)';
+		$wanted = isset( $opts['pages'] ) ? (array) $opts['pages'] : array();
+		foreach ( self::PAGES as $key => $def ) {
+			if ( in_array( $key, $wanted, true ) || ! $exists['pages'][ $key ] ) {
+				$this->setup_page( $key );
+			} else {
+				$this->log[] = "{$def[1]} page: kept as is (tick \"Re-import the {$def[1]} page\" to overwrite)";
+			}
 		}
 
 		if ( ! $exists['menu'] ) {
@@ -538,32 +559,35 @@ class PWH_Setup {
 	}
 
 	/**
-	 * cPanel Plans page. Goes at /web-hosting/cpanel/ (the mega menu link) when a
-	 * "web-hosting" page exists, else /cpanel-hosting/. A page someone else made
-	 * at that address is never taken over: ours then gets a "-plans" slug.
+	 * Import one of self::PAGES. See the PAGES doc for where it's created.
 	 */
-	private function setup_cpanel() {
-		$data = $this->load( 'cpanel.json' );
+	private function setup_page( $key ) {
+		list( $file, $title, $path, $fallback ) = self::PAGES[ $key ];
+
+		$data = $this->load( $file );
 		if ( ! $data ) {
 			return;
 		}
 
 		$this->state['pages'] = (array) $this->state['pages'];
-		$id                   = isset( $this->state['pages']['cpanel'] ) ? (int) $this->state['pages']['cpanel'] : 0;
+		$id                   = isset( $this->state['pages'][ $key ] ) ? (int) $this->state['pages'][ $key ] : 0;
 
 		if ( ! $id || ! get_post( $id ) ) {
-			$parent = get_page_by_path( 'web-hosting' );
-			$slug   = $parent ? 'cpanel' : 'cpanel-hosting';
-			$path   = $parent ? 'web-hosting/cpanel' : 'cpanel-hosting';
+			$parent_path = false !== strpos( $path, '/' ) ? dirname( $path ) : '';
+			$parent      = $parent_path ? get_page_by_path( $parent_path ) : null;
+			if ( $parent_path && ! $parent ) {
+				$path = $fallback;
+			}
+			$slug = basename( $path );
 			if ( get_page_by_path( $path ) ) {
-				$slug .= '-plans';
-				$this->log[] = "A page already exists at /$path/ – left alone; the cPanel Plans page uses /$slug/ instead";
+				$this->log[] = "A page already exists at /$path/ – left alone; the $title page uses /$slug-new/ instead";
+				$slug       .= '-new';
 			}
 			$id = wp_insert_post(
 				array(
 					'post_type'   => 'page',
 					'post_status' => 'publish',
-					'post_title'  => 'cPanel Hosting',
+					'post_title'  => $title,
 					'post_name'   => $slug,
 					'post_parent' => $parent ? $parent->ID : 0,
 				)
@@ -573,8 +597,8 @@ class PWH_Setup {
 		update_post_meta( $id, '_wp_page_template', 'elementor_header_footer' );
 		$this->save_elementor_data( $id, $data['content'], 'wp-page', array( 'hide_title' => 'yes' ) );
 
-		$this->state['pages']['cpanel'] = $id;
-		$this->log[]                    = "cPanel Plans page (#$id): " . get_permalink( $id );
+		$this->state['pages'][ $key ] = $id;
+		$this->log[]                  = "$title page (#$id): " . get_permalink( $id );
 	}
 
 	/* ---------------------------------------------------------------------

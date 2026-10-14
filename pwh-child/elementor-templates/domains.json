@@ -1,0 +1,1571 @@
+{
+ "version": "0.4",
+ "title": "PWH – Domains",
+ "type": "wp-page",
+ "content": [
+  {
+   "id": "1f05ad8",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "padding": {
+     "unit": "px",
+     "top": "136",
+     "right": "0",
+     "bottom": "140",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Hero",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 64,
+     "column": "64",
+     "row": "64",
+     "isLinked": true
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "72",
+     "right": "24",
+     "bottom": "72",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "flex_direction_tablet": "column",
+    "html_tag": "section",
+    "css_classes": "pwh-domains-hero",
+    "background_background": "classic",
+    "background_color": "#0B1629"
+   },
+   "elements": [
+    {
+     "id": "a9194ea",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Copy",
+      "width": {
+       "unit": "%",
+       "size": 50,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "6ad487c",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Find your name.<br>Lock it in properly.",
+        "header_size": "h1",
+        "_css_classes": "pwh-h2 pwh-text-cream"
+       },
+       "elements": []
+      },
+      {
+       "id": "832cc76",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Register, manage or transfer your .com.au, .com or any other domain, with reminders so it never quietly expires.</p>",
+        "_css_classes": "pwh-body pwh-text-cream"
+       },
+       "elements": []
+      },
+      {
+       "id": "a6121ff",
+       "elType": "widget",
+       "widgetType": "pwh-domain-search",
+       "settings": {
+        "placeholder": "Search for your domain",
+        "action": "",
+        "param": "query",
+        "whmcs": "yes"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "ad16fad",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Visual",
+      "width": {
+       "unit": "%",
+       "size": 50,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "min_height": {
+       "unit": "px",
+       "size": 380,
+       "sizes": []
+      },
+      "min_height_tablet": {
+       "unit": "px",
+       "size": 0,
+       "sizes": []
+      },
+      "css_classes": "pwh-domains-visual",
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "dde172e",
+       "elType": "widget",
+       "widgetType": "image",
+       "settings": {
+        "image": {
+         "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/f3df1232345aad30c3209977ac09361515473c56.png",
+         "id": "",
+         "size": "",
+         "alt": "A phone showing a website built on Perth Web Hosting",
+         "source": "library"
+        },
+        "image_size": "full",
+        "align": "left"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "6f7dbe6",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "padding": {
+     "unit": "px",
+     "top": "80",
+     "right": "0",
+     "bottom": "40",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Register",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 60,
+     "column": "60",
+     "row": "60",
+     "isLinked": true
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 32,
+     "column": "32",
+     "row": "32",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "40",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "32",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "flex-start",
+    "flex_direction_tablet": "column",
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "18613d3",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Copy",
+      "width": {
+       "unit": "px",
+       "size": 638,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "_flex_size": "none"
+     },
+     "elements": [
+      {
+       "id": "359737a",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Search, register, done.",
+        "header_size": "h2",
+        "_css_classes": "pwh-h3 pwh-text-ink"
+       },
+       "elements": []
+      },
+      {
+       "id": "df67003",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Search your business name across every extension that matters in Australia. We'll flag if it's taken, suggest close alternatives, and register it in minutes.</p>",
+        "_css_classes": "pwh-body pwh-text-ink"
+       },
+       "elements": []
+      },
+      {
+       "id": "68b04ba",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "padding": {
+         "unit": "px",
+         "top": "18",
+         "right": "18",
+         "bottom": "18",
+         "left": "18",
+         "isLinked": true
+        },
+        "_title": "Privacy note",
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "flex_align_items": "flex-start",
+        "css_classes": "pwh-note"
+       },
+       "elements": [
+        {
+         "id": "c5e294d",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<div class=\"pwh-note-switch\" aria-hidden=\"true\"></div>"
+         },
+         "elements": []
+        },
+        {
+         "id": "826f6a3",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_title": "Note text",
+          "flex_gap": {
+           "unit": "px",
+           "size": 2,
+           "column": "2",
+           "row": "2",
+           "isLinked": true
+          },
+          "_flex_size": "grow"
+         },
+         "elements": [
+          {
+           "id": "608251d",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "Domain privacy (WHOIS)",
+            "header_size": "p",
+            "_css_classes": "pwh-note-title"
+           },
+           "elements": []
+          },
+          {
+           "id": "5bfad6a",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "<p>Hides your personal details from the public domain register (WHOIS). Only available on international extensions (TLDs) like .com, .net and .org. Australian .au domains don't offer it.</p>",
+            "_css_classes": "pwh-note-text"
+           },
+           "elements": []
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "5f57b7b",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Extensions",
+      "flex_gap": {
+       "unit": "px",
+       "size": 12,
+       "column": "12",
+       "row": "12",
+       "isLinked": true
+      },
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "1042e57",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": ".com.au plus every other extension",
+        "header_size": "p",
+        "_css_classes": "pwh-label"
+       },
+       "elements": []
+      },
+      {
+       "id": "0e3fb80",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<ul class=\"pwh-chips\"><li>.com.au</li><li>.com</li><li>.net.au</li><li>.org.au</li><li>.io</li><li>.net</li><li>.au</li><li>.co</li><li>.photos</li><li>.org</li><li>.store</li><li>.biz</li><li>.solutions</li><li>.id.au</li><li class=\"is-more\">+ more</li></ul>"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "64908cc",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "80",
+     "right": "0",
+     "bottom": "80",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "HowItWorks",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section",
+    "background_background": "classic",
+    "background_color": "#F5F1E0"
+   },
+   "elements": [
+    {
+     "id": "132bb7e",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Four steps to your new domain.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h3 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "7558aeb",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<ol class=\"pwh-steps\"><li>Search your business name across every extension that matters.</li><li>Choose your domain, and any close alternatives worth grabbing too.</li><li>Register: most domains are live within minutes.</li><li>We connect it to your hosting or email for you.</li></ol>"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "8e085ab",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "100",
+     "right": "0",
+     "bottom": "100",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Transfer",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "80",
+     "right": "24",
+     "bottom": "80",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "64",
+     "right": "20",
+     "bottom": "64",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section",
+    "background_background": "classic",
+    "background_color": "#0B1629",
+    "background_image": {
+     "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/domains-transfer.jpg",
+     "id": "",
+     "size": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_position": "center center",
+    "background_size": "cover",
+    "background_repeat": "no-repeat",
+    "background_overlay_background": "classic",
+    "background_overlay_color": "#0B1629",
+    "background_overlay_opacity": {
+     "unit": "px",
+     "size": 0.8,
+     "sizes": []
+    }
+   },
+   "elements": [
+    {
+     "id": "e68db34",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Copy",
+      "width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "flex_align_items": "flex-start"
+     },
+     "elements": [
+      {
+       "id": "b1caaf8",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Bringing a domain across?<br>We'll handle the whole transfer.",
+        "header_size": "h2",
+        "_css_classes": "pwh-h3 pwh-text-cream"
+       },
+       "elements": []
+      },
+      {
+       "id": "1e5f2a9",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>No downtime, no lost email, no chasing transfer codes (EPP codes) yourself. We manage the whole transfer from your current domain provider (registrar), start to finish.</p>",
+        "_css_classes": "pwh-lead pwh-text-mist"
+       },
+       "elements": []
+      },
+      {
+       "id": "07bb6e7",
+       "elType": "widget",
+       "widgetType": "button",
+       "settings": {
+        "text": "Ask Us About Transferring",
+        "link": {
+         "url": "{{PWH_URL:/support/hosting-transfer-request/}}",
+         "is_external": "",
+         "nofollow": "",
+         "custom_attributes": ""
+        },
+        "size": "md",
+        "_css_classes": "pwh-btn pwh-btn--outline-cream"
+       },
+       "elements": []
+      },
+      {
+       "id": "eba31c9",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Sends a quick enquiry to our Perth team. We'll scope the transfer and come back to you, usually same day.</p>",
+        "_css_classes": "pwh-small pwh-text-cream"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "73ab34c",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "80",
+     "right": "0",
+     "bottom": "80",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "FAQ",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "0bc79e3",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Domain questions, answered.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h3 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "1624615",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Questions",
+      "width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "9c9ae67",
+       "elType": "widget",
+       "widgetType": "toggle",
+       "settings": {
+        "tabs": [
+         {
+          "_id": "3b09e8d",
+          "tab_title": "Which domain extension should I choose?",
+          "tab_content": "<p>For most Western Australian businesses a .com.au is the safe choice. It tells customers you're a local business. Many also register the matching .com so nobody else can take it.</p><p>Not sure? Send us your business name and we'll suggest the best domain and extension, free of charge.</p>"
+         },
+         {
+          "_id": "b4093ad",
+          "tab_title": "How does transferring a domain to you work?",
+          "tab_content": "<p>We handle the whole transfer for you: no downtime, no lost email and no chasing transfer codes (EPP codes) yourself. We manage it from your current domain provider (registrar), start to finish.</p><p>Send us a quick enquiry and our Perth team will scope the transfer, usually the same day.</p>"
+         },
+         {
+          "_id": "7bc6733",
+          "tab_title": "What is WHOIS privacy protection?",
+          "tab_content": "<p>It hides your personal details from the public domain register (WHOIS). It's only available on international extensions (TLDs) like .com, .net and .org. Australian .au domains don't offer it.</p>"
+         },
+         {
+          "_id": "4d7bbdd",
+          "tab_title": "Will you remind me before my domain expires?",
+          "tab_content": "<p>Yes. We send renewal reminders so your domain never quietly expires.</p>"
+         },
+         {
+          "_id": "90a1978",
+          "tab_title": "Can I bundle a domain with hosting or email?",
+          "tab_content": "<p>Yes. Hosting, domains and email are all looked after by the same Perth team, and we connect your domain to your hosting or email for you.</p>"
+         }
+        ],
+        "selected_icon": {
+         "value": "fas fa-plus",
+         "library": "fa-solid"
+        },
+        "selected_active_icon": {
+         "value": "fas fa-minus",
+         "library": "fa-solid"
+        },
+        "icon_align": "right",
+        "title_html_tag": "h3",
+        "faq_schema": "yes",
+        "_css_classes": "pwh-faq"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "53b2765",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "140",
+     "right": "0",
+     "bottom": "140",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Testimonials",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "96",
+     "right": "24",
+     "bottom": "96",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "72",
+     "right": "20",
+     "bottom": "72",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "dc0e9b2",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Intro",
+      "width": {
+       "unit": "px",
+       "size": 744,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 8,
+       "column": "8",
+       "row": "8",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "df857f7",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "WA businesses who've<br>made the switch",
+        "header_size": "h2",
+        "_css_classes": "pwh-h2 pwh-text-ink"
+       },
+       "elements": []
+      },
+      {
+       "id": "2a3b289",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Here's what business owners say after switching.</p>",
+        "_css_classes": "pwh-body pwh-text-ink"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "cecad9d",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Cards",
+      "flex_gap": {
+       "unit": "px",
+       "size": 32,
+       "column": "32",
+       "row": "32",
+       "isLinked": true
+      },
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "flex_align_items": "stretch",
+      "flex_direction_tablet": "column"
+     },
+     "elements": [
+      {
+       "id": "af862a0",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "28",
+         "right": "28",
+         "bottom": "28",
+         "left": "28",
+         "isLinked": true
+        },
+        "_title": "Testimonial – Nathan Hurst",
+        "width": {
+         "unit": "%",
+         "size": 33.33,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "css_classes": "pwh-testimonial",
+        "_flex_size": "grow"
+       },
+       "elements": [
+        {
+         "id": "611c5f0",
+         "elType": "widget",
+         "widgetType": "rating",
+         "settings": {
+          "rating_scale": {
+           "unit": "px",
+           "size": 5,
+           "sizes": []
+          },
+          "rating_value": 5,
+          "icon_size": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "icon_gap": {
+           "unit": "px",
+           "size": 3,
+           "sizes": []
+          },
+          "__globals__": {
+           "icon_marked_color": "globals/colors?id=accent"
+          },
+          "_css_classes": "pwh-stars"
+         },
+         "elements": []
+        },
+        {
+         "id": "85d8df3",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Excellent service from the guys at Perth Web Hosting. Love that my website is locally hosted and looked after. After years of being with 'the big global guys' and running into issues, downtime and more, all of that's finally over.</p>",
+          "_css_classes": "pwh-quote"
+         },
+         "elements": []
+        },
+        {
+         "id": "d32954e",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "padding": {
+           "unit": "px",
+           "top": "16",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "_title": "Who",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "flex_align_items": "center",
+          "css_classes": "pwh-who"
+         },
+         "elements": [
+          {
+           "id": "2dd15e7",
+           "elType": "widget",
+           "widgetType": "icon",
+           "settings": {
+            "selected_icon": {
+             "value": "fas fa-circle",
+             "library": "fa-solid"
+            },
+            "size": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "__globals__": {
+             "primary_color": "globals/colors?id=pwhnavysoft"
+            },
+            "_css_classes": "pwh-avatar"
+           },
+           "elements": []
+          },
+          {
+           "id": "ebe749f",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "_title": "NameCol",
+            "flex_gap": {
+             "unit": "px",
+             "size": 2,
+             "column": "2",
+             "row": "2",
+             "isLinked": true
+            }
+           },
+           "elements": [
+            {
+             "id": "7cb58f2",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "Nathan Hurst",
+              "header_size": "p",
+              "_css_classes": "pwh-who-name"
+             },
+             "elements": []
+            },
+            {
+             "id": "76ffc12",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Google review, 5 stars</p>",
+              "_css_classes": "pwh-who-source"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "a407adf",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "28",
+         "right": "28",
+         "bottom": "28",
+         "left": "28",
+         "isLinked": true
+        },
+        "_title": "Testimonial – Jack Hampton",
+        "width": {
+         "unit": "%",
+         "size": 33.33,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "css_classes": "pwh-testimonial",
+        "_flex_size": "grow"
+       },
+       "elements": [
+        {
+         "id": "22174fc",
+         "elType": "widget",
+         "widgetType": "rating",
+         "settings": {
+          "rating_scale": {
+           "unit": "px",
+           "size": 5,
+           "sizes": []
+          },
+          "rating_value": 5,
+          "icon_size": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "icon_gap": {
+           "unit": "px",
+           "size": 3,
+           "sizes": []
+          },
+          "__globals__": {
+           "icon_marked_color": "globals/colors?id=accent"
+          },
+          "_css_classes": "pwh-stars"
+         },
+         "elements": []
+        },
+        {
+         "id": "fee61a9",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Best web hosting services in Perth. I have tried many providers and these guys are the absolute best. I never have to wait for support and my website speeds are blazingly fast.</p>",
+          "_css_classes": "pwh-quote"
+         },
+         "elements": []
+        },
+        {
+         "id": "a61a26c",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "padding": {
+           "unit": "px",
+           "top": "16",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "_title": "Who",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "flex_align_items": "center",
+          "css_classes": "pwh-who"
+         },
+         "elements": [
+          {
+           "id": "5c03f8b",
+           "elType": "widget",
+           "widgetType": "icon",
+           "settings": {
+            "selected_icon": {
+             "value": "fas fa-circle",
+             "library": "fa-solid"
+            },
+            "size": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "__globals__": {
+             "primary_color": "globals/colors?id=pwhnavysoft"
+            },
+            "_css_classes": "pwh-avatar"
+           },
+           "elements": []
+          },
+          {
+           "id": "9a40a2c",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "_title": "NameCol",
+            "flex_gap": {
+             "unit": "px",
+             "size": 2,
+             "column": "2",
+             "row": "2",
+             "isLinked": true
+            }
+           },
+           "elements": [
+            {
+             "id": "b0a5af4",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "Jack Hampton",
+              "header_size": "p",
+              "_css_classes": "pwh-who-name"
+             },
+             "elements": []
+            },
+            {
+             "id": "7265f5a",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Google review, 5 stars</p>",
+              "_css_classes": "pwh-who-source"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "806128e",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "28",
+         "right": "28",
+         "bottom": "28",
+         "left": "28",
+         "isLinked": true
+        },
+        "_title": "Testimonial – Sora Kiari",
+        "width": {
+         "unit": "%",
+         "size": 33.33,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "css_classes": "pwh-testimonial",
+        "_flex_size": "grow"
+       },
+       "elements": [
+        {
+         "id": "8f8bafa",
+         "elType": "widget",
+         "widgetType": "rating",
+         "settings": {
+          "rating_scale": {
+           "unit": "px",
+           "size": 5,
+           "sizes": []
+          },
+          "rating_value": 5,
+          "icon_size": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "icon_gap": {
+           "unit": "px",
+           "size": 3,
+           "sizes": []
+          },
+          "__globals__": {
+           "icon_marked_color": "globals/colors?id=accent"
+          },
+          "_css_classes": "pwh-stars"
+         },
+         "elements": []
+        },
+        {
+         "id": "37774b1",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Great Service, Great Price, Great Support and Fast Speeds.</p>",
+          "_css_classes": "pwh-quote"
+         },
+         "elements": []
+        },
+        {
+         "id": "70cee0f",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "padding": {
+           "unit": "px",
+           "top": "16",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "_title": "Who",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "flex_align_items": "center",
+          "css_classes": "pwh-who"
+         },
+         "elements": [
+          {
+           "id": "597d0bc",
+           "elType": "widget",
+           "widgetType": "icon",
+           "settings": {
+            "selected_icon": {
+             "value": "fas fa-circle",
+             "library": "fa-solid"
+            },
+            "size": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "__globals__": {
+             "primary_color": "globals/colors?id=pwhnavysoft"
+            },
+            "_css_classes": "pwh-avatar"
+           },
+           "elements": []
+          },
+          {
+           "id": "a3f264f",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "_title": "NameCol",
+            "flex_gap": {
+             "unit": "px",
+             "size": 2,
+             "column": "2",
+             "row": "2",
+             "isLinked": true
+            }
+           },
+           "elements": [
+            {
+             "id": "547afc8",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "Sora Kiari",
+              "header_size": "p",
+              "_css_classes": "pwh-who-name"
+             },
+             "elements": []
+            },
+            {
+             "id": "4d322e2",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Google review, 5 stars</p>",
+              "_css_classes": "pwh-who-source"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "96eaf1b",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "101",
+     "right": "0",
+     "bottom": "101",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "HelpCTA",
+    "boxed_width": {
+     "unit": "px",
+     "size": 494,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 12,
+     "column": "12",
+     "row": "12",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "80",
+     "right": "24",
+     "bottom": "80",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "64",
+     "right": "20",
+     "bottom": "64",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "1cb2a43",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Not sure which extension is right for your business?",
+      "header_size": "h2",
+      "align": "center",
+      "_css_classes": "pwh-h3 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "241c43a",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>Send us your business name and we'll suggest the best domain and extension, free of charge.</p>",
+      "_css_classes": "pwh-body pwh-text-ink",
+      "align": "center"
+     },
+     "elements": []
+    },
+    {
+     "id": "935103d",
+     "elType": "widget",
+     "widgetType": "button",
+     "settings": {
+      "text": "Contact Us",
+      "link": {
+       "url": "{{PWH_URL:/contact/}}",
+       "is_external": "",
+       "nofollow": "",
+       "custom_attributes": ""
+      },
+      "size": "md",
+      "align": "center",
+      "_css_classes": "pwh-btn pwh-btn--amber"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": {
+  "hide_title": "yes",
+  "template": "elementor_header_footer"
+ }
+}

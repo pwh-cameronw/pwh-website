@@ -24,6 +24,7 @@ add_action(
 	function ( $widgets_manager ) {
 		$widgets_manager->register( new PWH_Pricing_Card_Widget() );
 		$widgets_manager->register( new PWH_Billing_Toggle_Widget() );
+		$widgets_manager->register( new PWH_Domain_Search_Widget() );
 	}
 );
 
@@ -185,6 +186,57 @@ add_action(
 						</ul>
 					<?php endif; ?>
 				</div>
+				<?php
+			}
+		}
+
+		/**
+		 * Domain search bar (Domains page hero). Submits to a WHMCS-style
+		 * domain checker: <action>?a=add&domain=register&query=<name>.
+		 */
+		class PWH_Domain_Search_Widget extends \Elementor\Widget_Base {
+
+			public function get_name() {
+				return 'pwh-domain-search';
+			}
+
+			public function get_title() {
+				return 'PWH Domain Search';
+			}
+
+			public function get_icon() {
+				return 'eicon-search';
+			}
+
+			public function get_categories() {
+				return array( 'pwh' );
+			}
+
+			protected function register_controls() {
+				$c = '\Elementor\Controls_Manager';
+				$this->start_controls_section( 'search', array( 'label' => 'Search' ) );
+				$this->add_control( 'placeholder', array( 'label' => 'Placeholder', 'type' => $c::TEXT, 'default' => 'Search for your domain' ) );
+				$this->add_control( 'action', array( 'label' => 'Domain checker URL', 'type' => $c::TEXT, 'default' => '', 'placeholder' => 'https://your-whmcs.example/cart.php', 'description' => 'Your WHMCS cart.php (or any page that takes ?query=). Leave empty to disable the form.', 'label_block' => true ) );
+				$this->add_control( 'param', array( 'label' => 'Search parameter', 'type' => $c::TEXT, 'default' => 'query' ) );
+				$this->add_control( 'whmcs', array( 'label' => 'Add WHMCS register params (a=add, domain=register)', 'type' => $c::SWITCHER, 'default' => 'yes' ) );
+				$this->end_controls_section();
+			}
+
+			protected function render() {
+				$s      = $this->get_settings_for_display();
+				$action = trim( (string) $s['action'] );
+				$param  = '' !== trim( (string) $s['param'] ) ? $s['param'] : 'query';
+				$id     = 'pwh-domain-' . $this->get_id();
+				?>
+				<form class="pwh-domain-search" role="search" method="get" action="<?php echo esc_url( $action ? $action : '#' ); ?>"<?php echo $action ? '' : ' onsubmit="return false"'; ?>>
+					<label class="screen-reader-text" for="<?php echo esc_attr( $id ); ?>"><?php echo esc_html( $s['placeholder'] ); ?></label>
+					<?php if ( 'yes' === $s['whmcs'] ) : ?>
+						<input type="hidden" name="a" value="add">
+						<input type="hidden" name="domain" value="register">
+					<?php endif; ?>
+					<input class="pwh-domain-search__input" id="<?php echo esc_attr( $id ); ?>" type="search" name="<?php echo esc_attr( $param ); ?>" placeholder="<?php echo esc_attr( $s['placeholder'] ); ?>" autocomplete="off" spellcheck="false">
+					<button class="pwh-domain-search__btn" type="submit"><span class="screen-reader-text">Search</span></button>
+				</form>
 				<?php
 			}
 		}

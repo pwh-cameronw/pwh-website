@@ -115,3 +115,19 @@ Built from the Figma *Page / cPanel Plans* frame. Import it from **Appearance �
 - **PWH Billing Toggle:** the Monthly / Yearly switch. It switches every Pricing Card on the page. A card with no yearly price keeps showing its monthly price.
 
 **To fill in:** the design only gives a yearly price and technical details for **Business**. Starter and Advanced need their yearly price, note and details entered on the card. Every *Order Now* button currently goes to `/client-login/`, so set each card's monthly and yearly order links to your WHMCS cart URLs.
+
+## Domains page
+
+Built from the Figma *Page / Domains* frame. Import it from **Appearance → PWH Setup → Import the Domains page**, or run `wp pwh setup --domains`. It goes to `/domains/` (the mega menu link), unless a page already exists there; then it goes to `/domains-new/` and the existing page is left alone.
+
+**Images (Media Library, matched by file name):**
+- the hero phone reuses your Home *Domains* card image (`f3df1232345aad30c3209977ac09361515473c56.png`), already uploaded
+- upload **`domains-transfer.jpg`**, the photo behind "Bringing a domain across?" (shown under an 80% navy overlay)
+
+**New widget, PWH Domain Search:** the grey search bar in the hero. Set **Domain checker URL** to your WHMCS `cart.php`. It submits `?a=add&domain=register&query=<name>`. Until it's set, the form does nothing.
+
+**Check before publishing:**
+- **FAQ answers are drafts.** Figma only has the questions. Each answer uses only what your pages already say (transfer, WHOIS, reminders, bundling, choosing an extension). They're in the Toggle widget, which also outputs FAQ schema.
+- **Not taken from Figma** (the Figma API limit was hit): the testimonials reuse the Home page's three reviews; the "Not sure which extension…" block is centred on cream with an amber **Contact Us** button to `/contact/`; and an open FAQ answer is styled as 16px grey text. Adjust any of these in Elementor if the design differs.
+- "Ask Us About Transferring" links to `/support/hosting-transfer-request/`.
+

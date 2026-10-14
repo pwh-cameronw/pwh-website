@@ -695,6 +695,141 @@ def cpanel():
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
 
+# --- Domains ---------------------------------------------------------------
+
+# Same Figma image as the Home "Domains" card, already in the Media Library.
+DOMAINS_HERO = MEDIA + "f3df1232345aad30c3209977ac09361515473c56.png"
+DOMAINS_TRANSFER = MEDIA + "domains-transfer.jpg"
+
+# Draft answers: written only from what the Figma pages already say. Not in
+# the design; review before publishing.
+DOMAIN_FAQ = [
+    ("Which domain extension should I choose?",
+     "<p>For most Western Australian businesses a .com.au is the safe choice. It tells customers you're a local business. Many also register the matching .com so nobody else can take it.</p>"
+     "<p>Not sure? Send us your business name and we'll suggest the best domain and extension, free of charge.</p>"),
+    ("How does transferring a domain to you work?",
+     "<p>We handle the whole transfer for you: no downtime, no lost email and no chasing transfer codes (EPP codes) yourself. We manage it from your current domain provider (registrar), start to finish.</p>"
+     "<p>Send us a quick enquiry and our Perth team will scope the transfer, usually the same day.</p>"),
+    ("What is WHOIS privacy protection?",
+     "<p>It hides your personal details from the public domain register (WHOIS). It's only available on international extensions (TLDs) like .com, .net and .org. Australian .au domains don't offer it.</p>"),
+    ("Will you remind me before my domain expires?",
+     "<p>Yes. We send renewal reminders so your domain never quietly expires.</p>"),
+    ("Can I bundle a domain with hosting or email?",
+     "<p>Yes. Hosting, domains and email are all looked after by the same Perth team, and we connect your domain to your hosting or email for you.</p>"),
+]
+
+
+def domains():
+    hero = con("Hero", [
+        con("Copy", [
+            heading("Find your name.<br>Lock it in properly.", "pwh-h2 pwh-text-cream", tag="h1"),
+            text("<p>Register, manage or transfer your .com.au, .com or any other domain, with reminders so it never quietly expires.</p>",
+                 "pwh-body pwh-text-cream"),
+            widget("pwh-domain-search", {"placeholder": "Search for your domain", "action": "", "param": "query", "whmcs": "yes"}),
+        ], gap_px=16, width=pct(50), width_t=pct(100), extra={"_flex_size": "grow"}),
+        con("Visual", [
+            image(DOMAINS_HERO, "", alt="A phone showing a website built on Perth Web Hosting"),
+        ], cls="pwh-domains-visual", width=pct(50), width_t=pct(100), min_h=380, min_h_t=0,
+            extra={"_flex_size": "grow"}),
+    ], cls="pwh-domains-hero", direction="row", boxed=1180, gap_px=64, align="center", dir_t="column",
+        gap_t=40, pad=box(136, 0, 140, 0), pad_t=box(72, 24, 72, 24), pad_m=box(56, 20, 56, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#0B1629"})
+
+    chips = ".com.au .com .net.au .org.au .io .net .au .co .photos .org .store .biz .solutions .id.au".split()
+    register = con("Register", [
+        con("Copy", [
+            heading("Search, register, done.", "pwh-h3 pwh-text-ink", tag="h2"),
+            text("<p>Search your business name across every extension that matters in Australia. We'll flag if it's taken, suggest close alternatives, and register it in minutes.</p>",
+                 "pwh-body pwh-text-ink"),
+            con("Privacy note", [
+                text('<div class="pwh-note-switch" aria-hidden="true"></div>', ""),
+                con("Note text", [
+                    heading("Domain privacy (WHOIS)", "pwh-note-title", tag="p"),
+                    text("<p>Hides your personal details from the public domain register (WHOIS). Only available on international extensions (TLDs) like .com, .net and .org. Australian .au domains don't offer it.</p>",
+                         "pwh-note-text"),
+                ], gap_px=2, extra={"_flex_size": "grow"}),
+            ], cls="pwh-note", direction="row", gap_px=16, align="flex-start", pad=box(18)),
+        ], gap_px=16, width=px(638), width_t=pct(100), extra={"_flex_size": "none"}),
+        con("Extensions", [
+            heading(".com.au plus every other extension", "pwh-label", tag="p"),
+            text('<ul class="pwh-chips">' + "".join(f"<li>{c}</li>" for c in chips) + '<li class="is-more">+ more</li></ul>', ""),
+        ], gap_px=12, extra={"_flex_size": "grow"}),
+    ], direction="row", boxed=1180, gap_px=60, align="flex-start", dir_t="column", gap_t=32,
+        pad=box(80, 0, 40, 0), pad_t=box(64, 24, 40, 24), pad_m=box(56, 20, 32, 20), tag="section")
+
+    steps = [
+        "Search your business name across every extension that matters.",
+        "Choose your domain, and any close alternatives worth grabbing too.",
+        "Register: most domains are live within minutes.",
+        "We connect it to your hosting or email for you.",
+    ]
+    how = con("HowItWorks", [
+        heading("Four steps to your new domain.", "pwh-h3 pwh-text-ink", tag="h2"),
+        text('<ol class="pwh-steps">' + "".join(f"<li>{t}</li>" for t in steps) + "</ol>", ""),
+    ], boxed=1180, gap_px=40, pad=box(80, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0"})
+
+    transfer = con("Transfer", [
+        con("Copy", [
+            heading("Bringing a domain across?<br>We'll handle the whole transfer.", "pwh-h3 pwh-text-cream", tag="h2"),
+            text("<p>No downtime, no lost email, no chasing transfer codes (EPP codes) yourself. We manage the whole transfer from your current domain provider (registrar), start to finish.</p>",
+                 "pwh-lead pwh-text-mist"),
+            button("Ask Us About Transferring", url("/support/hosting-transfer-request/"), "pwh-btn--outline-cream"),
+            text("<p>Sends a quick enquiry to our Perth team. We'll scope the transfer and come back to you, usually same day.</p>",
+                 "pwh-small pwh-text-cream"),
+        ], gap_px=16, width=px(760), width_t=pct(100), extra={"flex_align_items": "flex-start"}),
+    ], boxed=1180, pad=box(100, 0), pad_t=box(80, 24), pad_m=box(64, 20), tag="section",
+        extra={
+            "background_background": "classic",
+            "background_color": "#0B1629",
+            "background_image": asset(DOMAINS_TRANSFER),
+            "background_position": "center center",
+            "background_size": "cover",
+            "background_repeat": "no-repeat",
+            "background_overlay_background": "classic",
+            "background_overlay_color": "#0B1629",
+            "background_overlay_opacity": {"unit": "px", "size": 0.8, "sizes": []},
+        })
+
+    faq = con("FAQ", [
+        heading("Domain questions, answered.", "pwh-h3 pwh-text-ink", tag="h2"),
+        con("Questions", [
+            widget("toggle", {
+                "tabs": [{"_id": _id("faq"), "tab_title": q, "tab_content": a} for q, a in DOMAIN_FAQ],
+                "selected_icon": {"value": "fas fa-plus", "library": "fa-solid"},
+                "selected_active_icon": {"value": "fas fa-minus", "library": "fa-solid"},
+                "icon_align": "right",
+                "title_html_tag": "h3",
+                "faq_schema": "yes",
+            }, "pwh-faq"),
+        ], width=px(760), width_t=pct(100)),
+    ], boxed=1180, gap_px=40, pad=box(80, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section")
+
+    testimonials = con("Testimonials", [
+        con("Intro", [
+            heading("WA businesses who've<br>made the switch", "pwh-h2 pwh-text-ink", tag="h2"),
+            text("<p>Here's what business owners say after switching.</p>", "pwh-body pwh-text-ink"),
+        ], gap_px=8, width=px(744), width_t=pct(100)),
+        con("Cards", [
+            review("Excellent service from the guys at Perth Web Hosting. Love that my website is locally hosted and looked after. After years of being with 'the big global guys' and running into issues, downtime and more, all of that's finally over.",
+                   "Nathan Hurst", "Google review, 5 stars"),
+            review("Best web hosting services in Perth. I have tried many providers and these guys are the absolute best. I never have to wait for support and my website speeds are blazingly fast.",
+                   "Jack Hampton", "Google review, 5 stars"),
+            review("Great Service, Great Price, Great Support and Fast Speeds.", "Sora Kiari", "Google review, 5 stars"),
+        ], direction="row", gap_px=32, align="stretch", dir_t="column", gap_t=24),
+    ], boxed=1180, gap_px=40, pad=box(140, 0), pad_t=box(96, 24), pad_m=box(72, 20), tag="section")
+
+    help_cta = con("HelpCTA", [
+        heading("Not sure which extension is right for your business?", "pwh-h3 pwh-text-ink", tag="h2", align="center"),
+        text("<p>Send us your business name and we'll suggest the best domain and extension, free of charge.</p>", "pwh-body pwh-text-ink"),
+        button("Contact Us", url("/contact/"), "pwh-btn--amber", align="center"),
+    ], boxed=494, gap_px=12, align="center", pad=box(101, 0), pad_t=box(80, 24), pad_m=box(64, 20), tag="section")
+    help_cta["elements"][1]["settings"]["align"] = "center"
+
+    return template("PWH – Domains", "wp-page", [hero, register, how, transfer, faq, testimonials, help_cta],
+                    {"hide_title": "yes", "template": "elementor_header_footer"})
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     files = {
@@ -705,6 +840,7 @@ def main():
         "mega-support.json": mega_support(),
         "mega-about.json": mega_about(),
         "cpanel.json": cpanel(),
+        "domains.json": domains(),
     }
     for name, data in files.items():
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as fh:
