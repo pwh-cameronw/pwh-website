@@ -392,10 +392,7 @@ body .pwh-btn--sm .elementor-button {
 	max-width: none !important;
 	margin: 0 !important;
 	transform: translateX(-50%) !important;
-	padding-top: 37px; /* 23px hover bridge + 14px gap */
-	background: transparent;
-	box-shadow: none;
-	border: 0;
+	padding: 37px 0 0 !important; /* 23px hover bridge + 14px gap */
 }
 
 .pwh-mainnav .jet-mega-menu-item--top-level:has(.pwh-mega--narrow) {
@@ -412,9 +409,31 @@ body .pwh-btn--sm .elementor-button {
 .pwh-mainnav .jet-mega-menu-mega-container__inner {
 	width: 100%;
 	max-width: none;
-	background: transparent;
-	padding: 0;
-	box-shadow: none;
+}
+
+/* JetMenu paints its mega wrapper white (default CSS plus the widget's style
+   controls, which use more specific selectors). Force the wrapper and every
+   layer between it and the .pwh-mega panel to be invisible so only the cream
+   panel shows. */
+.pwh-mainnav .jet-mega-menu-mega-container,
+.pwh-mainnav .jet-mega-menu-mega-container__inner,
+.pwh-mainnav .jet-mega-menu-mega-container__inner > .elementor,
+.pwh-mainnav .jet-mega-menu-mega-container__inner > .elementor > .elementor-section-wrap,
+.pwh-mainnav .jet-sub-mega-menu,
+.pwh-mainnav .jet-sub-mega-menu > .elementor,
+.pwh-mainnav .jet-sub-mega-menu > .elementor > .elementor-section-wrap {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	outline: 0 !important;
+}
+
+.pwh-mainnav .jet-mega-menu-mega-container__inner,
+.pwh-mainnav .jet-mega-menu-mega-container__inner > .elementor {
+	padding: 0 !important;
 }
 
 /* --- JetMenu 1.x (legacy markup: .jet-menu / .jet-sub-mega-menu) ------ */
@@ -459,10 +478,7 @@ body .pwh-btn--sm .elementor-button {
 	max-width: none !important;
 	margin: 0 !important;
 	transform: translateX(-50%) !important;
-	padding-top: 37px;
-	background: transparent;
-	box-shadow: none;
-	border: 0;
+	padding: 37px 0 0 !important;
 }
 
 .pwh-mainnav .jet-menu > .jet-menu-item:has(.pwh-mega--narrow) {
