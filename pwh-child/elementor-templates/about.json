@@ -1,0 +1,908 @@
+{
+ "version": "0.4",
+ "title": "PWH – About",
+ "type": "wp-page",
+ "content": [
+  {
+   "id": "9ad49b3",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "116",
+     "right": "0",
+     "bottom": "120",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Hero",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "96",
+     "right": "24",
+     "bottom": "96",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "72",
+     "right": "20",
+     "bottom": "72",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section",
+    "background_background": "classic",
+    "background_color": "#0B1629",
+    "background_image": {
+     "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/about-hero.jpg",
+     "id": "",
+     "size": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_position": "center center",
+    "background_size": "cover",
+    "background_repeat": "no-repeat",
+    "background_overlay_background": "classic",
+    "background_overlay_color": "#0B1629",
+    "background_overlay_opacity": {
+     "unit": "px",
+     "size": 0.6,
+     "sizes": []
+    }
+   },
+   "elements": [
+    {
+     "id": "66d8711",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Copy",
+      "width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 14,
+       "column": "14",
+       "row": "14",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "0ce24e3",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "A local Perth team you can actually get on the phone.",
+        "header_size": "h1",
+        "_css_classes": "pwh-h1 pwh-text-cream"
+       },
+       "elements": []
+      },
+      {
+       "id": "ddb6307",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>We've been looking after websites, email and domains for Western Australian businesses for over 16 years. Same people who answer the phone, look after the servers, and fix the problem.</p>",
+        "_css_classes": "pwh-lead pwh-lead--tight pwh-text-mist"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "16b1d1a",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "56",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Story",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 12,
+     "column": "12",
+     "row": "12",
+     "isLinked": true
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 16,
+     "column": "16",
+     "row": "16",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "56",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "48",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_direction_tablet": "column",
+    "html_tag": "section",
+    "background_background": "classic",
+    "background_color": "#F5F1E0"
+   },
+   "elements": [
+    {
+     "id": "dd4946b",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "We're West Australian, through and through.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h3 pwh-text-ink pwh-fixed",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 417,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "f519adf",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>You're a growing business. Your website and email need to work hard, stay up, and be there when your customers are. That's the job we've been doing since 2006, for businesses right across WA.</p>",
+      "_css_classes": "pwh-body pwh-text-grey",
+      "_flex_size": "grow"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "9846409",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "72",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "IntroVideo",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "a7cd565",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Intro",
+      "width": {
+       "unit": "px",
+       "size": 670,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 10,
+       "column": "10",
+       "row": "10",
+       "isLinked": true
+      },
+      "flex_align_items": "center"
+     },
+     "elements": [
+      {
+       "id": "e223c1e",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Cameron, and a few of the businesses we look after.",
+        "header_size": "h2",
+        "align": "center",
+        "_css_classes": "pwh-h2 pwh-text-ink"
+       },
+       "elements": []
+      },
+      {
+       "id": "d461750",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Two and a half minutes on why we do this locally, and a few Perth businesses on what it's been like since they switched.</p>",
+        "_css_classes": "pwh-lead-17 pwh-text-grey",
+        "align": "center"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "4a6fc1e",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Video",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "min_height": {
+       "unit": "px",
+       "size": 495,
+       "sizes": []
+      },
+      "min_height_tablet": {
+       "unit": "px",
+       "size": 360,
+       "sizes": []
+      },
+      "min_height_mobile": {
+       "unit": "px",
+       "size": 240,
+       "sizes": []
+      },
+      "css_classes": "pwh-video",
+      "background_background": "classic",
+      "background_color": "#0B1629",
+      "border_radius": {
+       "unit": "px",
+       "top": "16",
+       "right": "16",
+       "bottom": "16",
+       "left": "16",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "9a14829",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<span class=\"pwh-play\" aria-hidden=\"true\"></span>"
+       },
+       "elements": []
+      },
+      {
+       "id": "84e8fc1",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>VIDEO (2:30): Cameron on who we are,<br>plus customer stories</p>",
+        "_css_classes": "pwh-video-caption"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "eb7f31b",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "72",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "LocalInfrastructure",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 64,
+     "column": "64",
+     "row": "64",
+     "isLinked": true
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 32,
+     "column": "32",
+     "row": "32",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "flex_direction_tablet": "column",
+    "html_tag": "section",
+    "background_background": "classic",
+    "background_color": "#F5F1E0"
+   },
+   "elements": [
+    {
+     "id": "a5eb5b6",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Copy",
+      "width": {
+       "unit": "px",
+       "size": 558,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 12,
+       "column": "12",
+       "row": "12",
+       "isLinked": true
+      },
+      "_flex_size": "none"
+     },
+     "elements": [
+      {
+       "id": "be37647",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Your data lives<br>in Perth.<br>So does the team.",
+        "header_size": "h2",
+        "_css_classes": "pwh-h2 pwh-text-ink"
+       },
+       "elements": []
+      },
+      {
+       "id": "305f7bd",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Your website and email are hosted on our servers in the NextDC data centre in Malaga. The people you talk to are the people who run those servers. No middleman, no offshore support desk, no ticket that sits for three days.</p>",
+        "_css_classes": "pwh-lead-17 pwh-text-grey"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "89e9b54",
+     "elType": "widget",
+     "widgetType": "image",
+     "settings": {
+      "image": {
+       "url": "{{PWH_ASSET:images/about-infrastructure.jpg}}",
+       "id": "",
+       "size": "",
+       "alt": "The Perth Web Hosting team working at the office",
+       "source": "library"
+      },
+      "image_size": "full",
+      "align": "left",
+      "_css_classes": "pwh-photo pwh-photo--300",
+      "_flex_size": "grow"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "b17f910",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "56",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Security",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "56",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "48",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section",
+    "background_background": "classic",
+    "background_color": "#0B1629",
+    "background_image": {
+     "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/about-backups.jpg",
+     "id": "",
+     "size": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_position": "center center",
+    "background_size": "cover",
+    "background_repeat": "no-repeat",
+    "background_overlay_background": "classic",
+    "background_overlay_color": "#0B1629",
+    "background_overlay_opacity": {
+     "unit": "px",
+     "size": 0.6,
+     "sizes": []
+    }
+   },
+   "elements": [
+    {
+     "id": "4822f1e",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Copy",
+      "width": {
+       "unit": "px",
+       "size": 700,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 12,
+       "column": "12",
+       "row": "12",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "2364b57",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "We're serious about backups.",
+        "header_size": "h2",
+        "_css_classes": "pwh-h2 pwh-text-cream"
+       },
+       "elements": []
+      },
+      {
+       "id": "d29a796",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>We back your site up every 3 hours to a separate Western Australian data centre. We're the only provider in Perth taking nightly snapshots of your website and holding them for 31 days. If something goes wrong, we roll you back to a recent version. Less lost work, less stress.</p>",
+        "_css_classes": "pwh-lead-17 pwh-text-cream"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "d6a18da",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "72",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "MeetCameron",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 48,
+     "column": "48",
+     "row": "48",
+     "isLinked": true
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 32,
+     "column": "32",
+     "row": "32",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "stretch",
+    "flex_direction_tablet": "column",
+    "html_tag": "section",
+    "background_background": "classic",
+    "background_color": "#0B1629"
+   },
+   "elements": [
+    {
+     "id": "6dfd512",
+     "elType": "widget",
+     "widgetType": "image",
+     "settings": {
+      "image": {
+       "url": "{{PWH_ASSET:images/about-cameron.jpg}}",
+       "id": "",
+       "size": "",
+       "alt": "Cameron Worts, founder of Perth Web Hosting, by the Swan River",
+       "source": "library"
+      },
+      "image_size": "full",
+      "align": "left",
+      "_css_classes": "pwh-photo pwh-photo--343 pwh-fixed",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 514,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "d113af3",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "70",
+       "right": "0",
+       "bottom": "70",
+       "left": "0",
+       "isLinked": false
+      },
+      "_title": "Copy",
+      "flex_gap": {
+       "unit": "px",
+       "size": 12,
+       "column": "12",
+       "row": "12",
+       "isLinked": true
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "flex_justify_content": "center",
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "d61de43",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Meet the founder",
+        "header_size": "p",
+        "_css_classes": "pwh-kicker"
+       },
+       "elements": []
+      },
+      {
+       "id": "f6ed986",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Cameron Worts",
+        "header_size": "h2",
+        "_css_classes": "pwh-h2 pwh-text-cream"
+       },
+       "elements": []
+      },
+      {
+       "id": "59a3dd8",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Cameron is the founder and the person behind Perth Web Hosting. He's passionate about technology and won't settle for second best on design, security or backups. His favourite part of the job is seeing a business click with how much easier a good website makes things. He's also a keen photographer, most of the shots on this site and around the office are his, usually taken while chasing a storm.</p>",
+        "_css_classes": "pwh-lead-16 pwh-text-mist"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "bab0d98",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "64",
+     "right": "0",
+     "bottom": "64",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "CTA",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "56",
+     "right": "24",
+     "bottom": "56",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "48",
+     "right": "20",
+     "bottom": "48",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "html_tag": "section",
+    "css_classes": "pwh-cta-band",
+    "background_background": "classic",
+    "background_color": "#F5F1E0"
+   },
+   "elements": [
+    {
+     "id": "34c8b32",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "We'd love to work with you.",
+      "header_size": "h2",
+      "align": "center",
+      "_css_classes": "pwh-h2 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "8baa1e8",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>Cameron and the team especially like finding the little wins that make a big difference. Get in touch today.<br>Your local hosting partner.</p>",
+      "_css_classes": "pwh-lead-17 pwh-text-grey",
+      "align": "center"
+     },
+     "elements": []
+    },
+    {
+     "id": "22fcbc7",
+     "elType": "widget",
+     "widgetType": "button",
+     "settings": {
+      "text": "Get in Touch",
+      "link": {
+       "url": "{{PWH_URL:/contact/}}",
+       "is_external": "",
+       "nofollow": "",
+       "custom_attributes": ""
+      },
+      "size": "md",
+      "align": "center",
+      "_css_classes": "pwh-btn pwh-btn--amber"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": {
+  "hide_title": "yes",
+  "template": "elementor_header_footer"
+ }
+}

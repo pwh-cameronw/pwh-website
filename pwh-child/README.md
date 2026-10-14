@@ -131,3 +131,13 @@ Built from the Figma *Page / Domains* frame. Import it from **Appearance → PWH
 - **Not taken from Figma** (the Figma API limit was hit): the testimonials reuse the Home page's three reviews; the "Not sure which extension…" block is centred on cream with an amber **Contact Us** button to `/contact/`; and an open FAQ answer is styled as 16px grey text. Adjust any of these in Elementor if the design differs.
 - "Ask Us About Transferring" links to `/support/hosting-transfer-request/`.
 
+## About page
+
+Built from the Figma *Page / About* frame (read through the Figma REST API, so spacing, type and colours are exact). Import it from **Appearance → PWH Setup → Import the About Us page**, or run `wp pwh setup --about`. It goes to `/about/` (the mega menu and footer link), or `/about-new/` if a page already exists there.
+
+**Images:**
+- *Your data lives in Perth* photo and Cameron's portrait ship with the theme (`assets/images/about-infrastructure.jpg`, `about-cameron.jpg`, 2× exports from Figma). Setup adds them to the Media Library.
+- Upload **`about-hero.jpg`** (Cameron on the phone, hero background) and **`about-backups.jpg`** ("We're serious about backups." background). Both are shown under a 60% navy overlay.
+
+**Video:** the design has a placeholder (navy panel, play button, "VIDEO (2:30)…" caption). When the video is ready, replace that container with an Elementor **Video** widget.
+

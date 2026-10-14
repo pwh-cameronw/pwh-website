@@ -95,6 +95,7 @@ class PWH_Setup {
 	const PAGES = array(
 		'cpanel'  => array( 'cpanel.json', 'cPanel Hosting', 'web-hosting/cpanel', 'cpanel-hosting' ),
 		'domains' => array( 'domains.json', 'Domains', 'domains', 'domains' ),
+		'about'   => array( 'about.json', 'About Us', 'about', 'about' ),
 	);
 
 	/** @var array */

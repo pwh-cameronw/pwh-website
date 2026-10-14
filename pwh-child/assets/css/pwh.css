@@ -1592,6 +1592,109 @@ body .pwh-btn--sm .elementor-button {
 }
 
 /* ---------------------------------------------------------------------------
+ * 7d. About page
+ * ------------------------------------------------------------------------ */
+
+/* Inter Light body sizes used on About */
+.pwh-lead--tight,
+.pwh-lead--tight p {
+	line-height: 22px;
+}
+
+.pwh-lead-17,
+.pwh-lead-17 p,
+.pwh-lead-16,
+.pwh-lead-16 p {
+	margin: 0;
+	font-family: var(--pwh-font-body);
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 21px;
+}
+
+.pwh-lead-16,
+.pwh-lead-16 p {
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.pwh-text-grey,
+.pwh-text-grey .elementor-heading-title {
+	color: var(--pwh-grey-dark);
+}
+
+/* Small amber-light label above a heading ("Meet the founder") */
+.pwh-kicker .elementor-heading-title {
+	margin: 0;
+	color: #e8c07a;
+	font-family: var(--pwh-font-body);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+/* Fixed-width widgets beside a growing column keep their Figma width. */
+@media (min-width: 1025px) {
+	.pwh-fixed {
+		flex-shrink: 0 !important;
+	}
+}
+
+/* Rounded photos filling their slot */
+.pwh-photo img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+	border-radius: var(--pwh-radius);
+}
+
+.pwh-photo--300 img {
+	height: 300px;
+}
+
+.pwh-photo--343 img {
+	height: 343px;
+}
+
+/* Video placeholder: navy panel, 84px cream play button, caption */
+.pwh-video {
+	border-radius: var(--pwh-radius);
+	overflow: hidden;
+}
+
+.pwh-play {
+	display: block;
+	width: 84px;
+	height: 84px;
+	border-radius: 50%;
+	background: var(--pwh-cream) no-repeat 54% 50% / 21px 24px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 24'%3E%3Cpath d='M0 0v24l21-12z' fill='%230b1629'/%3E%3C/svg%3E");
+}
+
+.pwh-video-caption,
+.pwh-video-caption p {
+	margin: 0;
+	color: var(--pwh-navy-mist);
+	font-family: var(--pwh-font-body);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+/* CTA band: pale rule top and bottom */
+.pwh-cta-band {
+	border-top: 1px solid var(--pwh-navy-pale);
+	border-bottom: 1px solid var(--pwh-navy-pale);
+}
+
+@media (max-width: 1024px) {
+	.pwh-photo--300 img,
+	.pwh-photo--343 img {
+		height: auto;
+		aspect-ratio: 3 / 2;
+	}
+}
+
+/* ---------------------------------------------------------------------------
  * 8. Footer
  * ------------------------------------------------------------------------ */
 

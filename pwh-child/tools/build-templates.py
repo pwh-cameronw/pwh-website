@@ -830,6 +830,111 @@ def domains():
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
 
+# --- About -----------------------------------------------------------------
+# Built from the Figma REST API (Page / About, 157:2402).
+
+ABOUT_HERO = MEDIA + "about-hero.jpg"        # Hero background (Cameron on the phone)
+ABOUT_BACKUPS = MEDIA + "about-backups.jpg"  # "We're serious about backups." background
+
+
+def photo_bg(img, opacity):
+    return {
+        "background_background": "classic",
+        "background_color": "#0B1629",
+        "background_image": asset(img),
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_repeat": "no-repeat",
+        "background_overlay_background": "classic",
+        "background_overlay_color": "#0B1629",
+        "background_overlay_opacity": {"unit": "px", "size": opacity, "sizes": []},
+    }
+
+
+def about():
+    hero = con("Hero", [
+        con("Copy", [
+            heading("A local Perth team you can actually get on the phone.", "pwh-h1 pwh-text-cream", tag="h1"),
+            text("<p>We've been looking after websites, email and domains for Western Australian businesses for over 16 years. Same people who answer the phone, look after the servers, and fix the problem.</p>",
+                 "pwh-lead pwh-lead--tight pwh-text-mist"),
+        ], gap_px=14, width=px(760), width_t=pct(100)),
+    ], boxed=1180, pad=box(116, 0, 120, 0), pad_t=box(96, 24, 96, 24), pad_m=box(72, 20, 72, 20), tag="section",
+        extra=photo_bg(ABOUT_HERO, 0.6))
+
+    story = con("Story", [
+        heading("We're West Australian, through and through.", "pwh-h3 pwh-text-ink pwh-fixed", tag="h2"),
+        text("<p>You're a growing business. Your website and email need to work hard, stay up, and be there when your customers are. That's the job we've been doing since 2006, for businesses right across WA.</p>",
+             "pwh-body pwh-text-grey"),
+    ], direction="row", boxed=1180, gap_px=12, dir_t="column", gap_t=16,
+        pad=box(72, 0, 56, 0), pad_t=box(64, 24, 56, 24), pad_m=box(56, 20, 48, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0"})
+    story["elements"][0]["settings"].update({"_element_width": "initial", "_element_custom_width": px(417),
+                                             "_element_width_tablet": "inherit"})
+    story["elements"][1]["settings"].update({"_flex_size": "grow"})
+
+    video = con("IntroVideo", [
+        con("Intro", [
+            heading("Cameron, and a few of the businesses we look after.", "pwh-h2 pwh-text-ink", tag="h2", align="center"),
+            text("<p>Two and a half minutes on why we do this locally, and a few Perth businesses on what it's been like since they switched.</p>",
+                 "pwh-lead-17 pwh-text-grey"),
+        ], gap_px=10, width=px(670), width_t=pct(100), align="center"),
+        # Placeholder from the design. Swap for an Elementor Video widget once the video is ready.
+        con("Video", [
+            text('<span class="pwh-play" aria-hidden="true"></span>', ""),
+            text("<p>VIDEO (2:30): Cameron on who we are,<br>plus customer stories</p>", "pwh-video-caption"),
+        ], cls="pwh-video", gap_px=16, justify="center", align="center", min_h=495, min_h_t=360, min_h_m=240,
+            extra={"background_background": "classic", "background_color": "#0B1629", "border_radius": box(16)}),
+    ], boxed=1180, gap_px=24, align="center", pad=box(72, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section")
+    video["elements"][0]["elements"][1]["settings"]["align"] = "center"
+
+    infra = con("LocalInfrastructure", [
+        con("Copy", [
+            heading("Your data lives<br>in Perth.<br>So does the team.", "pwh-h2 pwh-text-ink", tag="h2"),
+            text("<p>Your website and email are hosted on our servers in the NextDC data centre in Malaga. The people you talk to are the people who run those servers. No middleman, no offshore support desk, no ticket that sits for three days.</p>",
+                 "pwh-lead-17 pwh-text-grey"),
+        ], gap_px=12, width=px(558), width_t=pct(100), extra={"_flex_size": "none"}),
+        image("images/about-infrastructure.jpg", "pwh-photo pwh-photo--300", alt="The Perth Web Hosting team working at the office"),
+    ], direction="row", boxed=1180, gap_px=64, align="center", dir_t="column", gap_t=32,
+        pad=box(72, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0"})
+    infra["elements"][1]["settings"].update({"_flex_size": "grow"})
+
+    backups = con("Security", [
+        con("Copy", [
+            heading("We're serious about backups.", "pwh-h2 pwh-text-cream", tag="h2"),
+            text("<p>We back your site up every 3 hours to a separate Western Australian data centre. We're the only provider in Perth taking nightly snapshots of your website and holding them for 31 days. If something goes wrong, we roll you back to a recent version. Less lost work, less stress.</p>",
+                 "pwh-lead-17 pwh-text-cream"),
+        ], gap_px=12, width=px(700), width_t=pct(100)),
+    ], boxed=1180, pad=box(72, 0, 56, 0), pad_t=box(64, 24, 56, 24), pad_m=box(56, 20, 48, 20), tag="section",
+        extra=photo_bg(ABOUT_BACKUPS, 0.6))
+
+    cameron = con("MeetCameron", [
+        image("images/about-cameron.jpg", "pwh-photo pwh-photo--343 pwh-fixed", alt="Cameron Worts, founder of Perth Web Hosting, by the Swan River"),
+        con("Copy", [
+            heading("Meet the founder", "pwh-kicker", tag="p"),
+            heading("Cameron Worts", "pwh-h2 pwh-text-cream", tag="h2"),
+            text("<p>Cameron is the founder and the person behind Perth Web Hosting. He's passionate about technology and won't settle for second best on design, security or backups. His favourite part of the job is seeing a business click with how much easier a good website makes things. He's also a keen photographer, most of the shots on this site and around the office are his, usually taken while chasing a storm.</p>",
+                 "pwh-lead-16 pwh-text-mist"),
+        ], gap_px=12, pad=box(70, 0), pad_t=box(0), justify="center", extra={"_flex_size": "grow"}),
+    ], direction="row", boxed=1180, gap_px=48, align="stretch", dir_t="column", gap_t=32,
+        pad=box(72, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#0B1629"})
+    cameron["elements"][0]["settings"].update({"_element_width": "initial", "_element_custom_width": px(514),
+                                               "_element_width_tablet": "inherit"})
+
+    cta = con("CTA", [
+        heading("We'd love to work with you.", "pwh-h2 pwh-text-ink", tag="h2", align="center"),
+        text("<p>Cameron and the team especially like finding the little wins that make a big difference. Get in touch today.<br>Your local hosting partner.</p>",
+             "pwh-lead-17 pwh-text-grey"),
+        button("Get in Touch", url("/contact/"), "pwh-btn--amber", align="center"),
+    ], cls="pwh-cta-band", boxed=1180, gap_px=24, align="center", pad=box(64, 0), pad_t=box(56, 24), pad_m=box(48, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0"})
+    cta["elements"][1]["settings"]["align"] = "center"
+
+    return template("PWH – About", "wp-page", [hero, story, video, infra, backups, cameron, cta],
+                    {"hide_title": "yes", "template": "elementor_header_footer"})
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     files = {
@@ -841,6 +946,7 @@ def main():
         "mega-about.json": mega_about(),
         "cpanel.json": cpanel(),
         "domains.json": domains(),
+        "about.json": about(),
     }
     for name, data in files.items():
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as fh:
