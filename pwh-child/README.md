@@ -42,7 +42,9 @@ What it gives you:
    - creates the JetMenu mega content for Products, About and Support and turns mega menu on for those items
    - adds the PNG photos to the Media Library
 
-   You can run it again at any time. It updates the same posts rather than creating duplicates. **Note:** it rebuilds the *PWH Primary* menu items each time, so make menu changes in `inc/setup.php` or stop re-running it once you start editing the menu by hand.
+   You can run it again at any time without losing your work:
+   - **Header, footer, PWH Primary menu and JetMenu mega content are protected.** Once they exist (including a header or footer you built yourself), setup never imports over them, never changes their display conditions and never rebuilds the menu. Edit them in Elementor and Appearance → Menus. To get the original import back, delete that template or menu first.
+   - **Home page and kit colours & fonts** are only re-applied when you tick them on the setup page (or pass `--home` / `--kit` to `wp pwh setup`). Re-importing the Home page overwrites edits made to it in Elementor.
 
 ## JetMenu: check, or connect by hand
 
@@ -90,7 +92,7 @@ The JSON in `elementor-templates/` is generated. Edit `tools/build-templates.py`
 python3 tools/build-templates.py
 ```
 
-Then re-run **PWH Setup**. The files are also in Elementor's export format, so you can import them through **Templates → Saved Templates → Import**. That route doesn't fill in the `{{PWH_…}}` placeholders, though (image URLs, links and the menu ID), so use the setup page where you can.
+Then re-run **PWH Setup** with *Re-import the Home page* ticked. Header and footer changes in the generator only reach a site that doesn't have a header or footer yet. The files are also in Elementor's export format, so you can import them through **Templates → Saved Templates → Import**. That route doesn't fill in the `{{PWH_…}}` placeholders, though (image URLs, links and the menu ID), so use the setup page where you can.
 
 ## Not in this build yet
 

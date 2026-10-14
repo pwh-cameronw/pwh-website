@@ -4,7 +4,11 @@
  * creates the primary menu and wires JetMenu mega content to it.
  *
  * Run from Appearance → PWH Setup, or `wp pwh setup` with WP-CLI.
- * Safe to re-run: posts created on a previous run are updated in place.
+ *
+ * Re-running never touches the header, footer, primary menu or JetMenu mega
+ * content once they exist; those are maintained in Elementor/WordPress by hand.
+ * The Home page and kit globals are only re-applied when asked for explicitly
+ * (checkboxes on the setup page, or --home / --kit with WP-CLI).
  *
  * @package pwh-child
  */
@@ -83,7 +87,7 @@ class PWH_Setup {
 	);
 
 	/** @var array */
-	private $state;
+	public $state;
 
 	/** @var string[] */
 	private $log = array();
@@ -99,9 +103,14 @@ class PWH_Setup {
 		if ( defined( 'WP_CLI' ) && WP_CLI ) {
 			WP_CLI::add_command(
 				'pwh setup',
-				function () {
+				function ( $args, $assoc ) {
 					$setup = new self();
-					$setup->run();
+					$setup->run(
+						array(
+							'home' => ! empty( $assoc['home'] ),
+							'kit'  => ! empty( $assoc['kit'] ),
+						)
+					);
 					foreach ( $setup->log as $line ) {
 						WP_CLI::log( $line );
 					}
@@ -148,9 +157,30 @@ class PWH_Setup {
 				<?php endforeach; ?>
 			</ul>
 
+			<?php
+			$setup  = new self();
+			$exists = $setup->existing();
+			?>
+			<h2>Protected</h2>
+			<p>These are never imported over once they exist. Edit them in Elementor / Appearance → Menus.</p>
+			<ul>
+				<li><?php echo $exists['header'] ? '🔒 Header – exists, kept as is' : '➕ Header – will be imported'; ?></li>
+				<li><?php echo $exists['footer'] ? '🔒 Footer – exists, kept as is' : '➕ Footer – will be imported'; ?></li>
+				<li><?php echo $exists['menu'] ? '🔒 PWH Primary menu &amp; JetMenu mega content – exists, kept as is' : '➕ PWH Primary menu &amp; JetMenu mega content – will be created'; ?></li>
+			</ul>
+
 			<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
 				<?php wp_nonce_field( 'pwh_setup' ); ?>
 				<input type="hidden" name="action" value="pwh_setup">
+				<h2>Optional</h2>
+				<p>
+					<label><input type="checkbox" name="pwh_home" value="1" <?php checked( ! $exists['home'] ); ?>>
+					<?php echo $exists['home'] ? '<strong>Re-import the Home page</strong> – overwrites any edits made to it in Elementor' : 'Import the Home page'; ?></label>
+				</p>
+				<p>
+					<label><input type="checkbox" name="pwh_kit" value="1" <?php checked( empty( $setup->state['kit_done'] ) ); ?>>
+					<?php echo empty( $setup->state['kit_done'] ) ? 'Apply PWH colours &amp; fonts to the Elementor kit' : '<strong>Re-apply PWH colours &amp; fonts</strong> – overwrites changes made in Site Settings'; ?></label>
+				</p>
 				<?php submit_button( get_option( self::OPTION ) ? 'Re-run setup' : 'Run setup', 'primary', 'submit', true, $checks['Elementor'] ? array() : array( 'disabled' => 'disabled' ) ); ?>
 			</form>
 
@@ -169,7 +199,12 @@ class PWH_Setup {
 		check_admin_referer( 'pwh_setup' );
 
 		$setup = new self();
-		$setup->run();
+		$setup->run(
+			array(
+				'home' => ! empty( $_POST['pwh_home'] ),
+				'kit'  => ! empty( $_POST['pwh_kit'] ),
+			)
+		);
 
 		set_transient( 'pwh_setup_log', $setup->log, 5 * MINUTE_IN_SECONDS );
 		wp_safe_redirect( admin_url( 'themes.php?page=pwh-setup' ) );
@@ -184,7 +219,41 @@ class PWH_Setup {
 		$this->attachments = (array) $this->state['attachments'];
 	}
 
-	public function run() {
+	/**
+	 * What already exists on the site. Header/footer count if ANY Theme Builder
+	 * header/footer exists, so a hand-built one is never shadowed by an import.
+	 */
+	public function existing() {
+		$has_type = function ( $type ) {
+			$q = new WP_Query(
+				array(
+					'post_type'      => 'elementor_library',
+					'post_status'    => array( 'publish', 'draft', 'private', 'future', 'pending' ),
+					'posts_per_page' => 1,
+					'fields'         => 'ids',
+					'no_found_rows'  => true,
+					'meta_key'       => '_elementor_template_type', // phpcs:ignore WordPress.DB.SlowDBQuery
+					'meta_value'     => $type, // phpcs:ignore WordPress.DB.SlowDBQuery
+				)
+			);
+			return (bool) $q->posts;
+		};
+
+		$menu_id = (int) $this->state['menu'];
+		$menu    = ( $menu_id && wp_get_nav_menu_object( $menu_id ) ) || wp_get_nav_menu_object( 'PWH Primary' );
+
+		return array(
+			'header' => $has_type( 'header' ),
+			'footer' => $has_type( 'footer' ),
+			'menu'   => (bool) $menu,
+			'home'   => $this->state['home'] && get_post( $this->state['home'] ),
+		);
+	}
+
+	/**
+	 * @param array $opts { home: bool re-import Home, kit: bool re-apply kit }.
+	 */
+	public function run( array $opts = array() ) {
 		if ( ! did_action( 'elementor/loaded' ) ) {
 			$this->log[] = 'Elementor is not active – nothing imported.';
 			return;
@@ -194,14 +263,40 @@ class PWH_Setup {
 		require_once ABSPATH . 'wp-admin/includes/media.php';
 		require_once ABSPATH . 'wp-admin/includes/image.php';
 
-		$this->setup_kit();
+		$exists = $this->existing();
 
-		$menu_id                  = $this->setup_menu();
-		$this->state['menu']      = $menu_id;
+		if ( ! empty( $opts['kit'] ) || empty( $this->state['kit_done'] ) ) {
+			$this->setup_kit();
+			$this->state['kit_done'] = 1;
+		} else {
+			$this->log[] = 'Kit colours & fonts: kept as is';
+		}
+
+		// Menu + JetMenu mega content: created once, then left alone.
+		if ( $exists['menu'] ) {
+			$menu                = wp_get_nav_menu_object( (int) $this->state['menu'] ) ?: wp_get_nav_menu_object( 'PWH Primary' );
+			$this->state['menu'] = (int) $menu->term_id;
+			$this->log[]         = "Menu \"{$menu->name}\" (#{$menu->term_id}) and its mega content: protected, not changed";
+		} else {
+			$this->state['menu'] = $this->setup_menu();
+		}
+
 		$this->state['templates'] = (array) $this->state['templates'];
+		$new_theme_parts          = false;
 
 		foreach ( self::TEMPLATES as $key => $def ) {
 			list( $file, $type, $title ) = $def;
+
+			if ( in_array( $type, array( 'header', 'footer' ), true ) && $exists[ $type ] ) {
+				$this->log[] = ucfirst( $type ) . ': protected, not changed';
+				continue;
+			}
+			// Saved mega templates are reference copies; create once, never overwrite.
+			if ( ! empty( $this->state['templates'][ $key ] ) && get_post( $this->state['templates'][ $key ] ) ) {
+				$this->log[] = "Template \"$title\": exists, not changed";
+				continue;
+			}
+
 			$data = $this->load( $file );
 			if ( ! $data ) {
 				continue;
@@ -209,12 +304,20 @@ class PWH_Setup {
 			$id = $this->upsert_library_template( $key, $title, $type, $data );
 			if ( in_array( $type, array( 'header', 'footer' ), true ) ) {
 				update_post_meta( $id, '_elementor_conditions', array( 'include/general' ) );
+				$new_theme_parts = true;
 			}
 		}
 
-		$this->setup_home();
-		$this->setup_jetmenu( $menu_id );
-		$this->finish();
+		if ( ! empty( $opts['home'] ) || ! $exists['home'] ) {
+			$this->setup_home();
+		} else {
+			$this->log[] = 'Home page: kept as is (tick "Re-import the Home page" to overwrite)';
+		}
+
+		if ( ! $exists['menu'] ) {
+			$this->setup_jetmenu( $this->state['menu'] );
+		}
+		$this->finish( $new_theme_parts );
 
 		$this->state['attachments'] = $this->attachments;
 		update_option( self::OPTION, $this->state, false );
@@ -526,7 +629,7 @@ class PWH_Setup {
 			return 0;
 		}
 
-		// Rebuild items so re-runs stay in sync with this file.
+		// Only reached when the menu was just created (existing menus are protected).
 		foreach ( (array) wp_get_nav_menu_items( $menu_id, array( 'post_status' => 'any' ) ) as $item ) {
 			wp_delete_post( $item->ID, true );
 		}
@@ -626,8 +729,10 @@ class PWH_Setup {
 		}
 	}
 
-	private function finish() {
-		if ( class_exists( '\ElementorPro\Modules\ThemeBuilder\Module' ) ) {
+	private function finish( $new_theme_parts ) {
+		if ( ! $new_theme_parts ) {
+			// Nothing new for the Theme Builder; leave its display conditions alone.
+		} elseif ( class_exists( '\ElementorPro\Modules\ThemeBuilder\Module' ) ) {
 			$module     = \ElementorPro\Modules\ThemeBuilder\Module::instance();
 			$conditions = method_exists( $module, 'get_conditions_manager' ) ? $module->get_conditions_manager() : null;
 			if ( $conditions && method_exists( $conditions, 'get_cache' ) ) {
