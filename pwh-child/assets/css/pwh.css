@@ -353,10 +353,18 @@ body .pwh-btn--sm .elementor-button {
 	line-height: normal;
 }
 
+.pwh-mainnav .jet-mega-menu-item__inner {
+	gap: 7px !important;
+}
+
 .pwh-mainnav .jet-mega-menu-item__dropdown {
-	margin-left: 7px;
+	width: 11px !important;
+	min-width: 0 !important;
+	height: 11px !important;
+	margin: 0 !important;
+	padding: 0 !important;
 	color: var(--pwh-navy-ink);
-	font-size: 11px;
+	font-size: 11px !important;
 	line-height: 1;
 }
 
@@ -369,8 +377,8 @@ body .pwh-btn--sm .elementor-button {
 /* Mega panel position. JetMenu anchors the panel to the menu widget, so it
    starts at the "Products" link and runs off the right of the screen. Instead,
    anchor it to the header bar and centre it on the 1180px content column, 14px
-   below the bar as in Figma. The narrow About panel (.pwh-mega--narrow) stays
-   under its own menu item. */
+   below the bar as in Figma. Narrow panels (About) stay under their own menu
+   item: .pwh-mega--narrow, or any single-column panel from older imports. */
 .pwh-header {
 	position: relative;
 }
@@ -397,15 +405,16 @@ body .pwh-btn--sm .elementor-button {
 	padding: 37px 0 0 !important; /* 23px hover bridge + 14px gap */
 }
 
-.pwh-mainnav .jet-mega-menu-item--top-level:has(.pwh-mega--narrow) {
+.pwh-mainnav .jet-mega-menu-item--top-level:has(.pwh-mega--narrow, .pwh-mega > .e-con:only-child, .pwh-mega > .e-con-inner > .e-con:only-child) {
 	position: relative !important;
 }
 
-.pwh-mainnav .jet-mega-menu-item--top-level:has(.pwh-mega--narrow) > .jet-mega-menu-mega-container {
+.pwh-mainnav .jet-mega-menu-item--top-level:has(.pwh-mega--narrow, .pwh-mega > .e-con:only-child, .pwh-mega > .e-con-inner > .e-con:only-child) > .jet-mega-menu-mega-container {
 	top: 100% !important;
 	left: 0 !important;
 	width: 280px !important;
 	transform: none !important;
+	padding-top: 41px !important; /* hover bridge; panel lands 14px below the bar, level with the wide panels */
 }
 
 .pwh-mainnav .jet-mega-menu-mega-container__inner {
@@ -483,15 +492,16 @@ body .pwh-btn--sm .elementor-button {
 	padding: 37px 0 0 !important;
 }
 
-.pwh-mainnav .jet-menu > .jet-menu-item:has(.pwh-mega--narrow) {
+.pwh-mainnav .jet-menu > .jet-menu-item:has(.pwh-mega--narrow, .pwh-mega > .e-con:only-child, .pwh-mega > .e-con-inner > .e-con:only-child) {
 	position: relative !important;
 }
 
-.pwh-mainnav .jet-menu > .jet-menu-item:has(.pwh-mega--narrow) > .jet-sub-mega-menu {
+.pwh-mainnav .jet-menu > .jet-menu-item:has(.pwh-mega--narrow, .pwh-mega > .e-con:only-child, .pwh-mega > .e-con-inner > .e-con:only-child) > .jet-sub-mega-menu {
 	top: 100% !important;
 	left: 0 !important;
 	width: 280px !important;
 	transform: none !important;
+	padding-top: 41px !important; /* hover bridge; panel lands 14px below the bar, level with the wide panels */
 }
 
 /* --- Mega content templates (Mega Menu / Products, Support, About) ----- */
@@ -524,6 +534,38 @@ body .pwh-btn--sm .elementor-button {
 	border: 1px solid var(--pwh-navy-pale);
 	border-radius: var(--pwh-radius);
 	box-shadow: var(--pwh-shadow-menu);
+}
+
+/* Older imports: the panel is a boxed container, so Elementor passes the
+   panel's padding vars to its .e-con-inner as well (44px twice) and the
+   columns are boxed without .pwh-mega-col and don't shrink. Normalise both
+   structures. */
+.pwh-mega > .e-con-inner {
+	--padding-top: 0px;
+	--padding-right: 0px;
+	--padding-bottom: 0px;
+	--padding-left: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	gap: 48px;
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0 !important;
+}
+
+.pwh-mega > .e-con,
+.pwh-mega > .e-con-inner > .e-con {
+	flex: 1 1 0 !important;
+	min-width: 0;
+	width: auto;
+}
+
+.pwh-mega .e-con-inner .e-con-inner {
+	padding: 0 !important;
+	max-width: none;
 }
 
 .pwh-mega .e-con {
@@ -588,14 +630,25 @@ body .pwh-btn--sm .elementor-button {
 		gap: 32px;
 	}
 
-	.pwh-mega-col {
+	.pwh-mega > .e-con-inner {
+		flex-wrap: wrap;
+		gap: 32px;
+	}
+
+	.pwh-mega-col,
+	.pwh-mega > .e-con,
+	.pwh-mega > .e-con-inner > .e-con {
 		flex: 1 1 calc(50% - 16px) !important;
 	}
 }
 
 @media (max-width: 767px) {
-	.pwh-mega {
+	.pwh-mega,
+	.pwh-mega > .e-con-inner {
 		flex-direction: column;
+	}
+
+	.pwh-mega {
 		padding: 24px;
 	}
 }
@@ -699,6 +752,12 @@ body .pwh-btn--sm .elementor-button {
 	background-position: calc(50% - 325px) 0;
 }
 
+/* "Not sure what you need?" – navy under the photo, so the gradient doesn't
+   show as grey on cream while Elementor lazy-loads the background. */
+.pwh-why {
+	background-color: var(--pwh-navy-ink);
+}
+
 /* Clients strip – dashed logo slots */
 .pwh-logo-slot {
 	background-color: var(--pwh-navy-mist);
@@ -722,6 +781,17 @@ body .pwh-btn--sm .elementor-button {
 }
 
 /* Card / Media – product cards */
+/* Three-up card rows (product cards, testimonials): equal columns that fit
+   the row including gaps. Elementor gives containers flex-shrink 0, so
+   33.33% widths plus 32px gaps overflowed by 64px. */
+@media (min-width: 1025px) {
+	.pwh-media-card,
+	.pwh-testimonial {
+		flex: 1 1 0 !important;
+		min-width: 0;
+	}
+}
+
 .pwh-media-card {
 	border-radius: var(--pwh-radius);
 	overflow: hidden;
