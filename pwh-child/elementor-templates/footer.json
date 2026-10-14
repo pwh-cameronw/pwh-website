@@ -56,7 +56,7 @@
      "id": "28c264a",
      "elType": "container",
      "settings": {
-      "content_width": "boxed",
+      "content_width": "full",
       "flex_direction": "row",
       "padding": {
        "unit": "px",
@@ -92,7 +92,7 @@
        "id": "67cb1b9",
        "elType": "container",
        "settings": {
-        "content_width": "boxed",
+        "content_width": "full",
         "flex_direction": "column",
         "padding": {
          "unit": "px",
@@ -177,7 +177,7 @@
          "id": "1e677ff",
          "elType": "container",
          "settings": {
-          "content_width": "boxed",
+          "content_width": "full",
           "flex_direction": "column",
           "padding": {
            "unit": "px",
@@ -209,7 +209,7 @@
            "id": "ac8fcd6",
            "elType": "container",
            "settings": {
-            "content_width": "boxed",
+            "content_width": "full",
             "flex_direction": "row",
             "padding": {
              "unit": "px",
@@ -272,7 +272,7 @@
            "id": "02214a6",
            "elType": "container",
            "settings": {
-            "content_width": "boxed",
+            "content_width": "full",
             "flex_direction": "row",
             "padding": {
              "unit": "px",
@@ -335,7 +335,7 @@
            "id": "c43d1b0",
            "elType": "container",
            "settings": {
-            "content_width": "boxed",
+            "content_width": "full",
             "flex_direction": "row",
             "padding": {
              "unit": "px",
@@ -401,7 +401,7 @@
          "id": "a689079",
          "elType": "container",
          "settings": {
-          "content_width": "boxed",
+          "content_width": "full",
           "flex_direction": "row",
           "padding": {
            "unit": "px",
@@ -491,7 +491,7 @@
        "id": "dce47b4",
        "elType": "container",
        "settings": {
-        "content_width": "boxed",
+        "content_width": "full",
         "flex_direction": "column",
         "padding": {
          "unit": "px",
@@ -520,7 +520,7 @@
          "id": "cfddc8a",
          "elType": "container",
          "settings": {
-          "content_width": "boxed",
+          "content_width": "full",
           "flex_direction": "column",
           "padding": {
            "unit": "px",
@@ -612,7 +612,7 @@
          "id": "a600122",
          "elType": "container",
          "settings": {
-          "content_width": "boxed",
+          "content_width": "full",
           "flex_direction": "column",
           "padding": {
            "unit": "px",
@@ -693,7 +693,7 @@
        "id": "4b63a3d",
        "elType": "container",
        "settings": {
-        "content_width": "boxed",
+        "content_width": "full",
         "flex_direction": "column",
         "padding": {
          "unit": "px",
@@ -888,7 +888,7 @@
        "id": "e1bc5c3",
        "elType": "container",
        "settings": {
-        "content_width": "boxed",
+        "content_width": "full",
         "flex_direction": "column",
         "padding": {
          "unit": "px",
@@ -1002,7 +1002,7 @@
      "id": "086f9f4",
      "elType": "container",
      "settings": {
-      "content_width": "boxed",
+      "content_width": "full",
       "flex_direction": "column",
       "padding": {
        "unit": "px",
@@ -1020,7 +1020,7 @@
        "id": "9f2bc94",
        "elType": "container",
        "settings": {
-        "content_width": "boxed",
+        "content_width": "full",
         "flex_direction": "row",
         "padding": {
          "unit": "px",
@@ -1058,7 +1058,7 @@
          "id": "87845ec",
          "elType": "container",
          "settings": {
-          "content_width": "boxed",
+          "content_width": "full",
           "flex_direction": "row",
           "padding": {
            "unit": "px",

@@ -62,10 +62,15 @@ def gap(size):
 
 # --- elements -------------------------------------------------------------
 
-def con(name, children, *, cls="", direction="column", full=False, boxed=None, width=None,
+def con(name, children, *, cls="", direction="column", full=None, boxed=None, width=None,
         gap_px=None, pad=None, pad_t=None, pad_m=None, justify=None, align=None,
         dir_t=None, dir_m=None, gap_t=None, gap_m=None, width_t=None, width_m=None,
         min_h=None, min_h_t=None, min_h_m=None, tag=None, link=None, extra=None):
+    # Only top-level sections are "boxed" (they pass boxed=1180). Everything nested
+    # is "full width": Elementor ignores the Width control on boxed containers,
+    # which made the product cards each 100% wide.
+    if full is None:
+        full = boxed is None
     s = {
         "content_width": "full" if full else "boxed",
         "flex_direction": direction,
@@ -367,6 +372,7 @@ SECTION_PAD_M = box(72, 20)
 def media_card(title, body_html, img, link, overlay):
     extra = {
         "background_background": "classic",
+        "background_color": "#0B1629",
         "background_image": asset(img),
         "background_position": "center center",
         "background_size": "cover",
