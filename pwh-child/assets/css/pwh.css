@@ -364,19 +364,57 @@ body .pwh-btn--sm .elementor-button {
 	fill: currentColor;
 }
 
-/* Mega panel: JetMenu's wrapper is made transparent; the panel look lives on
-   the .pwh-mega container inside the mega content template, so the design
-   survives JetMenu style resets. 14px gap under the bar as in Figma. */
-.pwh-mainnav .jet-mega-menu-mega-container {
-	padding-top: 14px;
+/* Mega panel position. JetMenu anchors the panel to the menu widget, so it
+   starts at the "Products" link and runs off the right of the screen. Instead,
+   anchor it to the header bar and centre it on the 1180px content column, 14px
+   below the bar as in Figma. The narrow About panel (.pwh-mega--narrow) stays
+   under its own menu item. */
+.pwh-header {
+	position: relative;
+}
+
+.pwh-header > .e-con-inner,
+.pwh-mainnav,
+.pwh-mainnav > .elementor-widget-container,
+.pwh-mainnav .jet-mega-menu,
+.pwh-mainnav .jet-mega-menu-container,
+.pwh-mainnav .jet-mega-menu-list,
+.pwh-mainnav .jet-mega-menu-item--top-level {
+	position: static !important;
+}
+
+.pwh-mainnav .jet-mega-menu-item--top-level > .jet-mega-menu-mega-container {
+	position: absolute !important;
+	top: calc(100% - 23px) !important;
+	left: 50% !important;
+	right: auto !important;
+	width: min(var(--pwh-content), calc(100% - 48px)) !important;
+	max-width: none !important;
+	margin: 0 !important;
+	transform: translateX(-50%) !important;
+	padding-top: 37px; /* 23px hover bridge + 14px gap */
 	background: transparent;
 	box-shadow: none;
 	border: 0;
 }
 
+.pwh-mainnav .jet-mega-menu-item--top-level:has(.pwh-mega--narrow) {
+	position: relative !important;
+}
+
+.pwh-mainnav .jet-mega-menu-item--top-level:has(.pwh-mega--narrow) > .jet-mega-menu-mega-container {
+	top: 100% !important;
+	left: 0 !important;
+	width: 280px !important;
+	transform: none !important;
+}
+
 .pwh-mainnav .jet-mega-menu-mega-container__inner {
+	width: 100%;
+	max-width: none;
 	background: transparent;
 	padding: 0;
+	box-shadow: none;
 }
 
 /* --- JetMenu 1.x (legacy markup: .jet-menu / .jet-sub-mega-menu) ------ */
@@ -407,20 +445,141 @@ body .pwh-btn--sm .elementor-button {
 	color: var(--pwh-navy-ink);
 }
 
-.pwh-mainnav .jet-sub-mega-menu {
-	padding-top: 14px;
+.pwh-mainnav .jet-menu-container,
+.pwh-mainnav .jet-menu-inner,
+.pwh-mainnav .jet-menu,
+.pwh-mainnav .jet-menu > .jet-menu-item {
+	position: static !important;
+}
+
+.pwh-mainnav .jet-menu > .jet-menu-item > .jet-sub-mega-menu {
+	top: calc(100% - 23px) !important;
+	left: 50% !important;
+	width: min(var(--pwh-content), calc(100% - 48px)) !important;
+	max-width: none !important;
+	margin: 0 !important;
+	transform: translateX(-50%) !important;
+	padding-top: 37px;
 	background: transparent;
 	box-shadow: none;
 	border: 0;
 }
 
+.pwh-mainnav .jet-menu > .jet-menu-item:has(.pwh-mega--narrow) {
+	position: relative !important;
+}
+
+.pwh-mainnav .jet-menu > .jet-menu-item:has(.pwh-mega--narrow) > .jet-sub-mega-menu {
+	top: 100% !important;
+	left: 0 !important;
+	width: 280px !important;
+	transform: none !important;
+}
+
 /* --- Mega content templates (Mega Menu / Products, Support, About) ----- */
 
+/* Layout is set here as well as in Elementor, because JetMenu doesn't always
+   load the Elementor-generated CSS for its mega content. Without it every
+   container falls back to a 100%-wide column and only the first column shows. */
 .pwh-mega {
+	--flex-direction: row;
+	--flex-wrap: nowrap;
+	--align-items: flex-start;
+	--gap: 48px;
+	--row-gap: 48px;
+	--column-gap: 48px;
+	--padding-top: 44px;
+	--padding-right: 44px;
+	--padding-bottom: 44px;
+	--padding-left: 44px;
+	--width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	gap: 48px;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	padding: 44px;
 	background-color: var(--pwh-cream);
 	border: 1px solid var(--pwh-navy-pale);
 	border-radius: var(--pwh-radius);
 	box-shadow: var(--pwh-shadow-menu);
+}
+
+.pwh-mega .e-con {
+	--padding-top: 0px;
+	--padding-right: 0px;
+	--padding-bottom: 0px;
+	--padding-left: 0px;
+	--width: auto;
+	--flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	min-width: 0;
+}
+
+.pwh-mega .elementor-widget {
+	width: 100%;
+	margin: 0;
+}
+
+.pwh-mega-col {
+	--gap: 18px;
+	--row-gap: 18px;
+	flex: 1 1 0 !important;
+	gap: 18px;
+}
+
+.pwh-mega-col--tight {
+	--gap: 12px;
+	--row-gap: 12px;
+	gap: 12px;
+}
+
+.pwh-mega-col--list {
+	--gap: 16px;
+	--row-gap: 16px;
+	gap: 16px;
+}
+
+.pwh-mega .pwh-mega-item {
+	--gap: 3px;
+	--row-gap: 3px;
+	gap: 3px;
+}
+
+.pwh-mega .pwh-mega-box {
+	--gap: 4px;
+	--row-gap: 4px;
+	--padding-top: 14px;
+	--padding-right: 14px;
+	--padding-bottom: 14px;
+	--padding-left: 14px;
+	gap: 4px;
+	padding: 14px;
+}
+
+@media (max-width: 1024px) {
+	.pwh-mega {
+		--flex-wrap: wrap;
+		--gap: 32px;
+		flex-wrap: wrap;
+		gap: 32px;
+	}
+
+	.pwh-mega-col {
+		flex: 1 1 calc(50% - 16px) !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.pwh-mega {
+		flex-direction: column;
+		padding: 24px;
+	}
 }
 
 /* Column heading: "• Domains" (Inter Black 15, navy dot 7px, gap 8) */

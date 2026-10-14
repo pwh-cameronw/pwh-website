@@ -191,21 +191,24 @@ def mega_item(title, desc, link, boxed=False):
     return con(f"Item – {title}", [
         heading(title, "pwh-mega-link", tag="p", link=link),
         text(f"<p>{desc}</p>", "pwh-mega-desc"),
-    ], cls="pwh-mega-item" + (" pwh-mega-box" if boxed else ""), gap_px=4 if boxed else 3,
+    ], cls="pwh-mega-item" + (" pwh-mega-box" if boxed else ""), full=True, gap_px=4 if boxed else 3,
         pad=box(14) if boxed else box(0))
 
 
 def mega_col(name, items, group=None, gap_px=18):
+    # Layout is also enforced by pwh.css (.pwh-mega-col), because JetMenu does not
+    # always load the Elementor-generated CSS for its mega content.
     kids = []
     if group:
         kids.append(heading(group, "pwh-mega-group", tag="p"))
     kids += items
-    return con(name, kids, gap_px=gap_px, width=pct(25), width_t=pct(50), width_m=pct(100),
+    return con(name, kids, cls="pwh-mega-col" + (" pwh-mega-col--tight" if gap_px == 12 else ""),
+               full=True, gap_px=gap_px, width=pct(25), width_t=pct(50), width_m=pct(100),
                extra={"_flex_size": "grow"})
 
 
-def mega_panel(name, cols, width=1180):
-    return con(name, cols, cls="pwh-mega", direction="row", boxed=width, gap_px=48, pad=box(44),
+def mega_panel(name, cols):
+    return con(name, cols, cls="pwh-mega", full=True, direction="row", gap_px=48, pad=box(44),
                dir_t="row", dir_m="column", gap_t=32, pad_m=box(24),
                extra={"flex_wrap_tablet": "wrap", "flex_align_items": "flex-start"})
 
@@ -261,8 +264,9 @@ def mega_support():
 def mega_about():
     links = [("About Us", "/about/"), ("Privacy Policy", "/privacy-policy/"),
              ("Terms of Service", "/terms-of-service/"), ("Acceptable Use Policy", "/acceptable-use-policy/")]
-    col = con("Links", [heading(t, "pwh-mega-link", tag="p", link=url(u)) for t, u in links], gap_px=16)
-    panel = con("Mega Menu / About", [col], cls="pwh-mega", boxed=280, pad=box(44), pad_m=box(24))
+    col = con("Links", [heading(t, "pwh-mega-link", tag="p", link=url(u)) for t, u in links],
+              cls="pwh-mega-col pwh-mega-col--list", full=True, gap_px=16)
+    panel = con("Mega Menu / About", [col], cls="pwh-mega pwh-mega--narrow", full=True, pad=box(44), pad_m=box(24))
     return template("PWH – Mega Menu / About", "section", [panel])
 
 
