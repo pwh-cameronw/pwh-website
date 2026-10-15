@@ -16,6 +16,7 @@ Placeholders resolved by the importer (inc/setup.php):
 """
 
 import hashlib
+import re
 import json
 import os
 
@@ -1012,6 +1013,168 @@ def wordpress():
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
 
+# --- Contact (standalone export) -------------------------------------------
+# Built from the Figma REST API (Page / Contact, 155:2274). Exported to
+# export/contact.json as a self-contained Elementor template: relative links,
+# absolute Media Library image URLs, and its CSS in an HTML widget so it
+# works without a theme update.
+
+CONTACT_HERO = MEDIA + "contact-hero.jpg"
+
+CONTACT_CSS = """
+.pwh-c-card{border-radius:12px;border:1px solid var(--pwh-navy-pale,#c2d3e8);background:var(--pwh-cream,#fffef4)}
+.pwh-c-card--dark{background:var(--pwh-navy-ink,#0b1629);border-color:var(--pwh-navy-ink,#0b1629)}
+.pwh-c-kicker .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:12px;font-weight:700;line-height:15px}
+.pwh-c-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:20px;font-weight:700;line-height:24px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-c-text,.pwh-c-text p{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:17px}
+.pwh-c-link .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:14px;font-weight:700;line-height:17px}
+.pwh-c-link .elementor-heading-title a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.pwh-c-link .elementor-heading-title a:hover{text-decoration-thickness:2px}
+.pwh-c-card--dark .pwh-c-title .elementor-heading-title,.pwh-c-card--dark .pwh-c-link .elementor-heading-title{color:var(--pwh-cream,#fffef4)}
+.pwh-c-card--dark .pwh-c-kicker .elementor-heading-title,.pwh-c-card--dark .pwh-c-text{color:var(--pwh-navy-mist,#eaf0f8)}
+.pwh-c-details{border-top:1px solid var(--pwh-navy-pale,#c2d3e8);border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)}
+.pwh-c-info,.pwh-c-info p{margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:18px;color:var(--pwh-grey-dark,#575557)}
+.pwh-c-info strong,.pwh-c-info a{color:var(--pwh-navy-ink,#0b1629);font-weight:700;text-decoration:none}
+.pwh-c-note,.pwh-c-note p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:16px;color:var(--pwh-grey,#828082)}
+.pwh-c-map iframe{display:block;border-radius:10px;border:2px solid var(--pwh-navy-pale,#c2d3e8)}
+.pwh-c-formcard{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:16px;background:var(--pwh-cream,#fffef4)}
+.pwh-form .elementor-field-group{margin-bottom:20px!important}
+.pwh-form .elementor-field-label{margin-bottom:8px;padding:0;font-family:Inter,sans-serif;font-size:13px;font-weight:700;line-height:16px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-form .elementor-mark-required .elementor-field-label:after{color:var(--pwh-amber-deep,#9e6e25);padding-left:4px}
+.pwh-form .elementor-field-textual,.pwh-form .elementor-select-wrapper select{min-height:46px;padding:14px 16px;border:1.5px solid var(--pwh-navy-pale,#c2d3e8)!important;border-radius:8px!important;background:var(--pwh-cream,#fffef4)!important;color:var(--pwh-navy-ink,#0b1629)!important;font-family:Inter,sans-serif;font-size:15px;line-height:18px}
+.pwh-form textarea.elementor-field-textual{min-height:92px}
+.pwh-form .elementor-field-textual::placeholder{color:var(--pwh-grey,#828082);opacity:1}
+.pwh-form .elementor-field-textual:focus,.pwh-form select:focus{outline:2px solid var(--pwh-amber,#c89439);outline-offset:1px;box-shadow:none}
+.pwh-form .elementor-select-wrapper .select-caret-down-wrapper{right:16px;color:var(--pwh-grey,#828082);font-size:12px}
+.pwh-form .elementor-button{width:100%;min-height:48px;padding:15px 30px;border-radius:16px;background:var(--pwh-amber,#c89439)!important;color:var(--pwh-navy-ink,#0b1629)!important;font-family:Inter,sans-serif;font-size:15px;font-weight:700}
+.pwh-form .elementor-button:hover{background:#b5832c!important}
+.pwh-c-calendly{border:2px dashed var(--pwh-navy-pale,#c2d3e8);border-radius:16px;background:var(--pwh-navy-mist,#eaf0f8)}
+.pwh-c-calendly-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:20px;font-weight:900;line-height:24px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-c-style{display:none!important}
+.pwh-c-title--16 .elementor-heading-title{font-size:16px;line-height:19px}
+.pwh-lead--tight,.pwh-lead--tight p{line-height:22px}
+.pwh-lead-16,.pwh-lead-16 p{margin:0;font-family:Inter,sans-serif;font-size:16px;font-weight:300;line-height:19px}
+.pwh-text-grey{color:var(--pwh-grey-dark,#575557)}
+@media (min-width:1025px){.pwh-c-row>.e-con,.pwh-c-row>.e-con-inner>.e-con{flex:1 1 0!important;min-width:0}.pwh-c-row2>.e-con,.pwh-c-row2>.e-con-inner>.e-con{flex:0 0 calc(50% - 24px)!important;max-width:calc(50% - 24px);min-width:0}.pwh-c-map{flex:1 1 0!important;min-width:0}}
+"""
+
+
+def contact_card(kicker, kicker_color, title, body, link_text, link, dark=False, body_color=None):
+    return con(f"Card – {title}", [
+        widget("heading", {"title": kicker, "header_size": "p", "title_color": kicker_color}, "pwh-c-kicker"),
+        heading(title, "pwh-c-title", tag="h2"),
+        text(f"<p>{body}</p>", "pwh-c-text"),
+        heading(link_text, "pwh-c-link", tag="p", link=link),
+    ], cls="pwh-c-card" + (" pwh-c-card--dark" if dark else ""), gap_px=10, pad=box(28),
+        width=pct(33.33), width_t=pct(100), extra={"_flex_size": "grow"})
+
+
+def contact():
+    style = widget("html", {"html": "<style>" + " ".join(CONTACT_CSS.split()) + "</style>"}, "pwh-c-style")
+
+    hero = con("Header", [
+        heading("Talk to a real person in Perth.", "pwh-h1 pwh-text-cream", tag="h1"),
+        text("<p>No call centre, no ticket queue. Pick the quickest path for what you need, or send us a message.<br>Your local hosting partner.</p>",
+             "pwh-lead pwh-lead--tight pwh-text-cream"),
+    ], boxed=1180, gap_px=12, justify="center", pad=box(116, 0, 120, 0), pad_t=box(96, 24, 96, 24), pad_m=box(72, 20, 72, 20),
+        min_h=504, min_h_t=0, tag="section", extra=photo_bg(CONTACT_HERO, 0.6))
+    hero["elements"][0]["settings"].update({"_element_width": "initial", "_element_custom_width": px(580),
+                                            "_element_width_tablet": "inherit"})
+
+    cards = con("PriorityCTAs", [
+        contact_card("Want to talk it through", "#C89439", "Book a Call back",
+                     "Pick a time that suits and one of our team will call you. No pitch, just answers.",
+                     "View plans →", url("#book-a-call")),
+        contact_card("Not sure yet", "#9E6E25", "Take the 2-minute quiz",
+                     "Answer a few quick questions and we'll recommend the right hosting, email and domain setup.",
+                     "Start the quiz →", url("/get-started/")),
+        contact_card("Already a customer?", "#EAF0F8", "Login to MyToolbox",
+                     "Change this copy and all.", "Login to MyToolbox →", url("/client-login/"), dark=True),
+    ], cls="pwh-c-row", direction="row", boxed=1180, gap_px=24, align="stretch", dir_t="column",
+        pad=box(80, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section")
+    # Body copy colours per card (Figma): navy / grey-dark / mist.
+    cards["elements"][0]["elements"][2]["settings"]["text_color"] = "#0B1629"
+    cards["elements"][1]["elements"][2]["settings"]["text_color"] = "#575557"
+
+    details = con("Details", [
+        con("Info", [
+            heading("Perth Web Hosting", "pwh-c-title", tag="p"),
+            text("<p>Suite 3, Level 3, 533 Hay Street, Perth WA 6000</p>", "pwh-c-info"),
+            text('<p><a href="tel:+61863654522">08 6365 4522</a></p>', "pwh-c-info"),
+            text("<p>Mon to Fri, 8:30am to 5:30pm<br>Perth time</p>", "pwh-c-info"),
+            text("<p>After-hours support is available to logged-in clients through MyToolbox.</p>", "pwh-c-note"),
+        ], gap_px=16, width=px(636), width_t=pct(100)),
+        widget("google_maps", {"address": "533 Hay Street, Perth WA 6000", "zoom": px(16),
+                               "height": px(220), "prevent_scroll": "yes"}, "pwh-c-map"),
+    ], cls="pwh-c-details", direction="row", boxed=1180, gap_px=64, align="center", dir_t="column", gap_t=32,
+        pad=box(56, 0), pad_t=box(56, 24), pad_m=box(48, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0"})
+    details["elements"][0]["elements"][0]["settings"]["_css_classes"] = "pwh-c-title pwh-c-title--16"
+    details["elements"][1]["settings"].update({"_flex_size": "grow"})
+
+    form = widget("form", {
+        "form_name": "Contact",
+        "form_fields": [
+            {"_id": _id("f"), "custom_id": "name", "field_type": "text", "field_label": "Full Name",
+             "placeholder": "Your name", "required": "true", "width": "100"},
+            {"_id": _id("f"), "custom_id": "email", "field_type": "email", "field_label": "Email Address",
+             "placeholder": "you@business.com.au", "required": "true", "width": "100"},
+            {"_id": _id("f"), "custom_id": "phone", "field_type": "tel", "field_label": "Phone Number (optional)",
+             "placeholder": "04XX XXX XXX", "width": "100"},
+            {"_id": _id("f"), "custom_id": "enquiry", "field_type": "select", "field_label": "Enquiry Type",
+             "field_options": "New sales enquiry\nSupport issue\nFeedback or review\nSomething else", "width": "100"},
+            {"_id": _id("f"), "custom_id": "message", "field_type": "textarea", "field_label": "Message",
+             "placeholder": "Tell us a bit about what you need.", "required": "true", "rows": 4, "width": "100"},
+        ],
+        "show_labels": "yes",
+        "mark_required": "yes",
+        "button_text": "Send Message",
+        "button_width": "100",
+        "button_size": "md",
+        "submit_actions": ["email"],
+        "email_subject": "New website enquiry from [field id=\"name\"]",
+        "email_reply_to": "email",
+        "success_message": "Thanks, we've got your message. We'll be in touch, usually the same business day.",
+        "error_message": "Sorry, something went wrong. Please call us on 08 6365 4522.",
+        "required_field_message": "This field is required.",
+    }, "pwh-form")
+
+    form_col = con("FormCol", [
+        heading("Send us a message", "pwh-h3 pwh-text-ink", tag="h2"),
+        text("<p>We reply to most enquiries the same business day.</p>", "pwh-c-text"),
+        form,
+    ], cls="pwh-c-formcard", gap_px=20, pad=box(36), pad_m=box(24), width=px(566), width_t=pct(100))
+    form_col["elements"][1]["settings"]["text_color"] = "#575557"
+
+    booking = con("BookingCol", [
+        heading("Prefer we call you?", "pwh-h3 pwh-text-ink", tag="h2"),
+        text("<p>Book a callback at a time that suits. One of our Perth team will phone you.</p>", "pwh-lead-16 pwh-text-grey"),
+        # Placeholder from the design. Replace with your Calendly inline embed (HTML widget).
+        con("Calendly", [
+            heading("Calendly booking widget", "pwh-c-calendly-title", tag="p", align="center"),
+            text("<p>Embedded Calendly callback scheduler to be integrated here.</p>", "pwh-c-text"),
+        ], cls="pwh-c-calendly", gap_px=12, justify="center", align="center", min_h=520, min_h_m=360, pad=box(24)),
+    ], gap_px=16, width=px(566), width_t=pct(100), extra={"_element_id": "book-a-call"})
+    booking["elements"][2]["elements"][1]["settings"].update({"align": "center", "text_color": "#575557"})
+
+    form_row = con("FormAndBooking", [form_col, booking], cls="pwh-c-row2", direction="row", boxed=1180, gap_px=48,
+                   align="flex-start", dir_t="column", gap_t=40, pad=box(72, 0, 96, 0), pad_t=box(64, 24, 80, 24),
+                   pad_m=box(56, 20, 64, 20), tag="section")
+
+    hero["elements"].insert(0, style)
+    return template("PWH – Contact", "page", [hero, cards, details, form_row],
+                    {"hide_title": "yes", "template": "elementor_header_footer"})
+
+
+def export_standalone(data):
+    """Resolve importer placeholders so the JSON imports straight into Elementor."""
+    raw = json.dumps(data, ensure_ascii=False)
+    raw = re.sub(r"\{\{PWH_URL:([^}]*)\}\}", lambda m: m.group(1), raw)
+    raw = re.sub(r"\{\{PWH_ASSET:([^}]*)\}\}",
+                 lambda m: "https://dev.perthhosting.net/wp-content/themes/pwh-child/assets/" + m.group(1), raw)
+    return json.loads(raw)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     files = {
@@ -1026,6 +1189,13 @@ def main():
         "about.json": about(),
         "wordpress.json": wordpress(),
     }
+    exports = {"contact.json": export_standalone(contact())}
+    os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
+    for name, data in exports.items():
+        with open(os.path.join(OUT, "..", "export", name), "w", encoding="utf-8") as fh:
+            json.dump(data, fh, ensure_ascii=False, indent=1)
+            fh.write("\n")
+        print("wrote export/" + name)
     for name, data in files.items():
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as fh:
             json.dump(data, fh, ensure_ascii=False, indent=1)

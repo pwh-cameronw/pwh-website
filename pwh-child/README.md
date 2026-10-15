@@ -149,3 +149,13 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 - Upload **`wordpress-hero.jpg`** (the hero photo, shown under a 60% navy overlay).
 - *Order Now* goes to `/client-login/`. Set each card's monthly and yearly order links to your WHMCS URLs.
 
+## Contact page (standalone template)
+
+`export/contact.json` is a self-contained Elementor template. Import it with **Templates → Saved Templates → Import Templates**; no theme update needed. Its CSS is inside the template (a hidden HTML widget), links are relative, and the hero image is a Media Library URL.
+
+- Upload **`contact-hero.jpg`** (hero photo, shown under a 60% navy overlay) before importing.
+- The form is an **Elementor Pro Form**: Full Name, Email, Phone (optional), Enquiry Type, Message. It emails the site admin address by default; change *Actions After Submit → Email → To* if needed.
+- The map is a **Google Maps** widget set to 533 Hay Street.
+- **Placeholders kept from the design:** the Calendly box ("Prefer we call you?"; swap in your Calendly inline embed with an HTML widget), and the copy on the MyToolbox card ("Change this copy and all.").
+- Card links: *View plans →* jumps to the booking section (`#book-a-call`), *Start the quiz →* goes to `/get-started/`, *Login to MyToolbox →* goes to `/client-login/`.
+
