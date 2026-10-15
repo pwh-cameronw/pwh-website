@@ -1618,6 +1618,18 @@ body .pwh-btn--sm .elementor-button {
 	line-height: 19px;
 }
 
+.pwh-lead-17--regular,
+.pwh-lead-17--regular p {
+	font-weight: 400;
+}
+
+/* Keep a short intro to its Figma measure (e.g. 486px under the plan heading). */
+.pwh-narrow-486 {
+	max-width: 486px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .pwh-text-grey,
 .pwh-text-grey .elementor-heading-title {
 	color: var(--pwh-grey-dark);

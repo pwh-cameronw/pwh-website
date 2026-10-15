@@ -141,3 +141,11 @@ Built from the Figma *Page / About* frame (read through the Figma REST API, so s
 
 **Video:** the design has a placeholder (navy panel, play button, "VIDEO (2:30)…" caption). When the video is ready, replace that container with an Elementor **Video** widget.
 
+## Semi-Managed WordPress Plans page
+
+Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API). Import it from **Appearance → PWH Setup → Import the Semi-managed WordPress page**, or run `wp pwh setup --wordpress`. It goes to `/web-hosting/wordpress/` (the mega menu link) if a *web-hosting* page exists, otherwise `/wordpress-hosting/`.
+
+- Three **PWH Pricing Cards**: Basic $24.95, Silver $49.95 (featured), Premium $79.95. Each has its **yearly price** ($299.40 / $499.50 / $799.50) and **technical details** from the design's toggled states, so Monthly/Yearly and **+** work on every card.
+- Upload **`wordpress-hero.jpg`** (the hero photo, shown under a 60% navy overlay).
+- *Order Now* goes to `/client-login/`. Set each card's monthly and yearly order links to your WHMCS URLs.
+

@@ -96,6 +96,7 @@ class PWH_Setup {
 		'cpanel'  => array( 'cpanel.json', 'cPanel Hosting', 'web-hosting/cpanel', 'cpanel-hosting' ),
 		'domains' => array( 'domains.json', 'Domains', 'domains', 'domains' ),
 		'about'   => array( 'about.json', 'About Us', 'about', 'about' ),
+		'wordpress' => array( 'wordpress.json', 'Semi-managed WordPress', 'web-hosting/wordpress', 'wordpress-hosting' ),
 	);
 
 	/** @var array */

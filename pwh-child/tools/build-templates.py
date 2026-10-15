@@ -935,6 +935,83 @@ def about():
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
 
+# --- Semi-Managed WordPress Plans --------------------------------------------
+# Built from the Figma REST API (Page / Semi-Managed Plans, 114:1567). Yearly
+# prices and technical details come from the cards' hidden toggled layers.
+
+WORDPRESS_HERO = MEDIA + "wordpress-hero.jpg"
+
+
+def wordpress():
+    hero = con("Header", [
+        heading("Pick the WordPress plan that fits your business.", "pwh-h1 pwh-text-cream", tag="h1", align="center"),
+        text("<p>Semi-managed WordPress hosting. We handle the updates, security and monitoring, so you don't have to.</p>",
+             "pwh-lead-17 pwh-lead-17--regular pwh-text-mist pwh-narrow-486"),
+        text("<p>Semi-managed means we look after the technical upkeep of your site, you just run the business.</p>",
+             "pwh-small pwh-text-mist"),
+    ], cls="pwh-page-hero", boxed=882, gap_px=12, align="center",
+        pad=box(116, 0, 120, 0), pad_t=box(96, 24, 96, 24), pad_m=box(72, 20, 72, 20), tag="section",
+        extra=photo_bg(WORDPRESS_HERO, 0.6))
+    for w in hero["elements"][1:]:
+        w["settings"]["align"] = "center"
+
+    toggle = con("Year Toggle", [
+        widget("pwh-billing-toggle", {"monthly_label": "Monthly", "yearly_label": "Yearly",
+                                      "yearly_badge": "Best value", "default": "monthly"}),
+    ], boxed=1180, align="center", pad=box(56, 0), pad_t=box(48, 24), pad_m=box(40, 20), tag="section")
+
+    email = "Free SSL certificate and unlimited email accounts (IMAP/POP3)"
+    cards = con("Cards", [
+        plan("Basic", "For a single WordPress site you're happy to leave mostly on autopilot.", "24.95",
+             ["Email support only", email,
+              "Weekly malware scans, an initial security audit and basic site lockdown",
+              "Monthly plugin and theme checks, one-time setup optimisation, no ongoing monitoring",
+              "5GB high-speed SSD storage", "50GB premium bandwidth", "1 WordPress website",
+              "6-hourly, 31-day offsite backups"],
+             yearly="299.40", yearly_note="Billed annually. Same rate as monthly, locked in for the year.",
+             details="SpamAssassin filtering, 200% CPU, 12 MB/s I/O, 4GB RAM"),
+        plan("Silver", "Our most popular managed plan, for businesses running more than one site.", "49.95",
+             ["Local phone & email support, plus 30 minutes plugin & theme support", email,
+              "Daily malware scans, a 12-monthly security audit and full site lockdown",
+              "Monthly plugin and theme checks, 6-monthly optimisation review, monitored every 5 minutes",
+              "10GB high-speed SSD storage", "250GB premium bandwidth", "2 WordPress websites",
+              "6-hourly, 31-day offsite backups"],
+             featured=True, tag="Most popular", yearly="499.50",
+             yearly_note="Pay for 10 months, get 12. That's 2 months free.",
+             details="SpamExperts filtering, 400% CPU, 12 MB/s I/O, 6GB RAM"),
+        plan("Premium", "For high-traffic sites that need the closest watch.", "79.95",
+             ["Local phone & email support, plus 1 hour plugin & theme support", email,
+              "Daily malware scans, a 3-monthly security audit and full site lockdown",
+              "Weekly plugin and theme checks, 3-monthly optimisation review, monitored every 2 minutes",
+              "30GB high-speed SSD storage", "500GB premium bandwidth", "3 WordPress websites",
+              "6-hourly, 31-day, 2-location offsite backups"],
+             yearly="799.50", yearly_note="Pay for 10 months, get 12. That's 2 months free.",
+             details="SpamExperts filtering, 600% CPU, 12 MB/s I/O, 10GB RAM"),
+    ], cls="pwh-plans", boxed=1180, direction="row", gap_px=28, align="flex-start", dir_t="column",
+        gap_t=24, pad=box(0, 0, 96, 0), pad_t=box(0, 24, 80, 24), pad_m=box(0, 20, 64, 20), tag="section")
+
+    reviews = con("TestimonialStrip", [
+        heading("What customers say", "pwh-h3 pwh-h3-amber", tag="h2", align="center"),
+        con("Cards", [
+            review("Absolutely top notch service, brilliant support. There is no problems, only solutions.",
+                   "Cameron P", "Google review, 5 stars"),
+            review("Tim did a fantastic job communicating with me via email, with very fast and detailed responses. The web hosting transfer was actioned smoothly with no downtime.",
+                   "Kathy Krcmar", "Local Guide, Google review"),
+            review("After spending 4 years trying to make my site faster by changing every WordPress setting, Perth Web Hosting proved it was just bad hosting all along.",
+                   "Mathew Sallur", "Local Guide, Google review"),
+        ], direction="row", gap_px=24, align="stretch", dir_t="column"),
+    ], boxed=1180, gap_px=24, pad=box(0, 0, 72, 0), pad_t=box(0, 24, 64, 24), pad_m=box(0, 20, 56, 20), tag="section")
+
+    trust = con("TrustStrip", [
+        text("<ul class=\"pwh-trust-list\"><li>Free migration on every plan</li><li>No lock-in contracts</li>"
+             "<li>Perth-based support, every plan</li><li>30-day money-back guarantee on yearly plans</li></ul>", ""),
+    ], cls="pwh-trust", boxed=1180, pad=box(28, 0), pad_t=box(28, 24), pad_m=box(24, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0"})
+
+    return template("PWH – Semi-Managed WordPress Plans", "wp-page", [hero, toggle, cards, reviews, trust],
+                    {"hide_title": "yes", "template": "elementor_header_footer"})
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     files = {
@@ -947,6 +1024,7 @@ def main():
         "cpanel.json": cpanel(),
         "domains.json": domains(),
         "about.json": about(),
+        "wordpress.json": wordpress(),
     }
     for name, data in files.items():
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as fh:
