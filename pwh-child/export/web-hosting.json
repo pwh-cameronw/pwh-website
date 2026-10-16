@@ -1,6 +1,6 @@
 {
  "version": "0.4",
- "title": "PWH – Web Hosting (draft)",
+ "title": "PWH – Web Hosting",
  "type": "page",
  "content": [
   {
@@ -8,12 +8,12 @@
    "elType": "container",
    "settings": {
     "content_width": "boxed",
-    "flex_direction": "column",
+    "flex_direction": "row",
     "padding": {
      "unit": "px",
-     "top": "116",
+     "top": "136",
      "right": "0",
-     "bottom": "120",
+     "bottom": "140",
      "left": "0",
      "isLinked": false
     },
@@ -25,9 +25,9 @@
     },
     "flex_gap": {
      "unit": "px",
-     "size": 16,
-     "column": "16",
-     "row": "16",
+     "size": 64,
+     "column": "64",
+     "row": "64",
      "isLinked": true
     },
     "padding_tablet": {
@@ -46,74 +46,37 @@
      "left": "20",
      "isLinked": false
     },
-    "flex_justify_content": "center",
-    "min_height": {
-     "unit": "px",
-     "size": 656,
-     "sizes": []
-    },
-    "min_height_tablet": {
-     "unit": "px",
-     "size": 0,
-     "sizes": []
-    },
+    "flex_align_items": "center",
+    "flex_direction_tablet": "column",
     "html_tag": "section",
     "css_classes": "pwh-h-hero",
     "background_background": "classic",
-    "background_color": "#0B1629"
+    "background_color": "#0B1629",
+    "background_image": {
+     "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/1a31b8031e0f1b430d5aca73df5d118da1cc78a2.jpg",
+     "id": "",
+     "size": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_position": "center center",
+    "background_size": "cover",
+    "background_repeat": "no-repeat",
+    "background_overlay_background": "classic",
+    "background_overlay_color": "#0B1629",
+    "background_overlay_opacity": {
+     "unit": "px",
+     "size": 0.6,
+     "sizes": []
+    }
    },
    "elements": [
     {
-     "id": "c3c9425",
-     "elType": "widget",
-     "widgetType": "html",
-     "settings": {
-      "html": "<style>.pwh-h-style{display:none!important} .pwh-h-persona{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:16px;background:var(--pwh-cream,#fffef4)} .pwh-h-persona--featured{border:2px solid var(--pwh-navy-ink,#0b1629)} .pwh-h-title .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:26px;font-weight:900;line-height:31px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-text,.pwh-h-text p{margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:20px;color:var(--pwh-grey-dark,#575557)} .pwh-h-from .elementor-heading-title{display:flex;align-items:baseline;gap:6px;margin:0;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-from small{font-family:Inter,sans-serif;font-size:14px;font-weight:400;color:var(--pwh-grey-dark,#575557)} .pwh-h-from b{font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:32px;font-weight:900;line-height:38px;letter-spacing:-.6px} .pwh-h-list .elementor-icon-list-items{margin:0;padding:0} .pwh-h-list .elementor-icon-list-item{align-items:flex-start!important} .pwh-h-list .elementor-icon-list-item:not(:last-child){padding-bottom:10px!important} .pwh-h-list .elementor-icon-list-icon{width:16px;height:18px;padding:0!important;margin-right:10px;display:flex;justify-content:center;align-items:center} .pwh-h-list .elementor-icon-list-icon i{font-size:11px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-list .elementor-icon-list-icon svg{width:11px;height:11px;fill:var(--pwh-navy-ink,#0b1629)} .pwh-h-list .elementor-icon-list-text{padding:0!important;font-family:Inter,sans-serif;font-size:15px;line-height:18px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-persona .pwh-btn{margin-top:auto} .pwh-h-persona .pwh-btn .elementor-button{width:100%} .pwh-h-note,.pwh-h-note p{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-grey-dark,#575557)} .pwh-h-note a{color:var(--pwh-navy-ink,#0b1629);font-weight:700;text-decoration:underline;text-underline-offset:3px} .pwh-h-tile{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:12px;background:var(--pwh-cream,#fffef4)} .pwh-h-tile-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:16px;font-weight:700;line-height:19px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-tile-text,.pwh-h-tile-text p{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-grey-dark,#575557)} .pwh-h-switch .pwh-body,.pwh-h-switch .pwh-body p{line-height:22px} .pwh-h-row2>.e-con,.pwh-h-row2>.e-con-inner>.e-con{flex:0 0 calc(50% - 16px)!important;max-width:calc(50% - 16px);min-width:0} .pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex:1 1 0!important;min-width:0} @media (max-width:1024px){.pwh-h-row2,.pwh-h-row2>.e-con-inner{flex-direction:column!important}.pwh-h-row2>.e-con,.pwh-h-row2>.e-con-inner>.e-con{flex:0 0 auto!important;width:100%;max-width:100%}.pwh-h-row4{flex-wrap:wrap!important}.pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex:0 0 calc(50% - 12px)!important;max-width:calc(50% - 12px)}} @media (max-width:767px){.pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex-basis:100%!important;max-width:100%}} .pwh-h-hero .elementor-widget{max-width:100%}</style>",
-      "_css_classes": "pwh-h-style"
-     },
-     "elements": []
-    },
-    {
-     "id": "a5db2f2",
-     "elType": "widget",
-     "widgetType": "heading",
-     "settings": {
-      "title": "A site that doesn't let you down.",
-      "header_size": "h1",
-      "_css_classes": "pwh-h1 pwh-text-cream",
-      "_element_width": "initial",
-      "_element_custom_width": {
-       "unit": "px",
-       "size": 760,
-       "sizes": []
-      },
-      "_element_width_tablet": "inherit"
-     },
-     "elements": []
-    },
-    {
-     "id": "ab36803",
-     "elType": "widget",
-     "widgetType": "text-editor",
-     "settings": {
-      "editor": "<p>Fast, monitored hosting on Perth servers we look after ourselves. If something's off, we're usually already on it.</p>",
-      "_css_classes": "pwh-lead pwh-lead--tight pwh-text-mist",
-      "_element_width": "initial",
-      "_element_custom_width": {
-       "unit": "px",
-       "size": 760,
-       "sizes": []
-      },
-      "_element_width_tablet": "inherit"
-     },
-     "elements": []
-    },
-    {
-     "id": "b94dbdc",
+     "id": "682a71b",
      "elType": "container",
      "settings": {
       "content_width": "full",
-      "flex_direction": "row",
+      "flex_direction": "column",
       "padding": {
        "unit": "px",
        "top": "0",
@@ -122,7 +85,17 @@
        "left": "0",
        "isLinked": true
       },
-      "_title": "Buttons",
+      "_title": "Copy",
+      "width": {
+       "unit": "px",
+       "size": 558,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
       "flex_gap": {
        "unit": "px",
        "size": 16,
@@ -130,17 +103,48 @@
        "row": "16",
        "isLinked": true
       },
-      "flex_wrap": "wrap"
+      "flex_align_items": "flex-start"
      },
      "elements": [
+      {
+       "id": "c3c9425",
+       "elType": "widget",
+       "widgetType": "html",
+       "settings": {
+        "html": "<style>.pwh-h-style{display:none!important} .pwh-h-persona{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:16px;background:var(--pwh-cream,#fffef4)} .pwh-h-persona--featured{border:2px solid var(--pwh-navy-ink,#0b1629);box-shadow:0 20px 40px rgba(11,22,41,.18)} .pwh-h-tag .elementor-heading-title{display:inline-block;margin:0;padding:5px 10px;border-radius:3px;background:var(--pwh-sand,#e8e0c8);color:var(--pwh-amber-deep,#9e6e25);font-family:Inter,sans-serif;font-size:11px;font-weight:700;line-height:13px} .pwh-h-title .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:22px;font-weight:900;line-height:26px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-quote{border-radius:6px;background:var(--pwh-navy-mist,#eaf0f8)} .pwh-h-quote-text .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-from .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:12px;font-weight:700;line-height:16px;letter-spacing:1.8px;text-transform:uppercase;color:var(--pwh-grey-dark,#575557)} .pwh-h-price .elementor-heading-title{display:flex;flex-wrap:wrap;align-items:flex-end;gap:6px;margin:0} .pwh-h-amt{font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:40px;font-weight:900;line-height:46px;letter-spacing:-.9px;color:var(--pwh-amber-deep,#9e6e25)} .pwh-h-per{padding-bottom:4px;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-persona .pwh-h-text{min-height:90px} .pwh-h-text,.pwh-h-text p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:18px;color:var(--pwh-grey-dark,#575557)} .pwh-h-link .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:14px;font-weight:700;line-height:17px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-link .elementor-heading-title a{color:inherit;text-decoration:underline;text-underline-offset:3px} .pwh-h-link .elementor-heading-title a:hover{text-decoration-thickness:2px} .pwh-h-note,.pwh-h-note p{margin:0;font-family:Inter,sans-serif;font-size:14px;font-weight:300;line-height:17px;color:var(--pwh-grey-dark,#575557)} .pwh-h-note a{color:var(--pwh-navy-ink,#0b1629);font-weight:700;text-decoration:underline;text-underline-offset:3px} .pwh-h-tile{border:1px solid #d6cdb0;border-radius:16px;background:var(--pwh-cream-warm,#f5f1e0)} .pwh-h-tile-icon{width:34px!important;max-width:34px} .pwh-h-tile-icon .elementor-icon-wrapper{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border:1.5px dashed var(--pwh-amber-deep,#9e6e25);border-radius:6px} .pwh-h-tile-icon .elementor-icon{font-size:15px;color:var(--pwh-amber,#c89439)} .pwh-h-tile-icon .elementor-icon svg{width:15px;height:15px;fill:var(--pwh-amber,#c89439)} .pwh-h-tile-text,.pwh-h-tile-text p{margin:0;font-family:Inter,sans-serif;font-size:14px;font-weight:300;line-height:17px;color:var(--pwh-grey-dark,#575557)} .pwh-h-why-title .elementor-heading-title,.pwh-h-switch-title .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:28px;font-weight:900;line-height:34px;color:var(--pwh-cream,#fffef4)} .pwh-h-switch-text,.pwh-h-switch-text p{margin:0;font-family:Inter,sans-serif;font-size:18px;font-weight:300;line-height:22px;color:var(--pwh-navy-mist,#eaf0f8)} .pwh-h-hero .pwh-lead,.pwh-h-hero .pwh-lead p{line-height:22px} .pwh-h-faq-open .elementor-toggle-item:first-child .elementor-tab-content{display:block} .pwh-h-row2>.e-con,.pwh-h-row2>.e-con-inner>.e-con{flex:0 0 calc(50% - 16px)!important;max-width:calc(50% - 16px);min-width:0} .pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex:1 1 0!important;min-width:0} .pwh-h-hero .elementor-widget{max-width:100%} @media (max-width:1024px){.pwh-h-row2,.pwh-h-row2>.e-con-inner{flex-direction:column!important}.pwh-h-row2>.e-con,.pwh-h-row2>.e-con-inner>.e-con{flex:0 0 auto!important;width:100%;max-width:100%}.pwh-h-row4{flex-wrap:wrap!important}.pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex:0 0 calc(50% - 12px)!important;max-width:calc(50% - 12px)}} @media (max-width:767px){.pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex-basis:100%!important;max-width:100%}.pwh-h-amt{font-size:34px;line-height:40px}}</style>",
+        "_css_classes": "pwh-h-style"
+       },
+       "elements": []
+      },
+      {
+       "id": "a5db2f2",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Fast, reliable hosting. Real Perth support.",
+        "header_size": "h1",
+        "_css_classes": "pwh-h1 pwh-text-cream"
+       },
+       "elements": []
+      },
+      {
+       "id": "ab36803",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Website hosting (cPanel), WordPress hosting we look after for you, and reseller hosting for agencies. All on Perth servers our team monitors around the clock.</p>",
+        "_css_classes": "pwh-lead pwh-text-cream"
+       },
+       "elements": []
+      },
       {
        "id": "bb66edd",
        "elType": "widget",
        "widgetType": "button",
        "settings": {
-        "text": "See cPanel plans",
+        "text": "See hosting plans →",
         "link": {
-         "url": "/web-hosting/cpanel/",
+         "url": "#plans",
          "is_external": "",
          "nofollow": "",
          "custom_attributes": ""
@@ -149,25 +153,49 @@
         "_css_classes": "pwh-btn pwh-btn--amber"
        },
        "elements": []
-      },
-      {
-       "id": "f240b46",
-       "elType": "widget",
-       "widgetType": "button",
-       "settings": {
-        "text": "See WordPress plans",
-        "link": {
-         "url": "/web-hosting/wordpress/",
-         "is_external": "",
-         "nofollow": "",
-         "custom_attributes": ""
-        },
-        "size": "md",
-        "_css_classes": "pwh-btn pwh-btn--outline-cream"
-       },
-       "elements": []
       }
      ],
+     "isInner": false
+    },
+    {
+     "id": "3b2b17e",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Visual",
+      "width": {
+       "unit": "px",
+       "size": 558,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "min_height": {
+       "unit": "px",
+       "size": 380,
+       "sizes": []
+      },
+      "min_height_tablet": {
+       "unit": "px",
+       "size": 0,
+       "sizes": []
+      },
+      "hide_tablet": "hidden-tablet",
+      "hide_mobile": "hidden-mobile"
+     },
+     "elements": [],
      "isInner": false
     }
    ],
@@ -216,7 +244,8 @@
      "left": "20",
      "isLinked": false
     },
-    "html_tag": "section"
+    "html_tag": "section",
+    "_element_id": "plans"
    },
    "elements": [
     {
@@ -259,26 +288,26 @@
        "row": "24",
        "isLinked": true
       },
-      "flex_align_items": "stretch",
+      "flex_align_items": "flex-start",
       "flex_direction_tablet": "column",
       "css_classes": "pwh-h-row2"
      },
      "elements": [
       {
-       "id": "3c4fe35",
+       "id": "8a37fa2",
        "elType": "container",
        "settings": {
         "content_width": "full",
         "flex_direction": "column",
         "padding": {
          "unit": "px",
-         "top": "32",
-         "right": "32",
-         "bottom": "32",
-         "left": "32",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
          "isLinked": true
         },
-        "_title": "Persona – cPanel hosting",
+        "_title": "Persona – cPanel Hosting",
         "width_tablet": {
          "unit": "%",
          "size": 100,
@@ -289,14 +318,6 @@
          "size": 14,
          "column": "14",
          "row": "14",
-         "isLinked": true
-        },
-        "padding_mobile": {
-         "unit": "px",
-         "top": "24",
-         "right": "24",
-         "bottom": "24",
-         "left": "24",
          "isLinked": true
         },
         "css_classes": "pwh-h-persona"
@@ -307,94 +328,117 @@
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
-          "title": "cPanel hosting",
+          "title": "cPanel Hosting",
           "header_size": "h3",
           "_css_classes": "pwh-h-title"
          },
          "elements": []
         },
         {
+         "id": "4e79e27",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "padding": {
+           "unit": "px",
+           "top": "14",
+           "right": "14",
+           "bottom": "14",
+           "left": "14",
+           "isLinked": true
+          },
+          "_title": "Quote",
+          "css_classes": "pwh-h-quote"
+         },
+         "elements": [
+          {
+           "id": "77b34a0",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "You manage your own website and just need somewhere solid to host it.",
+            "header_size": "p",
+            "_css_classes": "pwh-h-quote-text"
+           },
+           "elements": []
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "021b735",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_title": "Price",
+          "flex_gap": {
+           "unit": "px",
+           "size": 2,
+           "column": "2",
+           "row": "2",
+           "isLinked": true
+          }
+         },
+         "elements": [
+          {
+           "id": "e864102",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "From",
+            "header_size": "p",
+            "_css_classes": "pwh-h-from"
+           },
+           "elements": []
+          },
+          {
+           "id": "0994b72",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "<span class=\"pwh-h-amt\">$7.95</span><span class=\"pwh-h-per\">/month</span>",
+            "header_size": "p",
+            "_css_classes": "pwh-h-price"
+           },
+           "elements": []
+          }
+         ],
+         "isInner": false
+        },
+        {
          "id": "efb0482",
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
-          "editor": "<p>Every plan runs on Perth servers we monitor ourselves, with free migration and local support. New to cPanel? It's the dashboard you use to manage your site, email and files.</p>",
+          "editor": "<p>Full control over your site via the industry-standard cPanel dashboard. Ideal for a single, self-managed website.</p>",
           "_css_classes": "pwh-h-text"
          },
          "elements": []
         },
         {
-         "id": "77b34a0",
+         "id": "f050d17",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
-          "title": "<small>From</small><b>$7.95</b><small>/ month</small>",
+          "title": "See cPanel plans →",
           "header_size": "p",
-          "_css_classes": "pwh-h-from"
-         },
-         "elements": []
-        },
-        {
-         "id": "5ffb996",
-         "elType": "widget",
-         "widgetType": "icon-list",
-         "settings": {
-          "icon_list": [
-           {
-            "_id": "efb4b5a",
-            "text": "Free SSL certificate",
-            "selected_icon": {
-             "value": "fas fa-check",
-             "library": "fa-solid"
-            }
-           },
-           {
-            "_id": "fc0cfa7",
-            "text": "Free migration from your current host",
-            "selected_icon": {
-             "value": "fas fa-check",
-             "library": "fa-solid"
-            }
-           },
-           {
-            "_id": "c9a7887",
-            "text": "6-hourly, 21-day offsite backups",
-            "selected_icon": {
-             "value": "fas fa-check",
-             "library": "fa-solid"
-            }
-           }
-          ],
-          "space_between": {
-           "unit": "px",
-           "size": 10,
-           "sizes": []
-          },
-          "icon_size": {
-           "unit": "px",
-           "size": 11,
-           "sizes": []
-          },
-          "icon_color": "#0B1629",
-          "text_color": "#0B1629",
-          "_css_classes": "pwh-h-list"
-         },
-         "elements": []
-        },
-        {
-         "id": "6078c6a",
-         "elType": "widget",
-         "widgetType": "button",
-         "settings": {
-          "text": "View cPanel plans",
           "link": {
            "url": "/web-hosting/cpanel/",
            "is_external": "",
            "nofollow": "",
            "custom_attributes": ""
           },
-          "size": "md",
-          "_css_classes": "pwh-btn pwh-btn--navy"
+          "_css_classes": "pwh-h-link"
          },
          "elements": []
         }
@@ -402,20 +446,20 @@
        "isInner": false
       },
       {
-       "id": "887746f",
+       "id": "548a14c",
        "elType": "container",
        "settings": {
         "content_width": "full",
         "flex_direction": "column",
         "padding": {
          "unit": "px",
-         "top": "32",
-         "right": "32",
-         "bottom": "32",
-         "left": "32",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
          "isLinked": true
         },
-        "_title": "Persona – Semi-managed WordPress",
+        "_title": "Persona – Semi-Managed WordPress Hosting",
         "width_tablet": {
          "unit": "%",
          "size": 100,
@@ -428,110 +472,136 @@
          "row": "14",
          "isLinked": true
         },
-        "padding_mobile": {
-         "unit": "px",
-         "top": "24",
-         "right": "24",
-         "bottom": "24",
-         "left": "24",
-         "isLinked": true
-        },
         "css_classes": "pwh-h-persona pwh-h-persona--featured"
        },
        "elements": [
         {
-         "id": "e864102",
+         "id": "638a52a",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
-          "title": "Semi-managed WordPress",
+          "title": "MOST POPULAR",
+          "header_size": "p",
+          "_css_classes": "pwh-h-tag"
+         },
+         "elements": []
+        },
+        {
+         "id": "df65ed8",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Semi-Managed WordPress Hosting",
           "header_size": "h3",
           "_css_classes": "pwh-h-title"
          },
          "elements": []
         },
         {
+         "id": "6a04ae0",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "padding": {
+           "unit": "px",
+           "top": "14",
+           "right": "14",
+           "bottom": "14",
+           "left": "14",
+           "isLinked": true
+          },
+          "_title": "Quote",
+          "css_classes": "pwh-h-quote"
+         },
+         "elements": [
+          {
+           "id": "63abade",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "You've got a website, but you'd rather leave the technical side to us.",
+            "header_size": "p",
+            "_css_classes": "pwh-h-quote-text"
+           },
+           "elements": []
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "5afe814",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_title": "Price",
+          "flex_gap": {
+           "unit": "px",
+           "size": 2,
+           "column": "2",
+           "row": "2",
+           "isLinked": true
+          }
+         },
+         "elements": [
+          {
+           "id": "42e917a",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "From",
+            "header_size": "p",
+            "_css_classes": "pwh-h-from"
+           },
+           "elements": []
+          },
+          {
+           "id": "dd97090",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "<span class=\"pwh-h-amt\">$24.95</span><span class=\"pwh-h-per\">/month</span>",
+            "header_size": "p",
+            "_css_classes": "pwh-h-price"
+           },
+           "elements": []
+          }
+         ],
+         "isInner": false
+        },
+        {
          "id": "e05af14",
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
-          "editor": "<p>We handle the updates, security and monitoring, so you don't have to. Semi-managed means we look after the technical upkeep of your site, you just run the business.</p>",
+          "editor": "<p>We handle setup, updates and troubleshooting, so you can focus on the business instead of the server. Perfect for your WordPress website.</p>",
           "_css_classes": "pwh-h-text"
          },
          "elements": []
         },
         {
-         "id": "0994b72",
+         "id": "60d73d2",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
-          "title": "<small>From</small><b>$24.95</b><small>/ month</small>",
+          "title": "See semi-managed plans →",
           "header_size": "p",
-          "_css_classes": "pwh-h-from"
-         },
-         "elements": []
-        },
-        {
-         "id": "f0f6b33",
-         "elType": "widget",
-         "widgetType": "icon-list",
-         "settings": {
-          "icon_list": [
-           {
-            "_id": "1325801",
-            "text": "Updates, security and monitoring handled for you",
-            "selected_icon": {
-             "value": "fas fa-check",
-             "library": "fa-solid"
-            }
-           },
-           {
-            "_id": "82ac73d",
-            "text": "Free migration from your current host",
-            "selected_icon": {
-             "value": "fas fa-check",
-             "library": "fa-solid"
-            }
-           },
-           {
-            "_id": "68e59a6",
-            "text": "Local Perth support",
-            "selected_icon": {
-             "value": "fas fa-check",
-             "library": "fa-solid"
-            }
-           }
-          ],
-          "space_between": {
-           "unit": "px",
-           "size": 10,
-           "sizes": []
-          },
-          "icon_size": {
-           "unit": "px",
-           "size": 11,
-           "sizes": []
-          },
-          "icon_color": "#0B1629",
-          "text_color": "#0B1629",
-          "_css_classes": "pwh-h-list"
-         },
-         "elements": []
-        },
-        {
-         "id": "b75f4f1",
-         "elType": "widget",
-         "widgetType": "button",
-         "settings": {
-          "text": "View WordPress plans",
           "link": {
            "url": "/web-hosting/wordpress/",
            "is_external": "",
            "nofollow": "",
            "custom_attributes": ""
           },
-          "size": "md",
-          "_css_classes": "pwh-btn pwh-btn--amber"
+          "_css_classes": "pwh-h-link"
          },
          "elements": []
         }
@@ -603,7 +673,7 @@
    },
    "elements": [
     {
-     "id": "f050d17",
+     "id": "a75207b",
      "elType": "widget",
      "widgetType": "heading",
      "settings": {
@@ -640,20 +710,20 @@
      },
      "elements": [
       {
-       "id": "b603155",
+       "id": "6e14bf8",
        "elType": "container",
        "settings": {
         "content_width": "full",
         "flex_direction": "column",
         "padding": {
          "unit": "px",
-         "top": "24",
-         "right": "24",
-         "bottom": "24",
-         "left": "24",
+         "top": "20",
+         "right": "20",
+         "bottom": "20",
+         "left": "20",
          "isLinked": true
         },
-        "_title": "Tile – Free SSL certificate",
+        "_title": "Tile – Free SSL",
         "width_tablet": {
          "unit": "%",
          "size": 100,
@@ -670,13 +740,33 @@
        },
        "elements": [
         {
-         "id": "638a52a",
+         "id": "24d0e94",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-lock",
+           "library": "fa-solid"
+          },
+          "align": "left",
+          "primary_color": "#C89439",
+          "size": {
+           "unit": "px",
+           "size": 15,
+           "sizes": []
+          },
+          "_css_classes": "pwh-h-tile-icon"
+         },
+         "elements": []
+        },
+        {
+         "id": "df11263",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
-          "title": "Free SSL certificate",
+          "title": "Free SSL",
           "header_size": "h3",
-          "_css_classes": "pwh-h-tile-title"
+          "_css_classes": "pwh-eyebrow pwh-text-ink"
          },
          "elements": []
         },
@@ -685,7 +775,155 @@
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
-          "editor": "<p>The padlock in the browser bar, set up for you on every site.</p>",
+          "editor": "<p>Every site is secured with HTTPS from day one, at no extra cost.</p>",
+          "_css_classes": "pwh-h-tile-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "2534e6e",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "20",
+         "right": "20",
+         "bottom": "20",
+         "left": "20",
+         "isLinked": true
+        },
+        "_title": "Tile – Daily backups",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 10,
+         "column": "10",
+         "row": "10",
+         "isLinked": true
+        },
+        "css_classes": "pwh-h-tile"
+       },
+       "elements": [
+        {
+         "id": "ad828e5",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-cloud-upload-alt",
+           "library": "fa-solid"
+          },
+          "align": "left",
+          "primary_color": "#C89439",
+          "size": {
+           "unit": "px",
+           "size": 15,
+           "sizes": []
+          },
+          "_css_classes": "pwh-h-tile-icon"
+         },
+         "elements": []
+        },
+        {
+         "id": "d24cf49",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Daily backups",
+          "header_size": "h3",
+          "_css_classes": "pwh-eyebrow pwh-text-ink"
+         },
+         "elements": []
+        },
+        {
+         "id": "69658c2",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Automatic daily backups, so a bad update is never a disaster.</p>",
+          "_css_classes": "pwh-h-tile-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "6403619",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "20",
+         "right": "20",
+         "bottom": "20",
+         "left": "20",
+         "isLinked": true
+        },
+        "_title": "Tile – 99.9% uptime",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 10,
+         "column": "10",
+         "row": "10",
+         "isLinked": true
+        },
+        "css_classes": "pwh-h-tile"
+       },
+       "elements": [
+        {
+         "id": "e0af12d",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-signal",
+           "library": "fa-solid"
+          },
+          "align": "left",
+          "primary_color": "#C89439",
+          "size": {
+           "unit": "px",
+           "size": 15,
+           "sizes": []
+          },
+          "_css_classes": "pwh-h-tile-icon"
+         },
+         "elements": []
+        },
+        {
+         "id": "62be5bb",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "99.9% uptime",
+          "header_size": "h3",
+          "_css_classes": "pwh-eyebrow pwh-text-ink"
+         },
+         "elements": []
+        },
+        {
+         "id": "dca6aa4",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Monitored around the clock from right here in Perth.</p>",
           "_css_classes": "pwh-h-tile-text"
          },
          "elements": []
@@ -701,10 +939,10 @@
         "flex_direction": "column",
         "padding": {
          "unit": "px",
-         "top": "24",
-         "right": "24",
-         "bottom": "24",
-         "left": "24",
+         "top": "20",
+         "right": "20",
+         "bottom": "20",
+         "left": "20",
          "isLinked": true
         },
         "_title": "Tile – Free migration",
@@ -724,121 +962,33 @@
        },
        "elements": [
         {
-         "id": "df65ed8",
+         "id": "54d7f41",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-truck-moving",
+           "library": "fa-solid"
+          },
+          "align": "left",
+          "primary_color": "#C89439",
+          "size": {
+           "unit": "px",
+           "size": 15,
+           "sizes": []
+          },
+          "_css_classes": "pwh-h-tile-icon"
+         },
+         "elements": []
+        },
+        {
+         "id": "e80c2ad",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
           "title": "Free migration",
           "header_size": "h3",
-          "_css_classes": "pwh-h-tile-title"
-         },
-         "elements": []
-        },
-        {
-         "id": "69658c2",
-         "elType": "widget",
-         "widgetType": "text-editor",
-         "settings": {
-          "editor": "<p>We move your files, databases and email across from your current host.</p>",
-          "_css_classes": "pwh-h-tile-text"
-         },
-         "elements": []
-        }
-       ],
-       "isInner": false
-      },
-      {
-       "id": "dd2b956",
-       "elType": "container",
-       "settings": {
-        "content_width": "full",
-        "flex_direction": "column",
-        "padding": {
-         "unit": "px",
-         "top": "24",
-         "right": "24",
-         "bottom": "24",
-         "left": "24",
-         "isLinked": true
-        },
-        "_title": "Tile – Offsite backups",
-        "width_tablet": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "flex_gap": {
-         "unit": "px",
-         "size": 10,
-         "column": "10",
-         "row": "10",
-         "isLinked": true
-        },
-        "css_classes": "pwh-h-tile"
-       },
-       "elements": [
-        {
-         "id": "63abade",
-         "elType": "widget",
-         "widgetType": "heading",
-         "settings": {
-          "title": "Offsite backups",
-          "header_size": "h3",
-          "_css_classes": "pwh-h-tile-title"
-         },
-         "elements": []
-        },
-        {
-         "id": "dca6aa4",
-         "elType": "widget",
-         "widgetType": "text-editor",
-         "settings": {
-          "editor": "<p>Your site is backed up offsite every 6 hours, so nothing's lost for long.</p>",
-          "_css_classes": "pwh-h-tile-text"
-         },
-         "elements": []
-        }
-       ],
-       "isInner": false
-      },
-      {
-       "id": "1a8aa7e",
-       "elType": "container",
-       "settings": {
-        "content_width": "full",
-        "flex_direction": "column",
-        "padding": {
-         "unit": "px",
-         "top": "24",
-         "right": "24",
-         "bottom": "24",
-         "left": "24",
-         "isLinked": true
-        },
-        "_title": "Tile – Local Perth support",
-        "width_tablet": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "flex_gap": {
-         "unit": "px",
-         "size": 10,
-         "column": "10",
-         "row": "10",
-         "isLinked": true
-        },
-        "css_classes": "pwh-h-tile"
-       },
-       "elements": [
-        {
-         "id": "42e917a",
-         "elType": "widget",
-         "widgetType": "heading",
-         "settings": {
-          "title": "Local Perth support",
-          "header_size": "h3",
-          "_css_classes": "pwh-h-tile-title"
+          "_css_classes": "pwh-eyebrow pwh-text-ink"
          },
          "elements": []
         },
@@ -847,7 +997,7 @@
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
-          "editor": "<p>Call a Perth number and talk to the team that runs the servers.</p>",
+          "editor": "<p>We move your site, email and domain across at no charge.</p>",
           "_css_classes": "pwh-h-tile-text"
          },
          "elements": []
@@ -862,66 +1012,46 @@
    "isInner": false
   },
   {
-   "id": "8ff0227",
+   "id": "a74e555",
    "elType": "container",
    "settings": {
     "content_width": "boxed",
-    "flex_direction": "row",
+    "flex_direction": "column",
     "padding": {
      "unit": "px",
-     "top": "62",
+     "top": "140",
      "right": "0",
-     "bottom": "62",
+     "bottom": "140",
      "left": "0",
      "isLinked": false
     },
-    "_title": "WhyPWH",
+    "_title": "Why PWH",
     "boxed_width": {
      "unit": "px",
      "size": 1180,
      "sizes": []
     },
-    "flex_gap": {
-     "unit": "px",
-     "size": 64,
-     "column": "64",
-     "row": "64",
-     "isLinked": true
-    },
     "padding_tablet": {
      "unit": "px",
-     "top": "72",
+     "top": "96",
      "right": "24",
-     "bottom": "72",
+     "bottom": "96",
      "left": "24",
      "isLinked": false
     },
     "padding_mobile": {
      "unit": "px",
-     "top": "56",
+     "top": "72",
      "right": "20",
-     "bottom": "56",
+     "bottom": "72",
      "left": "20",
      "isLinked": false
     },
-    "flex_align_items": "center",
-    "flex_direction_tablet": "column",
-    "min_height": {
-     "unit": "px",
-     "size": 464,
-     "sizes": []
-    },
-    "min_height_tablet": {
-     "unit": "px",
-     "size": 0,
-     "sizes": []
-    },
     "html_tag": "section",
-    "css_classes": "pwh-why",
     "background_background": "classic",
     "background_color": "#0B1629",
     "background_image": {
-     "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/notsure-hero.jpg",
+     "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/hosting-why.jpg",
      "id": "",
      "size": "",
      "alt": "",
@@ -930,29 +1060,17 @@
     "background_position": "center center",
     "background_size": "cover",
     "background_repeat": "no-repeat",
-    "background_overlay_background": "gradient",
-    "background_overlay_color": "rgba(11,22,41,0.8)",
-    "background_overlay_color_stop": {
-     "unit": "%",
-     "size": 0,
-     "sizes": []
-    },
-    "background_overlay_color_b": "rgba(11,22,41,0)",
-    "background_overlay_color_b_stop": {
-     "unit": "%",
-     "size": 65,
-     "sizes": []
-    },
-    "background_overlay_gradient_type": "linear",
-    "background_overlay_gradient_angle": {
-     "unit": "deg",
-     "size": 90,
+    "background_overlay_background": "classic",
+    "background_overlay_color": "#0B1629",
+    "background_overlay_opacity": {
+     "unit": "px",
+     "size": 0.5,
      "sizes": []
     }
    },
    "elements": [
     {
-     "id": "682a71b",
+     "id": "6ffeafb",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -967,8 +1085,8 @@
       },
       "_title": "Copy",
       "width": {
-       "unit": "%",
-       "size": 50,
+       "unit": "px",
+       "size": 497,
        "sizes": []
       },
       "width_tablet": {
@@ -978,22 +1096,21 @@
       },
       "flex_gap": {
        "unit": "px",
-       "size": 24,
-       "column": "24",
-       "row": "24",
+       "size": 12,
+       "column": "12",
+       "row": "12",
        "isLinked": true
-      },
-      "_flex_size": "grow"
+      }
      },
      "elements": [
       {
-       "id": "dd97090",
+       "id": "6879853",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
-        "title": "Not sure what you need? We'll figure it out with you.",
+        "title": "Local infrastructure.<br>Local accountability.",
         "header_size": "h2",
-        "_css_classes": "pwh-h2 pwh-text-cream"
+        "_css_classes": "pwh-h-why-title"
        },
        "elements": []
       },
@@ -1002,71 +1119,12 @@
        "elType": "widget",
        "widgetType": "text-editor",
        "settings": {
-        "editor": "<p>Getting online shouldn't mean learning how servers work first. Tell us a bit about your business and we'll walk you through exactly what you need: hosting, a domain, email, or all three. Then we set it up, so you don't have to.</p>",
-        "_css_classes": "pwh-body pwh-text-mist"
-       },
-       "elements": []
-      },
-      {
-       "id": "507e444",
-       "elType": "widget",
-       "widgetType": "button",
-       "settings": {
-        "text": "Start my walkthrough →",
-        "link": {
-         "url": "/get-started/",
-         "is_external": "",
-         "nofollow": "",
-         "custom_attributes": ""
-        },
-        "size": "md",
-        "_css_classes": "pwh-btn pwh-btn--amber"
+        "editor": "<p>Your site runs on servers we monitor ourselves, not a support ticket routed through three time zones. If something goes wrong, you call a real Perth number and talk to someone who can fix it.</p>",
+        "_css_classes": "pwh-body pwh-text-cream"
        },
        "elements": []
       }
      ],
-     "isInner": false
-    },
-    {
-     "id": "578cda7",
-     "elType": "container",
-     "settings": {
-      "content_width": "full",
-      "flex_direction": "column",
-      "padding": {
-       "unit": "px",
-       "top": "0",
-       "right": "0",
-       "bottom": "0",
-       "left": "0",
-       "isLinked": true
-      },
-      "_title": "Placeholder",
-      "width": {
-       "unit": "%",
-       "size": 50,
-       "sizes": []
-      },
-      "width_tablet": {
-       "unit": "%",
-       "size": 100,
-       "sizes": []
-      },
-      "min_height": {
-       "unit": "px",
-       "size": 200,
-       "sizes": []
-      },
-      "min_height_tablet": {
-       "unit": "px",
-       "size": 0,
-       "sizes": []
-      },
-      "_flex_size": "grow",
-      "hide_tablet": "hidden-tablet",
-      "hide_mobile": "hidden-mobile"
-     },
-     "elements": [],
      "isInner": false
     }
    ],
@@ -1115,7 +1173,9 @@
      "left": "20",
      "isLinked": false
     },
-    "html_tag": "section"
+    "html_tag": "section",
+    "background_background": "classic",
+    "background_color": "#0B1729"
    },
    "elements": [
     {
@@ -1153,13 +1213,13 @@
      },
      "elements": [
       {
-       "id": "60d73d2",
+       "id": "24adffc",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
         "title": "WA businesses who've<br>made the switch",
         "header_size": "h2",
-        "_css_classes": "pwh-h2 pwh-text-ink"
+        "_css_classes": "pwh-h2 pwh-text-cream"
        },
        "elements": []
       },
@@ -1169,7 +1229,7 @@
        "widgetType": "text-editor",
        "settings": {
         "editor": "<p>Here's what business owners say after switching.</p>",
-        "_css_classes": "pwh-body pwh-text-ink"
+        "_css_classes": "pwh-body pwh-text-cream"
        },
        "elements": []
       }
@@ -1210,7 +1270,7 @@
      },
      "elements": [
       {
-       "id": "2899a9a",
+       "id": "79a892c",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -1223,7 +1283,7 @@
          "left": "28",
          "isLinked": true
         },
-        "_title": "Testimonial – Nathan Hurst",
+        "_title": "Testimonial – Craig Clemmence",
         "width": {
          "unit": "%",
          "size": 33.33,
@@ -1278,7 +1338,7 @@
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
-          "editor": "<p>Excellent service from the guys at Perth Web Hosting. Love that my website is locally hosted and looked after. After years of being with 'the big global guys' and running into issues, downtime and more, all of that's finally over.</p>",
+          "editor": "<p>20 plus years dealing with hosting companies, and recently moved to PWH. The quality of the hosting and service is the best I have experienced.</p>",
           "_css_classes": "pwh-quote"
          },
          "elements": []
@@ -1310,7 +1370,7 @@
          },
          "elements": [
           {
-           "id": "24d0e94",
+           "id": "b51add3",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -1356,11 +1416,11 @@
            },
            "elements": [
             {
-             "id": "a75207b",
+             "id": "75bd9e2",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "Nathan Hurst",
+              "title": "Craig Clemmence",
               "header_size": "p",
               "_css_classes": "pwh-who-name"
              },
@@ -1386,7 +1446,7 @@
        "isInner": false
       },
       {
-       "id": "c321ffa",
+       "id": "c0ea518",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -1399,7 +1459,7 @@
          "left": "28",
          "isLinked": true
         },
-        "_title": "Testimonial – Jack Hampton",
+        "_title": "Testimonial – Kathy Krcmar",
         "width": {
          "unit": "%",
          "size": 33.33,
@@ -1454,7 +1514,7 @@
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
-          "editor": "<p>Best web hosting services in Perth. I have tried many providers and these guys are the absolute best. I never have to wait for support and my website speeds are blazingly fast.</p>",
+          "editor": "<p>So far THE BEST client support I have ever seen. Cameron was very patient with me and went out of his way to answer all of my questions. The web hosting transfer was actioned smoothly with no downtime.</p>",
           "_css_classes": "pwh-quote"
          },
          "elements": []
@@ -1486,7 +1546,7 @@
          },
          "elements": [
           {
-           "id": "ad828e5",
+           "id": "3c82331",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -1532,11 +1592,11 @@
            },
            "elements": [
             {
-             "id": "df11263",
+             "id": "9703769",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "Jack Hampton",
+              "title": "Kathy Krcmar",
               "header_size": "p",
               "_css_classes": "pwh-who-name"
              },
@@ -1547,7 +1607,7 @@
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
-              "editor": "<p>Google review, 5 stars</p>",
+              "editor": "<p>Local Guide, Google review</p>",
               "_css_classes": "pwh-who-source"
              },
              "elements": []
@@ -1562,7 +1622,7 @@
        "isInner": false
       },
       {
-       "id": "6b04627",
+       "id": "2c0f3c4",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -1575,7 +1635,7 @@
          "left": "28",
          "isLinked": true
         },
-        "_title": "Testimonial – Sora Kiari",
+        "_title": "Testimonial – Cameron P",
         "width": {
          "unit": "%",
          "size": 33.33,
@@ -1630,7 +1690,7 @@
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
-          "editor": "<p>Great Service, Great Price, Great Support and Fast Speeds.</p>",
+          "editor": "<p>Absolutely top notch service, brilliant support. There is no problems, only solutions.</p>",
           "_css_classes": "pwh-quote"
          },
          "elements": []
@@ -1662,7 +1722,7 @@
          },
          "elements": [
           {
-           "id": "e0af12d",
+           "id": "ccc72f2",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -1708,11 +1768,11 @@
            },
            "elements": [
             {
-             "id": "d24cf49",
+             "id": "94e6d87",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "Sora Kiari",
+              "title": "Cameron P",
               "header_size": "p",
               "_css_classes": "pwh-who-name"
              },
@@ -1790,7 +1850,7 @@
    },
    "elements": [
     {
-     "id": "62be5bb",
+     "id": "00e96a6",
      "elType": "widget",
      "widgetType": "heading",
      "settings": {
@@ -1835,28 +1895,28 @@
         "tabs": [
          {
           "_id": "1275fca",
-          "tab_title": "Should I choose cPanel or WordPress hosting?",
-          "tab_content": "<p>cPanel hosting gives you the dashboard (cPanel) to manage your site, email and files yourself. Semi-managed WordPress hosting is for WordPress sites where we handle the updates, security and monitoring, so you don't have to.</p><p>Not sure? <a href=\"/contact/\">Talk to our Perth team</a> and we'll point you the right way.</p>"
+          "tab_title": "What's the difference between cPanel, semi-managed and reseller hosting?",
+          "tab_content": "<p>cPanel gives you full control and you manage everything yourself. Semi-managed means we handle the setup, updates and troubleshooting so you don’t have to. Reseller hosting is for anyone managing sites for clients, with your own branding and full account control.</p>"
          },
          {
           "_id": "77ede16",
-          "tab_title": "Can you move my website from my current host?",
-          "tab_content": "<p>Yes. Migration is free on every plan. We move your files, databases and email across, and most sites move with no downtime.</p>"
+          "tab_title": "Can you migrate my existing website across?",
+          "tab_content": "<p>Yes, for free. We migrate your files, databases and email, and most sites move across with no downtime.</p>"
          },
          {
           "_id": "ee0e471",
-          "tab_title": "Where are your servers?",
-          "tab_content": "<p>On Perth servers we monitor ourselves.</p>"
+          "tab_title": "How much storage do I get?",
+          "tab_content": "<p>It depends on the plan: 5GB to 30GB of high-speed SSD storage on cPanel and semi-managed WordPress plans, and 25GB to 75GB on reseller plans. You can switch plans any time as you grow.</p>"
          },
          {
           "_id": "c1a45d9",
-          "tab_title": "Can I change plans later?",
-          "tab_content": "<p>Yes. You can switch plans any time as you grow.</p>"
+          "tab_title": "Is a domain included with hosting?",
+          "tab_content": "<p>Domains are registered separately. <a href=\"/domains/\">Search for your domain</a>, and we'll connect it to your hosting for you.</p>"
          },
          {
           "_id": "a522ab5",
-          "tab_title": "Is there a contract?",
-          "tab_content": "<p>No lock-in contracts. Monthly plans can be cancelled any time, and yearly plans come with a 30-day money-back guarantee.</p>"
+          "tab_title": "What happens if my site goes down?",
+          "tab_content": "<p>Our servers are monitored around the clock from right here in Perth, so we're usually already on it. If you need us, call a real Perth number, <a href=\"tel:+61863654522\">08 6365 4522</a>, and talk to someone who can fix it.</p>"
          }
         ],
         "selected_icon": {
@@ -1924,20 +1984,19 @@
      "isLinked": false
     },
     "html_tag": "section",
-    "css_classes": "pwh-h-switch",
     "background_background": "classic",
-    "background_color": "#F5F1E0",
+    "background_color": "#1A325B",
     "flex_align_items": "flex-start"
    },
    "elements": [
     {
-     "id": "e80c2ad",
+     "id": "725fed5",
      "elType": "widget",
      "widgetType": "heading",
      "settings": {
       "title": "Switching is easier than you think.",
       "header_size": "h2",
-      "_css_classes": "pwh-h3 pwh-text-ink"
+      "_css_classes": "pwh-h-switch-title"
      },
      "elements": []
     },
@@ -1947,16 +2006,16 @@
      "widgetType": "text-editor",
      "settings": {
       "editor": "<p>We migrate your files, databases and email for free. Most sites move across with no downtime.</p>",
-      "_css_classes": "pwh-body pwh-text-grey"
+      "_css_classes": "pwh-h-switch-text"
      },
      "elements": []
     },
     {
-     "id": "be96a80",
+     "id": "f240b46",
      "elType": "widget",
      "widgetType": "button",
      "settings": {
-      "text": "Ask Us About Switching",
+      "text": "Start my free migration →",
       "link": {
        "url": "/support/hosting-transfer-request/",
        "is_external": "",

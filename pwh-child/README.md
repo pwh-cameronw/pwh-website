@@ -163,7 +163,7 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 
 `export/microsoft-365.json` is built the same way as the Contact template (Figma *Page / Email — Microsoft 365*, 159:2684). Import it and insert it into the page at `/email/microsoft-365/` (the link used by the mega menu).
 
-- Upload **`m365-hero.jpg`** (hero photo, shown under a 60% navy overlay) to the Media Library before importing, or swap the hero background afterwards.
+- Uses **`778c8aaa03f6bb48282fd0777887a6c43c6c1b7e-scaled.jpg`** from the Media Library (hero photo, shown under a 60% navy overlay).
 - Sections: hero, "What you get over basic email." (six cards, 3 / 2 / 1 columns), "Two ways to buy." (Exchange Online Plan 1 at $7.50, Microsoft 365 Business from $13.95) and an FAQ (Elementor Toggle with FAQ schema).
 - Both *Get a Licence* buttons go to `/contact/`; the order links aren't in the design.
 - **The FAQ answers are drafts.** Figma only has the questions. The answers use only facts already on the page; check them before publishing.
@@ -187,11 +187,11 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 - *Order Now* goes to `/client-login/`; set it to your WHMCS order link.
 - **The FAQ answers are drafts.** Figma only has the questions; check them before publishing.
 
-## Web Hosting overview page (standalone template, DRAFT)
+## Web Hosting overview page (standalone template)
 
-`export/web-hosting.json` (Figma *Page / Hosting*, 15:133). Put it on the page at `/web-hosting/` (the menu's Web Hosting link; the plan pages sit under it at `/web-hosting/cpanel/` and `/web-hosting/wordpress/`).
+`export/web-hosting.json` (Figma *Page / Hosting*, 15:133, read from the file copy `UyIKr0mEfBlQKS0wEU0ibY`). Put it on the page at `/web-hosting/` (the menu's Web Hosting link; the plan pages sit under it at `/web-hosting/cpanel/` and `/web-hosting/wordpress/`).
 
-**This is a draft.** Figma's API and connector were both rate-limited, so only the page outline (section sizes and heading text) could be read. Real from Figma: every section heading, the reseller/VPS note, the testimonials heading and the "Switching is easier than you think." copy. Borrowed from other Figma pages: hero copy (Home "Website Hosting" card), persona card text and prices (cPanel and WordPress pages), the Why PWH section and reviews (Home). Written to fit, review before publishing: the four "included" tiles, the FAQ questions and answers, and the button labels.
-
-- The Why PWH background uses `notsure-hero.jpg` from the Media Library, as on the live Home page.
-- Rebuild with the real Figma copy once access returns.
+- The hero uses `1a31b8031e0f1b430d5aca73df5d118da1cc78a2.jpg`, already in the Media Library. Upload the **Why PWH** photo as **`hosting-why.jpg`** (Figma's image host is blocked here, so it couldn't be fetched).
+- Figma's hero has an empty "visual placeholder" on the right and the tiles have an "icon" placeholder; the template leaves the right side empty and uses Font Awesome icons in the tiles.
+- **FAQ:** the first answer is Figma's. The other four answers are drafts built from the plan pages; check them before publishing.
+- *See hosting plans →* jumps to the plan cards; *Start my free migration →* goes to the Hosting Transfer Request page.
