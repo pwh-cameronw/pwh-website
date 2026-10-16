@@ -1599,6 +1599,206 @@ def email_page():
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
 
+# --- Web Hosting (overview) -------------------------------------------------
+# DRAFT. Figma Page / Hosting (15:133). Only the page outline could be read
+# (both Figma routes were rate-limited), so this uses the outline's section
+# sizes and heading text. Copy marked DRAFT in HOSTING_DRAFT_NOTES is borrowed
+# from other Figma pages or written to fit; swap in the real copy later.
+
+HOSTING_CSS = """
+.pwh-h-style{display:none!important}
+.pwh-h-persona{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:16px;background:var(--pwh-cream,#fffef4)}
+.pwh-h-persona--featured{border:2px solid var(--pwh-navy-ink,#0b1629)}
+.pwh-h-title .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,"Archivo",sans-serif);font-stretch:125%;font-size:26px;font-weight:900;line-height:31px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-h-text,.pwh-h-text p{margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:20px;color:var(--pwh-grey-dark,#575557)}
+.pwh-h-from .elementor-heading-title{display:flex;align-items:baseline;gap:6px;margin:0;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-h-from small{font-family:Inter,sans-serif;font-size:14px;font-weight:400;color:var(--pwh-grey-dark,#575557)}
+.pwh-h-from b{font-family:var(--pwh-font-display,"Archivo",sans-serif);font-stretch:125%;font-size:32px;font-weight:900;line-height:38px;letter-spacing:-.6px}
+.pwh-h-list .elementor-icon-list-items{margin:0;padding:0}
+.pwh-h-list .elementor-icon-list-item{align-items:flex-start!important}
+.pwh-h-list .elementor-icon-list-item:not(:last-child){padding-bottom:10px!important}
+.pwh-h-list .elementor-icon-list-icon{width:16px;height:18px;padding:0!important;margin-right:10px;display:flex;justify-content:center;align-items:center}
+.pwh-h-list .elementor-icon-list-icon i{font-size:11px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-h-list .elementor-icon-list-icon svg{width:11px;height:11px;fill:var(--pwh-navy-ink,#0b1629)}
+.pwh-h-list .elementor-icon-list-text{padding:0!important;font-family:Inter,sans-serif;font-size:15px;line-height:18px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-h-persona .pwh-btn{margin-top:auto}
+.pwh-h-persona .pwh-btn .elementor-button{width:100%}
+.pwh-h-note,.pwh-h-note p{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-grey-dark,#575557)}
+.pwh-h-note a{color:var(--pwh-navy-ink,#0b1629);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.pwh-h-tile{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:12px;background:var(--pwh-cream,#fffef4)}
+.pwh-h-tile-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:16px;font-weight:700;line-height:19px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-h-tile-text,.pwh-h-tile-text p{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-grey-dark,#575557)}
+.pwh-h-switch .pwh-body,.pwh-h-switch .pwh-body p{line-height:22px}
+.pwh-h-row2>.e-con,.pwh-h-row2>.e-con-inner>.e-con{flex:0 0 calc(50% - 16px)!important;max-width:calc(50% - 16px);min-width:0}
+.pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex:1 1 0!important;min-width:0}
+@media (max-width:1024px){.pwh-h-row2,.pwh-h-row2>.e-con-inner{flex-direction:column!important}.pwh-h-row2>.e-con,.pwh-h-row2>.e-con-inner>.e-con{flex:0 0 auto!important;width:100%;max-width:100%}.pwh-h-row4{flex-wrap:wrap!important}.pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex:0 0 calc(50% - 12px)!important;max-width:calc(50% - 12px)}}
+@media (max-width:767px){.pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex-basis:100%!important;max-width:100%}}
+.pwh-h-hero .elementor-widget{max-width:100%}
+"""
+
+# DRAFT answers and questions (Figma's FAQ text couldn't be read). Facts come
+# from the cPanel, WordPress and Contact pages.
+HOSTING_FAQ = [
+    ("Should I choose cPanel or WordPress hosting?",
+     "<p>cPanel hosting gives you the dashboard (cPanel) to manage your site, email and files yourself. "
+     "Semi-managed WordPress hosting is for WordPress sites where we handle the updates, security and monitoring, so you don't have to.</p>"
+     "<p>Not sure? <a href=\"/contact/\">Talk to our Perth team</a> and we'll point you the right way.</p>"),
+    ("Can you move my website from my current host?",
+     "<p>Yes. Migration is free on every plan. We move your files, databases and email across, and most sites move with no downtime.</p>"),
+    ("Where are your servers?",
+     "<p>On Perth servers we monitor ourselves.</p>"),
+    ("Can I change plans later?",
+     "<p>Yes. You can switch plans any time as you grow.</p>"),
+    ("Is there a contract?",
+     "<p>No lock-in contracts. Monthly plans can be cancelled any time, and yearly plans come with a 30-day money-back guarantee.</p>"),
+]
+
+
+def hosting_persona(title, body, price, features, link_text, link, featured=False):
+    return con(f"Persona – {title}", [
+        heading(title, "pwh-h-title", tag="h3"),
+        text(f"<p>{body}</p>", "pwh-h-text"),
+        heading(f"<small>From</small><b>${price}</b><small>/ month</small>", "pwh-h-from", tag="p"),
+        widget("icon-list", {
+            "icon_list": [{"_id": _id("li"), "text": f, "selected_icon": {"value": "fas fa-check", "library": "fa-solid"}}
+                          for f in features],
+            "space_between": px(10), "icon_size": px(11), "icon_color": "#0B1629", "text_color": "#0B1629",
+        }, "pwh-h-list"),
+        button(link_text, link, "pwh-btn--amber" if featured else "pwh-btn--navy"),
+    ], cls="pwh-h-persona" + (" pwh-h-persona--featured" if featured else ""), gap_px=14, pad=box(32), pad_m=box(24),
+        width_t=pct(100))
+
+
+def hosting_tile(title, body):
+    return con(f"Tile – {title}", [
+        heading(title, "pwh-h-tile-title", tag="h3"),
+        text(f"<p>{body}</p>", "pwh-h-tile-text"),
+    ], cls="pwh-h-tile", gap_px=10, pad=box(24), width_t=pct(100))
+
+
+def hosting():
+    style = widget("html", {"html": "<style>" + " ".join(HOSTING_CSS.split()) + "</style>"}, "pwh-h-style")
+
+    # Figma hero: 740px tall including the 84px nav that overlaps it. DRAFT copy
+    # from the Home page's "Website Hosting" card (Figma 14:83).
+    hero = con("Hero", [
+        style,
+        heading("A site that doesn't let you down.", "pwh-h1 pwh-text-cream", tag="h1"),
+        text("<p>Fast, monitored hosting on Perth servers we look after ourselves. If something's off, we're usually already on it.</p>",
+             "pwh-lead pwh-lead--tight pwh-text-mist"),
+        con("Buttons", [
+            button("See cPanel plans", url("/web-hosting/cpanel/"), "pwh-btn--amber"),
+            button("See WordPress plans", url("/web-hosting/wordpress/"), "pwh-btn--outline-cream"),
+        ], direction="row", gap_px=16, extra={"flex_wrap": "wrap"}),
+    ], cls="pwh-h-hero", boxed=1180, gap_px=16, justify="center", pad=box(116, 0, 120, 0), pad_t=box(96, 24, 96, 24),
+        pad_m=box(72, 20, 72, 20), min_h=656, min_h_t=0, tag="section",
+        extra={"background_background": "classic", "background_color": "#0B1629"})
+    for w in hero["elements"][1:3]:
+        w["settings"].update({"_element_width": "initial", "_element_custom_width": px(760),
+                              "_element_width_tablet": "inherit"})
+
+    plans = con("Plans", [
+        heading("Which hosting is right for you?", "pwh-h2 pwh-text-ink", tag="h2"),
+        con("Cards", [
+            hosting_persona("cPanel hosting",
+                            "Every plan runs on Perth servers we monitor ourselves, with free migration and local support. "
+                            "New to cPanel? It's the dashboard you use to manage your site, email and files.",
+                            "7.95", ["Free SSL certificate", "Free migration from your current host",
+                                     "6-hourly, 21-day offsite backups"],
+                            "View cPanel plans", url("/web-hosting/cpanel/")),
+            hosting_persona("Semi-managed WordPress",
+                            "We handle the updates, security and monitoring, so you don't have to. "
+                            "Semi-managed means we look after the technical upkeep of your site, you just run the business.",
+                            "24.95", ["Updates, security and monitoring handled for you",
+                                      "Free migration from your current host", "Local Perth support"],
+                            "View WordPress plans", url("/web-hosting/wordpress/"), featured=True),
+        ], cls="pwh-h-row2", direction="row", gap_px=32, align="stretch", dir_t="column", gap_t=24),
+        text('<p>Looking for <a href="/reseller-hosting/">reseller hosting</a>, or need a private server (VPS)? '
+             'Dedicated and VPS hosting is coming soon. <a href="/vps-hosting/">Join the waitlist.</a></p>', "pwh-h-note"),
+    ], boxed=1180, gap_px=40, pad=box(140, 0), pad_t=box(96, 24), pad_m=box(72, 20), tag="section")
+
+    includes = con("Includes", [
+        heading("What's included, no matter which plan.", "pwh-h3 pwh-text-ink", tag="h2"),
+        con("Tiles", [
+            hosting_tile("Free SSL certificate", "The padlock in the browser bar, set up for you on every site."),
+            hosting_tile("Free migration", "We move your files, databases and email across from your current host."),
+            hosting_tile("Offsite backups", "Your site is backed up offsite every 6 hours, so nothing's lost for long."),
+            hosting_tile("Local Perth support", "Call a Perth number and talk to the team that runs the servers."),
+        ], cls="pwh-h-row4", direction="row", gap_px=24, align="stretch"),
+    ], boxed=1180, gap_px=40, pad=box(80, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0"})
+
+    # Same "Why PWH" component as the Home page (Figma 65:755 on this page).
+    why = con("WhyPWH", [
+        con("Copy", [
+            heading("Not sure what you need? We'll figure it out with you.", "pwh-h2 pwh-text-cream", tag="h2"),
+            text("<p>Getting online shouldn't mean learning how servers work first. Tell us a bit about your business and we'll walk you through exactly what you need: hosting, a domain, email, or all three. Then we set it up, so you don't have to.</p>",
+                 "pwh-body pwh-text-mist"),
+            button("Start my walkthrough →", url("/get-started/"), "pwh-btn--amber"),
+        ], gap_px=24, width=pct(50), width_t=pct(100), extra={"_flex_size": "grow"}),
+        con("Placeholder", [], width=pct(50), width_t=pct(100), min_h=200, min_h_t=0,
+            extra={"_flex_size": "grow", "hide_tablet": "hidden-tablet", "hide_mobile": "hidden-mobile"}),
+    ], cls="pwh-why", direction="row", boxed=1180, gap_px=64, align="center", dir_t="column",
+        pad=box(62, 0), pad_t=box(72, 24), pad_m=box(56, 20), min_h=464, min_h_t=0, tag="section",
+        extra={
+            "background_background": "classic",
+            "background_color": "#0B1629",
+            "background_image": asset(MEDIA + "notsure-hero.jpg"),
+            "background_position": "center center",
+            "background_size": "cover",
+            "background_repeat": "no-repeat",
+            "background_overlay_background": "gradient",
+            "background_overlay_color": "rgba(11,22,41,0.8)",
+            "background_overlay_color_stop": pct(0),
+            "background_overlay_color_b": "rgba(11,22,41,0)",
+            "background_overlay_color_b_stop": pct(65),
+            "background_overlay_gradient_type": "linear",
+            "background_overlay_gradient_angle": {"unit": "deg", "size": 90, "sizes": []},
+        })
+
+    # Same heading and card layout as the Home page; Figma's review text
+    # couldn't be read, so these are the Home page's three reviews.
+    testimonials = con("Testimonials", [
+        con("Intro", [
+            heading("WA businesses who've<br>made the switch", "pwh-h2 pwh-text-ink", tag="h2"),
+            text("<p>Here's what business owners say after switching.</p>", "pwh-body pwh-text-ink"),
+        ], gap_px=8, width=px(744), width_t=pct(100)),
+        con("Cards", [
+            review("Excellent service from the guys at Perth Web Hosting. Love that my website is locally hosted and looked after. After years of being with 'the big global guys' and running into issues, downtime and more, all of that's finally over.",
+                        "Nathan Hurst", "Google review, 5 stars"),
+            review("Best web hosting services in Perth. I have tried many providers and these guys are the absolute best. I never have to wait for support and my website speeds are blazingly fast.",
+                        "Jack Hampton", "Google review, 5 stars"),
+            review("Great Service, Great Price, Great Support and Fast Speeds.", "Sora Kiari", "Google review, 5 stars"),
+        ], direction="row", gap_px=32, align="stretch", dir_t="column", gap_t=24),
+    ], boxed=1180, gap_px=40, pad=SECTION_PAD, pad_t=SECTION_PAD_T, pad_m=SECTION_PAD_M, tag="section")
+
+    faq = con("FAQ", [
+        heading("Hosting questions, answered.", "pwh-h3 pwh-text-ink", tag="h2"),
+        con("Questions", [
+            widget("toggle", {
+                "tabs": [{"_id": _id("faq"), "tab_title": q, "tab_content": a} for q, a in HOSTING_FAQ],
+                "selected_icon": {"value": "fas fa-plus", "library": "fa-solid"},
+                "selected_active_icon": {"value": "fas fa-minus", "library": "fa-solid"},
+                "icon_align": "right",
+                "title_html_tag": "h3",
+                "faq_schema": "yes",
+            }, "pwh-faq"),
+        ], width=px(760), width_t=pct(100)),
+    ], boxed=1180, gap_px=32, pad=box(80, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section")
+
+    switching = con("Switching", [
+        heading("Switching is easier than you think.", "pwh-h3 pwh-text-ink", tag="h2"),
+        text("<p>We migrate your files, databases and email for free. Most sites move across with no downtime.</p>",
+             "pwh-body pwh-text-grey"),
+        button("Ask Us About Switching", url("/support/hosting-transfer-request/"), "pwh-btn--amber"),
+    ], cls="pwh-h-switch", boxed=1180, gap_px=12, pad=box(64, 0), pad_t=box(56, 24), pad_m=box(48, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0", "flex_align_items": "flex-start"})
+
+    return template("PWH – Web Hosting (draft)", "page",
+                    [hero, plans, includes, why, testimonials, faq, switching],
+                    {"hide_title": "yes", "template": "elementor_header_footer"})
+
+
 def export_standalone(data):
     """Resolve importer placeholders so the JSON imports straight into Elementor."""
     raw = json.dumps(data, ensure_ascii=False)
@@ -1624,7 +1824,8 @@ def main():
     }
     exports = {"contact.json": export_standalone(contact()), "microsoft-365.json": export_standalone(m365()),
                "reseller.json": export_standalone(reseller()),
-               "email.json": export_standalone(email_page())}
+               "email.json": export_standalone(email_page()),
+               "web-hosting.json": export_standalone(hosting())}
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     for name, data in exports.items():
         with open(os.path.join(OUT, "..", "export", name), "w", encoding="utf-8") as fh:

@@ -186,3 +186,12 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 - Sections: hero, "What's included" list next to the $10.95 / month price card, the "One thing to know" cPanel note, "Basic email or Microsoft 365?" with a link to `/email/microsoft-365/`, and an FAQ.
 - *Order Now* goes to `/client-login/`; set it to your WHMCS order link.
 - **The FAQ answers are drafts.** Figma only has the questions; check them before publishing.
+
+## Web Hosting overview page (standalone template, DRAFT)
+
+`export/web-hosting.json` (Figma *Page / Hosting*, 15:133). Put it on the page at `/web-hosting/` (the menu's Web Hosting link; the plan pages sit under it at `/web-hosting/cpanel/` and `/web-hosting/wordpress/`).
+
+**This is a draft.** Figma's API and connector were both rate-limited, so only the page outline (section sizes and heading text) could be read. Real from Figma: every section heading, the reseller/VPS note, the testimonials heading and the "Switching is easier than you think." copy. Borrowed from other Figma pages: hero copy (Home "Website Hosting" card), persona card text and prices (cPanel and WordPress pages), the Why PWH section and reviews (Home). Written to fit, review before publishing: the four "included" tiles, the FAQ questions and answers, and the button labels.
+
+- The Why PWH background uses `notsure-hero.jpg` from the Media Library, as on the live Home page.
+- Rebuild with the real Figma copy once access returns.

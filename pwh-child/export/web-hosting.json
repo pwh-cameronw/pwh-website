@@ -1,0 +1,1979 @@
+{
+ "version": "0.4",
+ "title": "PWH – Web Hosting (draft)",
+ "type": "page",
+ "content": [
+  {
+   "id": "4aa9a04",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "116",
+     "right": "0",
+     "bottom": "120",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Hero",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 16,
+     "column": "16",
+     "row": "16",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "96",
+     "right": "24",
+     "bottom": "96",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "72",
+     "right": "20",
+     "bottom": "72",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_justify_content": "center",
+    "min_height": {
+     "unit": "px",
+     "size": 656,
+     "sizes": []
+    },
+    "min_height_tablet": {
+     "unit": "px",
+     "size": 0,
+     "sizes": []
+    },
+    "html_tag": "section",
+    "css_classes": "pwh-h-hero",
+    "background_background": "classic",
+    "background_color": "#0B1629"
+   },
+   "elements": [
+    {
+     "id": "c3c9425",
+     "elType": "widget",
+     "widgetType": "html",
+     "settings": {
+      "html": "<style>.pwh-h-style{display:none!important} .pwh-h-persona{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:16px;background:var(--pwh-cream,#fffef4)} .pwh-h-persona--featured{border:2px solid var(--pwh-navy-ink,#0b1629)} .pwh-h-title .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:26px;font-weight:900;line-height:31px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-text,.pwh-h-text p{margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:20px;color:var(--pwh-grey-dark,#575557)} .pwh-h-from .elementor-heading-title{display:flex;align-items:baseline;gap:6px;margin:0;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-from small{font-family:Inter,sans-serif;font-size:14px;font-weight:400;color:var(--pwh-grey-dark,#575557)} .pwh-h-from b{font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:32px;font-weight:900;line-height:38px;letter-spacing:-.6px} .pwh-h-list .elementor-icon-list-items{margin:0;padding:0} .pwh-h-list .elementor-icon-list-item{align-items:flex-start!important} .pwh-h-list .elementor-icon-list-item:not(:last-child){padding-bottom:10px!important} .pwh-h-list .elementor-icon-list-icon{width:16px;height:18px;padding:0!important;margin-right:10px;display:flex;justify-content:center;align-items:center} .pwh-h-list .elementor-icon-list-icon i{font-size:11px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-list .elementor-icon-list-icon svg{width:11px;height:11px;fill:var(--pwh-navy-ink,#0b1629)} .pwh-h-list .elementor-icon-list-text{padding:0!important;font-family:Inter,sans-serif;font-size:15px;line-height:18px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-persona .pwh-btn{margin-top:auto} .pwh-h-persona .pwh-btn .elementor-button{width:100%} .pwh-h-note,.pwh-h-note p{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-grey-dark,#575557)} .pwh-h-note a{color:var(--pwh-navy-ink,#0b1629);font-weight:700;text-decoration:underline;text-underline-offset:3px} .pwh-h-tile{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:12px;background:var(--pwh-cream,#fffef4)} .pwh-h-tile-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:16px;font-weight:700;line-height:19px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-tile-text,.pwh-h-tile-text p{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-grey-dark,#575557)} .pwh-h-switch .pwh-body,.pwh-h-switch .pwh-body p{line-height:22px} .pwh-h-row2>.e-con,.pwh-h-row2>.e-con-inner>.e-con{flex:0 0 calc(50% - 16px)!important;max-width:calc(50% - 16px);min-width:0} .pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex:1 1 0!important;min-width:0} @media (max-width:1024px){.pwh-h-row2,.pwh-h-row2>.e-con-inner{flex-direction:column!important}.pwh-h-row2>.e-con,.pwh-h-row2>.e-con-inner>.e-con{flex:0 0 auto!important;width:100%;max-width:100%}.pwh-h-row4{flex-wrap:wrap!important}.pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex:0 0 calc(50% - 12px)!important;max-width:calc(50% - 12px)}} @media (max-width:767px){.pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex-basis:100%!important;max-width:100%}} .pwh-h-hero .elementor-widget{max-width:100%}</style>",
+      "_css_classes": "pwh-h-style"
+     },
+     "elements": []
+    },
+    {
+     "id": "a5db2f2",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "A site that doesn't let you down.",
+      "header_size": "h1",
+      "_css_classes": "pwh-h1 pwh-text-cream",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "ab36803",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>Fast, monitored hosting on Perth servers we look after ourselves. If something's off, we're usually already on it.</p>",
+      "_css_classes": "pwh-lead pwh-lead--tight pwh-text-mist",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "b94dbdc",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Buttons",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "flex_wrap": "wrap"
+     },
+     "elements": [
+      {
+       "id": "bb66edd",
+       "elType": "widget",
+       "widgetType": "button",
+       "settings": {
+        "text": "See cPanel plans",
+        "link": {
+         "url": "/web-hosting/cpanel/",
+         "is_external": "",
+         "nofollow": "",
+         "custom_attributes": ""
+        },
+        "size": "md",
+        "_css_classes": "pwh-btn pwh-btn--amber"
+       },
+       "elements": []
+      },
+      {
+       "id": "f240b46",
+       "elType": "widget",
+       "widgetType": "button",
+       "settings": {
+        "text": "See WordPress plans",
+        "link": {
+         "url": "/web-hosting/wordpress/",
+         "is_external": "",
+         "nofollow": "",
+         "custom_attributes": ""
+        },
+        "size": "md",
+        "_css_classes": "pwh-btn pwh-btn--outline-cream"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "0473fdf",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "140",
+     "right": "0",
+     "bottom": "140",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Plans",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "96",
+     "right": "24",
+     "bottom": "96",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "72",
+     "right": "20",
+     "bottom": "72",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "02e4f86",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Which hosting is right for you?",
+      "header_size": "h2",
+      "_css_classes": "pwh-h2 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "ba4f47f",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Cards",
+      "flex_gap": {
+       "unit": "px",
+       "size": 32,
+       "column": "32",
+       "row": "32",
+       "isLinked": true
+      },
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "flex_align_items": "stretch",
+      "flex_direction_tablet": "column",
+      "css_classes": "pwh-h-row2"
+     },
+     "elements": [
+      {
+       "id": "3c4fe35",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "32",
+         "right": "32",
+         "bottom": "32",
+         "left": "32",
+         "isLinked": true
+        },
+        "_title": "Persona – cPanel hosting",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 14,
+         "column": "14",
+         "row": "14",
+         "isLinked": true
+        },
+        "padding_mobile": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "css_classes": "pwh-h-persona"
+       },
+       "elements": [
+        {
+         "id": "ded6fe2",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "cPanel hosting",
+          "header_size": "h3",
+          "_css_classes": "pwh-h-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "efb0482",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Every plan runs on Perth servers we monitor ourselves, with free migration and local support. New to cPanel? It's the dashboard you use to manage your site, email and files.</p>",
+          "_css_classes": "pwh-h-text"
+         },
+         "elements": []
+        },
+        {
+         "id": "77b34a0",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "<small>From</small><b>$7.95</b><small>/ month</small>",
+          "header_size": "p",
+          "_css_classes": "pwh-h-from"
+         },
+         "elements": []
+        },
+        {
+         "id": "5ffb996",
+         "elType": "widget",
+         "widgetType": "icon-list",
+         "settings": {
+          "icon_list": [
+           {
+            "_id": "efb4b5a",
+            "text": "Free SSL certificate",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "fc0cfa7",
+            "text": "Free migration from your current host",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "c9a7887",
+            "text": "6-hourly, 21-day offsite backups",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           }
+          ],
+          "space_between": {
+           "unit": "px",
+           "size": 10,
+           "sizes": []
+          },
+          "icon_size": {
+           "unit": "px",
+           "size": 11,
+           "sizes": []
+          },
+          "icon_color": "#0B1629",
+          "text_color": "#0B1629",
+          "_css_classes": "pwh-h-list"
+         },
+         "elements": []
+        },
+        {
+         "id": "6078c6a",
+         "elType": "widget",
+         "widgetType": "button",
+         "settings": {
+          "text": "View cPanel plans",
+          "link": {
+           "url": "/web-hosting/cpanel/",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "size": "md",
+          "_css_classes": "pwh-btn pwh-btn--navy"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "887746f",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "32",
+         "right": "32",
+         "bottom": "32",
+         "left": "32",
+         "isLinked": true
+        },
+        "_title": "Persona – Semi-managed WordPress",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 14,
+         "column": "14",
+         "row": "14",
+         "isLinked": true
+        },
+        "padding_mobile": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "css_classes": "pwh-h-persona pwh-h-persona--featured"
+       },
+       "elements": [
+        {
+         "id": "e864102",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Semi-managed WordPress",
+          "header_size": "h3",
+          "_css_classes": "pwh-h-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "e05af14",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>We handle the updates, security and monitoring, so you don't have to. Semi-managed means we look after the technical upkeep of your site, you just run the business.</p>",
+          "_css_classes": "pwh-h-text"
+         },
+         "elements": []
+        },
+        {
+         "id": "0994b72",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "<small>From</small><b>$24.95</b><small>/ month</small>",
+          "header_size": "p",
+          "_css_classes": "pwh-h-from"
+         },
+         "elements": []
+        },
+        {
+         "id": "f0f6b33",
+         "elType": "widget",
+         "widgetType": "icon-list",
+         "settings": {
+          "icon_list": [
+           {
+            "_id": "1325801",
+            "text": "Updates, security and monitoring handled for you",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "82ac73d",
+            "text": "Free migration from your current host",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "68e59a6",
+            "text": "Local Perth support",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           }
+          ],
+          "space_between": {
+           "unit": "px",
+           "size": 10,
+           "sizes": []
+          },
+          "icon_size": {
+           "unit": "px",
+           "size": 11,
+           "sizes": []
+          },
+          "icon_color": "#0B1629",
+          "text_color": "#0B1629",
+          "_css_classes": "pwh-h-list"
+         },
+         "elements": []
+        },
+        {
+         "id": "b75f4f1",
+         "elType": "widget",
+         "widgetType": "button",
+         "settings": {
+          "text": "View WordPress plans",
+          "link": {
+           "url": "/web-hosting/wordpress/",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "size": "md",
+          "_css_classes": "pwh-btn pwh-btn--amber"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "efdec61",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>Looking for <a href=\"/reseller-hosting/\">reseller hosting</a>, or need a private server (VPS)? Dedicated and VPS hosting is coming soon. <a href=\"/vps-hosting/\">Join the waitlist.</a></p>",
+      "_css_classes": "pwh-h-note"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "e6ada61",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "80",
+     "right": "0",
+     "bottom": "80",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Includes",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section",
+    "background_background": "classic",
+    "background_color": "#F5F1E0"
+   },
+   "elements": [
+    {
+     "id": "f050d17",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "What's included, no matter which plan.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h3 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "58c75b6",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Tiles",
+      "flex_gap": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "flex_align_items": "stretch",
+      "css_classes": "pwh-h-row4"
+     },
+     "elements": [
+      {
+       "id": "b603155",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Tile – Free SSL certificate",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 10,
+         "column": "10",
+         "row": "10",
+         "isLinked": true
+        },
+        "css_classes": "pwh-h-tile"
+       },
+       "elements": [
+        {
+         "id": "638a52a",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Free SSL certificate",
+          "header_size": "h3",
+          "_css_classes": "pwh-h-tile-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "80277d2",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>The padlock in the browser bar, set up for you on every site.</p>",
+          "_css_classes": "pwh-h-tile-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "4be061d",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Tile – Free migration",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 10,
+         "column": "10",
+         "row": "10",
+         "isLinked": true
+        },
+        "css_classes": "pwh-h-tile"
+       },
+       "elements": [
+        {
+         "id": "df65ed8",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Free migration",
+          "header_size": "h3",
+          "_css_classes": "pwh-h-tile-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "69658c2",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>We move your files, databases and email across from your current host.</p>",
+          "_css_classes": "pwh-h-tile-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "dd2b956",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Tile – Offsite backups",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 10,
+         "column": "10",
+         "row": "10",
+         "isLinked": true
+        },
+        "css_classes": "pwh-h-tile"
+       },
+       "elements": [
+        {
+         "id": "63abade",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Offsite backups",
+          "header_size": "h3",
+          "_css_classes": "pwh-h-tile-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "dca6aa4",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Your site is backed up offsite every 6 hours, so nothing's lost for long.</p>",
+          "_css_classes": "pwh-h-tile-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "1a8aa7e",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Tile – Local Perth support",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 10,
+         "column": "10",
+         "row": "10",
+         "isLinked": true
+        },
+        "css_classes": "pwh-h-tile"
+       },
+       "elements": [
+        {
+         "id": "42e917a",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Local Perth support",
+          "header_size": "h3",
+          "_css_classes": "pwh-h-tile-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "1185674",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Call a Perth number and talk to the team that runs the servers.</p>",
+          "_css_classes": "pwh-h-tile-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "8ff0227",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "padding": {
+     "unit": "px",
+     "top": "62",
+     "right": "0",
+     "bottom": "62",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "WhyPWH",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 64,
+     "column": "64",
+     "row": "64",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "72",
+     "right": "24",
+     "bottom": "72",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "flex_direction_tablet": "column",
+    "min_height": {
+     "unit": "px",
+     "size": 464,
+     "sizes": []
+    },
+    "min_height_tablet": {
+     "unit": "px",
+     "size": 0,
+     "sizes": []
+    },
+    "html_tag": "section",
+    "css_classes": "pwh-why",
+    "background_background": "classic",
+    "background_color": "#0B1629",
+    "background_image": {
+     "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/notsure-hero.jpg",
+     "id": "",
+     "size": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_position": "center center",
+    "background_size": "cover",
+    "background_repeat": "no-repeat",
+    "background_overlay_background": "gradient",
+    "background_overlay_color": "rgba(11,22,41,0.8)",
+    "background_overlay_color_stop": {
+     "unit": "%",
+     "size": 0,
+     "sizes": []
+    },
+    "background_overlay_color_b": "rgba(11,22,41,0)",
+    "background_overlay_color_b_stop": {
+     "unit": "%",
+     "size": 65,
+     "sizes": []
+    },
+    "background_overlay_gradient_type": "linear",
+    "background_overlay_gradient_angle": {
+     "unit": "deg",
+     "size": 90,
+     "sizes": []
+    }
+   },
+   "elements": [
+    {
+     "id": "682a71b",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Copy",
+      "width": {
+       "unit": "%",
+       "size": 50,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "_flex_size": "grow"
+     },
+     "elements": [
+      {
+       "id": "dd97090",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Not sure what you need? We'll figure it out with you.",
+        "header_size": "h2",
+        "_css_classes": "pwh-h2 pwh-text-cream"
+       },
+       "elements": []
+      },
+      {
+       "id": "a384d7e",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Getting online shouldn't mean learning how servers work first. Tell us a bit about your business and we'll walk you through exactly what you need: hosting, a domain, email, or all three. Then we set it up, so you don't have to.</p>",
+        "_css_classes": "pwh-body pwh-text-mist"
+       },
+       "elements": []
+      },
+      {
+       "id": "507e444",
+       "elType": "widget",
+       "widgetType": "button",
+       "settings": {
+        "text": "Start my walkthrough →",
+        "link": {
+         "url": "/get-started/",
+         "is_external": "",
+         "nofollow": "",
+         "custom_attributes": ""
+        },
+        "size": "md",
+        "_css_classes": "pwh-btn pwh-btn--amber"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "578cda7",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Placeholder",
+      "width": {
+       "unit": "%",
+       "size": 50,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "min_height": {
+       "unit": "px",
+       "size": 200,
+       "sizes": []
+      },
+      "min_height_tablet": {
+       "unit": "px",
+       "size": 0,
+       "sizes": []
+      },
+      "_flex_size": "grow",
+      "hide_tablet": "hidden-tablet",
+      "hide_mobile": "hidden-mobile"
+     },
+     "elements": [],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "7df6dc4",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "140",
+     "right": "0",
+     "bottom": "140",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Testimonials",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "96",
+     "right": "24",
+     "bottom": "96",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "72",
+     "right": "20",
+     "bottom": "72",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "b33c947",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Intro",
+      "width": {
+       "unit": "px",
+       "size": 744,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 8,
+       "column": "8",
+       "row": "8",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "60d73d2",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "WA businesses who've<br>made the switch",
+        "header_size": "h2",
+        "_css_classes": "pwh-h2 pwh-text-ink"
+       },
+       "elements": []
+      },
+      {
+       "id": "34cb06c",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Here's what business owners say after switching.</p>",
+        "_css_classes": "pwh-body pwh-text-ink"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "2cc5f7c",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Cards",
+      "flex_gap": {
+       "unit": "px",
+       "size": 32,
+       "column": "32",
+       "row": "32",
+       "isLinked": true
+      },
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "flex_align_items": "stretch",
+      "flex_direction_tablet": "column"
+     },
+     "elements": [
+      {
+       "id": "2899a9a",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "28",
+         "right": "28",
+         "bottom": "28",
+         "left": "28",
+         "isLinked": true
+        },
+        "_title": "Testimonial – Nathan Hurst",
+        "width": {
+         "unit": "%",
+         "size": 33.33,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "css_classes": "pwh-testimonial",
+        "_flex_size": "grow"
+       },
+       "elements": [
+        {
+         "id": "e3faa71",
+         "elType": "widget",
+         "widgetType": "rating",
+         "settings": {
+          "rating_scale": {
+           "unit": "px",
+           "size": 5,
+           "sizes": []
+          },
+          "rating_value": 5,
+          "icon_size": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "icon_gap": {
+           "unit": "px",
+           "size": 3,
+           "sizes": []
+          },
+          "__globals__": {
+           "icon_marked_color": "globals/colors?id=accent"
+          },
+          "_css_classes": "pwh-stars"
+         },
+         "elements": []
+        },
+        {
+         "id": "b569652",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Excellent service from the guys at Perth Web Hosting. Love that my website is locally hosted and looked after. After years of being with 'the big global guys' and running into issues, downtime and more, all of that's finally over.</p>",
+          "_css_classes": "pwh-quote"
+         },
+         "elements": []
+        },
+        {
+         "id": "a142924",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "padding": {
+           "unit": "px",
+           "top": "16",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "_title": "Who",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "flex_align_items": "center",
+          "css_classes": "pwh-who"
+         },
+         "elements": [
+          {
+           "id": "24d0e94",
+           "elType": "widget",
+           "widgetType": "icon",
+           "settings": {
+            "selected_icon": {
+             "value": "fas fa-circle",
+             "library": "fa-solid"
+            },
+            "size": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "__globals__": {
+             "primary_color": "globals/colors?id=pwhnavysoft"
+            },
+            "_css_classes": "pwh-avatar"
+           },
+           "elements": []
+          },
+          {
+           "id": "2006593",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "_title": "NameCol",
+            "flex_gap": {
+             "unit": "px",
+             "size": 2,
+             "column": "2",
+             "row": "2",
+             "isLinked": true
+            }
+           },
+           "elements": [
+            {
+             "id": "a75207b",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "Nathan Hurst",
+              "header_size": "p",
+              "_css_classes": "pwh-who-name"
+             },
+             "elements": []
+            },
+            {
+             "id": "80e96ea",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Google review, 5 stars</p>",
+              "_css_classes": "pwh-who-source"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "c321ffa",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "28",
+         "right": "28",
+         "bottom": "28",
+         "left": "28",
+         "isLinked": true
+        },
+        "_title": "Testimonial – Jack Hampton",
+        "width": {
+         "unit": "%",
+         "size": 33.33,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "css_classes": "pwh-testimonial",
+        "_flex_size": "grow"
+       },
+       "elements": [
+        {
+         "id": "820916b",
+         "elType": "widget",
+         "widgetType": "rating",
+         "settings": {
+          "rating_scale": {
+           "unit": "px",
+           "size": 5,
+           "sizes": []
+          },
+          "rating_value": 5,
+          "icon_size": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "icon_gap": {
+           "unit": "px",
+           "size": 3,
+           "sizes": []
+          },
+          "__globals__": {
+           "icon_marked_color": "globals/colors?id=accent"
+          },
+          "_css_classes": "pwh-stars"
+         },
+         "elements": []
+        },
+        {
+         "id": "200022d",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Best web hosting services in Perth. I have tried many providers and these guys are the absolute best. I never have to wait for support and my website speeds are blazingly fast.</p>",
+          "_css_classes": "pwh-quote"
+         },
+         "elements": []
+        },
+        {
+         "id": "bac45fe",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "padding": {
+           "unit": "px",
+           "top": "16",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "_title": "Who",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "flex_align_items": "center",
+          "css_classes": "pwh-who"
+         },
+         "elements": [
+          {
+           "id": "ad828e5",
+           "elType": "widget",
+           "widgetType": "icon",
+           "settings": {
+            "selected_icon": {
+             "value": "fas fa-circle",
+             "library": "fa-solid"
+            },
+            "size": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "__globals__": {
+             "primary_color": "globals/colors?id=pwhnavysoft"
+            },
+            "_css_classes": "pwh-avatar"
+           },
+           "elements": []
+          },
+          {
+           "id": "27ba418",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "_title": "NameCol",
+            "flex_gap": {
+             "unit": "px",
+             "size": 2,
+             "column": "2",
+             "row": "2",
+             "isLinked": true
+            }
+           },
+           "elements": [
+            {
+             "id": "df11263",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "Jack Hampton",
+              "header_size": "p",
+              "_css_classes": "pwh-who-name"
+             },
+             "elements": []
+            },
+            {
+             "id": "dd18b49",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Google review, 5 stars</p>",
+              "_css_classes": "pwh-who-source"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "6b04627",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "28",
+         "right": "28",
+         "bottom": "28",
+         "left": "28",
+         "isLinked": true
+        },
+        "_title": "Testimonial – Sora Kiari",
+        "width": {
+         "unit": "%",
+         "size": 33.33,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "css_classes": "pwh-testimonial",
+        "_flex_size": "grow"
+       },
+       "elements": [
+        {
+         "id": "ab22b02",
+         "elType": "widget",
+         "widgetType": "rating",
+         "settings": {
+          "rating_scale": {
+           "unit": "px",
+           "size": 5,
+           "sizes": []
+          },
+          "rating_value": 5,
+          "icon_size": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "icon_gap": {
+           "unit": "px",
+           "size": 3,
+           "sizes": []
+          },
+          "__globals__": {
+           "icon_marked_color": "globals/colors?id=accent"
+          },
+          "_css_classes": "pwh-stars"
+         },
+         "elements": []
+        },
+        {
+         "id": "afbfa31",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Great Service, Great Price, Great Support and Fast Speeds.</p>",
+          "_css_classes": "pwh-quote"
+         },
+         "elements": []
+        },
+        {
+         "id": "29875f4",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "padding": {
+           "unit": "px",
+           "top": "16",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "_title": "Who",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "flex_align_items": "center",
+          "css_classes": "pwh-who"
+         },
+         "elements": [
+          {
+           "id": "e0af12d",
+           "elType": "widget",
+           "widgetType": "icon",
+           "settings": {
+            "selected_icon": {
+             "value": "fas fa-circle",
+             "library": "fa-solid"
+            },
+            "size": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "__globals__": {
+             "primary_color": "globals/colors?id=pwhnavysoft"
+            },
+            "_css_classes": "pwh-avatar"
+           },
+           "elements": []
+          },
+          {
+           "id": "1814223",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "_title": "NameCol",
+            "flex_gap": {
+             "unit": "px",
+             "size": 2,
+             "column": "2",
+             "row": "2",
+             "isLinked": true
+            }
+           },
+           "elements": [
+            {
+             "id": "d24cf49",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "Sora Kiari",
+              "header_size": "p",
+              "_css_classes": "pwh-who-name"
+             },
+             "elements": []
+            },
+            {
+             "id": "1719c4e",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Google review, 5 stars</p>",
+              "_css_classes": "pwh-who-source"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "a5a0286",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "80",
+     "right": "0",
+     "bottom": "80",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "FAQ",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 32,
+     "column": "32",
+     "row": "32",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "62be5bb",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Hosting questions, answered.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h3 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "ec22138",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Questions",
+      "width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "daa370a",
+       "elType": "widget",
+       "widgetType": "toggle",
+       "settings": {
+        "tabs": [
+         {
+          "_id": "1275fca",
+          "tab_title": "Should I choose cPanel or WordPress hosting?",
+          "tab_content": "<p>cPanel hosting gives you the dashboard (cPanel) to manage your site, email and files yourself. Semi-managed WordPress hosting is for WordPress sites where we handle the updates, security and monitoring, so you don't have to.</p><p>Not sure? <a href=\"/contact/\">Talk to our Perth team</a> and we'll point you the right way.</p>"
+         },
+         {
+          "_id": "77ede16",
+          "tab_title": "Can you move my website from my current host?",
+          "tab_content": "<p>Yes. Migration is free on every plan. We move your files, databases and email across, and most sites move with no downtime.</p>"
+         },
+         {
+          "_id": "ee0e471",
+          "tab_title": "Where are your servers?",
+          "tab_content": "<p>On Perth servers we monitor ourselves.</p>"
+         },
+         {
+          "_id": "c1a45d9",
+          "tab_title": "Can I change plans later?",
+          "tab_content": "<p>Yes. You can switch plans any time as you grow.</p>"
+         },
+         {
+          "_id": "a522ab5",
+          "tab_title": "Is there a contract?",
+          "tab_content": "<p>No lock-in contracts. Monthly plans can be cancelled any time, and yearly plans come with a 30-day money-back guarantee.</p>"
+         }
+        ],
+        "selected_icon": {
+         "value": "fas fa-plus",
+         "library": "fa-solid"
+        },
+        "selected_active_icon": {
+         "value": "fas fa-minus",
+         "library": "fa-solid"
+        },
+        "icon_align": "right",
+        "title_html_tag": "h3",
+        "faq_schema": "yes",
+        "_css_classes": "pwh-faq"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "59a0ebf",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "64",
+     "right": "0",
+     "bottom": "64",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Switching",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 12,
+     "column": "12",
+     "row": "12",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "56",
+     "right": "24",
+     "bottom": "56",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "48",
+     "right": "20",
+     "bottom": "48",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section",
+    "css_classes": "pwh-h-switch",
+    "background_background": "classic",
+    "background_color": "#F5F1E0",
+    "flex_align_items": "flex-start"
+   },
+   "elements": [
+    {
+     "id": "e80c2ad",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Switching is easier than you think.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h3 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "6fac606",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>We migrate your files, databases and email for free. Most sites move across with no downtime.</p>",
+      "_css_classes": "pwh-body pwh-text-grey"
+     },
+     "elements": []
+    },
+    {
+     "id": "be96a80",
+     "elType": "widget",
+     "widgetType": "button",
+     "settings": {
+      "text": "Ask Us About Switching",
+      "link": {
+       "url": "/support/hosting-transfer-request/",
+       "is_external": "",
+       "nofollow": "",
+       "custom_attributes": ""
+      },
+      "size": "md",
+      "_css_classes": "pwh-btn pwh-btn--amber"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": {
+  "hide_title": "yes",
+  "template": "elementor_header_footer"
+ }
+}
