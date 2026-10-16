@@ -1,0 +1,861 @@
+{
+ "version": "0.4",
+ "title": "PWH – Email",
+ "type": "page",
+ "content": [
+  {
+   "id": "3876c7f",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "116",
+     "right": "0",
+     "bottom": "120",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Hero",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 14,
+     "column": "14",
+     "row": "14",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "96",
+     "right": "24",
+     "bottom": "96",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "72",
+     "right": "20",
+     "bottom": "72",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_justify_content": "center",
+    "min_height": {
+     "unit": "px",
+     "size": 440,
+     "sizes": []
+    },
+    "min_height_tablet": {
+     "unit": "px",
+     "size": 0,
+     "sizes": []
+    },
+    "html_tag": "section",
+    "css_classes": "pwh-m-hero",
+    "background_background": "classic",
+    "background_color": "#0B1629"
+   },
+   "elements": [
+    {
+     "id": "75357ee",
+     "elType": "widget",
+     "widgetType": "html",
+     "settings": {
+      "html": "<style>.pwh-m-style{display:none!important} .pwh-lead--tight,.pwh-lead--tight p{line-height:22px} .pwh-m-card{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:10px;background:var(--pwh-cream,#fffef4)} .pwh-m-card-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:16px;font-weight:700;line-height:19px;color:var(--pwh-navy-ink,#0b1629)} .pwh-m-text,.pwh-m-text p{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-grey-dark,#575557)} .pwh-m-note,.pwh-m-note p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:16px;color:var(--pwh-grey,#828082)} .pwh-m-plans{border-top:1px solid var(--pwh-navy-pale,#c2d3e8);border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)} .pwh-m-plan{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:12px;background:var(--pwh-cream,#fffef4)} .pwh-m-plan--featured{border:2px solid var(--pwh-navy-ink,#0b1629)} .pwh-m-tag .elementor-heading-title{display:inline-block;margin:0;padding:5px 10px;border-radius:3px;background:var(--pwh-sand,#e8e0c8);color:var(--pwh-amber-deep,#9e6e25);font-family:Inter,sans-serif;font-size:11px;font-weight:700;line-height:13px} .pwh-m-plan-title .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:22px;font-weight:900;line-height:26px;color:var(--pwh-navy-ink,#0b1629)} .pwh-m-from .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:12px;font-weight:700;line-height:16px;letter-spacing:1.8px;text-transform:uppercase;color:var(--pwh-navy-ink,#0b1629)} .pwh-m-price .elementor-heading-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px;margin:0;color:var(--pwh-navy-ink,#0b1629)} .pwh-m-amt{font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:40px;font-weight:900;line-height:46px;letter-spacing:-.9px} .pwh-m-per{font-family:Inter,sans-serif;font-size:14px;font-weight:400;line-height:17px;color:var(--pwh-grey-dark,#575557)} .pwh-m-rule{height:1px;background:var(--pwh-navy-pale,#c2d3e8)} .pwh-m-list .elementor-icon-list-items{margin:0;padding:0} .pwh-m-list .elementor-icon-list-item{align-items:flex-start!important} .pwh-m-list .elementor-icon-list-item:not(:last-child){padding-bottom:10px!important} .pwh-m-list .elementor-icon-list-icon{width:16px;height:17px;padding:0!important;margin-right:10px;justify-content:center;align-items:center;display:flex} .pwh-m-list .elementor-icon-list-icon i{font-size:11px;color:var(--pwh-navy-ink,#0b1629)} .pwh-m-list .elementor-icon-list-icon svg{width:11px;height:11px;fill:var(--pwh-navy-ink,#0b1629)} .pwh-m-list .elementor-icon-list-text{padding:0!important;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-navy-ink,#0b1629)} .pwh-m-plan .pwh-btn{margin-top:auto} .pwh-m-plan .pwh-btn .elementor-button{width:100%;min-height:48px;padding:15px 30px;border-radius:16px;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px} .pwh-m-btn-amber .elementor-button{background:var(--pwh-amber,#c89439)!important;color:var(--pwh-navy-ink,#0b1629)!important} .pwh-m-btn-amber .elementor-button:hover{background:#b5832c!important} .pwh-m-btn-navy .elementor-button{background:var(--pwh-navy,#1a325b)!important;color:var(--pwh-cream,#fffef4)!important} .pwh-m-btn-navy .elementor-button:hover{background:var(--pwh-navy-ink,#0b1629)!important} .pwh-m-faq .elementor-toggle-item{margin:0!important;border:0;border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)} .pwh-m-faq .elementor-tab-title{display:flex;align-items:center;gap:16px;padding:20px 0!important;border:0!important;cursor:pointer} .pwh-m-faq .elementor-toggle-title{flex:1 1 auto;order:1;color:var(--pwh-navy-ink,#0b1629)!important;font-family:Inter,sans-serif;font-size:17px;font-weight:700;line-height:21px;text-decoration:none} .pwh-m-faq .elementor-toggle-icon{order:2;flex:0 0 20px;width:20px!important;margin:0!important;color:var(--pwh-navy-ink,#0b1629);font-size:14px;text-align:center} .pwh-m-faq .elementor-toggle-icon svg{width:14px;height:14px;fill:currentColor} .pwh-m-faq .elementor-tab-content{padding:0 40px 20px 0!important;border:0!important;color:var(--pwh-grey-dark,#575557);font-family:Inter,sans-serif;font-size:16px;line-height:24px} .pwh-m-faq .elementor-tab-content p{margin:0 0 8px} .pwh-m-faq .elementor-tab-content p:last-child{margin-bottom:0} .pwh-m-faq .elementor-tab-title:focus-visible{outline:2px solid var(--pwh-amber,#c89439);outline-offset:2px} .pwh-m-grid>.e-con,.pwh-m-grid>.e-con-inner>.e-con{flex:0 0 calc((100% - 48px)/3)!important;max-width:calc((100% - 48px)/3);min-width:0} .pwh-m-row>.e-con,.pwh-m-row>.e-con-inner>.e-con{flex:0 0 calc(50% - 12px)!important;max-width:calc(50% - 12px);min-width:0} .pwh-m-hero .elementor-widget{max-width:100%} @media (max-width:1024px){.pwh-m-row,.pwh-m-row>.e-con-inner{flex-direction:column!important}.pwh-m-grid>.e-con,.pwh-m-grid>.e-con-inner>.e-con{flex-basis:calc((100% - 24px)/2)!important;max-width:calc((100% - 24px)/2)}.pwh-m-row>.e-con,.pwh-m-row>.e-con-inner>.e-con{flex:0 0 auto!important;max-width:100%;width:100%}} @media (max-width:767px){.pwh-m-grid>.e-con,.pwh-m-grid>.e-con-inner>.e-con{flex-basis:100%!important;max-width:100%}.pwh-m-amt{font-size:34px;line-height:40px}} .pwh-e-list .elementor-icon-list-item:not(:last-child){padding-bottom:12px!important} .pwh-e-list .elementor-icon-list-text{font-size:15px!important;line-height:18px!important} .pwh-e-price-card{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:12px;background:var(--pwh-cream,#fffef4)} .pwh-e-price-card .pwh-btn .elementor-button{width:100%;min-height:48px;padding:15px 30px;border-radius:16px;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px} .pwh-e-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:18px;font-weight:700;line-height:22px;color:var(--pwh-navy-ink,#0b1629)} .pwh-e-label .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px;color:var(--pwh-navy-ink,#0b1629)} .pwh-e-body,.pwh-e-body p{margin:0;font-family:Inter,sans-serif;font-size:16px;font-weight:300;line-height:19px;color:var(--pwh-grey-dark,#575557)} .pwh-e-note-band{border-top:1px solid var(--pwh-navy-pale,#c2d3e8);border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)} .pwh-e-card{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:12px;background:var(--pwh-cream,#fffef4)} .pwh-e-link .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:14px;font-weight:700;line-height:17px;color:var(--pwh-navy-ink,#0b1629)} .pwh-e-link .elementor-heading-title a{color:inherit;text-decoration:underline;text-underline-offset:3px} .pwh-e-link .elementor-heading-title a:hover{text-decoration-thickness:2px} @media (min-width:1025px){.pwh-e-split>.e-con:first-child,.pwh-e-split>.e-con-inner>.e-con:first-child{flex:1 1 0!important;min-width:0}.pwh-e-split>.e-con:last-child,.pwh-e-split>.e-con-inner>.e-con:last-child{flex:0 0 360px!important}}</style>",
+      "_css_classes": "pwh-m-style"
+     },
+     "elements": []
+    },
+    {
+     "id": "4473e3a",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Basic email on your own domain.",
+      "header_size": "h1",
+      "_css_classes": "pwh-h1 pwh-text-cream",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "0ee7244",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>Simple mailboxes (IMAP and POP3) for businesses that just need email to work. One flat price for the whole team, no per-mailbox fees, and the same SpamExperts filtering the bigger plans get.</p>",
+      "_css_classes": "pwh-lead pwh-lead--tight pwh-text-mist",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "6bf55ee",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "56",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Included",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "56",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "48",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "4bf5470",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Split",
+      "flex_gap": {
+       "unit": "px",
+       "size": 48,
+       "column": "48",
+       "row": "48",
+       "isLinked": true
+      },
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 32,
+       "column": "32",
+       "row": "32",
+       "isLinked": true
+      },
+      "flex_align_items": "flex-start",
+      "flex_direction_tablet": "column",
+      "css_classes": "pwh-e-split"
+     },
+     "elements": [
+      {
+       "id": "3652160",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "_title": "List",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 14,
+         "column": "14",
+         "row": "14",
+         "isLinked": true
+        }
+       },
+       "elements": [
+        {
+         "id": "9910c44",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "What's included",
+          "header_size": "h2",
+          "_css_classes": "pwh-h2 pwh-text-ink",
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "px",
+           "size": 244,
+           "sizes": []
+          },
+          "_element_width_tablet": "inherit"
+         },
+         "elements": []
+        },
+        {
+         "id": "980c09f",
+         "elType": "widget",
+         "widgetType": "icon-list",
+         "settings": {
+          "icon_list": [
+           {
+            "_id": "d2505e1",
+            "text": "20 email accounts on your domain",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "20ce6cb",
+            "text": "20GB of fast storage (SSD), shared across the team",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "cc529ee",
+            "text": "SpamExperts spam and virus filtering",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "63325c1",
+            "text": "40MB attachment size",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "cc426af",
+            "text": "99.98% uptime",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "79282a2",
+            "text": "Secure webmail, plus setup on Android and Apple devices",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "5e9215d",
+            "text": "21-day offsite backup",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           }
+          ],
+          "space_between": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "icon_size": {
+           "unit": "px",
+           "size": 11,
+           "sizes": []
+          },
+          "icon_color": "#0B1629",
+          "text_color": "#0B1629",
+          "_css_classes": "pwh-m-list pwh-e-list"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "611b185",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "32",
+         "right": "32",
+         "bottom": "32",
+         "left": "32",
+         "isLinked": true
+        },
+        "_title": "Price",
+        "width": {
+         "unit": "px",
+         "size": 360,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 12,
+         "column": "12",
+         "row": "12",
+         "isLinked": true
+        },
+        "padding_mobile": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "css_classes": "pwh-e-price-card"
+       },
+       "elements": [
+        {
+         "id": "81121dd",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Basic email",
+          "header_size": "h3",
+          "_css_classes": "pwh-e-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "de49c55",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "<span class=\"pwh-m-amt\">$10.95</span><span class=\"pwh-m-per\">/ month</span>",
+          "header_size": "p",
+          "_css_classes": "pwh-m-price"
+         },
+         "elements": []
+        },
+        {
+         "id": "ec74dc2",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Or $90 a year. All prices exclude GST.</p>",
+          "_css_classes": "pwh-m-text"
+         },
+         "elements": []
+        },
+        {
+         "id": "0a57fd4",
+         "elType": "widget",
+         "widgetType": "button",
+         "settings": {
+          "text": "Order Now",
+          "link": {
+           "url": "/client-login/",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "size": "md",
+          "_css_classes": "pwh-btn pwh-m-btn-amber"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "eb12513",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "56",
+     "right": "0",
+     "bottom": "56",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "CPanelNote",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "48",
+     "right": "24",
+     "bottom": "48",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "40",
+     "right": "20",
+     "bottom": "40",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section",
+    "css_classes": "pwh-e-note-band",
+    "background_background": "classic",
+    "background_color": "#F5F1E0"
+   },
+   "elements": [
+    {
+     "id": "b3f7b9b",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "One thing to know",
+      "header_size": "h2",
+      "_css_classes": "pwh-e-label"
+     },
+     "elements": []
+    },
+    {
+     "id": "0ace52f",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>Basic email runs on a hosting account (cPanel). If you host your website with us on a cPanel plan, your email sits alongside it. If you only need email and no website, we'll set up a small hosting account to run it, just ask and we'll sort it.</p>",
+      "_css_classes": "pwh-e-body"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "8a8f101",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "56",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "WhichIsRight",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "56",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "48",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "e1372e3",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Basic email or Microsoft 365?",
+      "header_size": "h2",
+      "_css_classes": "pwh-h2 pwh-text-ink",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 446,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "5c90c44",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Cards",
+      "flex_gap": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "flex_align_items": "stretch",
+      "flex_direction_tablet": "column",
+      "css_classes": "pwh-m-row"
+     },
+     "elements": [
+      {
+       "id": "8e3d4d4",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "28",
+         "right": "28",
+         "bottom": "28",
+         "left": "28",
+         "isLinked": true
+        },
+        "_title": "Card – Basic email is right if",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 8,
+         "column": "8",
+         "row": "8",
+         "isLinked": true
+        },
+        "css_classes": "pwh-e-card"
+       },
+       "elements": [
+        {
+         "id": "8e18465",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Basic email is right if",
+          "header_size": "h3",
+          "_css_classes": "pwh-e-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "aaa7ecf",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>You mostly send and receive email, you want one flat price for the team, and you don't need shared calendars or the Office apps. It just works, on any device.</p>",
+          "_css_classes": "pwh-m-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "9d5367d",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "28",
+         "right": "28",
+         "bottom": "28",
+         "left": "28",
+         "isLinked": true
+        },
+        "_title": "Card – Microsoft 365 is right if",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 8,
+         "column": "8",
+         "row": "8",
+         "isLinked": true
+        },
+        "css_classes": "pwh-e-card"
+       },
+       "elements": [
+        {
+         "id": "d9a52bf",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Microsoft 365 is right if",
+          "header_size": "h3",
+          "_css_classes": "pwh-e-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "a2046d8",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Your team shares calendars and contacts, you want bigger mailboxes, or you use Word, Excel and Teams. Priced per mailbox, so you only pay for who needs it.</p>",
+          "_css_classes": "pwh-m-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "18fdf66",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "See Microsoft 365 →",
+      "header_size": "p",
+      "link": {
+       "url": "/email/microsoft-365/",
+       "is_external": "",
+       "nofollow": "",
+       "custom_attributes": ""
+      },
+      "_css_classes": "pwh-e-link"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "4c2021c",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "72",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "FAQ",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "9788afb",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Basic email questions.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h2 pwh-text-ink",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 338,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "2049425",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Questions",
+      "width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "d6e605c",
+       "elType": "widget",
+       "widgetType": "toggle",
+       "settings": {
+        "tabs": [
+         {
+          "_id": "93d3d02",
+          "tab_title": "What's the difference between IMAP and POP3?",
+          "tab_content": "<p>IMAP keeps your email on the server, so your inbox, folders and read messages stay in sync on every device. POP3 downloads email to one device and usually removes it from the server.</p><p>For most teams IMAP is the better choice. Both are included.</p>"
+         },
+         {
+          "_id": "c3d93cd",
+          "tab_title": "Is 20 email accounts a hard limit?",
+          "tab_content": "<p>The plan includes 20 email accounts on your domain. If your team needs more, give us a call on <a href=\"tel:+61863654522\">08 6365 4522</a> and we'll find the right setup.</p>"
+         },
+         {
+          "_id": "6aaeba1",
+          "tab_title": "Does my website hosting plan already include email?",
+          "tab_content": "<p>Basic email runs on a hosting account (cPanel). If you host your website with us on a cPanel plan, your email sits alongside it.</p>"
+         },
+         {
+          "_id": "94b6fec",
+          "tab_title": "Can you move my existing mailboxes across?",
+          "tab_content": "<p>Yes. Send us a <a href=\"/support/hosting-transfer-request/\">Hosting Transfer Request</a> and our Perth team will plan the move with you.</p>"
+         },
+         {
+          "_id": "4e4d8ac",
+          "tab_title": "Will it work with Outlook, Apple Mail and my phone?",
+          "tab_content": "<p>Yes. IMAP and POP3 work with Outlook, Apple Mail and the mail apps on Android and Apple devices, and there's secure webmail too.</p>"
+         }
+        ],
+        "selected_icon": {
+         "value": "fas fa-plus",
+         "library": "fa-solid"
+        },
+        "selected_active_icon": {
+         "value": "fas fa-minus",
+         "library": "fa-solid"
+        },
+        "icon_align": "right",
+        "title_html_tag": "h3",
+        "faq_schema": "yes",
+        "_css_classes": "pwh-m-faq"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": {
+  "hide_title": "yes",
+  "template": "elementor_header_footer"
+ }
+}

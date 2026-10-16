@@ -177,3 +177,12 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 - **Yearly prices aren't in the design.** Until you add them on each card (*Yearly → Price*), choosing Yearly keeps showing the monthly price.
 - The design shows a "+" row on each card but no technical details. The + appears once you fill in *Technical details* on a card.
 - *Order Now* goes to `/client-login/`. Set each card's order links to your WHMCS URLs.
+
+## Email (IMAP / POP3) page (standalone template)
+
+`export/email.json` (Figma *Page / Email — IMAP POP3*, 160:2838). Put it on the page at `/email/`, which is where the menu and footer link. Then set that page as the **Parent** of the Microsoft 365 page so it lives at `/email/microsoft-365/`, matching the menu.
+
+- No images to upload: the hero is solid navy in the design.
+- Sections: hero, "What's included" list next to the $10.95 / month price card, the "One thing to know" cPanel note, "Basic email or Microsoft 365?" with a link to `/email/microsoft-365/`, and an FAQ.
+- *Order Now* goes to `/client-login/`; set it to your WHMCS order link.
+- **The FAQ answers are drafts.** Figma only has the questions; check them before publishing.

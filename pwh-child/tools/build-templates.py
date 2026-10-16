@@ -1471,6 +1471,134 @@ def reseller():
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
 
+# --- Email (IMAP / POP3) -----------------------------------------------------
+# Built from the Figma REST API (Page / Email — IMAP POP3, 160:2838) as a
+# standalone template. Shares the Microsoft 365 page's CSS (pwh-m-*).
+
+EMAIL_CSS = M365_CSS + """
+.pwh-e-list .elementor-icon-list-item:not(:last-child){padding-bottom:12px!important}
+.pwh-e-list .elementor-icon-list-text{font-size:15px!important;line-height:18px!important}
+.pwh-e-price-card{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:12px;background:var(--pwh-cream,#fffef4)}
+.pwh-e-price-card .pwh-btn .elementor-button{width:100%;min-height:48px;padding:15px 30px;border-radius:16px;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px}
+.pwh-e-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:18px;font-weight:700;line-height:22px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-e-label .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-e-body,.pwh-e-body p{margin:0;font-family:Inter,sans-serif;font-size:16px;font-weight:300;line-height:19px;color:var(--pwh-grey-dark,#575557)}
+.pwh-e-note-band{border-top:1px solid var(--pwh-navy-pale,#c2d3e8);border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)}
+.pwh-e-card{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:12px;background:var(--pwh-cream,#fffef4)}
+.pwh-e-link .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:14px;font-weight:700;line-height:17px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-e-link .elementor-heading-title a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.pwh-e-link .elementor-heading-title a:hover{text-decoration-thickness:2px}
+@media (min-width:1025px){.pwh-e-split>.e-con:first-child,.pwh-e-split>.e-con-inner>.e-con:first-child{flex:1 1 0!important;min-width:0}.pwh-e-split>.e-con:last-child,.pwh-e-split>.e-con-inner>.e-con:last-child{flex:0 0 360px!important}}
+"""
+
+# Draft answers: written only from what the Figma page already says. Not in
+# the design; review before publishing.
+EMAIL_FAQ = [
+    ("What's the difference between IMAP and POP3?",
+     "<p>IMAP keeps your email on the server, so your inbox, folders and read messages stay in sync on every device. "
+     "POP3 downloads email to one device and usually removes it from the server.</p>"
+     "<p>For most teams IMAP is the better choice. Both are included.</p>"),
+    ("Is 20 email accounts a hard limit?",
+     "<p>The plan includes 20 email accounts on your domain. If your team needs more, give us a call on "
+     "<a href=\"tel:+61863654522\">08 6365 4522</a> and we'll find the right setup.</p>"),
+    ("Does my website hosting plan already include email?",
+     "<p>Basic email runs on a hosting account (cPanel). If you host your website with us on a cPanel plan, your email sits alongside it.</p>"),
+    ("Can you move my existing mailboxes across?",
+     "<p>Yes. Send us a <a href=\"/support/hosting-transfer-request/\">Hosting Transfer Request</a> and our Perth team will plan the move with you.</p>"),
+    ("Will it work with Outlook, Apple Mail and my phone?",
+     "<p>Yes. IMAP and POP3 work with Outlook, Apple Mail and the mail apps on Android and Apple devices, and there's secure webmail too.</p>"),
+]
+
+
+def email_page():
+    style = widget("html", {"html": "<style>" + " ".join(EMAIL_CSS.split()) + "</style>"}, "pwh-m-style")
+
+    def capped(w, width):
+        # Figma wraps these headings at a fixed width; keep the same line breaks.
+        w["settings"].update({"_element_width": "initial", "_element_custom_width": px(width),
+                              "_element_width_tablet": "inherit"})
+        return w
+
+    # Figma pads the hero 200px at the top because the nav overlaps it; the
+    # sticky header sits above the page here, so 84px comes off.
+    hero = con("Hero", [
+        style,
+        capped(heading("Basic email on your own domain.", "pwh-h1 pwh-text-cream", tag="h1"), 760),
+        capped(text("<p>Simple mailboxes (IMAP and POP3) for businesses that just need email to work. One flat price for the whole team, "
+                    "no per-mailbox fees, and the same SpamExperts filtering the bigger plans get.</p>",
+                    "pwh-lead pwh-lead--tight pwh-text-mist"), 760),
+    ], cls="pwh-m-hero", boxed=1180, gap_px=14, justify="center", pad=box(116, 0, 120, 0), pad_t=box(96, 24, 96, 24),
+        pad_m=box(72, 20, 72, 20), min_h=440, min_h_t=0, tag="section",
+        extra={"background_background": "classic", "background_color": "#0B1629"})
+
+    features = ["20 email accounts on your domain", "20GB of fast storage (SSD), shared across the team",
+                "SpamExperts spam and virus filtering", "40MB attachment size", "99.98% uptime",
+                "Secure webmail, plus setup on Android and Apple devices", "21-day offsite backup"]
+    included = con("Included", [
+        con("Split", [
+            con("List", [
+                capped(heading("What's included", "pwh-h2 pwh-text-ink", tag="h2"), 244),
+                widget("icon-list", {
+                    "icon_list": [{"_id": _id("li"), "text": f, "selected_icon": {"value": "fas fa-check", "library": "fa-solid"}}
+                                  for f in features],
+                    "space_between": px(12), "icon_size": px(11), "icon_color": "#0B1629", "text_color": "#0B1629",
+                }, "pwh-m-list pwh-e-list"),
+            ], gap_px=14, width_t=pct(100)),
+            con("Price", [
+                heading("Basic email", "pwh-e-title", tag="h3"),
+                heading('<span class="pwh-m-amt">$10.95</span><span class="pwh-m-per">/ month</span>', "pwh-m-price", tag="p"),
+                text("<p>Or $90 a year. All prices exclude GST.</p>", "pwh-m-text"),
+                # The order link isn't in the design; set it in Elementor.
+                button("Order Now", url("/client-login/"), "pwh-m-btn-amber"),
+            ], cls="pwh-e-price-card", gap_px=12, pad=box(32), pad_m=box(24), width=px(360), width_t=pct(100)),
+        ], cls="pwh-e-split", direction="row", gap_px=48, align="flex-start", dir_t="column", gap_t=32),
+    ], boxed=1180, pad=box(72, 0, 56, 0), pad_t=box(64, 24, 56, 24), pad_m=box(56, 20, 48, 20), tag="section")
+
+    note = con("CPanelNote", [
+        heading("One thing to know", "pwh-e-label", tag="h2"),
+        text("<p>Basic email runs on a hosting account (cPanel). If you host your website with us on a cPanel plan, your email sits alongside it. "
+             "If you only need email and no website, we'll set up a small hosting account to run it, just ask and we'll sort it.</p>",
+             "pwh-e-body"),
+    ], cls="pwh-e-note-band", boxed=1180, gap_px=24, pad=box(56, 0), pad_t=box(48, 24), pad_m=box(40, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0"})
+
+    def which(title, body):
+        return con(f"Card – {title}", [
+            heading(title, "pwh-e-title", tag="h3"),
+            text(f"<p>{body}</p>", "pwh-m-text"),
+        ], cls="pwh-e-card", gap_px=8, pad=box(28), width_t=pct(100))
+
+    compare = con("WhichIsRight", [
+        capped(heading("Basic email or Microsoft 365?", "pwh-h2 pwh-text-ink", tag="h2"), 446),
+        con("Cards", [
+            which("Basic email is right if",
+                  "You mostly send and receive email, you want one flat price for the team, and you don't need shared calendars "
+                  "or the Office apps. It just works, on any device."),
+            which("Microsoft 365 is right if",
+                  "Your team shares calendars and contacts, you want bigger mailboxes, or you use Word, Excel and Teams. "
+                  "Priced per mailbox, so you only pay for who needs it."),
+        ], cls="pwh-m-row", direction="row", gap_px=24, align="stretch", dir_t="column"),
+        heading("See Microsoft 365 →", "pwh-e-link", tag="p", link=url("/email/microsoft-365/")),
+    ], boxed=1180, gap_px=24, pad=box(72, 0, 56, 0), pad_t=box(64, 24, 56, 24), pad_m=box(56, 20, 48, 20), tag="section")
+
+    faq = con("FAQ", [
+        capped(heading("Basic email questions.", "pwh-h2 pwh-text-ink", tag="h2"), 338),
+        con("Questions", [
+            widget("toggle", {
+                "tabs": [{"_id": _id("faq"), "tab_title": q, "tab_content": a} for q, a in EMAIL_FAQ],
+                "selected_icon": {"value": "fas fa-plus", "library": "fa-solid"},
+                "selected_active_icon": {"value": "fas fa-minus", "library": "fa-solid"},
+                "icon_align": "right",
+                "title_html_tag": "h3",
+                "faq_schema": "yes",
+            }, "pwh-m-faq"),
+        ], width=px(760), width_t=pct(100)),
+    ], boxed=1180, gap_px=24, pad=box(72, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section")
+
+    return template("PWH – Email", "page", [hero, included, note, compare, faq],
+                    {"hide_title": "yes", "template": "elementor_header_footer"})
+
+
 def export_standalone(data):
     """Resolve importer placeholders so the JSON imports straight into Elementor."""
     raw = json.dumps(data, ensure_ascii=False)
@@ -1495,7 +1623,8 @@ def main():
         "wordpress.json": wordpress(),
     }
     exports = {"contact.json": export_standalone(contact()), "microsoft-365.json": export_standalone(m365()),
-               "reseller.json": export_standalone(reseller())}
+               "reseller.json": export_standalone(reseller()),
+               "email.json": export_standalone(email_page())}
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     for name, data in exports.items():
         with open(os.path.join(OUT, "..", "export", name), "w", encoding="utf-8") as fh:
