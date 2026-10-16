@@ -1,0 +1,1673 @@
+{
+ "version": "0.4",
+ "title": "PWH – Reseller Plans",
+ "type": "page",
+ "content": [
+  {
+   "id": "0fd997f",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "116",
+     "right": "0",
+     "bottom": "120",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Header",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 12,
+     "column": "12",
+     "row": "12",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "96",
+     "right": "24",
+     "bottom": "96",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "72",
+     "right": "20",
+     "bottom": "72",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "html_tag": "section",
+    "css_classes": "pwh-page-hero",
+    "background_background": "classic",
+    "background_color": "#0B1629"
+   },
+   "elements": [
+    {
+     "id": "0adef20",
+     "elType": "widget",
+     "widgetType": "html",
+     "settings": {
+      "html": "<style>.pwh-r-style{display:none!important} .pwh-r-measure{max-width:100%;margin-left:auto!important;margin-right:auto!important} .pwh-r-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:0;padding:0;list-style:none} .pwh-r-chips li{padding:7px 15px;border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:999px;background:var(--pwh-navy-mist,#eaf0f8);color:var(--pwh-navy-ink,#0b1629);font-family:Inter,sans-serif;font-size:13px;font-weight:700;line-height:16px} .pwh-r-included{border-top:1px solid var(--pwh-navy-pale,#c2d3e8);border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)} .pwh-r-card{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:10px;background:var(--pwh-cream,#fffef4)} .pwh-r-card-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px;color:var(--pwh-navy-ink,#0b1629)} .pwh-r-card-text,.pwh-r-card-text p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:16px;color:var(--pwh-grey-dark,#575557)} .pwh-r-eyebrow .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:13px;font-weight:700;line-height:16px;color:#e8c07a} .pwh-r-fine,.pwh-r-fine p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:16px;color:var(--pwh-navy-soft,#6b91be);opacity:.75} .pwh-r-grid>.e-con,.pwh-r-grid>.e-con-inner>.e-con{flex:1 1 0!important;min-width:0} @media (max-width:1024px){.pwh-r-grid{flex-wrap:wrap!important}.pwh-r-grid>.e-con,.pwh-r-grid>.e-con-inner>.e-con{flex:0 0 calc(50% - 12px)!important;max-width:calc(50% - 12px)}} @media (max-width:767px){.pwh-r-grid>.e-con,.pwh-r-grid>.e-con-inner>.e-con{flex-basis:100%!important;max-width:100%}}</style>",
+      "_css_classes": "pwh-r-style"
+     },
+     "elements": []
+    },
+    {
+     "id": "c407432",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Pick the reseller plan that fits your client base.",
+      "header_size": "h1",
+      "_css_classes": "pwh-h1 pwh-text-cream pwh-r-measure",
+      "align": "center",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 908,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "67aa55d",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>Host your clients under your own brand, backed by a real Perth team.</p>",
+      "_css_classes": "pwh-lead-17 pwh-lead-17--regular pwh-text-mist pwh-r-measure",
+      "align": "center",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 948,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "49127b0",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>Reseller hosting lets you host client sites under your own brand, using one control panel (WHM) to run every account from one place. Your clients never see our name.</p>",
+      "_css_classes": "pwh-small pwh-text-mist pwh-r-measure",
+      "align": "center",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 948,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "eadc5d9",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "80",
+     "right": "0",
+     "bottom": "56",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Audience",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "56",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "48",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "6249fc5",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Copy",
+      "width": {
+       "unit": "px",
+       "size": 680,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 10,
+       "column": "10",
+       "row": "10",
+       "isLinked": true
+      },
+      "flex_align_items": "center"
+     },
+     "elements": [
+      {
+       "id": "0ebb496",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Built for agencies, web designers and IT shops.",
+        "header_size": "h2",
+        "align": "center",
+        "_css_classes": "pwh-h2 pwh-text-ink"
+       },
+       "elements": []
+      },
+      {
+       "id": "a6574fc",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>If you build or manage websites for other people, reseller hosting lets you put every client on fast Perth servers under your own brand. You set the prices, you own the relationship. We stay invisible.</p>",
+        "_css_classes": "pwh-lead-17 pwh-text-grey pwh-r-measure",
+        "align": "center",
+        "_element_width": "initial",
+        "_element_custom_width": {
+         "unit": "px",
+         "size": 680,
+         "sizes": []
+        },
+        "_element_width_tablet": "inherit"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "6df3754",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<ul class=\"pwh-r-chips\"><li>Marketing agencies</li><li>Freelance web designers</li><li>WordPress developers</li><li>IT support shops</li></ul>",
+      "_element_width": "inherit"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "d5e2b97",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "72",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "WhatsIncluded",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 32,
+     "column": "32",
+     "row": "32",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "html_tag": "section",
+    "css_classes": "pwh-r-included",
+    "background_background": "classic",
+    "background_color": "#F5F1E0"
+   },
+   "elements": [
+    {
+     "id": "145d65e",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Everything your clients expect, running under your name.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h2 pwh-text-ink pwh-r-measure",
+      "align": "center",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 863,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "4bebdca",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Cards",
+      "flex_gap": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "flex_align_items": "stretch",
+      "css_classes": "pwh-r-grid",
+      "width": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "626b12d",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "20",
+         "right": "20",
+         "bottom": "20",
+         "left": "20",
+         "isLinked": true
+        },
+        "_title": "Card – A dashboard for every client",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 8,
+         "column": "8",
+         "row": "8",
+         "isLinked": true
+        },
+        "css_classes": "pwh-r-card"
+       },
+       "elements": [
+        {
+         "id": "297037c",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "A dashboard for every client",
+          "header_size": "h3",
+          "_css_classes": "pwh-r-card-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "4df57f9",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Every client gets their own dashboard (cPanel). You manage the lot from one place (WHM).</p>",
+          "_css_classes": "pwh-r-card-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "6a60e47",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "20",
+         "right": "20",
+         "bottom": "20",
+         "left": "20",
+         "isLinked": true
+        },
+        "_title": "Card – One-click installs",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 8,
+         "column": "8",
+         "row": "8",
+         "isLinked": true
+        },
+        "css_classes": "pwh-r-card"
+       },
+       "elements": [
+        {
+         "id": "7cfcf75",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "One-click installs",
+          "header_size": "h3",
+          "_css_classes": "pwh-r-card-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "23c53df",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>An app installer (Softaculous) is built in, so clients can add WordPress and 400+ other apps in a click.</p>",
+          "_css_classes": "pwh-r-card-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "8368a86",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "20",
+         "right": "20",
+         "bottom": "20",
+         "left": "20",
+         "isLinked": true
+        },
+        "_title": "Card – SpamExperts filtering",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 8,
+         "column": "8",
+         "row": "8",
+         "isLinked": true
+        },
+        "css_classes": "pwh-r-card"
+       },
+       "elements": [
+        {
+         "id": "97930d7",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "SpamExperts filtering",
+          "header_size": "h3",
+          "_css_classes": "pwh-r-card-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "8970f63",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Premium spam and virus filtering on every mailbox, included.</p>",
+          "_css_classes": "pwh-r-card-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "a20ece2",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "20",
+         "right": "20",
+         "bottom": "20",
+         "left": "20",
+         "isLinked": true
+        },
+        "_title": "Card – White-label, top to bottom",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 8,
+         "column": "8",
+         "row": "8",
+         "isLinked": true
+        },
+        "css_classes": "pwh-r-card"
+       },
+       "elements": [
+        {
+         "id": "4e34ef3",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "White-label, top to bottom",
+          "header_size": "h3",
+          "_css_classes": "pwh-r-card-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "60ecab5",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Your logo, your own web addresses (name servers), your support email. Clients never see us.</p>",
+          "_css_classes": "pwh-r-card-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "2773365",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "64",
+     "right": "0",
+     "bottom": "64",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "SupportClarity",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 14,
+     "column": "14",
+     "row": "14",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "html_tag": "section",
+    "background_background": "classic",
+    "background_color": "#0B1629"
+   },
+   "elements": [
+    {
+     "id": "0dfd3f2",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Support",
+      "header_size": "p",
+      "align": "center",
+      "_css_classes": "pwh-r-eyebrow"
+     },
+     "elements": []
+    },
+    {
+     "id": "b0da8a2",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "You've got a real<br>team behind you.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h2 pwh-text-cream pwh-r-measure",
+      "align": "center",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 700,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "8da9758",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>Every reseller plan comes with priority support from the same Perth team that runs the servers. They know how reseller setups work, they pick up the phone, and they stick with a problem until it's sorted. When you need a hand, you're talking to someone who can help.</p>",
+      "_css_classes": "pwh-lead-17 pwh-text-mist pwh-r-measure",
+      "align": "center",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 640,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "f271d6b",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>One small thing: that support covers you as the account holder. Your clients come to you, you come to us. It's what keeps your brand out front.</p>",
+      "_css_classes": "pwh-r-fine pwh-r-measure",
+      "align": "center",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 600,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "c3faa52",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "56",
+     "right": "0",
+     "bottom": "56",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Year Toggle",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "48",
+     "right": "24",
+     "bottom": "48",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "40",
+     "right": "20",
+     "bottom": "40",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "7fe63d3",
+     "elType": "widget",
+     "widgetType": "pwh-billing-toggle",
+     "settings": {
+      "monthly_label": "Monthly",
+      "yearly_label": "Yearly",
+      "yearly_badge": "Best value",
+      "default": "monthly"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "a9b6ac4",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "96",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Cards",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 28,
+     "column": "28",
+     "row": "28",
+     "isLinked": true
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "0",
+     "right": "24",
+     "bottom": "80",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "0",
+     "right": "20",
+     "bottom": "64",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "flex-start",
+    "flex_direction_tablet": "column",
+    "html_tag": "section",
+    "css_classes": "pwh-plans"
+   },
+   "elements": [
+    {
+     "id": "f88cb66",
+     "elType": "widget",
+     "widgetType": "pwh-pricing-card",
+     "settings": {
+      "featured": "",
+      "tag": "",
+      "title": "Small",
+      "description": "For agencies just getting started with client hosting.",
+      "currency": "$",
+      "monthly_price": "54.95",
+      "monthly_period": "/ month",
+      "monthly_note": "Billed monthly. Cancel any time.",
+      "monthly_url": {
+       "url": "/client-login/",
+       "is_external": "",
+       "nofollow": "",
+       "custom_attributes": ""
+      },
+      "yearly_price": "",
+      "yearly_period": "/ year",
+      "yearly_note": "",
+      "yearly_url": {
+       "url": "",
+       "is_external": "",
+       "nofollow": "",
+       "custom_attributes": ""
+      },
+      "button_text": "Order Now",
+      "features": [
+       {
+        "_id": "16e814f",
+        "text": "Completely white-labelled, your clients never see our name"
+       },
+       {
+        "_id": "6755fe9",
+        "text": "Full WHM access to manage every client account"
+       },
+       {
+        "_id": "0f48c59",
+        "text": "Priority local phone & email support"
+       },
+       {
+        "_id": "9c44975",
+        "text": "15 cPanel accounts"
+       },
+       {
+        "_id": "2365fa9",
+        "text": "25GB high-speed SSD storage"
+       },
+       {
+        "_id": "0b1d21f",
+        "text": "200GB premium bandwidth"
+       },
+       {
+        "_id": "373ea40",
+        "text": "6-hourly, 7-day offsite backup, plus 31-day secondary offsite backup"
+       }
+      ],
+      "details": ""
+     },
+     "elements": []
+    },
+    {
+     "id": "ef330f3",
+     "elType": "widget",
+     "widgetType": "pwh-pricing-card",
+     "settings": {
+      "featured": "yes",
+      "tag": "Most popular",
+      "title": "Medium",
+      "description": "Our most popular reseller plan, room to grow your client base.",
+      "currency": "$",
+      "monthly_price": "89.95",
+      "monthly_period": "/ month",
+      "monthly_note": "Billed monthly. Cancel any time.",
+      "monthly_url": {
+       "url": "/client-login/",
+       "is_external": "",
+       "nofollow": "",
+       "custom_attributes": ""
+      },
+      "yearly_price": "",
+      "yearly_period": "/ year",
+      "yearly_note": "",
+      "yearly_url": {
+       "url": "",
+       "is_external": "",
+       "nofollow": "",
+       "custom_attributes": ""
+      },
+      "button_text": "Order Now",
+      "features": [
+       {
+        "_id": "0b19d7c",
+        "text": "Completely white-labelled, your clients never see our name"
+       },
+       {
+        "_id": "9914cc2",
+        "text": "Full WHM access to manage every client account"
+       },
+       {
+        "_id": "3d0fa3a",
+        "text": "Priority local phone & email support"
+       },
+       {
+        "_id": "340223c",
+        "text": "30 cPanel accounts"
+       },
+       {
+        "_id": "2ac6d2c",
+        "text": "50GB high-speed SSD storage"
+       },
+       {
+        "_id": "14754aa",
+        "text": "600GB premium bandwidth"
+       },
+       {
+        "_id": "d1aeb33",
+        "text": "6-hourly, 7-day offsite backup, plus 31-day secondary offsite backup"
+       }
+      ],
+      "details": ""
+     },
+     "elements": []
+    },
+    {
+     "id": "cffb474",
+     "elType": "widget",
+     "widgetType": "pwh-pricing-card",
+     "settings": {
+      "featured": "",
+      "tag": "",
+      "title": "Large",
+      "description": "For established agencies running a large client portfolio.",
+      "currency": "$",
+      "monthly_price": "134.95",
+      "monthly_period": "/ month",
+      "monthly_note": "Billed monthly. Cancel any time.",
+      "monthly_url": {
+       "url": "/client-login/",
+       "is_external": "",
+       "nofollow": "",
+       "custom_attributes": ""
+      },
+      "yearly_price": "",
+      "yearly_period": "/ year",
+      "yearly_note": "",
+      "yearly_url": {
+       "url": "",
+       "is_external": "",
+       "nofollow": "",
+       "custom_attributes": ""
+      },
+      "button_text": "Order Now",
+      "features": [
+       {
+        "_id": "3e244f8",
+        "text": "Completely white-labelled, your clients never see our name"
+       },
+       {
+        "_id": "42f4682",
+        "text": "Full WHM access to manage every client account"
+       },
+       {
+        "_id": "577bfc0",
+        "text": "Priority local phone & email support"
+       },
+       {
+        "_id": "d4c1333",
+        "text": "50 cPanel accounts"
+       },
+       {
+        "_id": "5158f6d",
+        "text": "75GB high-speed SSD storage"
+       },
+       {
+        "_id": "949523b",
+        "text": "1000GB premium bandwidth"
+       },
+       {
+        "_id": "f1585aa",
+        "text": "6-hourly, 7-day offsite backup, plus 31-day secondary offsite backup"
+       }
+      ],
+      "details": ""
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "092fc71",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "72",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "TestimonialStrip",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "0",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "0",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "b12ddf7",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "What customers say",
+      "header_size": "h2",
+      "align": "center",
+      "_css_classes": "pwh-h3 pwh-h3-amber"
+     },
+     "elements": []
+    },
+    {
+     "id": "3c1bd40",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Cards",
+      "flex_gap": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "flex_align_items": "stretch",
+      "flex_direction_tablet": "column"
+     },
+     "elements": [
+      {
+       "id": "c5c3d37",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "28",
+         "right": "28",
+         "bottom": "28",
+         "left": "28",
+         "isLinked": true
+        },
+        "_title": "Testimonial – Kathy Krcmar",
+        "width": {
+         "unit": "%",
+         "size": 33.33,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "css_classes": "pwh-testimonial",
+        "_flex_size": "grow"
+       },
+       "elements": [
+        {
+         "id": "6de067a",
+         "elType": "widget",
+         "widgetType": "rating",
+         "settings": {
+          "rating_scale": {
+           "unit": "px",
+           "size": 5,
+           "sizes": []
+          },
+          "rating_value": 5,
+          "icon_size": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "icon_gap": {
+           "unit": "px",
+           "size": 3,
+           "sizes": []
+          },
+          "__globals__": {
+           "icon_marked_color": "globals/colors?id=accent"
+          },
+          "_css_classes": "pwh-stars"
+         },
+         "elements": []
+        },
+        {
+         "id": "05f952d",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Cameron and his team at Perth Web Hosting really take it above and beyond in terms of customer service and experience. I would definitely recommend this company to the wider community of Perth.</p>",
+          "_css_classes": "pwh-quote"
+         },
+         "elements": []
+        },
+        {
+         "id": "975460e",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "padding": {
+           "unit": "px",
+           "top": "16",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "_title": "Who",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "flex_align_items": "center",
+          "css_classes": "pwh-who"
+         },
+         "elements": [
+          {
+           "id": "06c45c8",
+           "elType": "widget",
+           "widgetType": "icon",
+           "settings": {
+            "selected_icon": {
+             "value": "fas fa-circle",
+             "library": "fa-solid"
+            },
+            "size": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "__globals__": {
+             "primary_color": "globals/colors?id=pwhnavysoft"
+            },
+            "_css_classes": "pwh-avatar"
+           },
+           "elements": []
+          },
+          {
+           "id": "53e32cf",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "_title": "NameCol",
+            "flex_gap": {
+             "unit": "px",
+             "size": 2,
+             "column": "2",
+             "row": "2",
+             "isLinked": true
+            }
+           },
+           "elements": [
+            {
+             "id": "1c58200",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "Kathy Krcmar",
+              "header_size": "p",
+              "_css_classes": "pwh-who-name"
+             },
+             "elements": []
+            },
+            {
+             "id": "8efb747",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Local Guide, Google review</p>",
+              "_css_classes": "pwh-who-source"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "4fef2c4",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "28",
+         "right": "28",
+         "bottom": "28",
+         "left": "28",
+         "isLinked": true
+        },
+        "_title": "Testimonial – Kim Epton",
+        "width": {
+         "unit": "%",
+         "size": 33.33,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "css_classes": "pwh-testimonial",
+        "_flex_size": "grow"
+       },
+       "elements": [
+        {
+         "id": "7c3238a",
+         "elType": "widget",
+         "widgetType": "rating",
+         "settings": {
+          "rating_scale": {
+           "unit": "px",
+           "size": 5,
+           "sizes": []
+          },
+          "rating_value": 5,
+          "icon_size": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "icon_gap": {
+           "unit": "px",
+           "size": 3,
+           "sizes": []
+          },
+          "__globals__": {
+           "icon_marked_color": "globals/colors?id=accent"
+          },
+          "_css_classes": "pwh-stars"
+         },
+         "elements": []
+        },
+        {
+         "id": "2ab3a61",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>With scaleability they are world class, and I wouldn't hesitate in recommending that you trust your hosting to Perth Web Hosting.</p>",
+          "_css_classes": "pwh-quote"
+         },
+         "elements": []
+        },
+        {
+         "id": "f76697a",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "padding": {
+           "unit": "px",
+           "top": "16",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "_title": "Who",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "flex_align_items": "center",
+          "css_classes": "pwh-who"
+         },
+         "elements": [
+          {
+           "id": "6efc8ec",
+           "elType": "widget",
+           "widgetType": "icon",
+           "settings": {
+            "selected_icon": {
+             "value": "fas fa-circle",
+             "library": "fa-solid"
+            },
+            "size": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "__globals__": {
+             "primary_color": "globals/colors?id=pwhnavysoft"
+            },
+            "_css_classes": "pwh-avatar"
+           },
+           "elements": []
+          },
+          {
+           "id": "0e818d9",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "_title": "NameCol",
+            "flex_gap": {
+             "unit": "px",
+             "size": 2,
+             "column": "2",
+             "row": "2",
+             "isLinked": true
+            }
+           },
+           "elements": [
+            {
+             "id": "a46853e",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "Kim Epton",
+              "header_size": "p",
+              "_css_classes": "pwh-who-name"
+             },
+             "elements": []
+            },
+            {
+             "id": "a1a8846",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Local Guide, Google review</p>",
+              "_css_classes": "pwh-who-source"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "cc40de6",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "28",
+         "right": "28",
+         "bottom": "28",
+         "left": "28",
+         "isLinked": true
+        },
+        "_title": "Testimonial – Nichola Davenport",
+        "width": {
+         "unit": "%",
+         "size": 33.33,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "css_classes": "pwh-testimonial",
+        "_flex_size": "grow"
+       },
+       "elements": [
+        {
+         "id": "70c27d7",
+         "elType": "widget",
+         "widgetType": "rating",
+         "settings": {
+          "rating_scale": {
+           "unit": "px",
+           "size": 5,
+           "sizes": []
+          },
+          "rating_value": 5,
+          "icon_size": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "icon_gap": {
+           "unit": "px",
+           "size": 3,
+           "sizes": []
+          },
+          "__globals__": {
+           "icon_marked_color": "globals/colors?id=accent"
+          },
+          "_css_classes": "pwh-stars"
+         },
+         "elements": []
+        },
+        {
+         "id": "687701f",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Highly recommend if you are looking for a great company that gives such great support and hosting.</p>",
+          "_css_classes": "pwh-quote"
+         },
+         "elements": []
+        },
+        {
+         "id": "f11a853",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "padding": {
+           "unit": "px",
+           "top": "16",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "_title": "Who",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "flex_align_items": "center",
+          "css_classes": "pwh-who"
+         },
+         "elements": [
+          {
+           "id": "ad8bac7",
+           "elType": "widget",
+           "widgetType": "icon",
+           "settings": {
+            "selected_icon": {
+             "value": "fas fa-circle",
+             "library": "fa-solid"
+            },
+            "size": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "__globals__": {
+             "primary_color": "globals/colors?id=pwhnavysoft"
+            },
+            "_css_classes": "pwh-avatar"
+           },
+           "elements": []
+          },
+          {
+           "id": "8e96477",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "_title": "NameCol",
+            "flex_gap": {
+             "unit": "px",
+             "size": 2,
+             "column": "2",
+             "row": "2",
+             "isLinked": true
+            }
+           },
+           "elements": [
+            {
+             "id": "afbddd3",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "Nichola Davenport",
+              "header_size": "p",
+              "_css_classes": "pwh-who-name"
+             },
+             "elements": []
+            },
+            {
+             "id": "33b4ccf",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Google review, 5 stars</p>",
+              "_css_classes": "pwh-who-source"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "3a9c961",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "28",
+     "right": "0",
+     "bottom": "28",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "TrustStrip",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "28",
+     "right": "24",
+     "bottom": "28",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "24",
+     "right": "20",
+     "bottom": "24",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section",
+    "css_classes": "pwh-trust",
+    "background_background": "classic",
+    "background_color": "#F5F1E0"
+   },
+   "elements": [
+    {
+     "id": "83644a3",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<ul class=\"pwh-trust-list\"><li>No lock-in contracts</li><li>Perth-based support, every plan</li><li>30-day money-back guarantee on yearly plans</li></ul>"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": {
+  "hide_title": "yes",
+  "template": "elementor_header_footer"
+ }
+}

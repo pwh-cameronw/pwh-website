@@ -167,3 +167,13 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 - Sections: hero, "What you get over basic email." (six cards, 3 / 2 / 1 columns), "Two ways to buy." (Exchange Online Plan 1 at $7.50, Microsoft 365 Business from $13.95) and an FAQ (Elementor Toggle with FAQ schema).
 - Both *Get a Licence* buttons go to `/contact/`; the order links aren't in the design.
 - **The FAQ answers are drafts.** Figma only has the questions. The answers use only facts already on the page; check them before publishing.
+
+## Reseller Plans page (standalone template)
+
+`export/reseller.json` (Figma *Page / Reseller Plans*, 117:1942). It uses the theme's **PWH Pricing Card** and **PWH Billing Toggle** widgets and existing styles, which are already on the live site; the page-specific CSS is inside the template.
+
+- No images to upload: the hero is solid navy in the design.
+- Sections: hero, "Built for agencies…" with audience chips, four "what's included" cards, the navy "real team behind you" support block, the Monthly/Yearly toggle, Small / Medium / Large plans ($54.95 / $89.95 / $134.95 a month), three reviews and the trust strip.
+- **Yearly prices aren't in the design.** Until you add them on each card (*Yearly → Price*), choosing Yearly keeps showing the monthly price.
+- The design shows a "+" row on each card but no technical details. The + appears once you fill in *Technical details* on a card.
+- *Order Now* goes to `/client-login/`. Set each card's order links to your WHMCS URLs.

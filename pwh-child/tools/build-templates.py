@@ -1335,6 +1335,142 @@ def m365():
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
 
+# --- Reseller Plans ----------------------------------------------------------
+# Built from the Figma REST API (Page / Reseller Plans, 117:1942) as a
+# standalone template. It reuses the theme's pricing card, billing toggle,
+# review and trust-strip styles (already on the live site); only the new
+# pieces carry their CSS inside the JSON.
+
+RESELLER_CSS = """
+.pwh-r-style{display:none!important}
+.pwh-r-measure{max-width:100%;margin-left:auto!important;margin-right:auto!important}
+.pwh-r-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:0;padding:0;list-style:none}
+.pwh-r-chips li{padding:7px 15px;border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:999px;background:var(--pwh-navy-mist,#eaf0f8);color:var(--pwh-navy-ink,#0b1629);font-family:Inter,sans-serif;font-size:13px;font-weight:700;line-height:16px}
+.pwh-r-included{border-top:1px solid var(--pwh-navy-pale,#c2d3e8);border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)}
+.pwh-r-card{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:10px;background:var(--pwh-cream,#fffef4)}
+.pwh-r-card-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-r-card-text,.pwh-r-card-text p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:16px;color:var(--pwh-grey-dark,#575557)}
+.pwh-r-eyebrow .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:13px;font-weight:700;line-height:16px;color:#e8c07a}
+.pwh-r-fine,.pwh-r-fine p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:16px;color:var(--pwh-navy-soft,#6b91be);opacity:.75}
+.pwh-r-grid>.e-con,.pwh-r-grid>.e-con-inner>.e-con{flex:1 1 0!important;min-width:0}
+@media (max-width:1024px){.pwh-r-grid{flex-wrap:wrap!important}.pwh-r-grid>.e-con,.pwh-r-grid>.e-con-inner>.e-con{flex:0 0 calc(50% - 12px)!important;max-width:calc(50% - 12px)}}
+@media (max-width:767px){.pwh-r-grid>.e-con,.pwh-r-grid>.e-con-inner>.e-con{flex-basis:100%!important;max-width:100%}}
+"""
+
+
+def reseller_card(title, body):
+    return con(f"Card – {title}", [
+        heading(title, "pwh-r-card-title", tag="h3"),
+        text(f"<p>{body}</p>", "pwh-r-card-text"),
+    ], cls="pwh-r-card", gap_px=8, pad=box(20), width_t=pct(100))
+
+
+def reseller():
+    style = widget("html", {"html": "<style>" + " ".join(RESELLER_CSS.split()) + "</style>"}, "pwh-r-style")
+
+    def centred(w, width):
+        w["settings"]["align"] = "center"
+        w["settings"]["_css_classes"] += " pwh-r-measure"
+        w["settings"]["_element_width"] = "initial"
+        w["settings"]["_element_custom_width"] = px(width)
+        w["settings"]["_element_width_tablet"] = "inherit"
+        return w
+
+    # Figma pads the hero 200px at the top because the nav overlaps it; the
+    # sticky header sits above the page here, so 84px comes off.
+    hero = con("Header", [
+        style,
+        centred(heading("Pick the reseller plan that fits your client base.", "pwh-h1 pwh-text-cream", tag="h1"), 908),
+        centred(text("<p>Host your clients under your own brand, backed by a real Perth team.</p>",
+                     "pwh-lead-17 pwh-lead-17--regular pwh-text-mist"), 948),
+        centred(text("<p>Reseller hosting lets you host client sites under your own brand, using one control panel (WHM) "
+                     "to run every account from one place. Your clients never see our name.</p>", "pwh-small pwh-text-mist"), 948),
+    ], cls="pwh-page-hero", boxed=1180, gap_px=12, align="center",
+        pad=box(116, 0, 120, 0), pad_t=box(96, 24, 96, 24), pad_m=box(72, 20, 72, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#0B1629"})
+
+    chips = ["Marketing agencies", "Freelance web designers", "WordPress developers", "IT support shops"]
+    audience = con("Audience", [
+        con("Copy", [
+            heading("Built for agencies, web designers and IT shops.", "pwh-h2 pwh-text-ink", tag="h2", align="center"),
+            centred(text("<p>If you build or manage websites for other people, reseller hosting lets you put every client on "
+                         "fast Perth servers under your own brand. You set the prices, you own the relationship. We stay invisible.</p>",
+                         "pwh-lead-17 pwh-text-grey"), 680),
+        ], gap_px=10, align="center", width=px(680), width_t=pct(100)),
+        text('<ul class="pwh-r-chips">' + "".join(f"<li>{c}</li>" for c in chips) + "</ul>", ""),
+    ], boxed=1180, gap_px=24, align="center", pad=box(80, 0, 56, 0), pad_t=box(64, 24, 56, 24),
+        pad_m=box(56, 20, 48, 20), tag="section")
+    audience["elements"][1]["settings"]["_element_width"] = "inherit"
+
+    included = con("WhatsIncluded", [
+        centred(heading("Everything your clients expect, running under your name.", "pwh-h2 pwh-text-ink", tag="h2"), 863),
+        con("Cards", [
+            reseller_card("A dashboard for every client",
+                          "Every client gets their own dashboard (cPanel). You manage the lot from one place (WHM)."),
+            reseller_card("One-click installs",
+                          "An app installer (Softaculous) is built in, so clients can add WordPress and 400+ other apps in a click."),
+            reseller_card("SpamExperts filtering", "Premium spam and virus filtering on every mailbox, included."),
+            reseller_card("White-label, top to bottom",
+                          "Your logo, your own web addresses (name servers), your support email. Clients never see us."),
+        ], cls="pwh-r-grid", direction="row", gap_px=24, align="stretch"),
+    ], cls="pwh-r-included", boxed=1180, gap_px=32, align="center", pad=box(72, 0), pad_t=box(64, 24), pad_m=box(56, 20),
+        tag="section", extra={"background_background": "classic", "background_color": "#F5F1E0"})
+    included["elements"][1]["settings"]["width"] = pct(100)
+
+    support = con("SupportClarity", [
+        heading("Support", "pwh-r-eyebrow", tag="p", align="center"),
+        centred(heading("You've got a real<br>team behind you.", "pwh-h2 pwh-text-cream", tag="h2"), 700),
+        centred(text("<p>Every reseller plan comes with priority support from the same Perth team that runs the servers. "
+                     "They know how reseller setups work, they pick up the phone, and they stick with a problem until it's sorted. "
+                     "When you need a hand, you're talking to someone who can help.</p>", "pwh-lead-17 pwh-text-mist"), 640),
+        centred(text("<p>One small thing: that support covers you as the account holder. Your clients come to you, "
+                     "you come to us. It's what keeps your brand out front.</p>", "pwh-r-fine"), 600),
+    ], boxed=1180, gap_px=14, align="center", pad=box(64, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#0B1629"})
+
+    toggle = con("Year Toggle", [
+        widget("pwh-billing-toggle", {"monthly_label": "Monthly", "yearly_label": "Yearly",
+                                      "yearly_badge": "Best value", "default": "monthly"}),
+    ], boxed=1180, align="center", pad=box(56, 0), pad_t=box(48, 24), pad_m=box(40, 20), tag="section")
+
+    common = ["Completely white-labelled, your clients never see our name",
+              "Full WHM access to manage every client account",
+              "Priority local phone & email support"]
+    backup = "6-hourly, 7-day offsite backup, plus 31-day secondary offsite backup"
+    cards = con("Cards", [
+        plan("Small", "For agencies just getting started with client hosting.", "54.95",
+             common + ["15 cPanel accounts", "25GB high-speed SSD storage", "200GB premium bandwidth", backup]),
+        plan("Medium", "Our most popular reseller plan, room to grow your client base.", "89.95",
+             common + ["30 cPanel accounts", "50GB high-speed SSD storage", "600GB premium bandwidth", backup],
+             featured=True, tag="Most popular"),
+        plan("Large", "For established agencies running a large client portfolio.", "134.95",
+             common + ["50 cPanel accounts", "75GB high-speed SSD storage", "1000GB premium bandwidth", backup]),
+    ], cls="pwh-plans", boxed=1180, direction="row", gap_px=28, align="flex-start", dir_t="column",
+        gap_t=24, pad=box(0, 0, 96, 0), pad_t=box(0, 24, 80, 24), pad_m=box(0, 20, 64, 20), tag="section")
+
+    reviews = con("TestimonialStrip", [
+        heading("What customers say", "pwh-h3 pwh-h3-amber", tag="h2", align="center"),
+        con("Cards", [
+            review("Cameron and his team at Perth Web Hosting really take it above and beyond in terms of customer service and experience. "
+                   "I would definitely recommend this company to the wider community of Perth.",
+                   "Kathy Krcmar", "Local Guide, Google review"),
+            review("With scaleability they are world class, and I wouldn't hesitate in recommending that you trust your hosting to Perth Web Hosting.",
+                   "Kim Epton", "Local Guide, Google review"),
+            review("Highly recommend if you are looking for a great company that gives such great support and hosting.",
+                   "Nichola Davenport", "Google review, 5 stars"),
+        ], direction="row", gap_px=24, align="stretch", dir_t="column"),
+    ], boxed=1180, gap_px=24, pad=box(0, 0, 72, 0), pad_t=box(0, 24, 64, 24), pad_m=box(0, 20, 56, 20), tag="section")
+
+    trust = con("TrustStrip", [
+        text("<ul class=\"pwh-trust-list\"><li>No lock-in contracts</li>"
+             "<li>Perth-based support, every plan</li><li>30-day money-back guarantee on yearly plans</li></ul>", ""),
+    ], cls="pwh-trust", boxed=1180, pad=box(28, 0), pad_t=box(28, 24), pad_m=box(24, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0"})
+
+    return template("PWH – Reseller Plans", "page", [hero, audience, included, support, toggle, cards, reviews, trust],
+                    {"hide_title": "yes", "template": "elementor_header_footer"})
+
+
 def export_standalone(data):
     """Resolve importer placeholders so the JSON imports straight into Elementor."""
     raw = json.dumps(data, ensure_ascii=False)
@@ -1358,7 +1494,8 @@ def main():
         "about.json": about(),
         "wordpress.json": wordpress(),
     }
-    exports = {"contact.json": export_standalone(contact()), "microsoft-365.json": export_standalone(m365())}
+    exports = {"contact.json": export_standalone(contact()), "microsoft-365.json": export_standalone(m365()),
+               "reseller.json": export_standalone(reseller())}
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     for name, data in exports.items():
         with open(os.path.join(OUT, "..", "export", name), "w", encoding="utf-8") as fh:
