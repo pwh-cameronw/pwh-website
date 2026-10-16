@@ -153,9 +153,17 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 
 `export/contact.json` is a self-contained Elementor template. Import it with **Templates → Saved Templates → Import Templates**; no theme update needed. Its CSS is inside the template (a hidden HTML widget), links are relative, and the hero image is a Media Library URL.
 
-- Upload **`contact-hero.jpg`** (hero photo, shown under a 60% navy overlay) before importing.
+- Uses **`contactus-hero.jpg`** from the Media Library (hero photo, shown under a 60% navy overlay).
 - The form is an **Elementor Pro Form**: Full Name, Email, Phone (optional), Enquiry Type, Message. It emails the site admin address by default; change *Actions After Submit → Email → To* if needed.
 - The map is a **Google Maps** widget set to 533 Hay Street.
 - **Placeholders kept from the design:** the Calendly box ("Prefer we call you?"; swap in your Calendly inline embed with an HTML widget), and the copy on the MyToolbox card ("Change this copy and all.").
 - Card links: *View plans →* jumps to the booking section (`#book-a-call`), *Start the quiz →* goes to `/get-started/`, *Login to MyToolbox →* goes to `/client-login/`.
 
+## Microsoft 365 page (standalone template)
+
+`export/microsoft-365.json` is built the same way as the Contact template (Figma *Page / Email — Microsoft 365*, 159:2684). Import it and insert it into the page at `/email/microsoft-365/` (the link used by the mega menu).
+
+- Upload **`m365-hero.jpg`** (hero photo, shown under a 60% navy overlay) to the Media Library before importing, or swap the hero background afterwards.
+- Sections: hero, "What you get over basic email." (six cards, 3 / 2 / 1 columns), "Two ways to buy." (Exchange Online Plan 1 at $7.50, Microsoft 365 Business from $13.95) and an FAQ (Elementor Toggle with FAQ schema).
+- Both *Get a Licence* buttons go to `/contact/`; the order links aren't in the design.
+- **The FAQ answers are drafts.** Figma only has the questions. The answers use only facts already on the page; check them before publishing.

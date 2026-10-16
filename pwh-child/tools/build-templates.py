@@ -1019,7 +1019,7 @@ def wordpress():
 # absolute Media Library image URLs, and its CSS in an HTML widget so it
 # works without a theme update.
 
-CONTACT_HERO = MEDIA + "contact-hero.jpg"
+CONTACT_HERO = MEDIA + "contactus-hero.jpg"  # as uploaded to the Media Library
 
 CONTACT_CSS = """
 .pwh-c-card{border-radius:12px;border:1px solid var(--pwh-navy-pale,#c2d3e8);background:var(--pwh-cream,#fffef4)}
@@ -1166,6 +1166,175 @@ def contact():
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
 
+# --- Microsoft 365 -----------------------------------------------------------
+# Built from the Figma REST API (Page / Email — Microsoft 365, 159:2684) as a
+# standalone template: page CSS travels inside the JSON.
+
+M365_HERO = MEDIA + "m365-hero.jpg"  # Not in the Media Library yet; upload with this name.
+
+M365_CSS = """
+.pwh-m-style{display:none!important}
+.pwh-lead--tight,.pwh-lead--tight p{line-height:22px}
+.pwh-m-card{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:10px;background:var(--pwh-cream,#fffef4)}
+.pwh-m-card-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:16px;font-weight:700;line-height:19px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-m-text,.pwh-m-text p{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-grey-dark,#575557)}
+.pwh-m-note,.pwh-m-note p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:16px;color:var(--pwh-grey,#828082)}
+.pwh-m-plans{border-top:1px solid var(--pwh-navy-pale,#c2d3e8);border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)}
+.pwh-m-plan{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:12px;background:var(--pwh-cream,#fffef4)}
+.pwh-m-plan--featured{border:2px solid var(--pwh-navy-ink,#0b1629)}
+.pwh-m-tag .elementor-heading-title{display:inline-block;margin:0;padding:5px 10px;border-radius:3px;background:var(--pwh-sand,#e8e0c8);color:var(--pwh-amber-deep,#9e6e25);font-family:Inter,sans-serif;font-size:11px;font-weight:700;line-height:13px}
+.pwh-m-plan-title .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,"Archivo",sans-serif);font-stretch:125%;font-size:22px;font-weight:900;line-height:26px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-m-from .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,"Archivo",sans-serif);font-stretch:125%;font-size:12px;font-weight:700;line-height:16px;letter-spacing:1.8px;text-transform:uppercase;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-m-price .elementor-heading-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px;margin:0;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-m-amt{font-family:var(--pwh-font-display,"Archivo",sans-serif);font-stretch:125%;font-size:40px;font-weight:900;line-height:46px;letter-spacing:-.9px}
+.pwh-m-per{font-family:Inter,sans-serif;font-size:14px;font-weight:400;line-height:17px;color:var(--pwh-grey-dark,#575557)}
+.pwh-m-rule{height:1px;background:var(--pwh-navy-pale,#c2d3e8)}
+.pwh-m-list .elementor-icon-list-items{margin:0;padding:0}
+.pwh-m-list .elementor-icon-list-item{align-items:flex-start!important}
+.pwh-m-list .elementor-icon-list-item:not(:last-child){padding-bottom:10px!important}
+.pwh-m-list .elementor-icon-list-icon{width:16px;height:17px;padding:0!important;margin-right:10px;justify-content:center;align-items:center;display:flex}
+.pwh-m-list .elementor-icon-list-icon i{font-size:11px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-m-list .elementor-icon-list-icon svg{width:11px;height:11px;fill:var(--pwh-navy-ink,#0b1629)}
+.pwh-m-list .elementor-icon-list-text{padding:0!important;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-m-plan .pwh-btn{margin-top:auto}
+.pwh-m-plan .pwh-btn .elementor-button{width:100%;min-height:48px;padding:15px 30px;border-radius:16px;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px}
+.pwh-m-btn-amber .elementor-button{background:var(--pwh-amber,#c89439)!important;color:var(--pwh-navy-ink,#0b1629)!important}
+.pwh-m-btn-amber .elementor-button:hover{background:#b5832c!important}
+.pwh-m-btn-navy .elementor-button{background:var(--pwh-navy,#1a325b)!important;color:var(--pwh-cream,#fffef4)!important}
+.pwh-m-btn-navy .elementor-button:hover{background:var(--pwh-navy-ink,#0b1629)!important}
+.pwh-m-faq .elementor-toggle-item{margin:0!important;border:0;border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)}
+.pwh-m-faq .elementor-tab-title{display:flex;align-items:center;gap:16px;padding:20px 0!important;border:0!important;cursor:pointer}
+.pwh-m-faq .elementor-toggle-title{flex:1 1 auto;order:1;color:var(--pwh-navy-ink,#0b1629)!important;font-family:Inter,sans-serif;font-size:17px;font-weight:700;line-height:21px;text-decoration:none}
+.pwh-m-faq .elementor-toggle-icon{order:2;flex:0 0 20px;width:20px!important;margin:0!important;color:var(--pwh-navy-ink,#0b1629);font-size:14px;text-align:center}
+.pwh-m-faq .elementor-toggle-icon svg{width:14px;height:14px;fill:currentColor}
+.pwh-m-faq .elementor-tab-content{padding:0 40px 20px 0!important;border:0!important;color:var(--pwh-grey-dark,#575557);font-family:Inter,sans-serif;font-size:16px;line-height:24px}
+.pwh-m-faq .elementor-tab-content p{margin:0 0 8px}
+.pwh-m-faq .elementor-tab-content p:last-child{margin-bottom:0}
+.pwh-m-faq .elementor-tab-title:focus-visible{outline:2px solid var(--pwh-amber,#c89439);outline-offset:2px}
+.pwh-m-grid>.e-con,.pwh-m-grid>.e-con-inner>.e-con{flex:0 0 calc((100% - 48px)/3)!important;max-width:calc((100% - 48px)/3);min-width:0}
+.pwh-m-row>.e-con,.pwh-m-row>.e-con-inner>.e-con{flex:0 0 calc(50% - 12px)!important;max-width:calc(50% - 12px);min-width:0}
+.pwh-m-hero .elementor-widget{max-width:100%}
+@media (max-width:1024px){.pwh-m-row,.pwh-m-row>.e-con-inner{flex-direction:column!important}.pwh-m-grid>.e-con,.pwh-m-grid>.e-con-inner>.e-con{flex-basis:calc((100% - 24px)/2)!important;max-width:calc((100% - 24px)/2)}.pwh-m-row>.e-con,.pwh-m-row>.e-con-inner>.e-con{flex:0 0 auto!important;max-width:100%;width:100%}}
+@media (max-width:767px){.pwh-m-grid>.e-con,.pwh-m-grid>.e-con-inner>.e-con{flex-basis:100%!important;max-width:100%}.pwh-m-amt{font-size:34px;line-height:40px}}
+"""
+
+# Draft answers: written only from what the Figma page already says. Not in
+# the design; review before publishing.
+M365_FAQ = [
+    ("What's the difference between Plan 1 and Business?",
+     "<p>Exchange Online Plan 1 is business email: a 50GB mailbox, shared calendars, contacts and tasks, webmail and the Android and Apple apps.</p>"
+     "<p>Microsoft 365 Business gives you a 100GB mailbox and adds the Office apps (web and desktop) and SpamExperts spam and virus filtering. It comes in Basic, Standard and Premium tiers.</p>"),
+    ("Can I mix basic email and Microsoft 365 across my team?",
+     "<p>Often, yes, depending on how your email is set up. Call us on <a href=\"tel:+61863654522\">08 6365 4522</a> and we'll tell you what works for your domain and your team.</p>"),
+    ("Do you move my existing mailboxes across?",
+     "<p>Yes. Send us a <a href=\"/support/microsoft-transfer-request/\">Microsoft Transfer Request</a> and our Perth team will plan the move with you.</p>"),
+    ("How long does it take to set up a licence?",
+     "<p>Licences are set up by hand during business hours (Mon to Fri, 8:30am to 5:30pm Perth time).</p>"),
+    ("Can I add or remove licences later?",
+     "<p>Yes. Microsoft 365 is charged per licence, so just let us know when your team changes and we'll adjust it.</p>"),
+]
+
+
+def m365_card(title, body):
+    return con(f"Card – {title}", [
+        heading(title, "pwh-m-card-title", tag="h3"),
+        text(f"<p>{body}</p>", "pwh-m-text"),
+    ], cls="pwh-m-card", gap_px=8, pad=box(24), width_t=pct(100))
+
+
+def m365_plan(title, amount, per, features, button_cls, featured=False, tag="", from_label=False):
+    items = []
+    if tag:
+        items.append(heading(tag, "pwh-m-tag", tag="p"))
+    items.append(heading(title, "pwh-m-plan-title", tag="h3"))
+    price = heading(f'<span class="pwh-m-amt">{amount}</span><span class="pwh-m-per">{per}</span>', "pwh-m-price", tag="p")
+    if from_label:
+        items.append(con("Price", [heading("From", "pwh-m-from", tag="p"), price], gap_px=6))
+    else:
+        items.append(price)
+    items.append(widget("divider", {"style": "solid", "weight": px(1), "color": "#C2D3E8", "gap": px(0)}, ""))
+    items.append(widget("icon-list", {
+        "icon_list": [{"_id": _id("li"), "text": f, "selected_icon": {"value": "fas fa-check", "library": "fa-solid"}}
+                      for f in features],
+        "space_between": px(10),
+        "icon_size": px(11),
+        "icon_color": "#0B1629",
+        "text_color": "#0B1629",
+    }, "pwh-m-list"))
+    # Order links aren't in the design; set them per card in Elementor.
+    items.append(button("Get a Licence", url("/contact/"), button_cls))
+    return con(f"Plan – {title}", items,
+               cls="pwh-m-plan" + (" pwh-m-plan--featured" if featured else ""),
+               gap_px=14, pad=box(32), pad_m=box(24), width_t=pct(100))
+
+
+def m365():
+    style = widget("html", {"html": "<style>" + " ".join(M365_CSS.split()) + "</style>"}, "pwh-m-style")
+
+    # Figma pads the hero 200px at the top because the nav overlaps it; the
+    # sticky header sits above the page here, so 84px comes off.
+    hero = con("Hero", [
+        style,
+        heading("Microsoft 365, set up and supported by your local team.", "pwh-h1 pwh-text-cream", tag="h1"),
+        text("<p>Full business mailboxes (Exchange), shared calendars, and the Office apps your team already knows. "
+             "Bought through us, you get a real Perth phone number for support instead of Microsoft's queue.</p>",
+             "pwh-lead pwh-lead--tight pwh-text-mist"),
+    ], cls="pwh-m-hero", boxed=1180, gap_px=14, justify="center", pad=box(116, 0, 120, 0), pad_t=box(96, 24, 96, 24),
+        pad_m=box(72, 20, 72, 20), min_h=502, min_h_t=0, tag="section", extra=photo_bg(M365_HERO, 0.6))
+    for w in hero["elements"][1:]:
+        w["settings"].update({"_element_width": "initial", "_element_custom_width": px(760),
+                              "_element_width_tablet": "inherit"})
+
+    why = con("WhyUpgrade", [
+        heading("What you get over basic email.", "pwh-h2 pwh-text-ink", tag="h2"),
+        con("Cards", [
+            m365_card("Bigger mailboxes", "50GB to 100GB per mailbox, so you're not deleting emails to make room."),
+            m365_card("Shared calendars and contacts", "See when the team's free, book meetings, share a company address book."),
+            m365_card("Works on every device, in sync", "Read an email on your phone, it's read on your laptop too. Same for your calendar."),
+            m365_card("The Office apps", "Word, Excel, Outlook and Teams, on the web and installed on your machine (Business plans)."),
+            m365_card("Local phone support", "Something not working? Call a Perth number and talk to someone who can fix it."),
+            m365_card("Long-term archiving", "10-year archive backup available, handy if you need to keep records."),
+        ], cls="pwh-m-grid", direction="row", gap_px=24, align="stretch", extra={"flex_wrap": "wrap"}),
+    ], boxed=1180, gap_px=24, pad=box(72, 0, 56, 0), pad_t=box(64, 24, 56, 24), pad_m=box(56, 20, 48, 20), tag="section")
+
+    plans = con("Plans", [
+        heading("Two ways to buy.", "pwh-h2 pwh-text-ink", tag="h2"),
+        text("<p>All prices exclude GST. Licenses are set up by hand during business hours. "
+             "Month-to-month billing costs a little more than paying 12 months up front.</p>", "pwh-m-note"),
+        con("Cards", [
+            m365_plan("Exchange Online Plan 1", "$7.50", "/ user / month", [
+                "50GB mailbox storage", "Shared calendars, contacts and tasks", "150MB attachment size",
+                "Local Perth telephone support", "Webmail and Android / Apple apps", "10-year archive backup available",
+            ], "pwh-m-btn-amber", featured=True, tag="Most popular"),
+            m365_plan("Microsoft 365 Business", "$13.95", "/ licence / month", [
+                "100GB mailbox storage", "Everything in Plan 1, plus:", "Office apps, web and desktop",
+                "SpamExperts spam and virus filtering", "Basic, Standard and Premium tiers", "Charged per licence",
+            ], "pwh-m-btn-navy", from_label=True),
+        ], cls="pwh-m-row", direction="row", gap_px=24, align="stretch", dir_t="column"),
+        text("<p>Need Project, SharePoint, Visio, OneDrive for Business or something else? We can sort that too, "
+             '<a href="/contact/">just ask</a>.</p>', "pwh-m-text"),
+    ], cls="pwh-m-plans", boxed=1180, gap_px=24, pad=box(72, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0"})
+    plans["elements"][1]["settings"]["_margin"] = box(0, 0, 0, 0)
+
+    faq = con("FAQ", [
+        heading("Microsoft 365 questions.", "pwh-h2 pwh-text-ink", tag="h2"),
+        con("Questions", [
+            widget("toggle", {
+                "tabs": [{"_id": _id("faq"), "tab_title": q, "tab_content": a} for q, a in M365_FAQ],
+                "selected_icon": {"value": "fas fa-plus", "library": "fa-solid"},
+                "selected_active_icon": {"value": "fas fa-minus", "library": "fa-solid"},
+                "icon_align": "right",
+                "title_html_tag": "h3",
+                "faq_schema": "yes",
+            }, "pwh-m-faq"),
+        ], width=px(760), width_t=pct(100)),
+    ], boxed=1180, gap_px=24, pad=box(72, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section")
+
+    return template("PWH – Microsoft 365", "page", [hero, why, plans, faq],
+                    {"hide_title": "yes", "template": "elementor_header_footer"})
+
+
 def export_standalone(data):
     """Resolve importer placeholders so the JSON imports straight into Elementor."""
     raw = json.dumps(data, ensure_ascii=False)
@@ -1189,7 +1358,7 @@ def main():
         "about.json": about(),
         "wordpress.json": wordpress(),
     }
-    exports = {"contact.json": export_standalone(contact())}
+    exports = {"contact.json": export_standalone(contact()), "microsoft-365.json": export_standalone(m365())}
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     for name, data in exports.items():
         with open(os.path.join(OUT, "..", "export", name), "w", encoding="utf-8") as fh:

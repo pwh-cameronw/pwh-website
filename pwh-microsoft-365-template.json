@@ -1,0 +1,1199 @@
+{
+ "version": "0.4",
+ "title": "PWH – Microsoft 365",
+ "type": "page",
+ "content": [
+  {
+   "id": "18ef60b",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "116",
+     "right": "0",
+     "bottom": "120",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Hero",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 14,
+     "column": "14",
+     "row": "14",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "96",
+     "right": "24",
+     "bottom": "96",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "72",
+     "right": "20",
+     "bottom": "72",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_justify_content": "center",
+    "min_height": {
+     "unit": "px",
+     "size": 502,
+     "sizes": []
+    },
+    "min_height_tablet": {
+     "unit": "px",
+     "size": 0,
+     "sizes": []
+    },
+    "html_tag": "section",
+    "css_classes": "pwh-m-hero",
+    "background_background": "classic",
+    "background_color": "#0B1629",
+    "background_image": {
+     "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/m365-hero.jpg",
+     "id": "",
+     "size": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_position": "center center",
+    "background_size": "cover",
+    "background_repeat": "no-repeat",
+    "background_overlay_background": "classic",
+    "background_overlay_color": "#0B1629",
+    "background_overlay_opacity": {
+     "unit": "px",
+     "size": 0.6,
+     "sizes": []
+    }
+   },
+   "elements": [
+    {
+     "id": "64f8fa9",
+     "elType": "widget",
+     "widgetType": "html",
+     "settings": {
+      "html": "<style>.pwh-m-style{display:none!important} .pwh-lead--tight,.pwh-lead--tight p{line-height:22px} .pwh-m-card{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:10px;background:var(--pwh-cream,#fffef4)} .pwh-m-card-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:16px;font-weight:700;line-height:19px;color:var(--pwh-navy-ink,#0b1629)} .pwh-m-text,.pwh-m-text p{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-grey-dark,#575557)} .pwh-m-note,.pwh-m-note p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:16px;color:var(--pwh-grey,#828082)} .pwh-m-plans{border-top:1px solid var(--pwh-navy-pale,#c2d3e8);border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)} .pwh-m-plan{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:12px;background:var(--pwh-cream,#fffef4)} .pwh-m-plan--featured{border:2px solid var(--pwh-navy-ink,#0b1629)} .pwh-m-tag .elementor-heading-title{display:inline-block;margin:0;padding:5px 10px;border-radius:3px;background:var(--pwh-sand,#e8e0c8);color:var(--pwh-amber-deep,#9e6e25);font-family:Inter,sans-serif;font-size:11px;font-weight:700;line-height:13px} .pwh-m-plan-title .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:22px;font-weight:900;line-height:26px;color:var(--pwh-navy-ink,#0b1629)} .pwh-m-from .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:12px;font-weight:700;line-height:16px;letter-spacing:1.8px;text-transform:uppercase;color:var(--pwh-navy-ink,#0b1629)} .pwh-m-price .elementor-heading-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px;margin:0;color:var(--pwh-navy-ink,#0b1629)} .pwh-m-amt{font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:40px;font-weight:900;line-height:46px;letter-spacing:-.9px} .pwh-m-per{font-family:Inter,sans-serif;font-size:14px;font-weight:400;line-height:17px;color:var(--pwh-grey-dark,#575557)} .pwh-m-rule{height:1px;background:var(--pwh-navy-pale,#c2d3e8)} .pwh-m-list .elementor-icon-list-items{margin:0;padding:0} .pwh-m-list .elementor-icon-list-item{align-items:flex-start!important} .pwh-m-list .elementor-icon-list-item:not(:last-child){padding-bottom:10px!important} .pwh-m-list .elementor-icon-list-icon{width:16px;height:17px;padding:0!important;margin-right:10px;justify-content:center;align-items:center;display:flex} .pwh-m-list .elementor-icon-list-icon i{font-size:11px;color:var(--pwh-navy-ink,#0b1629)} .pwh-m-list .elementor-icon-list-icon svg{width:11px;height:11px;fill:var(--pwh-navy-ink,#0b1629)} .pwh-m-list .elementor-icon-list-text{padding:0!important;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-navy-ink,#0b1629)} .pwh-m-plan .pwh-btn{margin-top:auto} .pwh-m-plan .pwh-btn .elementor-button{width:100%;min-height:48px;padding:15px 30px;border-radius:16px;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px} .pwh-m-btn-amber .elementor-button{background:var(--pwh-amber,#c89439)!important;color:var(--pwh-navy-ink,#0b1629)!important} .pwh-m-btn-amber .elementor-button:hover{background:#b5832c!important} .pwh-m-btn-navy .elementor-button{background:var(--pwh-navy,#1a325b)!important;color:var(--pwh-cream,#fffef4)!important} .pwh-m-btn-navy .elementor-button:hover{background:var(--pwh-navy-ink,#0b1629)!important} .pwh-m-faq .elementor-toggle-item{margin:0!important;border:0;border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)} .pwh-m-faq .elementor-tab-title{display:flex;align-items:center;gap:16px;padding:20px 0!important;border:0!important;cursor:pointer} .pwh-m-faq .elementor-toggle-title{flex:1 1 auto;order:1;color:var(--pwh-navy-ink,#0b1629)!important;font-family:Inter,sans-serif;font-size:17px;font-weight:700;line-height:21px;text-decoration:none} .pwh-m-faq .elementor-toggle-icon{order:2;flex:0 0 20px;width:20px!important;margin:0!important;color:var(--pwh-navy-ink,#0b1629);font-size:14px;text-align:center} .pwh-m-faq .elementor-toggle-icon svg{width:14px;height:14px;fill:currentColor} .pwh-m-faq .elementor-tab-content{padding:0 40px 20px 0!important;border:0!important;color:var(--pwh-grey-dark,#575557);font-family:Inter,sans-serif;font-size:16px;line-height:24px} .pwh-m-faq .elementor-tab-content p{margin:0 0 8px} .pwh-m-faq .elementor-tab-content p:last-child{margin-bottom:0} .pwh-m-faq .elementor-tab-title:focus-visible{outline:2px solid var(--pwh-amber,#c89439);outline-offset:2px} .pwh-m-grid>.e-con,.pwh-m-grid>.e-con-inner>.e-con{flex:0 0 calc((100% - 48px)/3)!important;max-width:calc((100% - 48px)/3);min-width:0} .pwh-m-row>.e-con,.pwh-m-row>.e-con-inner>.e-con{flex:0 0 calc(50% - 12px)!important;max-width:calc(50% - 12px);min-width:0} .pwh-m-hero .elementor-widget{max-width:100%} @media (max-width:1024px){.pwh-m-row,.pwh-m-row>.e-con-inner{flex-direction:column!important}.pwh-m-grid>.e-con,.pwh-m-grid>.e-con-inner>.e-con{flex-basis:calc((100% - 24px)/2)!important;max-width:calc((100% - 24px)/2)}.pwh-m-row>.e-con,.pwh-m-row>.e-con-inner>.e-con{flex:0 0 auto!important;max-width:100%;width:100%}} @media (max-width:767px){.pwh-m-grid>.e-con,.pwh-m-grid>.e-con-inner>.e-con{flex-basis:100%!important;max-width:100%}.pwh-m-amt{font-size:34px;line-height:40px}}</style>",
+      "_css_classes": "pwh-m-style"
+     },
+     "elements": []
+    },
+    {
+     "id": "f3e1502",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Microsoft 365, set up and supported by your local team.",
+      "header_size": "h1",
+      "_css_classes": "pwh-h1 pwh-text-cream",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    },
+    {
+     "id": "92b38b5",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>Full business mailboxes (Exchange), shared calendars, and the Office apps your team already knows. Bought through us, you get a real Perth phone number for support instead of Microsoft's queue.</p>",
+      "_css_classes": "pwh-lead pwh-lead--tight pwh-text-mist",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "_element_width_tablet": "inherit"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "dc96a43",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "56",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "WhyUpgrade",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "56",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "48",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "2f741c5",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "What you get over basic email.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h2 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "921d3ec",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Cards",
+      "flex_gap": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "flex_align_items": "stretch",
+      "css_classes": "pwh-m-grid",
+      "flex_wrap": "wrap"
+     },
+     "elements": [
+      {
+       "id": "dcaec4e",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Card – Bigger mailboxes",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 8,
+         "column": "8",
+         "row": "8",
+         "isLinked": true
+        },
+        "css_classes": "pwh-m-card"
+       },
+       "elements": [
+        {
+         "id": "51bb2c1",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Bigger mailboxes",
+          "header_size": "h3",
+          "_css_classes": "pwh-m-card-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "6d8ee6a",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>50GB to 100GB per mailbox, so you're not deleting emails to make room.</p>",
+          "_css_classes": "pwh-m-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "52367d0",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Card – Shared calendars and contacts",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 8,
+         "column": "8",
+         "row": "8",
+         "isLinked": true
+        },
+        "css_classes": "pwh-m-card"
+       },
+       "elements": [
+        {
+         "id": "0f2ce65",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Shared calendars and contacts",
+          "header_size": "h3",
+          "_css_classes": "pwh-m-card-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "b2aa3b7",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>See when the team's free, book meetings, share a company address book.</p>",
+          "_css_classes": "pwh-m-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "56c9bfd",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Card – Works on every device, in sync",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 8,
+         "column": "8",
+         "row": "8",
+         "isLinked": true
+        },
+        "css_classes": "pwh-m-card"
+       },
+       "elements": [
+        {
+         "id": "cc65b56",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Works on every device, in sync",
+          "header_size": "h3",
+          "_css_classes": "pwh-m-card-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "f5f446b",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Read an email on your phone, it's read on your laptop too. Same for your calendar.</p>",
+          "_css_classes": "pwh-m-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "b3bc9bb",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Card – The Office apps",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 8,
+         "column": "8",
+         "row": "8",
+         "isLinked": true
+        },
+        "css_classes": "pwh-m-card"
+       },
+       "elements": [
+        {
+         "id": "4b93bf4",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "The Office apps",
+          "header_size": "h3",
+          "_css_classes": "pwh-m-card-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "50cd59a",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Word, Excel, Outlook and Teams, on the web and installed on your machine (Business plans).</p>",
+          "_css_classes": "pwh-m-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "0461051",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Card – Local phone support",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 8,
+         "column": "8",
+         "row": "8",
+         "isLinked": true
+        },
+        "css_classes": "pwh-m-card"
+       },
+       "elements": [
+        {
+         "id": "1944831",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Local phone support",
+          "header_size": "h3",
+          "_css_classes": "pwh-m-card-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "7376d9e",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Something not working? Call a Perth number and talk to someone who can fix it.</p>",
+          "_css_classes": "pwh-m-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "c24ab3e",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Card – Long-term archiving",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 8,
+         "column": "8",
+         "row": "8",
+         "isLinked": true
+        },
+        "css_classes": "pwh-m-card"
+       },
+       "elements": [
+        {
+         "id": "1e012cb",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Long-term archiving",
+          "header_size": "h3",
+          "_css_classes": "pwh-m-card-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "cdcf980",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>10-year archive backup available, handy if you need to keep records.</p>",
+          "_css_classes": "pwh-m-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "4cc8e6a",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "72",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Plans",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section",
+    "css_classes": "pwh-m-plans",
+    "background_background": "classic",
+    "background_color": "#F5F1E0"
+   },
+   "elements": [
+    {
+     "id": "22c9ca2",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Two ways to buy.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h2 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "9058c69",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>All prices exclude GST. Licenses are set up by hand during business hours. Month-to-month billing costs a little more than paying 12 months up front.</p>",
+      "_css_classes": "pwh-m-note",
+      "_margin": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      }
+     },
+     "elements": []
+    },
+    {
+     "id": "a5e9109",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Cards",
+      "flex_gap": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "flex_align_items": "stretch",
+      "flex_direction_tablet": "column",
+      "css_classes": "pwh-m-row"
+     },
+     "elements": [
+      {
+       "id": "a0ac29a",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "32",
+         "right": "32",
+         "bottom": "32",
+         "left": "32",
+         "isLinked": true
+        },
+        "_title": "Plan – Exchange Online Plan 1",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 14,
+         "column": "14",
+         "row": "14",
+         "isLinked": true
+        },
+        "padding_mobile": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "css_classes": "pwh-m-plan pwh-m-plan--featured"
+       },
+       "elements": [
+        {
+         "id": "e6694c8",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Most popular",
+          "header_size": "p",
+          "_css_classes": "pwh-m-tag"
+         },
+         "elements": []
+        },
+        {
+         "id": "116febb",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Exchange Online Plan 1",
+          "header_size": "h3",
+          "_css_classes": "pwh-m-plan-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "08c1ed6",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "<span class=\"pwh-m-amt\">$7.50</span><span class=\"pwh-m-per\">/ user / month</span>",
+          "header_size": "p",
+          "_css_classes": "pwh-m-price"
+         },
+         "elements": []
+        },
+        {
+         "id": "40be763",
+         "elType": "widget",
+         "widgetType": "divider",
+         "settings": {
+          "style": "solid",
+          "weight": {
+           "unit": "px",
+           "size": 1,
+           "sizes": []
+          },
+          "color": "#C2D3E8",
+          "gap": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          }
+         },
+         "elements": []
+        },
+        {
+         "id": "8930dd1",
+         "elType": "widget",
+         "widgetType": "icon-list",
+         "settings": {
+          "icon_list": [
+           {
+            "_id": "6a46b0c",
+            "text": "50GB mailbox storage",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "6b3076e",
+            "text": "Shared calendars, contacts and tasks",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "3d5f311",
+            "text": "150MB attachment size",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "a06d905",
+            "text": "Local Perth telephone support",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "20c2efe",
+            "text": "Webmail and Android / Apple apps",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "652805e",
+            "text": "10-year archive backup available",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           }
+          ],
+          "space_between": {
+           "unit": "px",
+           "size": 10,
+           "sizes": []
+          },
+          "icon_size": {
+           "unit": "px",
+           "size": 11,
+           "sizes": []
+          },
+          "icon_color": "#0B1629",
+          "text_color": "#0B1629",
+          "_css_classes": "pwh-m-list"
+         },
+         "elements": []
+        },
+        {
+         "id": "cd8f4ad",
+         "elType": "widget",
+         "widgetType": "button",
+         "settings": {
+          "text": "Get a Licence",
+          "link": {
+           "url": "/contact/",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "size": "md",
+          "_css_classes": "pwh-btn pwh-m-btn-amber"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "af89272",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "32",
+         "right": "32",
+         "bottom": "32",
+         "left": "32",
+         "isLinked": true
+        },
+        "_title": "Plan – Microsoft 365 Business",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 14,
+         "column": "14",
+         "row": "14",
+         "isLinked": true
+        },
+        "padding_mobile": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "css_classes": "pwh-m-plan"
+       },
+       "elements": [
+        {
+         "id": "2a1b032",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Microsoft 365 Business",
+          "header_size": "h3",
+          "_css_classes": "pwh-m-plan-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "c0b9854",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_title": "Price",
+          "flex_gap": {
+           "unit": "px",
+           "size": 6,
+           "column": "6",
+           "row": "6",
+           "isLinked": true
+          }
+         },
+         "elements": [
+          {
+           "id": "5e525fb",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "From",
+            "header_size": "p",
+            "_css_classes": "pwh-m-from"
+           },
+           "elements": []
+          },
+          {
+           "id": "da61196",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "<span class=\"pwh-m-amt\">$13.95</span><span class=\"pwh-m-per\">/ licence / month</span>",
+            "header_size": "p",
+            "_css_classes": "pwh-m-price"
+           },
+           "elements": []
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "c2fdf2d",
+         "elType": "widget",
+         "widgetType": "divider",
+         "settings": {
+          "style": "solid",
+          "weight": {
+           "unit": "px",
+           "size": 1,
+           "sizes": []
+          },
+          "color": "#C2D3E8",
+          "gap": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          }
+         },
+         "elements": []
+        },
+        {
+         "id": "eeb3448",
+         "elType": "widget",
+         "widgetType": "icon-list",
+         "settings": {
+          "icon_list": [
+           {
+            "_id": "664d402",
+            "text": "100GB mailbox storage",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "d9821fe",
+            "text": "Everything in Plan 1, plus:",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "ddb5b88",
+            "text": "Office apps, web and desktop",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "53401b4",
+            "text": "SpamExperts spam and virus filtering",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "6de45a4",
+            "text": "Basic, Standard and Premium tiers",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           },
+           {
+            "_id": "15585e8",
+            "text": "Charged per licence",
+            "selected_icon": {
+             "value": "fas fa-check",
+             "library": "fa-solid"
+            }
+           }
+          ],
+          "space_between": {
+           "unit": "px",
+           "size": 10,
+           "sizes": []
+          },
+          "icon_size": {
+           "unit": "px",
+           "size": 11,
+           "sizes": []
+          },
+          "icon_color": "#0B1629",
+          "text_color": "#0B1629",
+          "_css_classes": "pwh-m-list"
+         },
+         "elements": []
+        },
+        {
+         "id": "07ba109",
+         "elType": "widget",
+         "widgetType": "button",
+         "settings": {
+          "text": "Get a Licence",
+          "link": {
+           "url": "/contact/",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "size": "md",
+          "_css_classes": "pwh-btn pwh-m-btn-navy"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "62f5647",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>Need Project, SharePoint, Visio, OneDrive for Business or something else? We can sort that too, <a href=\"/contact/\">just ask</a>.</p>",
+      "_css_classes": "pwh-m-text"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "da35ee1",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "72",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "FAQ",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "14fef46",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Microsoft 365 questions.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h2 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "c639d00",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Questions",
+      "width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "89d7d86",
+       "elType": "widget",
+       "widgetType": "toggle",
+       "settings": {
+        "tabs": [
+         {
+          "_id": "a3712d8",
+          "tab_title": "What's the difference between Plan 1 and Business?",
+          "tab_content": "<p>Exchange Online Plan 1 is business email: a 50GB mailbox, shared calendars, contacts and tasks, webmail and the Android and Apple apps.</p><p>Microsoft 365 Business gives you a 100GB mailbox and adds the Office apps (web and desktop) and SpamExperts spam and virus filtering. It comes in Basic, Standard and Premium tiers.</p>"
+         },
+         {
+          "_id": "6d11744",
+          "tab_title": "Can I mix basic email and Microsoft 365 across my team?",
+          "tab_content": "<p>Often, yes, depending on how your email is set up. Call us on <a href=\"tel:+61863654522\">08 6365 4522</a> and we'll tell you what works for your domain and your team.</p>"
+         },
+         {
+          "_id": "1718020",
+          "tab_title": "Do you move my existing mailboxes across?",
+          "tab_content": "<p>Yes. Send us a <a href=\"/support/microsoft-transfer-request/\">Microsoft Transfer Request</a> and our Perth team will plan the move with you.</p>"
+         },
+         {
+          "_id": "7c61874",
+          "tab_title": "How long does it take to set up a licence?",
+          "tab_content": "<p>Licences are set up by hand during business hours (Mon to Fri, 8:30am to 5:30pm Perth time).</p>"
+         },
+         {
+          "_id": "3383a92",
+          "tab_title": "Can I add or remove licences later?",
+          "tab_content": "<p>Yes. Microsoft 365 is charged per licence, so just let us know when your team changes and we'll adjust it.</p>"
+         }
+        ],
+        "selected_icon": {
+         "value": "fas fa-plus",
+         "library": "fa-solid"
+        },
+        "selected_active_icon": {
+         "value": "fas fa-minus",
+         "library": "fa-solid"
+        },
+        "icon_align": "right",
+        "title_html_tag": "h3",
+        "faq_schema": "yes",
+        "_css_classes": "pwh-m-faq"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": {
+  "hide_title": "yes",
+  "template": "elementor_header_footer"
+ }
+}
