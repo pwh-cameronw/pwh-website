@@ -211,3 +211,9 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 - `export/privacy-policy.json`: Privacy Policy (from /privacy-policy/). Put it on the page at `/privacy-policy/`. Corrected: OAIC link (was aoic.gov.au), NPPs → APPs, "It is an important" typo.
 - `export/terms-of-service.json`: Terms of Service, converted from the old site's PDF (`/wp-content/uploads/2021/10/terms-of-service.pdf`, dated 30/07/2018). Put it on the page at `/terms-of-service/`. Corrected on 17/10/2026: Office 365 → Microsoft 365, R1Soft → JetBackup, clause 8.6 "seven (14)" → "fourteen (14)", clause 9.1 card details "cannot" be read by staff, and typos in 5.12, 13.1, 14.6 and 17.2. `tools/pdf-legal-to-html.py` turns numbered legal PDFs (via `pdftotext -layout`) into the clause HTML, keeping the wording exactly.
 - To add Acceptable Use, save the old page's text as `content/<name>.html` and add a line to `main()`.
+
+## Page and snippet CSS (`assets/css/pwh-pages.css`)
+
+The standalone page templates (Contact, Microsoft 365, Reseller, Email, Email overview, Web Hosting, legal pages), the mobile menu, the phone footer and the Home reviews-carousel dots all get their CSS from `assets/css/pwh-pages.css`, which the theme loads on every page and in the Elementor editor. The templates in `export/` and the snippets in `snippets/` no longer carry their own `<style>` blocks, so **upload the theme before importing them**.
+
+The file is generated: edit the CSS in `tools/build-templates.py` (or `snippets/*.css`) and run `python3 tools/build-templates.py`.
