@@ -2065,7 +2065,7 @@ def main():
                "privacy-policy.json": export_standalone(legal_page("Privacy Policy", "privacy-policy.html")),
                "terms-of-service.json": export_standalone(legal_page("Terms of Service", "terms-of-service.html", updated="17/10/2026")),
                "acceptable-use-policy.json": export_standalone(legal_page("Acceptable Use Policy", "acceptable-use-policy.html", updated="17/10/2026")),
-               "service-level-agreement.json": export_standalone(legal_page("Service Level Agreement", "service-level-agreement.html", updated="26/07/2018"))}
+               "service-level-agreement.json": export_standalone(legal_page("Service Level Agreement", "service-level-agreement.html", updated="17/10/2026"))}
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     with open(os.path.join(OUT, "..", "assets", "css", "pwh-pages.css"), "w", encoding="utf-8") as fh:
         fh.write(page_css())
