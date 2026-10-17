@@ -208,6 +208,6 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 
 `legal_page()` in `tools/build-templates.py` puts old-site legal copy into the new design: a navy title band and a 760px reading column. The copy lives in `content/*.html`, taken verbatim from www.perthwebhosting.net.au.
 
-- `export/privacy-policy.json`: Privacy Policy (from /privacy-policy/). Put it on the page at `/privacy-policy/`.
-- `export/terms-of-service.json`: Terms of Service, converted from the old site's PDF (`/wp-content/uploads/2021/10/terms-of-service.pdf`, updated 30/07/2018). Put it on the page at `/terms-of-service/`. `tools/pdf-legal-to-html.py` turns numbered legal PDFs (via `pdftotext -layout`) into the clause HTML, keeping the wording exactly.
+- `export/privacy-policy.json`: Privacy Policy (from /privacy-policy/). Put it on the page at `/privacy-policy/`. Corrected: OAIC link (was aoic.gov.au), NPPs → APPs, "It is an important" typo.
+- `export/terms-of-service.json`: Terms of Service, converted from the old site's PDF (`/wp-content/uploads/2021/10/terms-of-service.pdf`, dated 30/07/2018). Put it on the page at `/terms-of-service/`. Corrected on 17/10/2026: Office 365 → Microsoft 365, R1Soft → JetBackup, clause 8.6 "seven (14)" → "fourteen (14)", clause 9.1 card details "cannot" be read by staff, and typos in 5.12, 13.1, 14.6 and 17.2. `tools/pdf-legal-to-html.py` turns numbered legal PDFs (via `pdftotext -layout`) into the clause HTML, keeping the wording exactly.
 - To add Acceptable Use, save the old page's text as `content/<name>.html` and add a line to `main()`.

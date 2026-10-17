@@ -2012,7 +2012,7 @@ def main():
                "web-hosting.json": export_standalone(hosting()),
                "email-overview.json": export_standalone(emails()),
                "privacy-policy.json": export_standalone(legal_page("Privacy Policy", "privacy-policy.html")),
-               "terms-of-service.json": export_standalone(legal_page("Terms of Service", "terms-of-service.html", updated="30/07/2018"))}
+               "terms-of-service.json": export_standalone(legal_page("Terms of Service", "terms-of-service.html", updated="17/10/2026"))}
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     for name, data in exports.items():
         with open(os.path.join(OUT, "..", "export", name), "w", encoding="utf-8") as fh:
