@@ -203,3 +203,10 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 - Upload the hero photo as **`email-hero.jpg`** (Figma's image host is blocked here). The SpamExperts logo uses `spamexperts.png`, already in the Media Library.
 - Plan cards link to `/e-mail/imap-pop3/` and `/e-mail/microsoft-365/`. The **Gmail card is a placeholder in the design** ("$XX", "Information about Gmail"); its link goes to `/contact-us/` until there's a Google page.
 - **The FAQ answers are drafts.** Figma only has the questions; check them, especially the Google one.
+
+## Legal pages (standalone templates)
+
+`legal_page()` in `tools/build-templates.py` puts old-site legal copy into the new design: a navy title band and a 760px reading column. The copy lives in `content/*.html`, taken verbatim from www.perthwebhosting.net.au.
+
+- `export/privacy-policy.json`: Privacy Policy (from /privacy-policy/). Put it on the page at `/privacy-policy/`.
+- To add Terms of Service or Acceptable Use, save the old page's text as `content/<name>.html` and add a line to `main()`.

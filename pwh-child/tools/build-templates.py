@@ -1938,6 +1938,45 @@ def emails():
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
 
+# --- Legal pages ---------------------------------------------------------------
+# Old-site legal copy (content/*.html, copied verbatim) in the new design: a
+# navy title band, then the text in a 760px reading column. CSS travels inside
+# the JSON.
+
+LEGAL_CSS = """
+.pwh-l-style{display:none!important}
+.pwh-l-body{max-width:760px}
+.pwh-l-body,.pwh-l-body p,.pwh-l-body li{font-family:Inter,sans-serif;font-size:16px;font-weight:400;line-height:24px;color:var(--pwh-grey-dark,#575557)}
+.pwh-l-body p{margin:0 0 16px}
+.pwh-l-body h2,.pwh-l-body h3{margin:40px 0 12px;font-family:var(--pwh-font-display,"Archivo",sans-serif);font-stretch:125%;font-size:22px;font-weight:900;line-height:28px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-l-body ul,.pwh-l-body ol{margin:0 0 16px;padding-left:22px}
+.pwh-l-body li{margin:0 0 6px;padding-left:4px}
+.pwh-l-body li::marker{color:var(--pwh-amber,#c89439)}
+.pwh-l-body a{color:var(--pwh-navy-ink,#0b1629);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.pwh-l-body a:hover{text-decoration-thickness:2px}
+.pwh-l-body strong{color:var(--pwh-navy-ink,#0b1629)}
+.pwh-l-body>.elementor-widget-container>:first-child,.pwh-l-body>:first-child{margin-top:0}
+@media (max-width:767px){.pwh-l-body h2,.pwh-l-body h3{margin-top:32px;font-size:20px;line-height:26px}}
+"""
+
+
+def legal_page(title, content_file):
+    with open(os.path.join(os.path.dirname(__file__), "..", "content", content_file), encoding="utf-8") as fh:
+        body_html = fh.read().strip()
+    style = widget("html", {"html": "<style>" + " ".join(LEGAL_CSS.split()) + "</style>"}, "pwh-l-style")
+    hero = con("Header", [
+        style,
+        heading(title, "pwh-h1 pwh-text-cream", tag="h1"),
+    ], cls="pwh-page-hero", boxed=1180, gap_px=12, pad=box(96, 0, 80, 0), pad_t=box(80, 24, 64, 24),
+        pad_m=box(56, 20, 48, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#0B1629"})
+    body = con("Policy", [
+        text(body_html, "pwh-l-body"),
+    ], boxed=1180, pad=box(72, 0, 96, 0), pad_t=box(56, 24, 80, 24), pad_m=box(48, 20, 64, 20), tag="section")
+    return template(f"PWH – {title}", "page", [hero, body],
+                    {"hide_title": "yes", "template": "elementor_header_footer"})
+
+
 def export_standalone(data):
     """Resolve importer placeholders so the JSON imports straight into Elementor."""
     raw = json.dumps(data, ensure_ascii=False)
@@ -1965,7 +2004,8 @@ def main():
                "reseller.json": export_standalone(reseller()),
                "email.json": export_standalone(email_page()),
                "web-hosting.json": export_standalone(hosting()),
-               "email-overview.json": export_standalone(emails())}
+               "email-overview.json": export_standalone(emails()),
+               "privacy-policy.json": export_standalone(legal_page("Privacy Policy", "privacy-policy.html"))}
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     for name, data in exports.items():
         with open(os.path.join(OUT, "..", "export", name), "w", encoding="utf-8") as fh:
