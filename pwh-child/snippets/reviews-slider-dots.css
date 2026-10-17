@@ -1,0 +1,41 @@
+/* Paste into the Home reviews Listing Grid widget (mobile version): Advanced > Custom CSS.
+   Elementor replaces "selector" with that widget. */
+/* Reviews carousel (mobile): dots styled like the Products slider dots */
+@media (max-width: 767px) {
+	selector .jet-engine-swiper-pagination-wrapper {
+		gap: 2px;
+		margin: 4px 0 0;
+		align-items: center;
+	}
+	selector .jet-engine-swiper-pagination-wrapper .swiper-pagination-bullet {
+		display: flex;
+		align-items: center;
+		width: auto;
+		height: auto;
+		margin: 0 !important;
+		padding: 10px 4px;
+		border-radius: 0;
+		background: transparent !important;
+		opacity: 1;
+	}
+	selector .jet-engine-swiper-pagination-wrapper .swiper-pagination-bullet::before {
+		content: "";
+		display: block;
+		width: 6px;
+		height: 6px;
+		border-radius: 3px;
+		background: #C5CAD4;
+		transition: width .25s, background .25s;
+	}
+	selector .jet-engine-swiper-pagination-wrapper .swiper-pagination-bullet-active::before {
+		width: 18px;
+		background: #1A325B;
+	}
+	selector .jet-engine-swiper-pagination-wrapper .swiper-pagination-bullet:focus-visible {
+		outline: none;
+	}
+	selector .jet-engine-swiper-pagination-wrapper .swiper-pagination-bullet:focus-visible::before {
+		outline: 2px solid #C89439;
+		outline-offset: 2px;
+	}
+}
