@@ -1,0 +1,1274 @@
+{
+ "version": "0.4",
+ "title": "PWH – Email",
+ "type": "page",
+ "content": [
+  {
+   "id": "5bb0e1e",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "padding": {
+     "unit": "px",
+     "top": "136",
+     "right": "0",
+     "bottom": "140",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Hero",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 64,
+     "column": "64",
+     "row": "64",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "96",
+     "right": "24",
+     "bottom": "96",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "72",
+     "right": "20",
+     "bottom": "72",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "flex_direction_tablet": "column",
+    "html_tag": "section",
+    "css_classes": "pwh-h-hero",
+    "background_background": "classic",
+    "background_color": "#0B1629",
+    "background_image": {
+     "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/email-hero.jpg",
+     "id": "",
+     "size": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_position": "center center",
+    "background_size": "cover",
+    "background_repeat": "no-repeat",
+    "background_overlay_background": "classic",
+    "background_overlay_color": "#0B1629",
+    "background_overlay_opacity": {
+     "unit": "px",
+     "size": 0.5,
+     "sizes": []
+    }
+   },
+   "elements": [
+    {
+     "id": "38d71c0",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Copy",
+      "width": {
+       "unit": "px",
+       "size": 694,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "flex_align_items": "flex-start"
+     },
+     "elements": [
+      {
+       "id": "3143cf6",
+       "elType": "widget",
+       "widgetType": "html",
+       "settings": {
+        "html": "<style>.pwh-eo-style{display:none!important} .pwh-h-persona{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:16px;background:var(--pwh-cream,#fffef4)} .pwh-h-persona--featured{border:2px solid var(--pwh-navy-ink,#0b1629);box-shadow:0 20px 40px rgba(11,22,41,.18)} .pwh-h-tag .elementor-heading-title{display:inline-block;margin:0;padding:5px 10px;border-radius:3px;background:var(--pwh-sand,#e8e0c8);color:var(--pwh-amber-deep,#9e6e25);font-family:Inter,sans-serif;font-size:11px;font-weight:700;line-height:13px} .pwh-h-title .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:22px;font-weight:900;line-height:26px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-quote{border-radius:6px;background:var(--pwh-navy-mist,#eaf0f8)} .pwh-h-quote-text .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-from .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:12px;font-weight:700;line-height:16px;letter-spacing:1.8px;text-transform:uppercase;color:var(--pwh-grey-dark,#575557)} .pwh-h-price .elementor-heading-title{display:flex;flex-wrap:wrap;align-items:flex-end;gap:6px;margin:0} .pwh-h-amt{font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:40px;font-weight:900;line-height:46px;letter-spacing:-.9px;color:var(--pwh-amber-deep,#9e6e25)} .pwh-h-per{padding-bottom:4px;font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-persona .pwh-h-text{min-height:90px} .pwh-h-text,.pwh-h-text p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:18px;color:var(--pwh-grey-dark,#575557)} .pwh-h-link .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:14px;font-weight:700;line-height:17px;color:var(--pwh-navy-ink,#0b1629)} .pwh-h-link .elementor-heading-title a{color:inherit;text-decoration:none;text-underline-offset:3px} .pwh-h-link .elementor-heading-title a:hover{text-decoration:underline} .pwh-h-link .elementor-heading-title a{display:flex;align-items:center;justify-content:space-between;gap:12px} .pwh-h-link .elementor-heading-title a::after{content:\"\";flex:0 0 28px;height:18px;background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 18' fill='none' stroke='%230b1629' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1.5 9h24M18 1.5 25.5 9 18 16.5'/%3E%3C/svg%3E\") no-repeat center/contain} .pwh-h-note,.pwh-h-note p{margin:0;font-family:Inter,sans-serif;font-size:14px;font-weight:300;line-height:17px;color:var(--pwh-grey-dark,#575557)} .pwh-h-note a{color:var(--pwh-navy-ink,#0b1629);font-weight:700;text-decoration:underline;text-underline-offset:3px} .pwh-h-tile{border:1px solid #d6cdb0;border-radius:16px;background:var(--pwh-cream-warm,#f5f1e0)} .pwh-h-tile-icon{width:34px!important;max-width:34px} .pwh-h-tile-icon .elementor-icon-wrapper{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border:1.5px dashed var(--pwh-amber-deep,#9e6e25);border-radius:6px} .pwh-h-tile-icon .elementor-icon{font-size:15px;color:var(--pwh-amber,#c89439)} .pwh-h-tile-icon .elementor-icon svg{width:15px;height:15px;fill:var(--pwh-amber,#c89439)} .pwh-h-tile-text,.pwh-h-tile-text p{margin:0;font-family:Inter,sans-serif;font-size:14px;font-weight:300;line-height:17px;color:var(--pwh-grey-dark,#575557)} .pwh-h-why-title .elementor-heading-title,.pwh-h-switch-title .elementor-heading-title{margin:0;font-family:var(--pwh-font-display,\"Archivo\",sans-serif);font-stretch:125%;font-size:28px;font-weight:900;line-height:34px;color:var(--pwh-cream,#fffef4)} .pwh-h-switch-text,.pwh-h-switch-text p{margin:0;font-family:Inter,sans-serif;font-size:18px;font-weight:300;line-height:22px;color:var(--pwh-navy-mist,#eaf0f8)} .pwh-h-hero .pwh-lead,.pwh-h-hero .pwh-lead p{line-height:22px} .pwh-h-faq-open .elementor-toggle-item:first-child .elementor-tab-content{display:block} .pwh-h-row2>.e-con,.pwh-h-row2>.e-con-inner>.e-con{flex:0 0 calc(50% - 16px)!important;max-width:calc(50% - 16px);min-width:0} .pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex:1 1 0!important;min-width:0} .pwh-h-hero .elementor-widget{max-width:100%} @media (max-width:1024px){.pwh-h-row2,.pwh-h-row2>.e-con-inner{flex-direction:column!important}.pwh-h-row2>.e-con,.pwh-h-row2>.e-con-inner>.e-con{flex:0 0 auto!important;width:100%;max-width:100%}.pwh-h-row4{flex-wrap:wrap!important}.pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex:0 0 calc(50% - 12px)!important;max-width:calc(50% - 12px)}} @media (max-width:767px){.pwh-h-row4>.e-con,.pwh-h-row4>.e-con-inner>.e-con{flex-basis:100%!important;max-width:100%}.pwh-h-amt{font-size:34px;line-height:40px}} .pwh-eo-card{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:8px} .pwh-eo-num{width:38px!important;max-width:38px} .pwh-eo-num .elementor-heading-title{display:flex;align-items:center;justify-content:center;width:38px;height:38px;margin:0;border-radius:999px;background:var(--pwh-navy-ink,#0b1629);color:var(--pwh-cream,#fffef4);font-family:Inter,sans-serif;font-size:16px;font-weight:900;line-height:19px} .pwh-eo-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:19px;font-weight:700;line-height:23px;color:var(--pwh-navy-ink,#0b1629)} .pwh-eo-text,.pwh-eo-text p{margin:0;font-family:Inter,sans-serif;font-size:15px;font-weight:300;line-height:18px;color:var(--pwh-grey-dark,#575557)} .pwh-eo-plans .pwh-h-text,.pwh-eo-plans .pwh-h-text p{color:var(--pwh-navy-ink,#0b1629)} .pwh-eo-spam{border-top:1px solid var(--pwh-navy-pale,#c2d3e8);border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)} .pwh-h-switch-text a{color:var(--pwh-cream,#fffef4);text-decoration:underline;text-underline-offset:3px} .pwh-eo-spam-text,.pwh-eo-spam-text p{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-navy-ink,#0b1629)} .pwh-eo-row3>.e-con,.pwh-eo-row3>.e-con-inner>.e-con{flex:1 1 0!important;min-width:0} @media (max-width:1024px){.pwh-eo-row3,.pwh-eo-row3>.e-con-inner{flex-direction:column!important}.pwh-eo-row3>.e-con,.pwh-eo-row3>.e-con-inner>.e-con{flex:0 0 auto!important;width:100%}} @media (max-width:767px){.pwh-eo-spam,.pwh-eo-spam>.e-con-inner{flex-direction:column!important;text-align:center}}</style>",
+        "_css_classes": "pwh-eo-style"
+       },
+       "elements": []
+      },
+      {
+       "id": "8a92b49",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Email that carries your business name. Never look unprofessional again.",
+        "header_size": "h1",
+        "_css_classes": "pwh-h2 pwh-text-cream",
+        "_element_width": "initial",
+        "_element_custom_width": {
+         "unit": "px",
+         "size": 675,
+         "sizes": []
+        },
+        "_element_width_tablet": "inherit"
+       },
+       "elements": []
+      },
+      {
+       "id": "2ae5df9",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Basic mailboxes give you 20 email accounts and 20GB of storage on your own domain. Or step up to Microsoft 365 for 50GB per mailbox, calendars and Teams.</p>",
+        "_css_classes": "pwh-body pwh-text-cream"
+       },
+       "elements": []
+      },
+      {
+       "id": "6078c6a",
+       "elType": "widget",
+       "widgetType": "button",
+       "settings": {
+        "text": "Get Online →",
+        "link": {
+         "url": "#plans",
+         "is_external": "",
+         "nofollow": "",
+         "custom_attributes": ""
+        },
+        "size": "md",
+        "_css_classes": "pwh-btn pwh-btn--amber"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "c8fd472",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Visual",
+      "width": {
+       "unit": "px",
+       "size": 422,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "min_height": {
+       "unit": "px",
+       "size": 380,
+       "sizes": []
+      },
+      "min_height_tablet": {
+       "unit": "px",
+       "size": 0,
+       "sizes": []
+      },
+      "hide_tablet": "hidden-tablet",
+      "hide_mobile": "hidden-mobile"
+     },
+     "elements": [],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "22585cb",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "80",
+     "right": "0",
+     "bottom": "40",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "WhyDomain",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "40",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "32",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "29a5843",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Why your own domain, not a free inbox.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h3 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "6c150b2",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Cards",
+      "flex_gap": {
+       "unit": "px",
+       "size": 32,
+       "column": "32",
+       "row": "32",
+       "isLinked": true
+      },
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "flex_align_items": "stretch",
+      "flex_direction_tablet": "column",
+      "css_classes": "pwh-eo-row3"
+     },
+     "elements": [
+      {
+       "id": "d39bc23",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Reason – Look like you mean business",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 10,
+         "column": "10",
+         "row": "10",
+         "isLinked": true
+        },
+        "css_classes": "pwh-eo-card"
+       },
+       "elements": [
+        {
+         "id": "decc92d",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "1",
+          "header_size": "p",
+          "_css_classes": "pwh-eo-num"
+         },
+         "elements": []
+        },
+        {
+         "id": "7b21e37",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Look like you mean business",
+          "header_size": "h3",
+          "_css_classes": "pwh-eo-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "6d52e0d",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>A name@yourbusiness.com.au address builds instant trust with customers and suppliers.</p>",
+          "_css_classes": "pwh-eo-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "b1d35b0",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Reason – Never lose an address",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 10,
+         "column": "10",
+         "row": "10",
+         "isLinked": true
+        },
+        "css_classes": "pwh-eo-card"
+       },
+       "elements": [
+        {
+         "id": "cc6247c",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "2",
+          "header_size": "p",
+          "_css_classes": "pwh-eo-num"
+         },
+         "elements": []
+        },
+        {
+         "id": "09d2535",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Never lose an address",
+          "header_size": "h3",
+          "_css_classes": "pwh-eo-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "73eb3ff",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>When staff come and go, the mailbox stays with the business, not the person.</p>",
+          "_css_classes": "pwh-eo-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "219f1a1",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Reason – Everything in sync",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 10,
+         "column": "10",
+         "row": "10",
+         "isLinked": true
+        },
+        "css_classes": "pwh-eo-card"
+       },
+       "elements": [
+        {
+         "id": "8cae6ab",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "3",
+          "header_size": "p",
+          "_css_classes": "pwh-eo-num"
+         },
+         "elements": []
+        },
+        {
+         "id": "f2aa574",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Everything in sync",
+          "header_size": "h3",
+          "_css_classes": "pwh-eo-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "5b131e5",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Calendar, contacts and mail stay in sync across your whole team, on any device.</p>",
+          "_css_classes": "pwh-eo-text"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "0220c49",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "140",
+     "right": "0",
+     "bottom": "140",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "FeatureCards",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "96",
+     "right": "24",
+     "bottom": "96",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "72",
+     "right": "20",
+     "bottom": "72",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section",
+    "background_background": "classic",
+    "background_color": "#F5F1E0",
+    "_element_id": "plans"
+   },
+   "elements": [
+    {
+     "id": "ec5d18e",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Cards",
+      "flex_gap": {
+       "unit": "px",
+       "size": 32,
+       "column": "32",
+       "row": "32",
+       "isLinked": true
+      },
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "flex_align_items": "flex-start",
+      "flex_direction_tablet": "column",
+      "css_classes": "pwh-eo-row3 pwh-eo-plans"
+     },
+     "elements": [
+      {
+       "id": "437aeb6",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Plan – Basic email (POP3 / IMAP)",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 14,
+         "column": "14",
+         "row": "14",
+         "isLinked": true
+        },
+        "css_classes": "pwh-h-persona"
+       },
+       "elements": [
+        {
+         "id": "94c3f5c",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Basic email (POP3 / IMAP)",
+          "header_size": "h3",
+          "_css_classes": "pwh-h-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "be9abd2",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_title": "Price",
+          "flex_gap": {
+           "unit": "px",
+           "size": 2,
+           "column": "2",
+           "row": "2",
+           "isLinked": true
+          }
+         },
+         "elements": [
+          {
+           "id": "e90690c",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "From",
+            "header_size": "p",
+            "_css_classes": "pwh-h-from"
+           },
+           "elements": []
+          },
+          {
+           "id": "7d5073d",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "<span class=\"pwh-h-amt\">$10.95</span><span class=\"pwh-h-per\">/month</span>",
+            "header_size": "p",
+            "_css_classes": "pwh-h-price"
+           },
+           "elements": []
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "b5a2d11",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>20 email accounts and 20GB of shared storage, all on your own business domain. One flat price, no per-mailbox fees.</p>",
+          "_css_classes": "pwh-h-text"
+         },
+         "elements": []
+        },
+        {
+         "id": "11b2b3d",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "See email plans →",
+          "header_size": "p",
+          "link": {
+           "url": "/e-mail/imap-pop3/",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-h-link"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "cc34226",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Plan – Microsoft 365",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 14,
+         "column": "14",
+         "row": "14",
+         "isLinked": true
+        },
+        "css_classes": "pwh-h-persona pwh-h-persona--featured"
+       },
+       "elements": [
+        {
+         "id": "fbc0943",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "MOST POPULAR",
+          "header_size": "p",
+          "_css_classes": "pwh-h-tag"
+         },
+         "elements": []
+        },
+        {
+         "id": "16de212",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Microsoft 365",
+          "header_size": "h3",
+          "_css_classes": "pwh-h-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "a13e16c",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_title": "Price",
+          "flex_gap": {
+           "unit": "px",
+           "size": 2,
+           "column": "2",
+           "row": "2",
+           "isLinked": true
+          }
+         },
+         "elements": [
+          {
+           "id": "83170dd",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "From",
+            "header_size": "p",
+            "_css_classes": "pwh-h-from"
+           },
+           "elements": []
+          },
+          {
+           "id": "b81720e",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "<span class=\"pwh-h-amt\">$7.50</span><span class=\"pwh-h-per\">/ mailbox / mo</span>",
+            "header_size": "p",
+            "_css_classes": "pwh-h-price"
+           },
+           "elements": []
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "bc8eeb5",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Full Exchange mailboxes with 50GB each, shared calendars, Teams and Office apps. Priced per mailbox, add only what you need.</p>",
+          "_css_classes": "pwh-h-text"
+         },
+         "elements": []
+        },
+        {
+         "id": "c7a52fa",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "See Microsoft 365 →",
+          "header_size": "p",
+          "link": {
+           "url": "/e-mail/microsoft-365/",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-h-link"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      },
+      {
+       "id": "a2a515b",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_title": "Plan – Gmail",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 14,
+         "column": "14",
+         "row": "14",
+         "isLinked": true
+        },
+        "css_classes": "pwh-h-persona"
+       },
+       "elements": [
+        {
+         "id": "061c7e7",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Gmail",
+          "header_size": "h3",
+          "_css_classes": "pwh-h-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "fc8632d",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_title": "Price",
+          "flex_gap": {
+           "unit": "px",
+           "size": 2,
+           "column": "2",
+           "row": "2",
+           "isLinked": true
+          }
+         },
+         "elements": [
+          {
+           "id": "0b84f3f",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "From",
+            "header_size": "p",
+            "_css_classes": "pwh-h-from"
+           },
+           "elements": []
+          },
+          {
+           "id": "253d7ff",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "<span class=\"pwh-h-amt\">$XX</span><span class=\"pwh-h-per\">/ mailbox / mo</span>",
+            "header_size": "p",
+            "_css_classes": "pwh-h-price"
+           },
+           "elements": []
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "5d371f4",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Information about Gmail</p>",
+          "_css_classes": "pwh-h-text"
+         },
+         "elements": []
+        },
+        {
+         "id": "315846f",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "See Google →",
+          "header_size": "p",
+          "link": {
+           "url": "/contact-us/",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "_css_classes": "pwh-h-link"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "3885c07",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "row",
+    "padding": {
+     "unit": "px",
+     "top": "28",
+     "right": "0",
+     "bottom": "28",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "SpamExpertsStrip",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 20,
+     "column": "20",
+     "row": "20",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "28",
+     "right": "24",
+     "bottom": "28",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "24",
+     "right": "20",
+     "bottom": "24",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_justify_content": "center",
+    "flex_align_items": "center",
+    "html_tag": "section",
+    "css_classes": "pwh-eo-spam",
+    "background_background": "classic",
+    "background_color": "#F5F1E0"
+   },
+   "elements": [
+    {
+     "id": "515dd8d",
+     "elType": "widget",
+     "widgetType": "image",
+     "settings": {
+      "image": {
+       "url": "https://dev.perthhosting.net/wp-content/uploads/2026/10/spamexperts.png",
+       "id": "",
+       "size": "",
+       "alt": "SpamExperts",
+       "source": "library"
+      },
+      "image_size": "full",
+      "align": "center",
+      "width": {
+       "unit": "px",
+       "size": 143,
+       "sizes": []
+      },
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 154,
+       "sizes": []
+      }
+     },
+     "elements": []
+    },
+    {
+     "id": "32efd73",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>Premium SpamExperts spam and virus filtering is included on every email plan, at no extra cost.</p>",
+      "_css_classes": "pwh-eo-spam-text"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "9dae16d",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "80",
+     "right": "0",
+     "bottom": "80",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "FAQ",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "64",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section"
+   },
+   "elements": [
+    {
+     "id": "539a34c",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Email questions, answered.",
+      "header_size": "h2",
+      "_css_classes": "pwh-h3 pwh-text-ink"
+     },
+     "elements": []
+    },
+    {
+     "id": "345601b",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Questions",
+      "width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "003d447",
+       "elType": "widget",
+       "widgetType": "toggle",
+       "settings": {
+        "tabs": [
+         {
+          "_id": "a8d4d82",
+          "tab_title": "What's the difference between Exchange and POP3/IMAP?",
+          "tab_content": "<p>Basic email (POP3/IMAP) gives you 20 email accounts and 20GB of shared storage on your own domain, for one flat price. Microsoft 365 runs on Exchange: full business mailboxes with 50GB each, shared calendars and contacts, Teams and the Office apps, priced per mailbox.</p>"
+         },
+         {
+          "_id": "90a6427",
+          "tab_title": "Can I add mailboxes for new staff later?",
+          "tab_content": "<p>Yes. Basic email includes 20 accounts, so you can add new staff any time. Microsoft 365 is priced per mailbox, so you add only what you need.</p>"
+         },
+         {
+          "_id": "9e568fa",
+          "tab_title": "Do you filter spam and viruses?",
+          "tab_content": "<p>Yes. Premium SpamExperts spam and virus filtering is included on every email plan, at no extra cost.</p>"
+         },
+         {
+          "_id": "5eb4cba",
+          "tab_title": "Will it work on my phone?",
+          "tab_content": "<p>Yes. There's secure webmail, and we can set your email up on Android and Apple devices.</p>"
+         },
+         {
+          "_id": "17f5218",
+          "tab_title": "Do I need a domain first?",
+          "tab_content": "<p>Your email runs on your own domain, like name@yourbusiness.com.au. If you don't have one yet, <a href=\"/domains/\">search for your domain</a> and we'll connect it to your email for you.</p>"
+         },
+         {
+          "_id": "4652c6c",
+          "tab_title": "Can I get Google email hosting?",
+          "tab_content": "<p>Talk to us. Call <a href=\"tel:+61863654522\">08 6365 4522</a> and our Perth team will help you work out the right setup.</p>"
+         }
+        ],
+        "selected_icon": {
+         "value": "fas fa-plus",
+         "library": "fa-solid"
+        },
+        "selected_active_icon": {
+         "value": "fas fa-minus",
+         "library": "fa-solid"
+        },
+        "icon_align": "right",
+        "title_html_tag": "h3",
+        "faq_schema": "yes",
+        "_css_classes": "pwh-faq"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "5752bfd",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "64",
+     "right": "0",
+     "bottom": "64",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Switching",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 12,
+     "column": "12",
+     "row": "12",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "56",
+     "right": "24",
+     "bottom": "56",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "48",
+     "right": "20",
+     "bottom": "48",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section",
+    "background_background": "classic",
+    "background_color": "#1A325B"
+   },
+   "elements": [
+    {
+     "id": "96c78a0",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "Already have email somewhere else?",
+      "header_size": "h2",
+      "_css_classes": "pwh-h-switch-title"
+     },
+     "elements": []
+    },
+    {
+     "id": "853e6fa",
+     "elType": "widget",
+     "widgetType": "text-editor",
+     "settings": {
+      "editor": "<p>We'll migrate your existing mailboxes, contacts and calendar across with no lost messages and minimal downtime. <a href=\"/contact-us/\">Talk to us about it.</a><br>Your local hosting partner.</p>",
+      "_css_classes": "pwh-h-switch-text"
+     },
+     "elements": []
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": {
+  "hide_title": "yes",
+  "template": "elementor_header_footer"
+ }
+}

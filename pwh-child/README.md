@@ -195,3 +195,11 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 - Figma's hero has an empty "visual placeholder" on the right and the tiles have an "icon" placeholder; the template leaves the right side empty and uses Font Awesome icons in the tiles.
 - **FAQ:** the first answer is Figma's. The other four answers are drafts built from the plan pages; check them before publishing.
 - *See hosting plans →* jumps to the plan cards; *Start my free migration →* goes to the Hosting Transfer Request page.
+
+## Email overview page (standalone template)
+
+`export/email-overview.json` (Figma *Page / Email*, 16:324, file copy `UyIKr0mEfBlQKS0wEU0ibY`). Put it on the page at `/e-mail/`.
+
+- Upload the hero photo as **`email-hero.jpg`** (Figma's image host is blocked here). The SpamExperts logo uses `spamexperts.png`, already in the Media Library.
+- Plan cards link to `/e-mail/imap-pop3/` and `/e-mail/microsoft-365/`. The **Gmail card is a placeholder in the design** ("$XX", "Information about Gmail"); its link goes to `/contact-us/` until there's a Google page.
+- **The FAQ answers are drafts.** Figma only has the questions; check them, especially the Google one.

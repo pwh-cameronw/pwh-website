@@ -1621,8 +1621,10 @@ HOSTING_CSS = """
 .pwh-h-persona .pwh-h-text{min-height:90px}
 .pwh-h-text,.pwh-h-text p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:18px;color:var(--pwh-grey-dark,#575557)}
 .pwh-h-link .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:14px;font-weight:700;line-height:17px;color:var(--pwh-navy-ink,#0b1629)}
-.pwh-h-link .elementor-heading-title a{color:inherit;text-decoration:underline;text-underline-offset:3px}
-.pwh-h-link .elementor-heading-title a:hover{text-decoration-thickness:2px}
+.pwh-h-link .elementor-heading-title a{color:inherit;text-decoration:none;text-underline-offset:3px}
+.pwh-h-link .elementor-heading-title a:hover{text-decoration:underline}
+.pwh-h-link .elementor-heading-title a{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.pwh-h-link .elementor-heading-title a::after{content:"";flex:0 0 28px;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 18' fill='none' stroke='%230b1629' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1.5 9h24M18 1.5 25.5 9 18 16.5'/%3E%3C/svg%3E") no-repeat center/contain}
 .pwh-h-note,.pwh-h-note p{margin:0;font-family:Inter,sans-serif;font-size:14px;font-weight:300;line-height:17px;color:var(--pwh-grey-dark,#575557)}
 .pwh-h-note a{color:var(--pwh-navy-ink,#0b1629);font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .pwh-h-tile{border:1px solid #d6cdb0;border-radius:16px;background:var(--pwh-cream-warm,#f5f1e0)}
@@ -1672,7 +1674,7 @@ def hosting_persona(title, quote, price, body, link_text, link, featured=False):
             heading(f'<span class="pwh-h-amt">${price}</span><span class="pwh-h-per">/month</span>', "pwh-h-price", tag="p"),
         ], gap_px=2),
         text(f"<p>{body}</p>", "pwh-h-text"),
-        heading(f"{link_text} →", "pwh-h-link", tag="p", link=link),
+        heading(link_text, "pwh-h-link", tag="p", link=link),
     ]
     return con(f"Persona – {title}", items,
                cls="pwh-h-persona" + (" pwh-h-persona--featured" if featured else ""),
@@ -1790,6 +1792,152 @@ def hosting():
                     [hero, plans, includes, why, testimonials, faq, switching],
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
+# --- Email (overview) ----------------------------------------------------------
+# Built from the Figma REST API (Page / Email, 16:324, file copy
+# UyIKr0mEfBlQKS0wEU0ibY) as a standalone template. Shares the Web Hosting
+# page's card styles (pwh-h-*).
+
+EMAILS_HERO = MEDIA + "email-hero.jpg"  # Not in the Media Library yet; upload with this name.
+
+EMAILS_CSS = HOSTING_CSS.replace(".pwh-h-style{display:none!important}", ".pwh-eo-style{display:none!important}") + """
+.pwh-eo-card{border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:8px}
+.pwh-eo-num{width:38px!important;max-width:38px}
+.pwh-eo-num .elementor-heading-title{display:flex;align-items:center;justify-content:center;width:38px;height:38px;margin:0;border-radius:999px;background:var(--pwh-navy-ink,#0b1629);color:var(--pwh-cream,#fffef4);font-family:Inter,sans-serif;font-size:16px;font-weight:900;line-height:19px}
+.pwh-eo-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:19px;font-weight:700;line-height:23px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-eo-text,.pwh-eo-text p{margin:0;font-family:Inter,sans-serif;font-size:15px;font-weight:300;line-height:18px;color:var(--pwh-grey-dark,#575557)}
+.pwh-eo-plans .pwh-h-text,.pwh-eo-plans .pwh-h-text p{color:var(--pwh-navy-ink,#0b1629)}
+.pwh-eo-spam{border-top:1px solid var(--pwh-navy-pale,#c2d3e8);border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)}
+.pwh-h-switch-text a{color:var(--pwh-cream,#fffef4);text-decoration:underline;text-underline-offset:3px}
+.pwh-eo-spam-text,.pwh-eo-spam-text p{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:17px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-eo-row3>.e-con,.pwh-eo-row3>.e-con-inner>.e-con{flex:1 1 0!important;min-width:0}
+@media (max-width:1024px){.pwh-eo-row3,.pwh-eo-row3>.e-con-inner{flex-direction:column!important}.pwh-eo-row3>.e-con,.pwh-eo-row3>.e-con-inner>.e-con{flex:0 0 auto!important;width:100%}}
+@media (max-width:767px){.pwh-eo-spam,.pwh-eo-spam>.e-con-inner{flex-direction:column!important;text-align:center}}
+"""
+
+# Figma only has the questions; these answers are drafts built from facts on
+# the email pages. Review before publishing.
+EMAILS_FAQ = [
+    ("What's the difference between Exchange and POP3/IMAP?",
+     "<p>Basic email (POP3/IMAP) gives you 20 email accounts and 20GB of shared storage on your own domain, for one flat price. "
+     "Microsoft 365 runs on Exchange: full business mailboxes with 50GB each, shared calendars and contacts, Teams and the Office apps, priced per mailbox.</p>"),
+    ("Can I add mailboxes for new staff later?",
+     "<p>Yes. Basic email includes 20 accounts, so you can add new staff any time. Microsoft 365 is priced per mailbox, so you add only what you need.</p>"),
+    ("Do you filter spam and viruses?",
+     "<p>Yes. Premium SpamExperts spam and virus filtering is included on every email plan, at no extra cost.</p>"),
+    ("Will it work on my phone?",
+     "<p>Yes. There's secure webmail, and we can set your email up on Android and Apple devices.</p>"),
+    ("Do I need a domain first?",
+     "<p>Your email runs on your own domain, like name@yourbusiness.com.au. If you don't have one yet, "
+     "<a href=\"/domains/\">search for your domain</a> and we'll connect it to your email for you.</p>"),
+    ("Can I get Google email hosting?",
+     "<p>Talk to us. Call <a href=\"tel:+61863654522\">08 6365 4522</a> and our Perth team will help you work out the right setup.</p>"),
+]
+
+
+def emails_reason(n, title, body):
+    return con(f"Reason – {title}", [
+        heading(str(n), "pwh-eo-num", tag="p"),
+        heading(title, "pwh-eo-title", tag="h3"),
+        text(f"<p>{body}</p>", "pwh-eo-text"),
+    ], cls="pwh-eo-card", gap_px=10, pad=box(24), width_t=pct(100))
+
+
+def emails_plan(title, price, per, body, link_text, link, featured=False):
+    items = [heading("MOST POPULAR", "pwh-h-tag", tag="p")] if featured else []
+    items += [
+        heading(title, "pwh-h-title", tag="h3"),
+        con("Price", [
+            heading("From", "pwh-h-from", tag="p"),
+            heading(f'<span class="pwh-h-amt">{price}</span><span class="pwh-h-per">{per}</span>', "pwh-h-price", tag="p"),
+        ], gap_px=2),
+        text(f"<p>{body}</p>", "pwh-h-text"),
+        heading(f"{link_text} →", "pwh-h-link", tag="p", link=link),
+    ]
+    return con(f"Plan – {title}", items, cls="pwh-h-persona" + (" pwh-h-persona--featured" if featured else ""),
+               gap_px=14, pad=box(24), width_t=pct(100))
+
+
+def emails():
+    style = widget("html", {"html": "<style>" + " ".join(EMAILS_CSS.split()) + "</style>"}, "pwh-eo-style")
+
+    # Figma pads the hero 220px at the top because the nav overlaps it; the
+    # sticky header sits above the page here, so 84px comes off.
+    hero = con("Hero", [
+        con("Copy", [
+            style,
+            heading("Email that carries your business name. Never look unprofessional again.", "pwh-h2 pwh-text-cream", tag="h1"),
+            text("<p>Basic mailboxes give you 20 email accounts and 20GB of storage on your own domain. "
+                 "Or step up to Microsoft 365 for 50GB per mailbox, calendars and Teams.</p>", "pwh-body pwh-text-cream"),
+            button("Get Online →", url("#plans"), "pwh-btn--amber"),
+        ], gap_px=16, width=px(694), width_t=pct(100), extra={"flex_align_items": "flex-start"}),
+        # Figma has an empty "Visual placeholder" here; the photo shows through.
+        con("Visual", [], width=px(422), width_t=pct(100), min_h=380, min_h_t=0,
+            extra={"hide_tablet": "hidden-tablet", "hide_mobile": "hidden-mobile"}),
+    ], cls="pwh-h-hero", direction="row", boxed=1180, gap_px=64, align="center", dir_t="column",
+        pad=box(136, 0, 140, 0), pad_t=box(96, 24, 96, 24), pad_m=box(72, 20, 72, 20), tag="section",
+        extra=photo_bg(EMAILS_HERO, 0.5))
+    hero["elements"][0]["elements"][1]["settings"].update({"_element_width": "initial", "_element_custom_width": px(675),
+                                                          "_element_width_tablet": "inherit"})
+
+    why = con("WhyDomain", [
+        heading("Why your own domain, not a free inbox.", "pwh-h3 pwh-text-ink", tag="h2"),
+        con("Cards", [
+            emails_reason(1, "Look like you mean business",
+                          "A name@yourbusiness.com.au address builds instant trust with customers and suppliers."),
+            emails_reason(2, "Never lose an address",
+                          "When staff come and go, the mailbox stays with the business, not the person."),
+            emails_reason(3, "Everything in sync",
+                          "Calendar, contacts and mail stay in sync across your whole team, on any device."),
+        ], cls="pwh-eo-row3", direction="row", gap_px=32, align="stretch", dir_t="column", gap_t=24),
+    ], boxed=1180, gap_px=40, pad=box(80, 0, 40, 0), pad_t=box(64, 24, 40, 24), pad_m=box(56, 20, 32, 20), tag="section")
+
+    plans = con("FeatureCards", [
+        con("Cards", [
+            emails_plan("Basic email (POP3 / IMAP)", "$10.95", "/month",
+                        "20 email accounts and 20GB of shared storage, all on your own business domain. One flat price, no per-mailbox fees.",
+                        "See email plans", url("/e-mail/imap-pop3/")),
+            emails_plan("Microsoft 365", "$7.50", "/ mailbox / mo",
+                        "Full Exchange mailboxes with 50GB each, shared calendars, Teams and Office apps. Priced per mailbox, add only what you need.",
+                        "See Microsoft 365", url("/e-mail/microsoft-365/"), featured=True),
+            # Placeholder card in the design: price and copy still to come.
+            emails_plan("Gmail", "$XX", "/ mailbox / mo", "Information about Gmail", "See Google", url("/contact-us/")),
+        ], cls="pwh-eo-row3 pwh-eo-plans", direction="row", gap_px=32, align="flex-start", dir_t="column", gap_t=24),
+    ], boxed=1180, gap_px=40, pad=box(140, 0), pad_t=box(96, 24), pad_m=box(72, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0", "_element_id": "plans"})
+
+    spam = con("SpamExpertsStrip", [
+        image(MEDIA + "spamexperts.png", "", alt="SpamExperts", align="center", width=px(143)),
+        text("<p>Premium SpamExperts spam and virus filtering is included on every email plan, at no extra cost.</p>", "pwh-eo-spam-text"),
+    ], cls="pwh-eo-spam", direction="row", boxed=1180, gap_px=20, justify="center", align="center",
+        pad=box(28, 0), pad_t=box(28, 24), pad_m=box(24, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#F5F1E0"})
+    spam["elements"][0]["settings"].update({"_element_width": "initial", "_element_custom_width": px(154)})
+
+    faq = con("FAQ", [
+        heading("Email questions, answered.", "pwh-h3 pwh-text-ink", tag="h2"),
+        con("Questions", [
+            widget("toggle", {
+                "tabs": [{"_id": _id("faq"), "tab_title": q, "tab_content": a} for q, a in EMAILS_FAQ],
+                "selected_icon": {"value": "fas fa-plus", "library": "fa-solid"},
+                "selected_active_icon": {"value": "fas fa-minus", "library": "fa-solid"},
+                "icon_align": "right",
+                "title_html_tag": "h3",
+                "faq_schema": "yes",
+            }, "pwh-faq"),
+        ], width=px(760), width_t=pct(100)),
+    ], boxed=1180, gap_px=40, pad=box(80, 0), pad_t=box(64, 24), pad_m=box(56, 20), tag="section")
+
+    switching = con("Switching", [
+        heading("Already have email somewhere else?", "pwh-h-switch-title", tag="h2"),
+        text("<p>We'll migrate your existing mailboxes, contacts and calendar across with no lost messages and minimal downtime. "
+             '<a href="/contact-us/">Talk to us about it.</a><br>Your local hosting partner.</p>', "pwh-h-switch-text"),
+    ], boxed=1180, gap_px=12, pad=box(64, 0), pad_t=box(56, 24), pad_m=box(48, 20), tag="section",
+        extra={"background_background": "classic", "background_color": "#1A325B"})
+
+    return template("PWH – Email", "page", [hero, why, plans, spam, faq, switching],
+                    {"hide_title": "yes", "template": "elementor_header_footer"})
+
+
 def export_standalone(data):
     """Resolve importer placeholders so the JSON imports straight into Elementor."""
     raw = json.dumps(data, ensure_ascii=False)
@@ -1816,7 +1964,8 @@ def main():
     exports = {"contact.json": export_standalone(contact()), "microsoft-365.json": export_standalone(m365()),
                "reseller.json": export_standalone(reseller()),
                "email.json": export_standalone(email_page()),
-               "web-hosting.json": export_standalone(hosting())}
+               "web-hosting.json": export_standalone(hosting()),
+               "email-overview.json": export_standalone(emails())}
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     for name, data in exports.items():
         with open(os.path.join(OUT, "..", "export", name), "w", encoding="utf-8") as fh:
