@@ -10,9 +10,10 @@ import html
 import re
 import sys
 
-SECTION = re.compile(r"^\s{0,4}(\d{1,2})\.\s{2,}(\S.*)$")
+SECTION = re.compile(r"^\s{0,4}(\d{1,2})\.\s+([A-Z0-9]\S.*)$")
 CLAUSE = re.compile(r"^\s*(\d{1,2}\.\d{1,2})\.\s+(\S.*)$")
 ITEM = re.compile(r"^\s*([a-z])\.\s+(\S.*)$")
+FOOTER = re.compile(r"\bPage \d+ of \d+\b")
 LINK = re.compile(r"(?<!\()(https?://[^\s<]+[^\s<.,)]|[\w.+-]+@[\w-]+(?:\.[\w-]+)+)")
 
 
@@ -31,7 +32,7 @@ def main(path, start):
     blank = False
     page_break = False
     for raw in lines:
-        if raw.strip().startswith("©"):
+        if raw.strip().startswith("©") or FOOTER.search(raw):
             page_break = True
             continue
         if not raw.strip():

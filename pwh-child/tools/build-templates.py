@@ -1961,8 +1961,15 @@ LEGAL_CSS = """
 .pwh-l-body .pwh-l-num{position:absolute;left:0;top:0;font-weight:700;color:var(--pwh-navy-ink,#0b1629)}
 .pwh-l-body .pwh-l-items{margin:-4px 0 16px 52px;padding-left:24px;list-style-type:lower-alpha}
 .pwh-l-body .pwh-l-items li::marker{color:var(--pwh-navy-ink,#0b1629);font-weight:700}
+.pwh-l-table-wrap{margin:12px 0 4px;overflow-x:auto;border:1px solid var(--pwh-navy-pale,#c2d3e8);border-radius:12px}
+.pwh-l-table{width:100%;min-width:480px;margin:0;border-collapse:collapse;font-family:Inter,sans-serif;font-size:15px;line-height:20px}
+.pwh-l-table th{padding:12px 16px;background:var(--pwh-navy-ink,#0b1629);color:var(--pwh-cream,#fffef4);font-weight:700;text-align:left}
+.pwh-l-table td{padding:12px 16px;border:0;border-top:1px solid var(--pwh-navy-pale,#c2d3e8);color:var(--pwh-grey-dark,#575557);background:var(--pwh-cream,#fffef4)}
+.pwh-l-table tbody tr:nth-child(even) td{background:var(--pwh-cream-warm,#f5f1e0)}
+.pwh-l-table th:last-child,.pwh-l-table td:last-child{text-align:right;white-space:nowrap}
+.pwh-l-table td:first-child{color:var(--pwh-navy-ink,#0b1629);font-weight:700;white-space:nowrap}
 .pwh-l-updated,.pwh-l-updated p{margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:20px;color:var(--pwh-navy-pale,#c2d3e8)}
-@media (max-width:767px){.pwh-l-body h2,.pwh-l-body h3{margin-top:32px;font-size:20px;line-height:26px}.pwh-l-body .pwh-l-clause{padding-left:40px}.pwh-l-body .pwh-l-items{margin-left:40px;padding-left:20px}}
+@media (max-width:767px){.pwh-l-items .pwh-l-table-wrap{margin-left:-60px}.pwh-l-table{min-width:0;font-size:14px;line-height:18px}.pwh-l-table th,.pwh-l-table td{padding:10px}.pwh-l-table th:last-child{white-space:normal}.pwh-l-body h2,.pwh-l-body h3{margin-top:32px;font-size:20px;line-height:26px}.pwh-l-body .pwh-l-clause{padding-left:40px}.pwh-l-body .pwh-l-items{margin-left:40px;padding-left:20px}}
 """
 
 
@@ -2057,7 +2064,8 @@ def main():
                "email-overview.json": export_standalone(emails()),
                "privacy-policy.json": export_standalone(legal_page("Privacy Policy", "privacy-policy.html")),
                "terms-of-service.json": export_standalone(legal_page("Terms of Service", "terms-of-service.html", updated="17/10/2026")),
-               "acceptable-use-policy.json": export_standalone(legal_page("Acceptable Use Policy", "acceptable-use-policy.html", updated="17/10/2026"))}
+               "acceptable-use-policy.json": export_standalone(legal_page("Acceptable Use Policy", "acceptable-use-policy.html", updated="17/10/2026")),
+               "service-level-agreement.json": export_standalone(legal_page("Service Level Agreement", "service-level-agreement.html", updated="26/07/2018"))}
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     with open(os.path.join(OUT, "..", "assets", "css", "pwh-pages.css"), "w", encoding="utf-8") as fh:
         fh.write(page_css())
