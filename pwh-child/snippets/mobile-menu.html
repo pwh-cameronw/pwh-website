@@ -1,0 +1,252 @@
+<!--
+  PWH mobile menu (Figma: Mobile page, "Menu / Closed" 529:2902 and the
+  Products / About / Support panels).
+
+  Paste into an Elementor HTML widget in the header row, next to the
+  MyToolbox button. Set the widget to show on Mobile only and hide the
+  JetMenu widget on Mobile. Self-contained: no theme files needed.
+-->
+<button type="button" class="pwhm-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="pwhm">
+	<span></span><span></span><span></span>
+</button>
+
+<div class="pwhm" id="pwhm" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+	<div class="pwhm-panels">
+
+		<!-- Main menu -->
+		<section class="pwhm-panel is-active" data-panel="main">
+			<div class="pwhm-bar">
+				<a class="pwhm-logo" href="/"><img src="https://dev.perthhosting.net/wp-content/uploads/2026/10/pwh-logo-noborder-navy.svg" alt="Perth Web Hosting" width="147" height="30"></a>
+				<button type="button" class="pwhm-close" aria-label="Close menu"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+			</div>
+			<div class="pwhm-body pwhm-body--main">
+				<button type="button" class="pwhm-row" data-open="products" aria-controls="pwhm-products">Products<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4l6 6-6 6"/></svg></button>
+				<button type="button" class="pwhm-row" data-open="about" aria-controls="pwhm-about">About<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4l6 6-6 6"/></svg></button>
+				<button type="button" class="pwhm-row" data-open="support" aria-controls="pwhm-support">Support<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4l6 6-6 6"/></svg></button>
+				<a class="pwhm-row pwhm-row--last" href="https://clients.perthwebhosting.net.au/index.php?rp=/login">Client login<span aria-hidden="true">→</span></a>
+				<a class="pwhm-quiz" href="/get-started/">
+					<strong>Not sure what you need?</strong>
+					<span>Take our 2-minute quiz and we'll point you to the right plan.</span>
+				</a>
+			</div>
+		</section>
+
+		<!-- Products -->
+		<section class="pwhm-panel" data-panel="products" id="pwhm-products" aria-label="Products">
+			<div class="pwhm-bar pwhm-bar--sub">
+				<button type="button" class="pwhm-back"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg>Menu</button>
+				<p class="pwhm-title">Products</p>
+				<button type="button" class="pwhm-close" aria-label="Close menu"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+			</div>
+			<div class="pwhm-body">
+				<div class="pwhm-group">
+					<p class="pwhm-label">Domains</p>
+					<a class="pwhm-item" href="/domains/"><strong>Search Domains</strong><span>Find and register your business name across every extension.</span></a>
+					<a class="pwhm-item" href="/domains/"><strong>Transfer Domains</strong><span>Move an existing domain across with no downtime.</span></a>
+				</div>
+				<div class="pwhm-group">
+					<p class="pwhm-label">Hosting</p>
+					<a class="pwhm-item" href="/web-hosting/cpanel/"><strong>cPanel Hosting</strong><span>Full control over your site with the industry-standard dashboard.</span></a>
+					<a class="pwhm-item" href="/web-hosting/semi-managed/"><strong>Semi-managed WordPress</strong><span>We handle updates, backups and troubleshooting for you.</span></a>
+				</div>
+				<div class="pwhm-group">
+					<p class="pwhm-label">Email</p>
+					<a class="pwhm-item" href="/e-mail/imap-pop3/"><strong>Email</strong><span>Business mailboxes on your own domain.</span></a>
+					<a class="pwhm-item" href="/e-mail/microsoft-365/"><strong>Microsoft 365</strong><span>Full business mailboxes with Teams and cloud storage.</span></a>
+				</div>
+				<div class="pwhm-group">
+					<a class="pwhm-item" href="/reseller-web-hosting/"><strong>Reseller</strong><span>White-label hosting for agencies and freelancers.</span></a>
+					<a class="pwhm-item" href="/vps-hosting/"><strong>VPS (private server)</strong><span>Coming soon. Join the waitlist for dedicated resources.</span></a>
+				</div>
+			</div>
+		</section>
+
+		<!-- About -->
+		<section class="pwhm-panel" data-panel="about" id="pwhm-about" aria-label="About">
+			<div class="pwhm-bar pwhm-bar--sub">
+				<button type="button" class="pwhm-back"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg>Menu</button>
+				<p class="pwhm-title">About</p>
+				<button type="button" class="pwhm-close" aria-label="Close menu"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+			</div>
+			<div class="pwhm-body">
+				<div class="pwhm-group">
+					<a class="pwhm-item" href="/about-us/"><strong>About Us</strong></a>
+					<a class="pwhm-item" href="/privacy-policy/"><strong>Privacy Policy</strong></a>
+					<a class="pwhm-item" href="/terms-of-service/"><strong>Terms of Service</strong></a>
+					<a class="pwhm-item" href="/acceptable-use-policy/"><strong>Acceptable Use Policy</strong></a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Support -->
+		<section class="pwhm-panel" data-panel="support" id="pwhm-support" aria-label="Support">
+			<div class="pwhm-bar pwhm-bar--sub">
+				<button type="button" class="pwhm-back"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg>Menu</button>
+				<p class="pwhm-title">Support</p>
+				<button type="button" class="pwhm-close" aria-label="Close menu"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+			</div>
+			<div class="pwhm-body">
+				<div class="pwhm-boxes">
+					<a class="pwhm-box" href="https://clients.perthwebhosting.net.au/index.php?rp=/login"><strong>MyToolbox</strong><span>Everything for managing your account in one place.</span></a>
+					<a class="pwhm-box" href="https://clients.perthwebhosting.net.au/submitticket.php"><strong>Submit a Ticket</strong><span>Log a support request with our local team.</span></a>
+				</div>
+				<div class="pwhm-group">
+					<a class="pwhm-item" href="/contact-us/"><strong>Contact Us</strong><span>Call, email or chat with our Perth-based team.</span></a>
+					<a class="pwhm-item" href="https://docs.perthwebhosting.net.au"><strong>Knowledge Base</strong><span>Guides and answers to common questions.</span></a>
+					<a class="pwhm-item" href="https://status.perthwebhosting.net.au/"><strong>Network Status</strong><span>Live status of our servers and network.</span></a>
+					<a class="pwhm-item" href="/support/hosting-transfer-request/"><strong>Hosting Transfer Request</strong><span>Ask us to migrate your site or email across.</span></a>
+					<a class="pwhm-item" href="/support/microsoft-transfer-request/"><strong>Microsoft Transfer</strong><span>Move your Microsoft 365 mailboxes across to us.</span></a>
+					<a class="pwhm-item" href="/service-level-agreement/"><strong>Service Level Agreement</strong><span>Our uptime commitment and support standards.</span></a>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<div class="pwhm-actions">
+		<a class="pwhm-btn pwhm-btn--outline" href="tel:+61863654522">Call us</a>
+		<a class="pwhm-btn pwhm-btn--amber" href="/get-started/">Get started →</a>
+	</div>
+</div>
+
+<style>
+button.pwhm-toggle:hover,button.pwhm-toggle:focus{background:none}
+button.pwhm-toggle{margin:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;box-sizing:border-box;display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.pwhm-toggle span{display:block;width:22px;height:2px;border-radius:2px;background:#0B1629}
+button.pwhm-toggle:focus-visible{outline:2px solid #C89439;outline-offset:2px;border-radius:8px}
+@media (max-width:767px){button.pwhm-toggle{display:flex}}
+
+.pwhm{position:fixed;inset:0;z-index:99999;display:flex;flex-direction:column;height:100vh;height:100dvh;background:#FFFEF4;color:#0B1629;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;opacity:0;transform:translateY(-8px);transition:opacity .2s ease,transform .2s ease}
+.pwhm[hidden]{display:none}
+.pwhm.is-open{opacity:1;transform:none}
+:where(.pwhm) *{box-sizing:border-box}
+:where(.pwhm) a{color:inherit;text-decoration:none}
+:where(.pwhm) p{margin:0}
+/* Beat the theme's default button styles (Hello Elementor reset). */
+.pwhm button{margin:0;padding:0;border:0;border-radius:0;background:none;color:inherit;font:inherit;text-align:left;text-transform:none;letter-spacing:normal;box-shadow:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.pwhm button:hover,.pwhm button:focus{background:none;color:inherit;text-decoration:none}
+.pwhm a:focus-visible,.pwhm button:focus-visible{outline:2px solid #C89439;outline-offset:2px;border-radius:8px}
+.pwhm svg{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+
+.pwhm-panels{position:relative;flex:1 1 auto;overflow:hidden}
+.pwhm-panel{position:absolute;inset:0;display:flex;flex-direction:column;background:#FFFEF4;transform:translateX(100%);visibility:hidden;transition:transform .28s ease,visibility 0s linear .28s}
+.pwhm-panel.is-active{transform:none;visibility:visible;transition:transform .28s ease}
+.pwhm-panel[data-panel="main"]{transform:translateX(-30%)}
+.pwhm-panel[data-panel="main"].is-active{transform:none}
+.pwhm-panel::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40px;background:linear-gradient(rgba(255,254,244,0),#FFFEF4);pointer-events:none}
+
+.pwhm-bar{display:flex;flex:0 0 64px;align-items:center;justify-content:space-between;padding:0 20px}
+.pwhm-bar--sub{display:grid;grid-template-columns:1fr auto 1fr;padding:0 12px}
+.pwhm-logo img{display:block;width:auto;height:30px}
+.pwhm .pwhm-close{display:flex;align-items:center;justify-content:center;width:44px;height:44px;justify-self:end}
+.pwhm-close svg{width:16px;height:16px;stroke-width:2.5}
+.pwhm .pwhm-back{display:inline-flex;align-items:center;gap:4px;height:44px;padding:0 8px;font-size:15px;font-weight:700;line-height:18px;justify-self:start}
+.pwhm-back svg{width:14px;height:14px;stroke-width:2}
+.pwhm-title{font-size:17px;font-weight:900;line-height:21px;text-align:center}
+
+.pwhm-body{flex:1 1 auto;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:14px 24px 40px;display:flex;flex-direction:column;gap:26px}
+.pwhm-body--main{padding:8px 20px 24px;gap:0}
+
+.pwhm .pwhm-row{display:flex;align-items:center;justify-content:space-between;width:100%;height:61px;padding:0 16px;border-bottom:1px solid rgba(11,22,41,.14);font-size:18px;font-weight:700;line-height:22px}
+.pwhm .pwhm-row--last{border-bottom:0;height:60px}
+.pwhm-row svg{width:20px;height:20px;stroke-width:2}
+.pwhm-row span{font-size:18px}
+.pwhm-quiz{display:flex;flex-direction:column;gap:4px;margin-top:24px;padding:16px 18px;border:2px solid #0B1629;border-radius:16px}
+.pwhm-quiz strong{font-size:16px;line-height:19px;font-weight:700}
+.pwhm-quiz span{font-size:13.5px;line-height:16px;color:#575557}
+
+.pwhm-group{display:flex;flex-direction:column;gap:4px}
+.pwhm-label{display:flex;align-items:center;gap:8px;padding-bottom:6px;font-size:15px;font-weight:900;line-height:18px}
+.pwhm-label::before{content:"";flex:0 0 7px;height:7px;border-radius:50%;background:#0B1629}
+.pwhm-item{display:flex;flex-direction:column;gap:2px;padding:9px 0}
+.pwhm-item strong,.pwhm-box strong{font-size:15.5px;font-weight:700;line-height:19px}
+.pwhm-item span,.pwhm-box span{font-size:13.5px;line-height:19px;color:#575557}
+.pwhm-boxes{display:flex;flex-direction:column;gap:12px}
+.pwhm-box{display:flex;flex-direction:column;gap:3px;padding:14px 16px;border:2px solid #0B1629;border-radius:16px}
+
+.pwhm-actions{display:flex;flex:0 0 auto;gap:12px;padding:16px 20px calc(28px + env(safe-area-inset-bottom));border-top:1px solid rgba(11,22,41,.14);background:#FFFEF4}
+.pwhm-btn{display:flex;flex:1 1 0;align-items:center;justify-content:center;min-height:48px;padding:15px 12px;border-radius:16px;font-size:15px;font-weight:700;line-height:18px;color:#0B1629}
+.pwhm-btn--outline{border:1.5px solid #0B1629}
+.pwhm-btn--amber{background:#C89439}
+html.pwhm-lock,html.pwhm-lock body{overflow:hidden}
+@media (prefers-reduced-motion:reduce){.pwhm,.pwhm-panel{transition:none!important}}
+</style>
+
+<script>
+(function () {
+	var menu = document.getElementById('pwhm');
+	if (!menu || menu.dataset.ready) return;
+	menu.dataset.ready = '1';
+	// Live outside the sticky header so position:fixed covers the screen.
+	document.body.appendChild(menu);
+
+	var toggles = document.querySelectorAll('.pwhm-toggle');
+	var panels = menu.querySelectorAll('.pwhm-panel');
+	var main = menu.querySelector('[data-panel="main"]');
+	var lastToggle = null, lastRow = null, closeTimer = null;
+
+	function show(panel) {
+		panels.forEach(function (p) { p.classList.toggle('is-active', p === panel); p.toggleAttribute('inert', p !== panel); });
+		panel.querySelector('.pwhm-body').scrollTop = 0;
+	}
+
+	// Wait for the panel to become visible before moving focus into it.
+	function focusSoon(el) { requestAnimationFrame(function () { requestAnimationFrame(function () { el.focus(); }); }); }
+
+	function open(btn) {
+		clearTimeout(closeTimer);
+		lastToggle = btn;
+		show(main);
+		menu.hidden = false;
+		document.documentElement.classList.add('pwhm-lock');
+		toggles.forEach(function (t) { t.setAttribute('aria-expanded', 'true'); });
+		requestAnimationFrame(function () { menu.classList.add('is-open'); });
+		focusSoon(main.querySelector('.pwhm-close'));
+	}
+
+	function close() {
+		menu.classList.remove('is-open');
+		document.documentElement.classList.remove('pwhm-lock');
+		toggles.forEach(function (t) { t.setAttribute('aria-expanded', 'false'); });
+		closeTimer = setTimeout(function () { menu.hidden = true; show(main); }, 200);
+		if (lastToggle) lastToggle.focus();
+	}
+
+	toggles.forEach(function (t) { t.addEventListener('click', function () { open(t); }); });
+
+	menu.addEventListener('click', function (e) {
+		var row = e.target.closest('[data-open]');
+		if (row) {
+			lastRow = row;
+			var sub = menu.querySelector('[data-panel="' + row.dataset.open + '"]');
+			show(sub);
+			focusSoon(sub.querySelector('.pwhm-back'));
+			return;
+		}
+		if (e.target.closest('.pwhm-back')) {
+			show(main);
+			if (lastRow) focusSoon(lastRow);
+			return;
+		}
+		if (e.target.closest('.pwhm-close') || e.target.closest('a')) close();
+	});
+
+	menu.addEventListener('keydown', function (e) {
+		if (e.key === 'Escape') {
+			e.preventDefault();
+			if (!main.classList.contains('is-active')) { show(main); if (lastRow) focusSoon(lastRow); } else { close(); }
+			return;
+		}
+		if (e.key !== 'Tab') return;
+		// Keep focus inside the open menu.
+		var f = [].filter.call(menu.querySelectorAll('a, button'), function (el) { return el.offsetParent !== null && !el.closest('[inert]'); });
+		if (!f.length) return;
+		var first = f[0], last = f[f.length - 1];
+		if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+		else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+	});
+
+	window.addEventListener('resize', function () { if (!menu.hidden && window.innerWidth > 767) close(); });
+	// Back/forward cache: never come back with the menu open.
+	window.addEventListener('pageshow', function () { if (!menu.hidden) { menu.classList.remove('is-open'); menu.hidden = true; document.documentElement.classList.remove('pwhm-lock'); } });
+})();
+</script>
