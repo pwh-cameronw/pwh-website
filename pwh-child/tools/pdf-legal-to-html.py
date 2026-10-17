@@ -13,7 +13,7 @@ import sys
 SECTION = re.compile(r"^\s{0,4}(\d{1,2})\.\s{2,}(\S.*)$")
 CLAUSE = re.compile(r"^\s*(\d{1,2}\.\d{1,2})\.\s+(\S.*)$")
 ITEM = re.compile(r"^\s*([a-z])\.\s+(\S.*)$")
-LINK = re.compile(r"(https?://[^\s<]+[^\s<.,)]|[\w.+-]+@[\w-]+(?:\.[\w-]+)+)")
+LINK = re.compile(r"(?<!\()(https?://[^\s<]+[^\s<.,)]|[\w.+-]+@[\w-]+(?:\.[\w-]+)+)")
 
 
 def linkify(text):
@@ -29,8 +29,10 @@ def main(path, start):
     blocks = []  # (kind, num, text)
     cur = None
     blank = False
+    page_break = False
     for raw in lines:
         if raw.strip().startswith("©"):
+            page_break = True
             continue
         if not raw.strip():
             blank = True
@@ -46,8 +48,12 @@ def main(path, start):
         elif ITEM.match(raw) and indent >= 20:
             m = ITEM.match(raw)
             cur = ["i", m.group(1), m.group(2)]
-        elif cur and not blank:
-            cur[2] += " " + text  # wrapped line
+        elif cur and (not blank or page_break):
+            # Wrapped line (possibly across a page break). A line ending in a
+            # hyphen splits a compound like "time-to-time": join without a space.
+            cur[2] += ("" if re.search(r"\w-$", cur[2]) else " ") + text
+            page_break = False
+            blank = False
             continue
         elif cur and cur[0] == "i" and indent >= 15:
             cur = ["p2", "", text]  # paragraph continuing a clause after its list
@@ -55,6 +61,7 @@ def main(path, start):
             cur = ["p", "", text]
         blocks.append(cur)
         blank = False
+        page_break = False
 
     out, in_list = [], False
     for kind, num, text in blocks:
