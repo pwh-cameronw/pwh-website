@@ -1952,22 +1952,28 @@ LEGAL_CSS = """
 .pwh-l-body ul,.pwh-l-body ol{margin:0 0 16px;padding-left:22px}
 .pwh-l-body li{margin:0 0 6px;padding-left:4px}
 .pwh-l-body li::marker{color:var(--pwh-amber,#c89439)}
-.pwh-l-body a{color:var(--pwh-navy-ink,#0b1629);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.pwh-l-body a{color:var(--pwh-navy-ink,#0b1629);font-weight:700;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere;word-break:break-word}
 .pwh-l-body a:hover{text-decoration-thickness:2px}
 .pwh-l-body strong{color:var(--pwh-navy-ink,#0b1629)}
 .pwh-l-body>.elementor-widget-container>:first-child,.pwh-l-body>:first-child{margin-top:0}
-@media (max-width:767px){.pwh-l-body h2,.pwh-l-body h3{margin-top:32px;font-size:20px;line-height:26px}}
+.pwh-l-body .pwh-l-clause{position:relative;padding-left:52px}
+.pwh-l-body .pwh-l-num{position:absolute;left:0;top:0;font-weight:700;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-l-body .pwh-l-items{margin:-4px 0 16px 52px;padding-left:24px;list-style-type:lower-alpha}
+.pwh-l-body .pwh-l-items li::marker{color:var(--pwh-navy-ink,#0b1629);font-weight:700}
+.pwh-l-updated,.pwh-l-updated p{margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:20px;color:var(--pwh-navy-pale,#c2d3e8)}
+@media (max-width:767px){.pwh-l-body h2,.pwh-l-body h3{margin-top:32px;font-size:20px;line-height:26px}.pwh-l-body .pwh-l-clause{padding-left:40px}.pwh-l-body .pwh-l-items{margin-left:40px;padding-left:20px}}
 """
 
 
-def legal_page(title, content_file):
+def legal_page(title, content_file, updated=None):
     with open(os.path.join(os.path.dirname(__file__), "..", "content", content_file), encoding="utf-8") as fh:
         body_html = fh.read().strip()
     style = widget("html", {"html": "<style>" + " ".join(LEGAL_CSS.split()) + "</style>"}, "pwh-l-style")
     hero = con("Header", [
         style,
         heading(title, "pwh-h1 pwh-text-cream", tag="h1"),
-    ], cls="pwh-page-hero", boxed=1180, gap_px=12, pad=box(96, 0, 80, 0), pad_t=box(80, 24, 64, 24),
+    ] + ([text(f"<p>Document updated: {updated}</p>", "pwh-l-updated")] if updated else []),
+        cls="pwh-page-hero", boxed=1180, gap_px=12, pad=box(96, 0, 80, 0), pad_t=box(80, 24, 64, 24),
         pad_m=box(56, 20, 48, 20), tag="section",
         extra={"background_background": "classic", "background_color": "#0B1629"})
     body = con("Policy", [
@@ -2005,7 +2011,8 @@ def main():
                "email.json": export_standalone(email_page()),
                "web-hosting.json": export_standalone(hosting()),
                "email-overview.json": export_standalone(emails()),
-               "privacy-policy.json": export_standalone(legal_page("Privacy Policy", "privacy-policy.html"))}
+               "privacy-policy.json": export_standalone(legal_page("Privacy Policy", "privacy-policy.html")),
+               "terms-of-service.json": export_standalone(legal_page("Terms of Service", "terms-of-service.html", updated="30/07/2018"))}
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     for name, data in exports.items():
         with open(os.path.join(OUT, "..", "export", name), "w", encoding="utf-8") as fh:

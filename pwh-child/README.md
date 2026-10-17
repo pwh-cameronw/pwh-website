@@ -209,4 +209,5 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 `legal_page()` in `tools/build-templates.py` puts old-site legal copy into the new design: a navy title band and a 760px reading column. The copy lives in `content/*.html`, taken verbatim from www.perthwebhosting.net.au.
 
 - `export/privacy-policy.json`: Privacy Policy (from /privacy-policy/). Put it on the page at `/privacy-policy/`.
-- To add Terms of Service or Acceptable Use, save the old page's text as `content/<name>.html` and add a line to `main()`.
+- `export/terms-of-service.json`: Terms of Service, converted from the old site's PDF (`/wp-content/uploads/2021/10/terms-of-service.pdf`, updated 30/07/2018). Put it on the page at `/terms-of-service/`. `tools/pdf-legal-to-html.py` turns numbered legal PDFs (via `pdftotext -layout`) into the clause HTML, keeping the wording exactly.
+- To add Acceptable Use, save the old page's text as `content/<name>.html` and add a line to `main()`.
