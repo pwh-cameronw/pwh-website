@@ -127,7 +127,7 @@ button.pwhm-toggle:focus-visible{outline:2px solid #C89439;outline-offset:2px;bo
 .pwhm a:focus-visible,.pwhm button:focus-visible{outline:2px solid #C89439;outline-offset:2px;border-radius:8px}
 .pwhm svg{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
 
-.pwhm-panels{position:relative;flex:1 1 auto;overflow:hidden}
+.pwhm-panels{position:relative;flex:1 1 auto;overflow:hidden;overflow:clip}
 .pwhm-panel{position:absolute;inset:0;display:flex;flex-direction:column;background:#FFFEF4;transform:translateX(100%);visibility:hidden;transition:transform .28s ease,visibility 0s linear .28s}
 .pwhm-panel.is-active{transform:none;visibility:visible;transition:transform .28s ease}
 .pwhm-panel[data-panel="main"]{transform:translateX(-30%)}
@@ -181,16 +181,20 @@ html.pwhm-lock,html.pwhm-lock body{overflow:hidden}
 
 	var toggles = document.querySelectorAll('.pwhm-toggle');
 	var panels = menu.querySelectorAll('.pwhm-panel');
+	var box = menu.querySelector('.pwhm-panels');
 	var main = menu.querySelector('[data-panel="main"]');
 	var lastToggle = null, lastRow = null, closeTimer = null;
 
 	function show(panel) {
 		panels.forEach(function (p) { p.classList.toggle('is-active', p === panel); p.toggleAttribute('inert', p !== panel); });
 		panel.querySelector('.pwhm-body').scrollTop = 0;
+		box.scrollLeft = 0;
 	}
 
 	// Wait for the panel to become visible before moving focus into it.
-	function focusSoon(el) { requestAnimationFrame(function () { requestAnimationFrame(function () { el.focus(); }); }); }
+	// preventScroll: some phone browsers otherwise scroll the menu sideways to
+	// reach a panel that is still sliding in, leaving it stuck off-screen.
+	function focusSoon(el) { requestAnimationFrame(function () { requestAnimationFrame(function () { el.focus({ preventScroll: true }); box.scrollLeft = 0; }); }); }
 
 	function open(btn) {
 		clearTimeout(closeTimer);
@@ -208,10 +212,11 @@ html.pwhm-lock,html.pwhm-lock body{overflow:hidden}
 		document.documentElement.classList.remove('pwhm-lock');
 		toggles.forEach(function (t) { t.setAttribute('aria-expanded', 'false'); });
 		closeTimer = setTimeout(function () { menu.hidden = true; show(main); }, 200);
-		if (lastToggle) lastToggle.focus();
+		if (lastToggle) lastToggle.focus({ preventScroll: true });
 	}
 
 	toggles.forEach(function (t) { t.addEventListener('click', function () { open(t); }); });
+	box.addEventListener('scroll', function () { if (box.scrollLeft) box.scrollLeft = 0; });
 
 	menu.addEventListener('click', function (e) {
 		var row = e.target.closest('[data-open]');
@@ -241,8 +246,8 @@ html.pwhm-lock,html.pwhm-lock body{overflow:hidden}
 		var f = [].filter.call(menu.querySelectorAll('a, button'), function (el) { return el.offsetParent !== null && !el.closest('[inert]'); });
 		if (!f.length) return;
 		var first = f[0], last = f[f.length - 1];
-		if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-		else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+		if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus({ preventScroll: true }); }
+		else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus({ preventScroll: true }); }
 	});
 
 	window.addEventListener('resize', function () { if (!menu.hidden && window.innerWidth > 767) close(); });
