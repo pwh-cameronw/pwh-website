@@ -764,6 +764,20 @@ body .pwh-btn--sm .elementor-button {
 	--overlay-opacity: 1 !important;
 }
 
+/* Phones: the photo across the top, fading down into navy, so the heading,
+   text and button sit on navy below it. */
+@media (max-width: 767px) {
+	.pwh-why {
+		background-size: auto 340px !important;
+		background-position: center top !important;
+		background-repeat: no-repeat !important;
+	}
+
+	.pwh-why::before {
+		background-image: linear-gradient(180deg, rgba(11, 22, 41, 0) 170px, rgba(11, 22, 41, 0.85) 290px, #0b1629 340px) !important;
+	}
+}
+
 /* Clients strip – dashed logo slots */
 .pwh-logo-slot {
 	background-color: var(--pwh-navy-mist);
