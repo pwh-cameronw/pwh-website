@@ -1,0 +1,30 @@
+/* Home products slider (phones): scroll the cards inside the row, one at a time,
+   instead of letting them push the page sideways. The dots below it (HTML widget
+   with .pwh-slider-dots) drive and follow this scroll. */
+@media (max-width: 767px) {
+	.pwh-products-slider {
+		overflow-x: auto;
+		overscroll-behavior-x: contain;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+	}
+	.pwh-products-slider::-webkit-scrollbar {
+		display: none;
+	}
+	.pwh-products-slider > .e-con,
+	.pwh-products-slider > .elementor-element {
+		flex-shrink: 0;
+		scroll-snap-align: start;
+	}
+	/* The theme's default button hover/focus fill (pink) shows on a tapped dot. */
+	.pwh-slider-dots button:hover,
+	.pwh-slider-dots button:focus {
+		background: none !important;
+		color: inherit !important;
+	}
+	/* Safety net: nothing on a phone should scroll the page sideways. */
+	html {
+		overflow-x: clip;
+	}
+}

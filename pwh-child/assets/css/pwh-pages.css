@@ -187,6 +187,38 @@
 .pwh-l-updated,.pwh-l-updated p{margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:20px;color:var(--pwh-navy-pale,#c2d3e8)}
 @media (max-width:767px){.pwh-l-body h2,.pwh-l-body h3{margin-top:32px;font-size:20px;line-height:26px}.pwh-l-body .pwh-l-clause{padding-left:40px}.pwh-l-body .pwh-l-items{margin-left:40px;padding-left:20px}}
 
+/* ---- Home products slider (phones) ---- */
+/* Home products slider (phones): scroll the cards inside the row, one at a time,
+   instead of letting them push the page sideways. The dots below it (HTML widget
+   with .pwh-slider-dots) drive and follow this scroll. */
+@media (max-width: 767px) {
+	.pwh-products-slider {
+		overflow-x: auto;
+		overscroll-behavior-x: contain;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+	}
+	.pwh-products-slider::-webkit-scrollbar {
+		display: none;
+	}
+	.pwh-products-slider > .e-con,
+	.pwh-products-slider > .elementor-element {
+		flex-shrink: 0;
+		scroll-snap-align: start;
+	}
+	/* The theme's default button hover/focus fill (pink) shows on a tapped dot. */
+	.pwh-slider-dots button:hover,
+	.pwh-slider-dots button:focus {
+		background: none !important;
+		color: inherit !important;
+	}
+	/* Safety net: nothing on a phone should scroll the page sideways. */
+	html {
+		overflow-x: clip;
+	}
+}
+
 /* ---- Home reviews carousel dots ---- */
 /* Reviews carousel (mobile): dots styled like the Products slider dots */
 @media (max-width: 767px) {

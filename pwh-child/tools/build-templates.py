@@ -2007,6 +2007,8 @@ def page_css():
         ("Email overview", EMAILS_CSS[len(HOSTING_CSS):]),
         ("Legal pages", LEGAL_CSS),
     ]
+    with open(os.path.join(snippets, "home-products-slider.css"), encoding="utf-8") as fh:
+        parts.append(("Home products slider (phones)", fh.read()))
     # Home reviews carousel (mobile Listing Grid widget 35e1d3f): dots like the Products slider.
     with open(os.path.join(snippets, "reviews-slider-dots.css"), encoding="utf-8") as fh:
         dots = re.sub(r"/\*.*?\*/\s*", "", fh.read(), count=1, flags=re.S)

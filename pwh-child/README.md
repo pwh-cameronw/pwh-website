@@ -215,6 +215,6 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 
 ## Page and snippet CSS (`assets/css/pwh-pages.css`)
 
-The standalone page templates (Contact, Microsoft 365, Reseller, Email, Email overview, Web Hosting, legal pages), the mobile menu, the phone footer and the Home reviews-carousel dots all get their CSS from `assets/css/pwh-pages.css`, which the theme loads on every page and in the Elementor editor. The templates in `export/` and the snippets in `snippets/` no longer carry their own `<style>` blocks, so **upload the theme before importing them**.
+The standalone page templates (Contact, Microsoft 365, Reseller, Email, Email overview, Web Hosting, legal pages), the mobile menu, the phone footer, the Home products slider (`.pwh-products-slider`, which scrolls sideways on phones instead of widening the page) and the Home reviews-carousel dots all get their CSS from `assets/css/pwh-pages.css`, which the theme loads on every page and in the Elementor editor. The templates in `export/` and the snippets in `snippets/` no longer carry their own `<style>` blocks, so **upload the theme before importing them**.
 
 The file is generated: edit the CSS in `tools/build-templates.py` (or `snippets/*.css`) and run `python3 tools/build-templates.py`.
