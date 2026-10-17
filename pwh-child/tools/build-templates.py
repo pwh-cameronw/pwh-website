@@ -510,6 +510,7 @@ def home():
             "background_overlay_color_b_stop": pct(65),
             "background_overlay_gradient_type": "linear",
             "background_overlay_gradient_angle": {"unit": "deg", "size": 90, "sizes": []},
+            "background_overlay_opacity": {"unit": "px", "size": 1, "sizes": []},
         })
 
     testimonials = con("Testimonials", [

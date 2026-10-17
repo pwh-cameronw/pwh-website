@@ -759,6 +759,9 @@ body .pwh-btn--sm .elementor-button {
    show as grey on cream while Elementor lazy-loads the background. */
 .pwh-why {
 	background-color: var(--pwh-navy-ink);
+	/* Full-strength gradient overlay (navy 80% fading out by 65%). Elementor
+	   falls back to 50% when the overlay opacity isn't set, which washes it out. */
+	--overlay-opacity: 1 !important;
 }
 
 /* Clients strip – dashed logo slots */

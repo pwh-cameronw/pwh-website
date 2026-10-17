@@ -1371,6 +1371,11 @@
      "unit": "deg",
      "size": 90,
      "sizes": []
+    },
+    "background_overlay_opacity": {
+     "unit": "px",
+     "size": 1,
+     "sizes": []
     }
    },
    "elements": [
