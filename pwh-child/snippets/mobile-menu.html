@@ -113,7 +113,9 @@ button.pwhm-toggle:hover,button.pwhm-toggle:focus{background:none}
 button.pwhm-toggle{margin:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;box-sizing:border-box;display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .pwhm-toggle span{display:block;width:22px;height:2px;border-radius:2px;background:#0B1629}
 button.pwhm-toggle:focus-visible{outline:2px solid #C89439;outline-offset:2px;border-radius:8px}
-@media (max-width:767px){button.pwhm-toggle{display:flex}}
+@media (max-width:767px){button.pwhm-toggle{display:flex}
+/* Sit at the right-hand end of the header row, whatever order the other widgets have. */
+.elementor-widget:has(.pwhm-toggle){order:99}}
 
 .pwhm{position:fixed;inset:0;z-index:99999;display:flex;flex-direction:column;height:100vh;height:100dvh;background:#FFFEF4;color:#0B1629;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;opacity:0;transform:translateY(-8px);transition:opacity .2s ease,transform .2s ease}
 .pwhm[hidden]{display:none}
