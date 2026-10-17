@@ -1,0 +1,80 @@
+<!--
+  PWH footer link rows for phones (Figma: Mobile page, "Footer / Mobile" 507:3747).
+
+  Paste into an Elementor HTML widget in the footer, straight after the brand
+  block (logo, address, social icons). Show it on Mobile only, and hide the
+  four link columns (Products, Business Products, Support, About PWH) on Mobile.
+  Each row opens to show its links. No theme files or JavaScript needed.
+  The style block also tidies the rest of the footer on phones (logo size,
+  social icons, bottom row) to match the design.
+-->
+<nav class="pwhf" aria-label="Footer">
+	<details class="pwhf-sec">
+		<summary>Products<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4l6 6-6 6"/></svg></summary>
+		<ul>
+			<li><a href="/domains/">Domains</a></li>
+			<li><a href="/web-hosting/">Web Hosting</a></li>
+			<li><a href="/e-mail/">Email</a></li>
+			<li><a href="/e-mail/microsoft-365/">Microsoft 365</a></li>
+			<li><a href="/reseller-web-hosting/">Reseller</a></li>
+			<li><a href="/vps-hosting/">VPS Hosting</a></li>
+		</ul>
+	</details>
+	<details class="pwhf-sec">
+		<summary>About<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4l6 6-6 6"/></svg></summary>
+		<ul>
+			<li><a href="/about-us/">About Us</a></li>
+			<li><a href="/privacy-policy/">Privacy Policy</a></li>
+			<li><a href="/terms-of-service/">Terms of Service</a></li>
+			<li><a href="/acceptable-use-policy/">Acceptable Use Policy</a></li>
+		</ul>
+	</details>
+	<details class="pwhf-sec">
+		<summary>Support<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4l6 6-6 6"/></svg></summary>
+		<ul>
+			<li><a href="/contact-us/">Contact Us</a></li>
+			<li><a href="https://clients.perthwebhosting.net.au/index.php?rp=/login">MyToolbox</a></li>
+			<li><a href="https://clients.perthwebhosting.net.au/submitticket.php">Submit a Ticket</a></li>
+			<li><a href="https://www.teamviewer.com/link/?url=505374">Remote Support</a></li>
+			<li><a href="https://download.teamviewer.com/download/TeamViewerQS.dmg">Mac Remote Support</a></li>
+			<li><a href="https://docs.perthwebhosting.net.au">Knowledge Base</a></li>
+			<li><a href="https://status.perthwebhosting.net.au/">Network Status</a></li>
+			<li><a href="/support/hosting-transfer-request/">Hosting Transfer Request</a></li>
+			<li><a href="/support/microsoft-transfer-request/">Microsoft Transfer Request</a></li>
+			<li><a href="/service-level-agreement/">Service Level Agreement</a></li>
+		</ul>
+	</details>
+</nav>
+
+<style>
+.pwhf{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#FFFEF4}
+.pwhf .pwhf-sec{margin:0;padding:0;border:0;border-bottom:1px solid #FFFEF4}
+.pwhf .pwhf-sec summary{display:flex;align-items:center;justify-content:space-between;height:60px;padding:0 16px;margin:0;list-style:none;cursor:pointer;font-size:18px;font-weight:700;line-height:22px;color:#FFFEF4;-webkit-tap-highlight-color:transparent}
+.pwhf .pwhf-sec summary::-webkit-details-marker{display:none}
+.pwhf .pwhf-sec summary::marker{content:""}
+.pwhf .pwhf-sec summary:focus-visible{outline:2px solid #C89439;outline-offset:-2px;border-radius:6px}
+.pwhf svg{flex:0 0 20px;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease}
+.pwhf .pwhf-sec[open] svg{transform:rotate(90deg)}
+.pwhf ul{display:flex;flex-direction:column;gap:12px;margin:0;padding:0 16px 20px;list-style:none}
+.pwhf li{margin:0;padding:0}
+.pwhf a{color:#EAF0F8;font-size:14.5px;font-weight:400;line-height:18px;text-decoration:none}
+.pwhf a:hover,.pwhf a:focus-visible{color:#FFFEF4;text-decoration:underline;text-underline-offset:3px}
+@media (prefers-reduced-motion:reduce){.pwhf svg{transition:none}}
+
+/* Phones: match the rest of the footer to the Figma "Footer / Mobile" frame.
+   The IDs are this site's footer elements; if the footer is rebuilt these
+   rules simply stop applying. */
+@media (max-width:767px){
+	.elementor-widget:has(.pwhf){width:100%;max-width:100%;align-self:stretch}
+	.elementor-element-e6eb937 img{width:201px!important}
+	.elementor-element-ccbceff{--grid-column-gap:10px!important}
+	.elementor-element-ccbceff .elementor-social-icon{width:34px!important;height:34px!important;font-size:16px!important}
+	.elementor-element-28c264a{--padding-bottom:0px!important;padding-bottom:0!important}
+	.elementor-element-086f9f4{border-top:0!important;--padding-top:0px!important;padding-top:0!important}
+	.elementor-element-9f2bc94{--padding-top:20px!important;padding-top:20px!important;--gap:12px!important;gap:12px!important}
+	.elementor-element-8aeaae7,.elementor-element-8aeaae7>.e-con-inner{--gap:0px!important;--row-gap:0px!important;gap:0!important}
+	.elementor-element-7af8244,.elementor-element-7af8244 p,.elementor-element-b366c05,.elementor-element-b366c05 p{font-size:13px!important;line-height:16px!important;color:#C2D3E8!important}
+	.elementor-element-7af8244 p{max-width:245px}
+	.elementor-element-87845ec{--justify-content:flex-start!important;justify-content:flex-start!important}
+}
+</style>
