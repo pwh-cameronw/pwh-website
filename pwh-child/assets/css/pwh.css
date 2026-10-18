@@ -1716,6 +1716,11 @@ body .pwh-btn--sm .elementor-button {
 	background-color: var(--pwh-navy-ink);
 }
 
+/* Play button: cream rather than UAEL's default black, which disappears on navy. */
+.elementor-widget-uael-video .uael-video__play-icon svg {
+	fill: var(--pwh-cream);
+}
+
 .pwh-video-caption,
 .pwh-video-caption p {
 	margin: 0;
