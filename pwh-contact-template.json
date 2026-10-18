@@ -724,70 +724,11 @@
        "elements": []
       },
       {
-       "id": "b0320d2",
+       "id": "7e61ee1",
        "elType": "widget",
-       "widgetType": "form",
+       "widgetType": "shortcode",
        "settings": {
-        "form_name": "Contact",
-        "form_fields": [
-         {
-          "_id": "3cd17a8",
-          "custom_id": "name",
-          "field_type": "text",
-          "field_label": "Full Name",
-          "placeholder": "Your name",
-          "required": "true",
-          "width": "100"
-         },
-         {
-          "_id": "537fd08",
-          "custom_id": "email",
-          "field_type": "email",
-          "field_label": "Email Address",
-          "placeholder": "you@business.com.au",
-          "required": "true",
-          "width": "100"
-         },
-         {
-          "_id": "3cb666f",
-          "custom_id": "phone",
-          "field_type": "tel",
-          "field_label": "Phone Number (optional)",
-          "placeholder": "04XX XXX XXX",
-          "width": "100"
-         },
-         {
-          "_id": "9c5670c",
-          "custom_id": "enquiry",
-          "field_type": "select",
-          "field_label": "Enquiry Type",
-          "field_options": "New sales enquiry\nSupport issue\nFeedback or review\nSomething else",
-          "width": "100"
-         },
-         {
-          "_id": "42d1a5c",
-          "custom_id": "message",
-          "field_type": "textarea",
-          "field_label": "Message",
-          "placeholder": "Tell us a bit about what you need.",
-          "required": "true",
-          "rows": 4,
-          "width": "100"
-         }
-        ],
-        "show_labels": "yes",
-        "mark_required": "yes",
-        "button_text": "Send Message",
-        "button_width": "100",
-        "button_size": "md",
-        "submit_actions": [
-         "email"
-        ],
-        "email_subject": "New website enquiry from [field id=\"name\"]",
-        "email_reply_to": "email",
-        "success_message": "Thanks, we've got your message. We'll be in touch, usually the same business day.",
-        "error_message": "Sorry, something went wrong. Please call us on 08 6365 4522.",
-        "required_field_message": "This field is required.",
+        "shortcode": "[gravityform id=\"1\" title=\"false\" description=\"false\" ajax=\"true\" theme=\"gravity-theme\"]",
         "_css_classes": "pwh-form"
        },
        "elements": []

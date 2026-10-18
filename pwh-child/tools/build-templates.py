@@ -1049,6 +1049,27 @@ CONTACT_CSS = """
 .pwh-form .elementor-select-wrapper .select-caret-down-wrapper{right:16px;color:var(--pwh-grey,#828082);font-size:12px}
 .pwh-form .elementor-button{width:100%;min-height:48px;padding:15px 30px;border-radius:16px;background:var(--pwh-amber,#c89439)!important;color:var(--pwh-navy-ink,#0b1629)!important;font-family:Inter,sans-serif;font-size:15px;font-weight:700}
 .pwh-form .elementor-button:hover{background:#b5832c!important}
+.pwh-form .gform_wrapper{margin:0;font-family:Inter,sans-serif}
+.pwh-form .gform_wrapper .gform_fields{grid-row-gap:20px}
+.pwh-form .gform_wrapper .gfield_label{display:block;margin:0 0 8px;padding:0;font-family:Inter,sans-serif;font-size:13px;font-weight:700;line-height:16px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-form .gform_wrapper .gfield_required{display:inline;margin:0;padding-left:4px;color:var(--pwh-amber-deep,#9e6e25);font-size:inherit}
+.pwh-form .gform_wrapper.gravity-theme input:not([type=submit]):not([type=hidden]):not([type=checkbox]):not([type=radio]),.pwh-form .gform_wrapper.gravity-theme select,.pwh-form .gform_wrapper.gravity-theme textarea{box-sizing:border-box;width:100%;min-height:46px;margin:0;padding:14px 16px;border:1.5px solid var(--pwh-navy-pale,#c2d3e8);border-radius:8px;background-color:var(--pwh-cream,#fffef4);color:var(--pwh-navy-ink,#0b1629);font-family:Inter,sans-serif;font-size:15px;line-height:18px;box-shadow:none}
+.pwh-form .gform_wrapper.gravity-theme .gfield textarea,.pwh-form .gform_wrapper.gravity-theme .gfield textarea.large{height:92px;min-height:92px;resize:vertical}
+.pwh-form .gform_wrapper.gravity-theme select{-webkit-appearance:none;appearance:none;padding-right:44px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23828082' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:12px 8px;cursor:pointer}
+.pwh-form .gform_wrapper ::placeholder{color:var(--pwh-grey,#828082);opacity:1}
+.pwh-form .gform_wrapper.gravity-theme input:focus,.pwh-form .gform_wrapper.gravity-theme select:focus,.pwh-form .gform_wrapper.gravity-theme textarea:focus{outline:2px solid var(--pwh-amber,#c89439);outline-offset:1px;box-shadow:none}
+.pwh-form .gform_wrapper.gravity-theme .gform_footer{margin:20px 0 0;padding:0}
+.pwh-form .gform_wrapper.gravity-theme .gform_footer input[type=submit],.pwh-form .gform_wrapper.gravity-theme .gform_footer button{width:100%;min-height:48px;margin:0;padding:15px 30px;border:0;border-radius:16px;background:var(--pwh-amber,#c89439);color:var(--pwh-navy-ink,#0b1629);font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px;cursor:pointer;transition:background .2s}
+.pwh-form .gform_wrapper.gravity-theme .gform_footer input[type=submit]:hover,.pwh-form .gform_wrapper.gravity-theme .gform_footer input[type=submit]:focus{background:#b5832c;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-form .gform_wrapper.gravity-theme .gform_footer input[type=submit]:focus-visible{outline:2px solid var(--pwh-navy-ink,#0b1629);outline-offset:2px}
+.pwh-form .gform_wrapper .gform_ajax_spinner{margin-left:12px}
+.pwh-form .gform_wrapper.gravity-theme .gfield.gfield_error input:not([type=submit]):not([type=hidden]):not([type=checkbox]):not([type=radio]),.pwh-form .gform_wrapper.gravity-theme .gfield.gfield_error select,.pwh-form .gform_wrapper.gravity-theme .gfield.gfield_error textarea{border-color:#b3261e}
+.pwh-form .gform_wrapper.gravity-theme .gfield_error .gfield_label{color:var(--pwh-navy-ink,#0b1629)}
+.pwh-form .gform_wrapper.gravity-theme .gfield_validation_message,.pwh-form .gform_wrapper.gravity-theme .validation_message{margin:6px 0 0;padding:0;border:0;background:none;color:#b3261e;font-size:13px;line-height:16px}
+.pwh-form .gform_wrapper.gravity-theme .gform_validation_errors{margin:0 0 20px;padding:12px 16px;border:1.5px solid #b3261e;border-radius:8px;background:#fdf1f0;box-shadow:none}
+.pwh-form .gform_wrapper.gravity-theme .gform_validation_errors>h2{margin:0;color:#b3261e;font-family:Inter,sans-serif;font-size:14px;font-weight:700;line-height:18px}
+.pwh-form .gform_wrapper.gravity-theme .gform_validation_errors>h2 .gform-icon{display:none}
+.pwh-form .gform_confirmation_message{padding:16px 20px;border-radius:8px;background:var(--pwh-navy-mist,#eaf0f8);color:var(--pwh-navy-ink,#0b1629);font-family:Inter,sans-serif;font-size:15px;line-height:22px}
 .pwh-c-calendly{border:2px dashed var(--pwh-navy-pale,#c2d3e8);border-radius:16px;background:var(--pwh-navy-mist,#eaf0f8)}
 .pwh-c-calendly-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:20px;font-weight:900;line-height:24px;color:var(--pwh-navy-ink,#0b1629)}
 .pwh-c-style{display:none!important}
@@ -1113,32 +1134,9 @@ def contact():
     details["elements"][0]["elements"][0]["settings"]["_css_classes"] = "pwh-c-title pwh-c-title--16"
     details["elements"][1]["settings"].update({"_flex_size": "grow"})
 
-    form = widget("form", {
-        "form_name": "Contact",
-        "form_fields": [
-            {"_id": _id("f"), "custom_id": "name", "field_type": "text", "field_label": "Full Name",
-             "placeholder": "Your name", "required": "true", "width": "100"},
-            {"_id": _id("f"), "custom_id": "email", "field_type": "email", "field_label": "Email Address",
-             "placeholder": "you@business.com.au", "required": "true", "width": "100"},
-            {"_id": _id("f"), "custom_id": "phone", "field_type": "tel", "field_label": "Phone Number (optional)",
-             "placeholder": "04XX XXX XXX", "width": "100"},
-            {"_id": _id("f"), "custom_id": "enquiry", "field_type": "select", "field_label": "Enquiry Type",
-             "field_options": "New sales enquiry\nSupport issue\nFeedback or review\nSomething else", "width": "100"},
-            {"_id": _id("f"), "custom_id": "message", "field_type": "textarea", "field_label": "Message",
-             "placeholder": "Tell us a bit about what you need.", "required": "true", "rows": 4, "width": "100"},
-        ],
-        "show_labels": "yes",
-        "mark_required": "yes",
-        "button_text": "Send Message",
-        "button_width": "100",
-        "button_size": "md",
-        "submit_actions": ["email"],
-        "email_subject": "New website enquiry from [field id=\"name\"]",
-        "email_reply_to": "email",
-        "success_message": "Thanks, we've got your message. We'll be in touch, usually the same business day.",
-        "error_message": "Sorry, something went wrong. Please call us on 08 6365 4522.",
-        "required_field_message": "This field is required.",
-    }, "pwh-form")
+    # Gravity Forms "PWH Contact" (import export/gravityforms-contact.json, see gf_contact_form()).
+    # Change id="1" to the form's ID if Gravity Forms gives it a different one on import.
+    form = widget("shortcode", {"shortcode": GF_CONTACT_SHORTCODE}, "pwh-form")
 
     form_col = con("FormCol", [
         heading("Send us a message", "pwh-h3 pwh-text-ink", tag="h2"),
@@ -2043,6 +2041,82 @@ def export_standalone(data):
     return json.loads(raw)
 
 
+# --- Gravity Forms: contact form ---------------------------------------------
+GF_CONTACT_SHORTCODE = '[gravityform id="1" title="false" description="false" ajax="true" theme="gravity-theme"]'
+
+
+def gf_contact_form():
+    """Gravity Forms export (Forms > Import/Export > Import Forms) for the Contact page."""
+    def field(fid, kind, label, required=False, **extra):
+        f = {"type": kind, "id": fid, "formId": 1, "label": label, "adminLabel": "", "isRequired": required,
+             "size": "large", "errorMessage": "", "visibility": "visible", "inputs": None, "description": "",
+             "allowsPrepopulate": False, "inputMask": False, "inputMaskValue": "", "inputMaskIsCustom": False,
+             "maxLength": "", "inputType": "", "labelPlacement": "", "descriptionPlacement": "",
+             "subLabelPlacement": "", "placeholder": "", "cssClass": "", "inputName": "", "noDuplicates": False,
+             "defaultValue": "", "enableAutocomplete": False, "autocompleteAttribute": "", "choices": "",
+             "conditionalLogic": "", "productField": "", "layoutGridColumnSpan": 12, "enableEnhancedUI": 0,
+             "fields": "", "displayOnly": ""}
+        f.update(extra)
+        return f
+
+    choices = [{"text": t, "value": t, "isSelected": False, "price": ""}
+               for t in ("New sales enquiry", "Support issue", "Feedback or review", "Something else")]
+    form = {
+        "title": "PWH Contact",
+        "description": "",
+        "labelPlacement": "top_label",
+        "descriptionPlacement": "below",
+        "subLabelPlacement": "below",
+        "validationPlacement": "below",
+        "validationSummary": False,
+        "requiredIndicator": "asterisk",
+        "customRequiredIndicator": "(Required)",
+        "button": {"type": "text", "text": "Send Message", "imageUrl": "", "width": "full",
+                   "location": "bottom", "layoutGridColumnSpan": 12, "id": "submit"},
+        "fields": [
+            field(1, "text", "Full Name", True, placeholder="Your name",
+                  enableAutocomplete=True, autocompleteAttribute="name"),
+            field(2, "email", "Email Address", True, placeholder="you@business.com.au",
+                  emailConfirmEnabled=False, enableAutocomplete=True, autocompleteAttribute="email"),
+            field(3, "phone", "Phone Number (optional)", placeholder="04XX XXX XXX", phoneFormat="international",
+                  enableAutocomplete=True, autocompleteAttribute="tel"),
+            field(4, "select", "Enquiry Type", choices=choices),
+            field(5, "textarea", "Message", True, placeholder="Tell us a bit about what you need.",
+                  useRichTextEditor=False),
+        ],
+        "version": "2.9.29",
+        "markupVersion": 2,
+        "nextFieldId": 6,
+        "cssClass": "",
+        "enableHoneypot": True,
+        "enableAnimation": False,
+        "save": {"enabled": False, "button": {"type": "link", "text": "Save and Continue Later"}},
+        "limitEntries": False,
+        "scheduleForm": False,
+        "requireLogin": False,
+        "is_active": "1",
+        "is_trash": "0",
+        "notifications": {
+            "6a1f0c2e9b7d4": {
+                "id": "6a1f0c2e9b7d4", "isActive": True, "name": "Admin Notification", "service": "wordpress",
+                "event": "form_submission", "toType": "email", "to": "{admin_email}",
+                "subject": "New website enquiry from {Full Name:1}",
+                "message": "{all_fields}", "from": "{admin_email}", "fromName": "Perth Web Hosting website",
+                "replyTo": "{Email Address:2}", "bcc": "", "disableAutoformat": False,
+                "routing": None, "conditionalLogic": None,
+            },
+        },
+        "confirmations": {
+            "6a1f0c2e9b7d5": {
+                "id": "6a1f0c2e9b7d5", "name": "Default Confirmation", "isDefault": True, "type": "message",
+                "message": "Thanks, we've got your message. We'll be in touch, usually the same business day.",
+                "url": "", "pageId": "", "queryString": "", "disableAutoformat": False, "conditionalLogic": [],
+            },
+        },
+    }
+    return {"0": form, "version": "2.9.29"}
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     files = {
@@ -2066,6 +2140,7 @@ def main():
                "terms-of-service.json": export_standalone(legal_page("Terms of Service", "terms-of-service.html", updated="17/10/2026")),
                "acceptable-use-policy.json": export_standalone(legal_page("Acceptable Use Policy", "acceptable-use-policy.html", updated="17/10/2026")),
                "service-level-agreement.json": export_standalone(legal_page("Service Level Agreement", "service-level-agreement.html", updated="17/10/2026"))}
+    exports["gravityforms-contact.json"] = gf_contact_form()
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     with open(os.path.join(OUT, "..", "assets", "css", "pwh-pages.css"), "w", encoding="utf-8") as fh:
         fh.write(page_css())

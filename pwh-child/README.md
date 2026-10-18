@@ -156,7 +156,9 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 `export/contact.json` is a self-contained Elementor template. Import it with **Templates → Saved Templates → Import Templates**; no theme update needed. Its CSS is inside the template (a hidden HTML widget), links are relative, and the hero image is a Media Library URL.
 
 - Uses **`contactus-hero.jpg`** from the Media Library (hero photo, shown under a 60% navy overlay).
-- The form is an **Elementor Pro Form**: Full Name, Email, Phone (optional), Enquiry Type, Message. It emails the site admin address by default; change *Actions After Submit → Email → To* if needed.
+- The form is **Gravity Forms** ("PWH Contact": Full Name, Email, Phone (optional), Enquiry Type, Message). Import `export/gravityforms-contact.json` first with **Forms → Import/Export → Import Forms**. The page shows it with a Shortcode widget (class `pwh-form`): `[gravityform id="1" title="false" description="false" ajax="true" theme="gravity-theme"]`. If the imported form isn't ID 1 (see **Forms**), change the `id` in that shortcode.
+  - It emails the site admin address, with Reply-To set to the sender; change it under **Settings → Notifications** on the form. Honeypot anti-spam is on.
+  - Styling is in the theme (`assets/css/pwh-pages.css`) and targets the shortcode's `theme="gravity-theme"`, so keep that attribute.
 - The map is a **Google Maps** widget set to 533 Hay Street.
 - **Placeholders kept from the design:** the Calendly box ("Prefer we call you?"; swap in your Calendly inline embed with an HTML widget), and the copy on the MyToolbox card ("Change this copy and all.").
 - Card links: *View plans →* jumps to the booking section (`#book-a-call`), *Start the quiz →* goes to `/get-started/`, *Login to MyToolbox →* goes to `/client-login/`.
