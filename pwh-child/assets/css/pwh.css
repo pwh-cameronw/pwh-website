@@ -1699,6 +1699,23 @@ body .pwh-btn--sm .elementor-button {
 	background: var(--pwh-cream) no-repeat 54% 50% / 21px 24px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 24'%3E%3Cpath d='M0 0v24l21-12z' fill='%230b1629'/%3E%3C/svg%3E");
 }
 
+/* Video widgets (UAEL or Elementor) in a centred column, e.g. About's intro
+   video: fill the column instead of collapsing to zero width. */
+.e-con > .elementor-widget-uael-video,
+.e-con > .elementor-widget-video,
+.e-con-inner > .elementor-widget-uael-video,
+.e-con-inner > .elementor-widget-video {
+	width: 100%;
+	align-self: stretch;
+}
+
+.elementor-widget-uael-video .uael-video__outer-wrap,
+.elementor-widget-video .elementor-wrapper {
+	border-radius: 16px;
+	overflow: hidden;
+	background-color: var(--pwh-navy-ink);
+}
+
 .pwh-video-caption,
 .pwh-video-caption p {
 	margin: 0;
