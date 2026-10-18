@@ -2029,3 +2029,21 @@ body .pwh-btn--sm .elementor-button {
 		transform: none;
 	}
 }
+
+/* UAEL Gravity Form Styler: its Font Awesome caret doubles up with the Gravity
+   Forms select arrow. Hide the caret and show one chevron in every state. */
+.elementor-widget-uael-gf-styler .uael-gf-select-custom::after {
+	display: none !important;
+}
+
+.elementor-widget-uael-gf-styler .gform_wrapper select:not([multiple]),
+.elementor-widget-uael-gf-styler .gform_wrapper select:not([multiple]):hover,
+.elementor-widget-uael-gf-styler .gform_wrapper select:not([multiple]):focus {
+	-webkit-appearance: none !important;
+	appearance: none !important;
+	padding-right: 44px !important;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23828082' stroke-width='1.6'/%3E%3C/svg%3E") !important;
+	background-repeat: no-repeat !important;
+	background-position: right 16px center !important;
+	background-size: 12px 8px !important;
+}
