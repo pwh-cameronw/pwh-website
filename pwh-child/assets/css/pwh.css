@@ -1237,6 +1237,76 @@ body .pwh-btn--sm .elementor-button {
 	}
 }
 
+/* Phones: swipe through the plan cards one at a time, like the Home products
+   slider, with dots underneath (added by pwh-pricing.js). */
+.pwh-plan-dots {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	gap: 2px;
+	margin-top: 4px;
+}
+
+@media (max-width: 767px) {
+	.pwh-plans > .e-con-inner,
+	.pwh-plans.e-con-full {
+		flex-direction: row !important;
+		flex-wrap: nowrap !important;
+		align-items: stretch !important;
+		gap: 12px !important;
+		overflow-x: auto;
+		overscroll-behavior-x: contain;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+		/* Room for the featured card's shadow inside the scroll area. */
+		padding-bottom: 24px;
+	}
+	.pwh-plans > .e-con-inner::-webkit-scrollbar,
+	.pwh-plans.e-con-full::-webkit-scrollbar {
+		display: none;
+	}
+	.pwh-plans .elementor-widget-pwh-pricing-card {
+		flex: 0 0 100% !important;
+		scroll-snap-align: start;
+	}
+	/* Equal-height cards, so the dots sit just under whichever card shows. */
+	.pwh-plans .elementor-widget-pwh-pricing-card > .elementor-widget-container,
+	.pwh-plans .elementor-widget-pwh-pricing-card .pwh-plan {
+		height: 100%;
+	}
+	.pwh-plan-dots {
+		display: flex;
+		margin-top: -16px;
+	}
+	.pwh-plan-dots button,
+	.pwh-plan-dots button:hover,
+	.pwh-plan-dots button:focus {
+		all: unset;
+		cursor: pointer;
+		padding: 10px 4px;
+		display: flex;
+		align-items: center;
+	}
+	.pwh-plan-dots button:focus-visible {
+		outline: 2px solid var(--pwh-amber);
+		outline-offset: 2px;
+		border-radius: 4px;
+	}
+	.pwh-plan-dots button span {
+		display: block;
+		width: 6px;
+		height: 6px;
+		border-radius: 3px;
+		background: #c5cad4;
+		transition: width 0.25s, background 0.25s;
+	}
+	.pwh-plan-dots button[aria-selected="true"] span {
+		width: 18px;
+		background: #1a325b;
+	}
+}
+
 /* Testimonial stars + avatar as built on the live Home page (Rating and Icon
    widgets). Defaults only; the widgets' own settings take precedence. */
 .pwh-stars {

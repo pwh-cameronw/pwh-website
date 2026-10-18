@@ -58,11 +58,75 @@
 		}
 	} );
 
+	/*
+	 * Phones: the plan cards in a .pwh-plans container become a swipe slider
+	 * (CSS in pwh.css). Add dots under it like the Home products slider.
+	 */
+	function initSlider( plans ) {
+		if ( plans.dataset.pwhSlider ) {
+			return;
+		}
+		var track = plans.querySelector( ':scope > .e-con-inner' ) || plans;
+		var cards = Array.prototype.filter.call( track.children, function ( c ) {
+			return c.classList.contains( 'elementor-widget-pwh-pricing-card' );
+		} );
+		if ( cards.length < 2 ) {
+			return;
+		}
+		plans.dataset.pwhSlider = '1';
+
+		var dots = document.createElement( 'div' );
+		dots.className = 'pwh-plan-dots';
+		dots.setAttribute( 'role', 'tablist' );
+		dots.setAttribute( 'aria-label', 'Plans' );
+		cards.forEach( function ( card, i ) {
+			var b = document.createElement( 'button' );
+			var t = card.querySelector( '.pwh-plan__title, h3' );
+			b.type = 'button';
+			b.setAttribute( 'role', 'tab' );
+			b.setAttribute( 'aria-label', 'Show ' + ( t ? t.textContent.trim() : 'plan ' + ( i + 1 ) ) );
+			b.appendChild( document.createElement( 'span' ) );
+			b.addEventListener( 'click', function () {
+				track.scrollTo( { left: card.offsetLeft - cards[ 0 ].offsetLeft, behavior: 'smooth' } );
+			} );
+			dots.appendChild( b );
+		} );
+		if ( track === plans ) {
+			plans.after( dots );
+		} else {
+			plans.appendChild( dots );
+		}
+
+		var btns = dots.querySelectorAll( 'button' );
+		function update() {
+			var x = track.scrollLeft, best = 0, bestD = Infinity;
+			cards.forEach( function ( c, i ) {
+				var d = Math.abs( c.offsetLeft - cards[ 0 ].offsetLeft - x );
+				if ( d < bestD ) {
+					bestD = d;
+					best = i;
+				}
+			} );
+			if ( x > 0 && x + track.clientWidth >= track.scrollWidth - 4 ) {
+				best = cards.length - 1;
+			}
+			btns.forEach( function ( b, i ) {
+				b.setAttribute( 'aria-selected', i === best ? 'true' : 'false' );
+			} );
+		}
+		track.addEventListener( 'scroll', function () {
+			window.requestAnimationFrame( update );
+		}, { passive: true } );
+		window.addEventListener( 'resize', update );
+		update();
+	}
+
 	function init() {
 		var toggle = document.querySelector( '.pwh-billing' );
 		if ( toggle && toggle.dataset.default === 'yearly' ) {
 			setBilling( 'yearly' );
 		}
+		document.querySelectorAll( '.pwh-plans' ).forEach( initSlider );
 	}
 
 	if ( document.readyState === 'loading' ) {

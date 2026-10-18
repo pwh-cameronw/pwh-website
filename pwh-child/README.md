@@ -84,6 +84,8 @@ Layout (direction, gaps, padding, widths, backgrounds) is set in each container'
 
 A `<ul class="pwh-dots">` inside a Text Editor gives the amber-dot list from the hero.
 
+On phones, pricing cards inside a container with the `pwh-plans` class become a swipe slider (one card at a time, dots underneath), like the Home products slider. This is automatic on any page with that class and needs no HTML widget (`assets/css/pwh.css` + `assets/js/pwh-pricing.js`).
+
 ## Rebuilding the templates
 
 The JSON in `elementor-templates/` is generated. Edit `tools/build-templates.py`, then:
