@@ -186,7 +186,7 @@ def header():
         image(LOGO_HEADER, "pwh-logo", link=url("/"), alt="Perth Web Hosting",
               width=px(142)),
         nav,
-        button("Client Login", url("/client-login/"),
+        button("MyToolbox", url("/client-login/"),
                "pwh-btn--pill pwh-btn--sm"),
     ], cls="pwh-header", direction="row", boxed=1180, justify="space-between", align="center",
         min_h=84, pad=box(0), pad_t=box(0, 24), tag="header",
@@ -1989,6 +1989,16 @@ def legal_page(title, content_file, updated=None):
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
 
+def header_standalone():
+    """The header for Templates → Theme Builder → Import: the JetMenu widget's menu is
+    left empty (menu IDs differ per site), so pick "PWH Primary" on it after importing."""
+    data = header()
+    for el in data["content"][0]["elements"]:
+        if el.get("widgetType") == "jet-mega-menu":
+            el["settings"]["menu"] = ""
+    return data
+
+
 def strip_page_styles(elements):
     """Drop the hidden <style> widgets: their CSS ships in the theme (pwh-pages.css)."""
     keep = []
@@ -2140,6 +2150,7 @@ def main():
                "terms-of-service.json": export_standalone(legal_page("Terms of Service", "terms-of-service.html", updated="17/10/2026")),
                "acceptable-use-policy.json": export_standalone(legal_page("Acceptable Use Policy", "acceptable-use-policy.html", updated="17/10/2026")),
                "service-level-agreement.json": export_standalone(legal_page("Service Level Agreement", "service-level-agreement.html", updated="17/10/2026"))}
+    exports["header.json"] = export_standalone(header_standalone())
     exports["gravityforms-contact.json"] = gf_contact_form()
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     with open(os.path.join(OUT, "..", "assets", "css", "pwh-pages.css"), "w", encoding="utf-8") as fh:

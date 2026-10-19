@@ -151,6 +151,15 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 - Upload **`wordpress-hero.jpg`** (the hero photo, shown under a 60% navy overlay).
 - *Order Now* goes to `/client-login/`. Set each card's monthly and yearly order links to your WHMCS URLs.
 
+## Header (standalone template)
+
+`export/header.json` is the site header (logo, JetMenu mega menu, **MyToolbox** pill, sticky) for importing by hand: **Templates → Theme Builder → Import Templates**. After importing:
+
+1. Edit it in Elementor, click the **Mega Menu** widget and choose **PWH Primary** as the menu (menu IDs differ per site, so it's left empty).
+2. **Publish** and set the display condition to **Entire Site**.
+
+The logo is `pwh-logo-noborder-navy.svg` from the Media Library; if it doesn't show, re-select it on the Image widget. If a header already exists under Theme Builder, give only one of them the *Entire Site* condition.
+
 ## Contact page (standalone template)
 
 `export/contact.json` is a self-contained Elementor template. Import it with **Templates → Saved Templates → Import Templates**; no theme update needed. Its CSS is inside the template (a hidden HTML widget), links are relative, and the hero image is a Media Library URL.

@@ -96,7 +96,7 @@
      "elType": "widget",
      "widgetType": "button",
      "settings": {
-      "text": "Client Login",
+      "text": "MyToolbox",
       "link": {
        "url": "{{PWH_URL:/client-login/}}",
        "is_external": "",
