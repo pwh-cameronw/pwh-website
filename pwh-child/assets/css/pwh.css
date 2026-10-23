@@ -1220,6 +1220,20 @@ body .pwh-btn--sm .elementor-button {
 	outline-offset: 4px;
 }
 
+/* Hello Elementor fills buttons pink (#c36) on hover/focus; keep this one clear. */
+.pwh-plan .pwh-plan__more:hover,
+.pwh-plan .pwh-plan__more:focus,
+.pwh-plan .pwh-plan__more:active {
+	background-color: transparent;
+	color: inherit;
+	box-shadow: none;
+}
+
+.pwh-plan .pwh-plan__more:hover::before,
+.pwh-plan .pwh-plan__more:hover::after {
+	background: var(--pwh-navy-ink);
+}
+
 /* Plan cards row: equal columns, cards keep their own height (Figma: items-start). */
 @media (min-width: 1025px) {
 	.pwh-plans > .e-con,
