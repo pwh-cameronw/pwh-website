@@ -11,10 +11,10 @@
     "flex_direction": "column",
     "padding": {
      "unit": "px",
-     "top": "44",
-     "right": "44",
-     "bottom": "44",
-     "left": "44",
+     "top": "24",
+     "right": "24",
+     "bottom": "24",
+     "left": "24",
      "isLinked": true
     },
     "_title": "Mega Menu / About",

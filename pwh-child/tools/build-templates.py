@@ -224,7 +224,7 @@ def mega_col(name, items, group=None, gap_px=18):
 
 
 def mega_panel(name, cols):
-    return con(name, cols, cls="pwh-mega", full=True, direction="row", gap_px=48, pad=box(44),
+    return con(name, cols, cls="pwh-mega", full=True, direction="row", gap_px=48, pad=box(28, 32),
                dir_t="row", dir_m="column", gap_t=32, pad_m=box(24),
                extra={"flex_wrap_tablet": "wrap", "flex_align_items": "flex-start"})
 
@@ -282,7 +282,7 @@ def mega_about():
              ("Terms of Service", "/terms-of-service/"), ("Acceptable Use Policy", "/acceptable-use-policy/")]
     col = con("Links", [heading(t, "pwh-mega-link", tag="p", link=url(u)) for t, u in links],
               cls="pwh-mega-col pwh-mega-col--list", full=True, gap_px=16)
-    panel = con("Mega Menu / About", [col], cls="pwh-mega pwh-mega--narrow", full=True, pad=box(44), pad_m=box(24))
+    panel = con("Mega Menu / About", [col], cls="pwh-mega pwh-mega--narrow", full=True, pad=box(24), pad_m=box(24))
     return template("PWH – Mega Menu / About", "section", [panel])
 
 

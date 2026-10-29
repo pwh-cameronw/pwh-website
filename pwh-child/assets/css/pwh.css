@@ -382,6 +382,25 @@ body .pwh-btn--sm .elementor-button {
    anchor it to the header bar and centre it on the 1180px content column, 14px
    below the bar as in Figma. Narrow panels (About) stay under their own menu
    item: .pwh-mega--narrow, or any single-column panel from older imports. */
+/* Mega menu panels: tighter padding than the 44px set on the imported templates. */
+.pwh-mainnav .pwh-mega.e-con {
+	--padding-top: 28px !important;
+	--padding-bottom: 28px !important;
+	--padding-left: 32px !important;
+	--padding-right: 32px !important;
+	padding: 28px 32px !important;
+}
+
+.pwh-mainnav .pwh-mega.pwh-mega--narrow.e-con,
+.pwh-mainnav .pwh-mega.e-con:has(> .e-con:only-child),
+.pwh-mainnav .pwh-mega.e-con:has(> .e-con-inner > .e-con:only-child) {
+	--padding-top: 24px !important;
+	--padding-bottom: 24px !important;
+	--padding-left: 24px !important;
+	--padding-right: 24px !important;
+	padding: 24px !important;
+}
+
 .pwh-header {
 	position: relative;
 }
@@ -519,10 +538,10 @@ body .pwh-btn--sm .elementor-button {
 	--gap: 48px;
 	--row-gap: 48px;
 	--column-gap: 48px;
-	--padding-top: 44px;
-	--padding-right: 44px;
-	--padding-bottom: 44px;
-	--padding-left: 44px;
+	--padding-top: 28px;
+	--padding-right: 32px;
+	--padding-bottom: 28px;
+	--padding-left: 32px;
 	--width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -532,7 +551,7 @@ body .pwh-btn--sm .elementor-button {
 	width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
-	padding: 44px;
+	padding: 28px 32px;
 	background-color: var(--pwh-cream);
 	border: 1px solid var(--pwh-navy-pale);
 	border-radius: var(--pwh-radius);
@@ -667,15 +686,6 @@ body .pwh-btn--sm .elementor-button {
 	font-size: 15px;
 	font-weight: 900;
 	line-height: normal;
-}
-
-.pwh-mega-group .elementor-heading-title::before {
-	content: "";
-	flex: 0 0 7px;
-	width: 7px;
-	height: 7px;
-	border-radius: 50%;
-	background: var(--pwh-navy-ink);
 }
 
 /* Link title (Inter Bold 14.5) */
@@ -1469,7 +1479,7 @@ body .pwh-btn--sm .elementor-button {
 	.pwh-domains-visual > .elementor-widget-image {
 		position: absolute;
 		top: 50%;
-		left: 50%;
+		left: 0%;
 		width: 1166px;
 		max-width: none;
 		transform: translate(calc(-50% + 61px), -50%);

@@ -11,11 +11,11 @@
     "flex_direction": "row",
     "padding": {
      "unit": "px",
-     "top": "44",
-     "right": "44",
-     "bottom": "44",
-     "left": "44",
-     "isLinked": true
+     "top": "28",
+     "right": "32",
+     "bottom": "28",
+     "left": "32",
+     "isLinked": false
     },
     "_title": "Mega Menu / Support",
     "flex_gap": {
