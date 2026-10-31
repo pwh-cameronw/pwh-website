@@ -86,6 +86,10 @@ A `<ul class="pwh-dots">` inside a Text Editor gives the amber-dot list from the
 
 On phones, pricing cards inside a container with the `pwh-plans` class become a swipe slider (one card at a time, dots underneath), like the Home products slider. This is automatic on any page with that class and needs no HTML widget (`assets/css/pwh.css` + `assets/js/pwh-pricing.js`).
 
+## Releasing a new version
+
+Run `python3 tools/release.py` from the theme folder. It bumps the version (1.1.0 → 1.1.1) in `style.css` and `functions.php` and builds `../pwh-child.zip`, so WordPress shows the new version when you upload it. Use `python3 tools/release.py minor` for 1.1.0 → 1.2.0, or give an exact version (`python3 tools/release.py 2.0.0`).
+
 ## Rebuilding the templates
 
 The JSON in `elementor-templates/` is generated. Edit `tools/build-templates.py`, then:
