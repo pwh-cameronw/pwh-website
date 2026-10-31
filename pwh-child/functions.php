@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PWH_CHILD_VERSION', '1.2.8' );
+define( 'PWH_CHILD_VERSION', '1.2.9' );
 define( 'PWH_CHILD_DIR', get_stylesheet_directory() );
 define( 'PWH_CHILD_URI', get_stylesheet_directory_uri() );
 
@@ -122,3 +122,29 @@ add_filter( 'elementor/fonts/additional_fonts', function ( $fonts ) {
 	$fonts['GT Standard'] = 'system';
 	return $fonts;
 } );
+
+/**
+ * Favicons: navy icon in light mode, cream icon in dark mode.
+ *
+ * WordPress's Site Icon (Appearance > Customize > Site Identity) also prints
+ * rel="icon" tags with sizes, which browsers can prefer over these, so drop
+ * those and keep its apple-touch-icon for home-screen shortcuts.
+ */
+add_filter( 'site_icon_meta_tags', function ( $tags ) {
+	return array_values( array_filter( $tags, function ( $tag ) {
+		return false === strpos( $tag, 'rel="icon"' );
+	} ) );
+} );
+
+add_action( 'wp_head', function () {
+	$dark  = content_url( '/uploads/2026/10/pwh-ico-dark.png' );
+	$light = content_url( '/uploads/2026/10/pwh-ico-light.png' );
+	?>
+	<!-- Default favicon (fallback for browsers that ignore the media attribute) -->
+	<link rel="icon" href="<?php echo esc_url( $dark ); ?>" type="image/png">
+	<!-- Light mode favicon (navy icon) -->
+	<link rel="icon" href="<?php echo esc_url( $dark ); ?>" type="image/png" media="(prefers-color-scheme: light)">
+	<!-- Dark mode favicon (cream icon) -->
+	<link rel="icon" href="<?php echo esc_url( $light ); ?>" type="image/png" media="(prefers-color-scheme: dark)">
+	<?php
+}, 5 );
