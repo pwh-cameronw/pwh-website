@@ -226,6 +226,8 @@ On any page, give the UAEL **Gravity Form Styler** widget the CSS class `pwh-for
 
 To make a Gravity Forms **HTML** block stand out (amber bar, warm tint), give that field the CSS class `pwh-form-note` (field → Appearance → Custom CSS Class). `snippets/gf-domain-password-note.html` is the tidied Domain Password note for the transfer form.
 
+Give a **checkbox** field the CSS class `pwh-focus-next` and ticking it puts the cursor in the next visible field after it, waiting for conditional logic to show that field (`assets/js/pwh-forms.js`). On the transfer form it's on "I wish to transfer my domain", which jumps to Current Domain Registrar.
+
 ## VPS application form (section template)
 
 `export/vps-application-form.json` replaces the **Apply** section on `/vps-hosting/` (the "ADD FORM HERE" placeholder), as designed in Figma (Page / VPS (gated), "Application"): the beige band with the form card centred.

@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PWH_CHILD_VERSION', '1.2.3' );
+define( 'PWH_CHILD_VERSION', '1.2.4' );
 define( 'PWH_CHILD_DIR', get_stylesheet_directory() );
 define( 'PWH_CHILD_URI', get_stylesheet_directory_uri() );
 
@@ -64,6 +64,15 @@ add_action( 'wp_enqueue_scripts', function () {
 		PWH_CHILD_URI . '/assets/js/pwh-video.js',
 		array(),
 		filemtime( PWH_CHILD_DIR . '/assets/js/pwh-video.js' ),
+		true
+	);
+
+	// Gravity Forms helpers (pwh-focus-next).
+	wp_enqueue_script(
+		'pwh-forms',
+		PWH_CHILD_URI . '/assets/js/pwh-forms.js',
+		array(),
+		filemtime( PWH_CHILD_DIR . '/assets/js/pwh-forms.js' ),
 		true
 	);
 
