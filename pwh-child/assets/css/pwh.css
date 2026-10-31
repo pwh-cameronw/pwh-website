@@ -1471,6 +1471,49 @@ body .pwh-btn--sm .elementor-button {
 }
 
 /* Phone-in-hand photo: overflows its 558 × 380 slot as in Figma, clipped by the hero. */
+@media (max-width: 767px) {
+	.pwh-domains-visual {
+		position: relative;
+	}
+
+	.pwh-domains-visual > .elementor-widget-image {
+		position: absolute;
+		top: 50%;
+		left: 0%;
+		width: 900px;
+		max-width: none;
+		transform: translate(calc(+25% - 220px), -22%);
+		pointer-events: none;
+	}
+
+	.pwh-domains-visual > .elementor-widget-image img {
+		width: 900px;
+		max-width: none;
+		height: auto;
+	}
+}
+@media (min-width: 768px) {
+	.pwh-domains-visual {
+		position: relative;
+	}
+
+	.pwh-domains-visual > .elementor-widget-image {
+		position: absolute;
+		top: 50%;
+		left: 0%;
+		width: 900px;
+		max-width: none;
+		transform: translate(calc(28% + 0px), -72%);
+		pointer-events: none;
+	}
+
+	.pwh-domains-visual > .elementor-widget-image img {
+		width: 900px;
+		max-width: none;
+		height: auto;
+	}
+}
+
 @media (min-width: 1025px) {
 	.pwh-domains-visual {
 		position: relative;
