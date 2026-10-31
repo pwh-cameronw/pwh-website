@@ -1088,6 +1088,12 @@ CONTACT_CSS = """
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield--type-html a{color:var(--pwh-navy-ink,#0b1629);text-decoration:underline;text-underline-offset:3px}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.importantnotice{padding:20px 24px;border-radius:12px;background:var(--pwh-navy-mist,#eaf0f8);font-size:14px;line-height:21px}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.importantnotice p{font-size:14px;line-height:21px;text-align:left!important}
+:is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note{padding:22px 24px;border-left:4px solid var(--pwh-amber,#c89439);border-radius:12px;background:#fbf2df}
+:is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note h1,:is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note h2{margin:0 0 10px;font-size:20px;line-height:25px}
+:is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note p{margin:0 0 10px;color:var(--pwh-navy-ink,#0b1629)}
+:is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note ul{margin:0 0 10px;padding-left:20px;list-style:disc}
+:is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note li{margin:0 0 6px;font-size:15px;line-height:22px;color:var(--pwh-navy-ink,#0b1629)}
+:is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note>:last-child,:is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note p:last-child{margin-bottom:0}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield_description{margin:0;padding:6px 0 0;font-family:Inter,sans-serif;font-size:13px;line-height:17px;color:var(--pwh-grey,#828082)}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .field_description_above .gfield_description{padding:0 0 10px}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield--type-checkbox legend.gfield_label{margin-bottom:8px}

@@ -224,6 +224,8 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 
 On any page, give the UAEL **Gravity Form Styler** widget the CSS class `pwh-form-card` (Advanced → CSS Classes) to show the form in the site style inside a centred 760px card, or `pwh-form` for the same styling without the card. It covers fields, buttons, the step progress bar, text blocks, help text, tick boxes and the form title, and turns "(Required)" into an asterisk. Widgets without either class keep their UAEL settings.
 
+To make a Gravity Forms **HTML** block stand out (amber bar, warm tint), give that field the CSS class `pwh-form-note` (field → Appearance → Custom CSS Class). `snippets/gf-domain-password-note.html` is the tidied Domain Password note for the transfer form.
+
 ## VPS application form (section template)
 
 `export/vps-application-form.json` replaces the **Apply** section on `/vps-hosting/` (the "ADD FORM HERE" placeholder), as designed in Figma (Page / VPS (gated), "Application"): the beige band with the form card centred.
