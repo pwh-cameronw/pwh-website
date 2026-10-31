@@ -1090,6 +1090,8 @@ CONTACT_CSS = """
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.importantnotice p{font-size:14px;line-height:21px;text-align:left!important}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note{padding:22px 24px;border-left:4px solid var(--pwh-amber,#c89439);border-radius:12px;background:#fbf2df}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note h1,:is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note h2{margin:0 0 10px;font-size:20px;line-height:25px}
+:is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note h3,:is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note h4{margin:20px 0 6px;font-family:var(--pwh-font-display,"Archivo",sans-serif);font-stretch:125%;font-size:17px;font-weight:900;line-height:22px;color:var(--pwh-navy-ink,#0b1629)}
+:is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note >:first-child{margin-top:0}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note p{margin:0 0 10px;color:var(--pwh-navy-ink,#0b1629)}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note ul{margin:0 0 10px;padding-left:20px;list-style:disc}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .gfield.pwh-form-note li{margin:0 0 6px;font-size:15px;line-height:22px;color:var(--pwh-navy-ink,#0b1629)}
