@@ -48,9 +48,10 @@
 :is(.pwh-form,.pwh-form-card) .gform_wrapper .gform_ajax_spinner{margin-left:12px}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .gfield.gfield_error input:not([type=submit]):not([type=button]):not([type=image]):not([type=file]):not([type=hidden]):not([type=checkbox]):not([type=radio]),:is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .gfield.gfield_error select,:is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .gfield.gfield_error textarea{border-color:#b3261e}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .gfield_error .gfield_label{color:var(--pwh-navy-ink,#0b1629)}
-:is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .gfield_validation_message,:is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .validation_message{margin:6px 0 0;padding:0;border:0;background:none;color:#b3261e;font-size:13px;line-height:16px}
-:is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .gform_validation_errors{margin:0 0 20px;padding:12px 16px;border:1.5px solid #b3261e;border-radius:8px;background:#fdf1f0;box-shadow:none}
-:is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .gform_validation_errors>h2{margin:0;color:#b3261e;font-family:Inter,sans-serif;font-size:14px;font-weight:700;line-height:18px}
+:is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .gfield_validation_message,:is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .validation_message{margin:6px 0 0;padding:0;border:0;background:none;color:#b3261e!important;font-size:13px;line-height:16px}
+:is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .gform_validation_errors{margin:0 0 20px;padding:12px 16px;border:1.5px solid #b3261e!important;border-radius:8px;background:#fdf1f0!important;box-shadow:none}
+:is(.pwh-form,.pwh-form-card).elementor-element .gform_wrapper.gravity-theme .gform_validation_errors.gform_validation_errors.gform_validation_errors{border-color:#b3261e!important}
+:is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .gform_validation_errors>h2{margin:0;color:var(--pwh-navy-ink,#0b1629)!important;font-family:Inter,sans-serif;font-size:14px;font-weight:700;line-height:18px}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .gform_validation_errors>h2 .gform-icon{display:none}
 :is(.pwh-form,.pwh-form-card) .gform_confirmation_message{padding:16px 20px;border-radius:8px;background:var(--pwh-navy-mist,#eaf0f8);color:var(--pwh-navy-ink,#0b1629);font-family:Inter,sans-serif;font-size:15px;line-height:22px}
 :is(.pwh-form,.pwh-form-card) .gform_wrapper.gravity-theme .gform_page_footer{display:flex;flex-wrap:wrap;gap:12px}
