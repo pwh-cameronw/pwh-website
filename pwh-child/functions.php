@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PWH_CHILD_VERSION', '1.1.0' );
+define( 'PWH_CHILD_VERSION', '1.1.1' );
 define( 'PWH_CHILD_DIR', get_stylesheet_directory() );
 define( 'PWH_CHILD_URI', get_stylesheet_directory_uri() );
 
