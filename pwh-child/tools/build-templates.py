@@ -1937,6 +1937,42 @@ def emails():
                     {"hide_title": "yes", "template": "elementor_header_footer"})
 
 
+# --- VPS application form ------------------------------------------------------
+# Figma: Page / VPS (gated) 161:2991, "Application" band. A section template that
+# replaces the Apply section on the live /vps-hosting/ page (the rest of that page
+# is already built), with the live page's wording. The form is Gravity Forms
+# (see gf_vps_form()).
+VPS_CSS = """
+.pwh-v-apply{border-top:1px solid var(--pwh-navy-pale,#c2d3e8);border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)}
+.pwh-v-formcard .pwh-form .gform_wrapper .gform_fields{grid-row-gap:18px}
+.pwh-v-formcard .pwh-form .gform_wrapper.gravity-theme .gform_footer{margin-top:18px}
+.pwh-v-note,.pwh-v-note p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:16px;color:var(--pwh-grey,#828082)}
+"""
+
+# Change id="5" to the form's ID if Gravity Forms gives it a different one on import.
+GF_VPS_SHORTCODE = '[gravityform id="5" title="false" description="false" ajax="true" theme="gravity-theme"]'
+
+
+def vps_apply():
+    style = widget("html", {"html": "<style>" + " ".join((CONTACT_CSS + VPS_CSS).split()) + "</style>"}, "pwh-v-style")
+    card = con("FormCard", [
+        style,
+        heading("Apply for a private server (VPS).", "pwh-h3 pwh-text-ink", tag="h2"),
+        text("<p>Tell us what you need and we’ll come back with a spec and a price. "
+             "Have your business name and ABN handy.</p>", "pwh-c-text"),
+        widget("shortcode", {"shortcode": GF_VPS_SHORTCODE}, "pwh-form"),
+        text("<p>We reply to most enquiries the same business day.</p>", "pwh-v-note"),
+    ], cls="pwh-c-formcard pwh-v-formcard", gap_px=18, pad=box(40), pad_m=box(24), width=px(560), width_m=pct(100))
+    card["elements"][1]["settings"].update({"_element_width": "initial", "_element_custom_width": px(360),
+                                            "_element_width_mobile": "inherit"})
+    card["elements"][2]["settings"]["text_color"] = "#575557"
+
+    apply = con("Apply", [card], cls="pwh-v-apply", boxed=1180, align="center",
+                pad=box(72, 0), pad_t=box(64, 24), pad_m=box(48, 20), tag="section",
+                extra={"background_background": "classic", "background_color": "#F5F1E0", "_element_id": "apply"})
+    return template("PWH – VPS Application Form", "section", [apply])
+
+
 # --- Legal pages ---------------------------------------------------------------
 # Old-site legal copy (content/*.html, copied verbatim) in the new design: a
 # navy title band, then the text in a 760px reading column. CSS travels inside
@@ -2012,6 +2048,7 @@ def page_css():
         ("Web Hosting", HOSTING_CSS),
         ("Email overview", EMAILS_CSS[len(HOSTING_CSS):]),
         ("Legal pages", LEGAL_CSS),
+        ("VPS application", VPS_CSS),
     ]
     with open(os.path.join(snippets, "home-products-slider.css"), encoding="utf-8") as fh:
         parts.append(("Home products slider (phones)", fh.read()))
@@ -2045,24 +2082,23 @@ def export_standalone(data):
 GF_CONTACT_SHORTCODE = '[gravityform id="1" title="false" description="false" ajax="true" theme="gravity-theme"]'
 
 
-def gf_contact_form():
-    """Gravity Forms export (Forms > Import/Export > Import Forms) for the Contact page."""
-    def field(fid, kind, label, required=False, **extra):
-        f = {"type": kind, "id": fid, "formId": 1, "label": label, "adminLabel": "", "isRequired": required,
-             "size": "large", "errorMessage": "", "visibility": "visible", "inputs": None, "description": "",
-             "allowsPrepopulate": False, "inputMask": False, "inputMaskValue": "", "inputMaskIsCustom": False,
-             "maxLength": "", "inputType": "", "labelPlacement": "", "descriptionPlacement": "",
-             "subLabelPlacement": "", "placeholder": "", "cssClass": "", "inputName": "", "noDuplicates": False,
-             "defaultValue": "", "enableAutocomplete": False, "autocompleteAttribute": "", "choices": "",
-             "conditionalLogic": "", "productField": "", "layoutGridColumnSpan": 12, "enableEnhancedUI": 0,
-             "fields": "", "displayOnly": ""}
-        f.update(extra)
-        return f
+def gf_field(fid, kind, label, required=False, **extra):
+    f = {"type": kind, "id": fid, "formId": 1, "label": label, "adminLabel": "", "isRequired": required,
+         "size": "large", "errorMessage": "", "visibility": "visible", "inputs": None, "description": "",
+         "allowsPrepopulate": False, "inputMask": False, "inputMaskValue": "", "inputMaskIsCustom": False,
+         "maxLength": "", "inputType": "", "labelPlacement": "", "descriptionPlacement": "",
+         "subLabelPlacement": "", "placeholder": "", "cssClass": "", "inputName": "", "noDuplicates": False,
+         "defaultValue": "", "enableAutocomplete": False, "autocompleteAttribute": "", "choices": "",
+         "conditionalLogic": "", "productField": "", "layoutGridColumnSpan": 12, "enableEnhancedUI": 0,
+         "fields": "", "displayOnly": ""}
+    f.update(extra)
+    return f
 
-    choices = [{"text": t, "value": t, "isSelected": False, "price": ""}
-               for t in ("New sales enquiry", "Support issue", "Feedback or review", "Something else")]
+
+def gf_export(title, fields, button, subject, reply_to, confirmation, ids):
+    """A Gravity Forms export file (Forms > Import/Export > Import Forms) holding one form."""
     form = {
-        "title": "PWH Contact",
+        "title": title,
         "description": "",
         "labelPlacement": "top_label",
         "descriptionPlacement": "below",
@@ -2071,22 +2107,12 @@ def gf_contact_form():
         "validationSummary": False,
         "requiredIndicator": "asterisk",
         "customRequiredIndicator": "(Required)",
-        "button": {"type": "text", "text": "Send Message", "imageUrl": "", "width": "full",
+        "button": {"type": "text", "text": button, "imageUrl": "", "width": "full",
                    "location": "bottom", "layoutGridColumnSpan": 12, "id": "submit"},
-        "fields": [
-            field(1, "text", "Full Name", True, placeholder="Your name",
-                  enableAutocomplete=True, autocompleteAttribute="name"),
-            field(2, "email", "Email Address", True, placeholder="you@business.com.au",
-                  emailConfirmEnabled=False, enableAutocomplete=True, autocompleteAttribute="email"),
-            field(3, "phone", "Phone Number (optional)", placeholder="04XX XXX XXX", phoneFormat="international",
-                  enableAutocomplete=True, autocompleteAttribute="tel"),
-            field(4, "select", "Enquiry Type", choices=choices),
-            field(5, "textarea", "Message", True, placeholder="Tell us a bit about what you need.",
-                  useRichTextEditor=False),
-        ],
+        "fields": fields,
         "version": "2.9.29",
         "markupVersion": 2,
-        "nextFieldId": 6,
+        "nextFieldId": len(fields) + 1,
         "cssClass": "",
         "enableHoneypot": True,
         "enableAnimation": False,
@@ -2097,24 +2123,62 @@ def gf_contact_form():
         "is_active": "1",
         "is_trash": "0",
         "notifications": {
-            "6a1f0c2e9b7d4": {
-                "id": "6a1f0c2e9b7d4", "isActive": True, "name": "Admin Notification", "service": "wordpress",
+            ids[0]: {
+                "id": ids[0], "isActive": True, "name": "Admin Notification", "service": "wordpress",
                 "event": "form_submission", "toType": "email", "to": "{admin_email}",
-                "subject": "New website enquiry from {Full Name:1}",
-                "message": "{all_fields}", "from": "{admin_email}", "fromName": "Perth Web Hosting website",
-                "replyTo": "{Email Address:2}", "bcc": "", "disableAutoformat": False,
-                "routing": None, "conditionalLogic": None,
+                "subject": subject, "message": "{all_fields}", "from": "{admin_email}",
+                "fromName": "Perth Web Hosting website", "replyTo": reply_to, "bcc": "",
+                "disableAutoformat": False, "routing": None, "conditionalLogic": None,
             },
         },
         "confirmations": {
-            "6a1f0c2e9b7d5": {
-                "id": "6a1f0c2e9b7d5", "name": "Default Confirmation", "isDefault": True, "type": "message",
-                "message": "Thanks, we've got your message. We'll be in touch, usually the same business day.",
-                "url": "", "pageId": "", "queryString": "", "disableAutoformat": False, "conditionalLogic": [],
+            ids[1]: {
+                "id": ids[1], "name": "Default Confirmation", "isDefault": True, "type": "message",
+                "message": confirmation, "url": "", "pageId": "", "queryString": "",
+                "disableAutoformat": False, "conditionalLogic": [],
             },
         },
     }
     return {"0": form, "version": "2.9.29"}
+
+
+def gf_contact_form():
+    """Gravity Forms export for the Contact page."""
+    choices = [{"text": t, "value": t, "isSelected": False, "price": ""}
+               for t in ("New sales enquiry", "Support issue", "Feedback or review", "Something else")]
+    return gf_export("PWH Contact", [
+        gf_field(1, "text", "Full Name", True, placeholder="Your name",
+                 enableAutocomplete=True, autocompleteAttribute="name"),
+        gf_field(2, "email", "Email Address", True, placeholder="you@business.com.au",
+                 emailConfirmEnabled=False, enableAutocomplete=True, autocompleteAttribute="email"),
+        gf_field(3, "phone", "Phone Number (optional)", placeholder="04XX XXX XXX", phoneFormat="international",
+                 enableAutocomplete=True, autocompleteAttribute="tel"),
+        gf_field(4, "select", "Enquiry Type", choices=choices),
+        gf_field(5, "textarea", "Message", True, placeholder="Tell us a bit about what you need.",
+                 useRichTextEditor=False),
+    ], "Send Message", "New website enquiry from {Full Name:1}", "{Email Address:2}",
+        "Thanks, we've got your message. We'll be in touch, usually the same business day.",
+        ("6a1f0c2e9b7d4", "6a1f0c2e9b7d5"))
+
+
+def gf_vps_form():
+    """Gravity Forms export for the VPS application page."""
+    return gf_export("PWH VPS Application", [
+        gf_field(1, "text", "Business Name", True, placeholder="Registered business name",
+                 enableAutocomplete=True, autocompleteAttribute="organization"),
+        # ABNs are 11 digits, shown as 12 345 678 901.
+        gf_field(2, "text", "ABN", True, placeholder="Australian Business Number",
+                 inputMask=True, inputMaskIsCustom=True, inputMaskValue="99 999 999 999"),
+        gf_field(3, "text", "Contact Name", True, placeholder="Your name",
+                 enableAutocomplete=True, autocompleteAttribute="name"),
+        gf_field(4, "email", "Email", True, placeholder="you@business.com.au",
+                 emailConfirmEnabled=False, enableAutocomplete=True, autocompleteAttribute="email"),
+        gf_field(5, "textarea", "What will you use the VPS for?", True,
+                 placeholder="Tell us about the sites, traffic and any technical requirements",
+                 useRichTextEditor=False),
+    ], "Submit Application", "VPS application from {Business Name:1}", "{Email:4}",
+        "Thanks, we've got your application. We'll be in touch with a spec and a price.",
+        ("6a1f0c2e9b7e1", "6a1f0c2e9b7e2"))
 
 
 def main():
@@ -2136,11 +2200,13 @@ def main():
                "email.json": export_standalone(email_page()),
                "web-hosting.json": export_standalone(hosting()),
                "email-overview.json": export_standalone(emails()),
+               "vps-application-form.json": export_standalone(vps_apply()),
                "privacy-policy.json": export_standalone(legal_page("Privacy Policy", "privacy-policy.html")),
                "terms-of-service.json": export_standalone(legal_page("Terms of Service", "terms-of-service.html", updated="17/10/2026")),
                "acceptable-use-policy.json": export_standalone(legal_page("Acceptable Use Policy", "acceptable-use-policy.html", updated="17/10/2026")),
                "service-level-agreement.json": export_standalone(legal_page("Service Level Agreement", "service-level-agreement.html", updated="17/10/2026"))}
     exports["gravityforms-contact.json"] = gf_contact_form()
+    exports["gravityforms-vps-application.json"] = gf_vps_form()
     os.makedirs(os.path.join(OUT, "..", "export"), exist_ok=True)
     with open(os.path.join(OUT, "..", "assets", "css", "pwh-pages.css"), "w", encoding="utf-8") as fh:
         fh.write(page_css())

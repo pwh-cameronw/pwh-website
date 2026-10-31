@@ -208,6 +208,19 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 - Plan cards link to `/e-mail/imap-pop3/` and `/e-mail/microsoft-365/`. The **Gmail card is a placeholder in the design** ("$XX", "Information about Gmail"); its link goes to `/contact-us/` until there's a Google page.
 - **The FAQ answers are drafts.** Figma only has the questions; check them, especially the Google one.
 
+## VPS application form (section template)
+
+`export/vps-application-form.json` replaces the **Apply** section on `/vps-hosting/` (the "ADD FORM HERE" placeholder), as designed in Figma (Page / VPS (gated), "Application"): the beige band with the form card centred.
+
+1. Import the form: **Forms → Import/Export → Import Forms** → `export/gravityforms-vps-application.json` ("PWH VPS Application": Business Name, ABN, Contact Name, Email, what the VPS is for). Note its ID in the Forms list.
+2. Import the template: **Templates → Saved Templates → Import Templates** → `export/vps-application-form.json`.
+3. On the VPS page, insert the template where the Apply section is (folder icon → My Templates → Insert) and delete the old Apply section.
+4. If the form's ID isn't 5, edit the Shortcode widget in the card and change `id="5"`.
+
+- It emails the site admin address with Reply-To set to the applicant (**Settings → Notifications** on the form). Honeypot anti-spam is on, and the ABN field only accepts 11 digits (shown as 12 345 678 901).
+- The section keeps the `apply` anchor, so buttons can link to `#apply`.
+- Styling is in the theme (`assets/css/pwh-pages.css`), shared with the Contact form.
+
 ## Legal pages (standalone templates)
 
 `legal_page()` in `tools/build-templates.py` puts old-site legal copy into the new design: a navy title band and a 760px reading column. The copy lives in `content/*.html`, taken verbatim from www.perthwebhosting.net.au.

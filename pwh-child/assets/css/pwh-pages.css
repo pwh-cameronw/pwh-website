@@ -215,6 +215,12 @@
 .pwh-l-updated,.pwh-l-updated p{margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:20px;color:var(--pwh-navy-pale,#c2d3e8)}
 @media (max-width:767px){.pwh-l-items .pwh-l-table-wrap{margin-left:-60px}.pwh-l-table{min-width:0;font-size:14px;line-height:18px}.pwh-l-table th,.pwh-l-table td{padding:10px}.pwh-l-table th:last-child{white-space:normal}.pwh-l-body h2,.pwh-l-body h3{margin-top:32px;font-size:20px;line-height:26px}.pwh-l-body .pwh-l-clause{padding-left:40px}.pwh-l-body .pwh-l-items{margin-left:40px;padding-left:20px}}
 
+/* ---- VPS application ---- */
+.pwh-v-apply{border-top:1px solid var(--pwh-navy-pale,#c2d3e8);border-bottom:1px solid var(--pwh-navy-pale,#c2d3e8)}
+.pwh-v-formcard .pwh-form .gform_wrapper .gform_fields{grid-row-gap:18px}
+.pwh-v-formcard .pwh-form .gform_wrapper.gravity-theme .gform_footer{margin-top:18px}
+.pwh-v-note,.pwh-v-note p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:16px;color:var(--pwh-grey,#828082)}
+
 /* ---- Home products slider (phones) ---- */
 /* Home products slider (phones): scroll the cards inside the row, one at a time,
    instead of letting them push the page sideways. The dots below it (HTML widget
