@@ -2071,3 +2071,11 @@ body .pwh-btn--sm .elementor-button {
 	background-position: right 16px center !important;
 	background-size: 12px 8px !important;
 }
+
+/* UAEL Gravity Form Styler hides the real checkbox/radio with position:absolute
+   but leaves it anchored to the whole widget, so ticking a box focuses an input
+   near the top of the form and the page jumps up. Anchor it to its own row. */
+.elementor-widget-uael-gf-styler .gfield_checkbox .gchoice,
+.elementor-widget-uael-gf-styler .gfield_radio .gchoice {
+	position: relative;
+}
