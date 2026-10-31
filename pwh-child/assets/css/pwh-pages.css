@@ -36,23 +36,47 @@
 .pwh-form .gform_wrapper .gform_fields{grid-row-gap:20px}
 .pwh-form .gform_wrapper .gfield_label{display:block;margin:0 0 8px;padding:0;font-family:Inter,sans-serif;font-size:13px;font-weight:700;line-height:16px;color:var(--pwh-navy-ink,#0b1629)}
 .pwh-form .gform_wrapper .gfield_required{display:inline;margin:0;padding-left:4px;color:var(--pwh-amber-deep,#9e6e25);font-size:inherit}
-.pwh-form .gform_wrapper.gravity-theme input:not([type=submit]):not([type=hidden]):not([type=checkbox]):not([type=radio]),.pwh-form .gform_wrapper.gravity-theme select,.pwh-form .gform_wrapper.gravity-theme textarea{box-sizing:border-box;width:100%;min-height:46px;margin:0;padding:14px 16px;border:1.5px solid var(--pwh-navy-pale,#c2d3e8);border-radius:8px;background-color:var(--pwh-cream,#fffef4);color:var(--pwh-navy-ink,#0b1629);font-family:Inter,sans-serif;font-size:15px;line-height:18px;box-shadow:none}
+.pwh-form .gform_wrapper.gravity-theme input:not([type=submit]):not([type=button]):not([type=image]):not([type=file]):not([type=hidden]):not([type=checkbox]):not([type=radio]),.pwh-form .gform_wrapper.gravity-theme select,.pwh-form .gform_wrapper.gravity-theme textarea{box-sizing:border-box;width:100%;min-height:46px;margin:0;padding:14px 16px;border:1.5px solid var(--pwh-navy-pale,#c2d3e8);border-radius:8px;background-color:var(--pwh-cream,#fffef4);color:var(--pwh-navy-ink,#0b1629);font-family:Inter,sans-serif;font-size:15px;line-height:18px;box-shadow:none}
 .pwh-form .gform_wrapper.gravity-theme .gfield textarea,.pwh-form .gform_wrapper.gravity-theme .gfield textarea.large{height:92px;min-height:92px;resize:vertical}
 .pwh-form .gform_wrapper.gravity-theme select{-webkit-appearance:none;appearance:none;padding-right:44px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23828082' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:12px 8px;cursor:pointer}
 .pwh-form .gform_wrapper ::placeholder{color:var(--pwh-grey,#828082);opacity:1}
 .pwh-form .gform_wrapper.gravity-theme input:focus,.pwh-form .gform_wrapper.gravity-theme select:focus,.pwh-form .gform_wrapper.gravity-theme textarea:focus{outline:2px solid var(--pwh-amber,#c89439);outline-offset:1px;box-shadow:none}
-.pwh-form .gform_wrapper.gravity-theme .gform_footer{margin:20px 0 0;padding:0}
+.pwh-form .gform_wrapper.gravity-theme .gform_footer,.pwh-form .gform_wrapper.gravity-theme .gform_page_footer{margin:20px 0 0;padding:0}
 .pwh-form .gform_wrapper.gravity-theme .gform_footer input[type=submit],.pwh-form .gform_wrapper.gravity-theme .gform_footer button{width:100%;min-height:48px;margin:0;padding:15px 30px;border:0;border-radius:16px;background:var(--pwh-amber,#c89439);color:var(--pwh-navy-ink,#0b1629);font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px;cursor:pointer;transition:background .2s}
 .pwh-form .gform_wrapper.gravity-theme .gform_footer input[type=submit]:hover,.pwh-form .gform_wrapper.gravity-theme .gform_footer input[type=submit]:focus{background:#b5832c;color:var(--pwh-navy-ink,#0b1629)}
 .pwh-form .gform_wrapper.gravity-theme .gform_footer input[type=submit]:focus-visible{outline:2px solid var(--pwh-navy-ink,#0b1629);outline-offset:2px}
 .pwh-form .gform_wrapper .gform_ajax_spinner{margin-left:12px}
-.pwh-form .gform_wrapper.gravity-theme .gfield.gfield_error input:not([type=submit]):not([type=hidden]):not([type=checkbox]):not([type=radio]),.pwh-form .gform_wrapper.gravity-theme .gfield.gfield_error select,.pwh-form .gform_wrapper.gravity-theme .gfield.gfield_error textarea{border-color:#b3261e}
+.pwh-form .gform_wrapper.gravity-theme .gfield.gfield_error input:not([type=submit]):not([type=button]):not([type=image]):not([type=file]):not([type=hidden]):not([type=checkbox]):not([type=radio]),.pwh-form .gform_wrapper.gravity-theme .gfield.gfield_error select,.pwh-form .gform_wrapper.gravity-theme .gfield.gfield_error textarea{border-color:#b3261e}
 .pwh-form .gform_wrapper.gravity-theme .gfield_error .gfield_label{color:var(--pwh-navy-ink,#0b1629)}
 .pwh-form .gform_wrapper.gravity-theme .gfield_validation_message,.pwh-form .gform_wrapper.gravity-theme .validation_message{margin:6px 0 0;padding:0;border:0;background:none;color:#b3261e;font-size:13px;line-height:16px}
 .pwh-form .gform_wrapper.gravity-theme .gform_validation_errors{margin:0 0 20px;padding:12px 16px;border:1.5px solid #b3261e;border-radius:8px;background:#fdf1f0;box-shadow:none}
 .pwh-form .gform_wrapper.gravity-theme .gform_validation_errors>h2{margin:0;color:#b3261e;font-family:Inter,sans-serif;font-size:14px;font-weight:700;line-height:18px}
 .pwh-form .gform_wrapper.gravity-theme .gform_validation_errors>h2 .gform-icon{display:none}
 .pwh-form .gform_confirmation_message{padding:16px 20px;border-radius:8px;background:var(--pwh-navy-mist,#eaf0f8);color:var(--pwh-navy-ink,#0b1629);font-family:Inter,sans-serif;font-size:15px;line-height:22px}
+.pwh-form .gform_wrapper.gravity-theme .gform_page_footer{display:flex;flex-wrap:wrap;gap:12px}
+.pwh-form .gform_wrapper.gravity-theme .gform_page_footer input[type=button],.pwh-form .gform_wrapper.gravity-theme .gform_page_footer input[type=submit]{flex:1 1 140px;width:auto;min-height:48px;margin:0;padding:15px 30px;border:0;border-radius:16px;background:var(--pwh-amber,#c89439);color:var(--pwh-navy-ink,#0b1629);font-family:Inter,sans-serif;font-size:15px;font-weight:700;line-height:18px;cursor:pointer;transition:background .2s}
+.pwh-form .gform_wrapper.gravity-theme .gform_page_footer input[type=button]:hover,.pwh-form .gform_wrapper.gravity-theme .gform_page_footer input[type=button]:focus,.pwh-form .gform_wrapper.gravity-theme .gform_page_footer input[type=submit]:hover,.pwh-form .gform_wrapper.gravity-theme .gform_page_footer input[type=submit]:focus{background:#b5832c;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-form .gform_wrapper.gravity-theme .gform_page_footer input.gform_previous_button[type=button]{order:-1;border:1.5px solid var(--pwh-navy-ink,#0b1629);background:transparent}
+.pwh-form .gform_wrapper.gravity-theme .gform_page_footer input.gform_previous_button[type=button]:hover,.pwh-form .gform_wrapper.gravity-theme .gform_page_footer input.gform_previous_button[type=button]:focus{background:var(--pwh-navy-mist,#eaf0f8)}
+.pwh-form .gform_wrapper.gravity-theme .gform_page_footer input:focus-visible,.pwh-form .gform_wrapper.gravity-theme .gform_footer input:focus-visible{outline:2px solid var(--pwh-navy-ink,#0b1629);outline-offset:2px}
+.pwh-form .gform_wrapper .gf_progressbar_wrapper{margin:0 0 24px;padding:0}
+.pwh-form .gform_wrapper .gf_progressbar_title{margin:0 0 8px;font-family:Inter,sans-serif;font-size:13px;font-weight:700;line-height:16px;color:var(--pwh-grey-dark,#575557);letter-spacing:0}
+.pwh-form .gform_wrapper .gf_progressbar{height:6px;margin:0;padding:0;border-radius:3px;background:var(--pwh-navy-pale,#c2d3e8);box-shadow:none;overflow:hidden}
+.pwh-form .gform_wrapper .gf_progressbar_percentage{height:6px;border-radius:3px;background:var(--pwh-amber,#c89439)!important;color:transparent}
+.pwh-form .gform_wrapper .gf_progressbar_percentage span{display:none}
+.pwh-form .gform_wrapper .gfield--type-html h1,.pwh-form .gform_wrapper .gfield--type-html h2{margin:0 0 8px;font-family:var(--pwh-font-display,"Archivo",sans-serif);font-stretch:125%;font-size:22px;font-weight:900;line-height:28px;color:var(--pwh-navy-ink,#0b1629)}
+.pwh-form .gform_wrapper .gfield--type-html,.pwh-form .gform_wrapper .gfield--type-html p{margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:22px;color:var(--pwh-grey-dark,#575557)}
+.pwh-form .gform_wrapper .gfield--type-html strong{color:var(--pwh-navy-ink,#0b1629)}
+.pwh-form .gform_wrapper .gfield--type-html a{color:var(--pwh-navy-ink,#0b1629);text-decoration:underline;text-underline-offset:3px}
+.pwh-form .gform_wrapper .gfield.importantnotice{padding:20px 24px;border-radius:12px;background:var(--pwh-navy-mist,#eaf0f8);font-size:14px;line-height:21px}
+.pwh-form .gform_wrapper .gfield.importantnotice p{font-size:14px;line-height:21px;text-align:left!important}
+.pwh-form .gform_wrapper .gfield_description{margin:0;padding:6px 0 0;font-family:Inter,sans-serif;font-size:13px;line-height:17px;color:var(--pwh-grey,#828082)}
+.pwh-form .gform_wrapper .field_description_above .gfield_description{padding:0 0 10px}
+.pwh-form .gform_wrapper .gfield--type-checkbox legend.gfield_label{margin-bottom:8px}
+.pwh-form .gform_wrapper .gfield_checkbox .gchoice{display:flex;align-items:flex-start;gap:10px;margin:0}
+.pwh-form .gform_wrapper .gfield_checkbox input[type=checkbox]{flex:0 0 18px;width:18px;height:18px;margin:1px 0 0;accent-color:var(--pwh-navy-ink,#0b1629);cursor:pointer}
+.pwh-form .gform_wrapper .gfield_checkbox label{margin:0;font-family:Inter,sans-serif;font-size:14px;line-height:20px;color:var(--pwh-navy-ink,#0b1629);cursor:pointer}
+.pwh-form .gform_wrapper .gfield--type-checkbox+.gfield--type-checkbox{margin-top:-8px}
 .pwh-c-calendly{border:2px dashed var(--pwh-navy-pale,#c2d3e8);border-radius:16px;background:var(--pwh-navy-mist,#eaf0f8)}
 .pwh-c-calendly-title .elementor-heading-title{margin:0;font-family:Inter,sans-serif;font-size:20px;font-weight:900;line-height:24px;color:var(--pwh-navy-ink,#0b1629)}
 .pwh-c-style{display:none!important}
@@ -220,6 +244,11 @@
 .pwh-v-formcard .pwh-form .gform_wrapper .gform_fields{grid-row-gap:18px}
 .pwh-v-formcard .pwh-form .gform_wrapper.gravity-theme .gform_footer{margin-top:18px}
 .pwh-v-note,.pwh-v-note p{margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:16px;color:var(--pwh-grey,#828082)}
+
+/* ---- Hosting transfer request ---- */
+.pwh-t-hero .pwh-v-lead,.pwh-t-hero .pwh-v-lead p{margin:0;font-family:Inter,sans-serif;font-size:18px;font-weight:300;line-height:24px;color:var(--pwh-navy-mist,#eaf0f8)}
+.pwh-t-hero .pwh-v-lead a{color:var(--pwh-cream,#fffef4);text-decoration:underline;text-underline-offset:3px}
+.pwh-t-form{border-top:1px solid var(--pwh-navy-pale,#c2d3e8)}
 
 /* ---- Home products slider (phones) ---- */
 /* Home products slider (phones): scroll the cards inside the row, one at a time,

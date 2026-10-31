@@ -1,0 +1,209 @@
+{
+ "version": "0.4",
+ "title": "PWH – Hosting Transfer Request",
+ "type": "page",
+ "content": [
+  {
+   "id": "adf7f00",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "96",
+     "right": "0",
+     "bottom": "88",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Hero",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "80",
+     "right": "24",
+     "bottom": "72",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "48",
+     "left": "20",
+     "isLinked": false
+    },
+    "html_tag": "section",
+    "css_classes": "pwh-t-hero",
+    "background_background": "classic",
+    "background_color": "#0B1629"
+   },
+   "elements": [
+    {
+     "id": "8839405",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_title": "Copy",
+      "width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 14,
+       "column": "14",
+       "row": "14",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "694afc9",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Hosting transfer request",
+        "header_size": "h1",
+        "_css_classes": "pwh-h1 pwh-text-cream"
+       },
+       "elements": []
+      },
+      {
+       "id": "9ca6125",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Chose assisted transfer when you signed up? Send us your current provider’s details and we’ll move your website across. The more you can tell us, the quicker it goes. Moving Microsoft 365 mailboxes instead? Use the <a href=\"/support/microsoft-transfer-request/\">Microsoft 365 transfer form</a>.</p>",
+        "_css_classes": "pwh-v-lead"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "46a3af5",
+   "elType": "container",
+   "settings": {
+    "content_width": "boxed",
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "72",
+     "right": "0",
+     "bottom": "96",
+     "left": "0",
+     "isLinked": false
+    },
+    "_title": "Form",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1180,
+     "sizes": []
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "64",
+     "right": "24",
+     "bottom": "80",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "40",
+     "right": "16",
+     "bottom": "56",
+     "left": "16",
+     "isLinked": false
+    },
+    "flex_align_items": "center",
+    "html_tag": "section",
+    "css_classes": "pwh-t-form",
+    "background_background": "classic",
+    "background_color": "#F5F1E0"
+   },
+   "elements": [
+    {
+     "id": "bb7846c",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "padding": {
+       "unit": "px",
+       "top": "40",
+       "right": "40",
+       "bottom": "40",
+       "left": "40",
+       "isLinked": true
+      },
+      "_title": "FormCard",
+      "width": {
+       "unit": "px",
+       "size": 760,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "24",
+       "right": "24",
+       "bottom": "24",
+       "left": "24",
+       "isLinked": true
+      },
+      "css_classes": "pwh-c-formcard"
+     },
+     "elements": [
+      {
+       "id": "9460675",
+       "elType": "widget",
+       "widgetType": "shortcode",
+       "settings": {
+        "shortcode": "[gravityform id=\"3\" title=\"false\" description=\"false\" ajax=\"true\" theme=\"gravity-theme\"]",
+        "_css_classes": "pwh-form"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": {
+  "hide_title": "yes",
+  "template": "elementor_header_footer"
+ }
+}

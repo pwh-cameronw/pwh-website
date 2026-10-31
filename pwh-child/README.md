@@ -208,6 +208,14 @@ Built from the Figma *Page / Semi-Managed Plans* frame (via the Figma REST API).
 - Plan cards link to `/e-mail/imap-pop3/` and `/e-mail/microsoft-365/`. The **Gmail card is a placeholder in the design** ("$XX", "Information about Gmail"); its link goes to `/contact-us/` until there's a Google page.
 - **The FAQ answers are drafts.** Figma only has the questions; check them, especially the Google one.
 
+## Hosting Transfer Request page (standalone template)
+
+`export/hosting-transfer-request.json` is the page at `/support/hosting-transfer-request/` (the "Website transfer form →" link on the Migrate page). Navy title band, then the existing Gravity Forms **Transfer your hosting** form (ID 3, five steps) in a card.
+
+- Create the page at that address, set it to **Elementor Full Width**, and import/insert the template.
+- The form is shown with `[gravityform id="3" title="false" description="false" ajax="true" theme="gravity-theme"]`. Change the ID if the form isn't ID 3.
+- The theme styles the multi-step parts: step progress bar, Next / Previous / Submit buttons, the text blocks, field help text, tick boxes, and the `importantnotice` cost box.
+
 ## VPS application form (section template)
 
 `export/vps-application-form.json` replaces the **Apply** section on `/vps-hosting/` (the "ADD FORM HERE" placeholder), as designed in Figma (Page / VPS (gated), "Application"): the beige band with the form card centred.
