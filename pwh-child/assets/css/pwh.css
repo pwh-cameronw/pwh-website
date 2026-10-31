@@ -13,23 +13,9 @@
  * ------------------------------------------------------------------------ */
 
 /* GT Standard is licensed from Grilli Type – drop the woff2 files into
-   assets/fonts (see assets/fonts/README.md). Until then Archivo Expanded,
-   loaded from Google Fonts, is used. */
-@font-face {
-	font-family: "GT Standard";
-	src: url("../fonts/GT-Standard-M-Extended-Black.woff2") format("woff2");
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "GT Standard";
-	src: url("../fonts/GT-Standard-M-Extended-Bold.woff2") format("woff2");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
+   assets/fonts (see assets/fonts/README.md). functions.php declares the
+   @font-face for each file that is there, so a missing file never 404s.
+   Until then Archivo Expanded, loaded from Google Fonts, is used. */
 
 /* ---------------------------------------------------------------------------
  * 2. Tokens (Figma variables)

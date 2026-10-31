@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PWH_CHILD_VERSION', '1.2.7' );
+define( 'PWH_CHILD_VERSION', '1.2.8' );
 define( 'PWH_CHILD_DIR', get_stylesheet_directory() );
 define( 'PWH_CHILD_URI', get_stylesheet_directory_uri() );
 
@@ -57,6 +57,18 @@ add_action( 'wp_enqueue_scripts', function () {
 		$deps,
 		filemtime( PWH_CHILD_DIR . '/assets/css/pwh.css' )
 	);
+
+	// GT Standard: only declared for the font files that are in assets/fonts, so
+	// the browser never requests a file that isn't there (404s in the console).
+	$gt_faces = '';
+	foreach ( array( 900 => 'GT-Standard-M-Extended-Black.woff2', 700 => 'GT-Standard-M-Extended-Bold.woff2' ) as $weight => $file ) {
+		if ( file_exists( PWH_CHILD_DIR . '/assets/fonts/' . $file ) ) {
+			$gt_faces .= '@font-face{font-family:"GT Standard";src:url("' . esc_url( PWH_CHILD_URI . '/assets/fonts/' . $file ) . '") format("woff2");font-weight:' . $weight . ';font-style:normal;font-display:swap}';
+		}
+	}
+	if ( $gt_faces ) {
+		wp_add_inline_style( 'pwh-child', $gt_faces );
+	}
 
 	// UAEL Video widgets: play on the first press (adds autoplay=1 to the click-to-load player).
 	wp_enqueue_script(
