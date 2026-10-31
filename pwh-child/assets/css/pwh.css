@@ -2076,6 +2076,7 @@ body .pwh-btn--sm .elementor-button {
    but leaves it anchored to the whole widget, so ticking a box focuses an input
    near the top of the form and the page jumps up. Anchor it to its own row. */
 .elementor-widget-uael-gf-styler .gfield_checkbox .gchoice,
-.elementor-widget-uael-gf-styler .gfield_radio .gchoice {
+.elementor-widget-uael-gf-styler .gfield_radio .gchoice,
+.elementor-widget-uael-gf-styler .ginput_container_consent {
 	position: relative;
 }
